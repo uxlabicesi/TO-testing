@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+/*
+ * Variables
+ */
+
+// Color Vars
+$color-blue: #294F75;
+$color-green: #79AF3a;
+$color-red: #D23A3A;
+$color-gold: #E6CF00;
+$color-gray: #C4C4C4;
+$color-lightGray: #FAFAFA;
+$color-darkGray: #494949;
+
+//Typography
+$typo-h1: 36px;
+$typo-h2: 22px;
+$typo-h3: 16px;
+$typo-h4: 14px;
+$typo-body: 20px;
+$typo-button: 16px;
+$typo-largeButton: 24px;
+$typo-subtitle: 30px;
+$typo-xSmall: 12px;
+
+//Typography font
+$typo-principal: 'Open Sans';
+$typo-secundary: 'Open Sans';
+$typo-text: 'Open Sans';
+
+
+//Typography Weight
+
+$typo-bold: 700;
+$typo-semibold: 600;
+$typo-regular: 400;
+
+
+//Breakpoints
+$screen-small: 576px;
+$screen-medium: 769px;
+$screen-large: 992px;
+$screen-extraLarge: 1200px

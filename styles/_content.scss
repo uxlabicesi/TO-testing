@@ -1,0 +1,110 @@
+.content{
+    position: relative;
+    top: 70px;
+    width: calc(100vw - 285px);
+    padding: 0 40px;
+    margin-left: 285px;
+    background-color: $color-lightGray;
+    height: 200vh;
+
+    &__containerFlex {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-right: 10%;
+        align-items: center;
+    }
+
+    &__title{
+        font-size: $typo-largeButton;
+        color: $color-blue;
+        font-weight: $typo-semibold;
+    }
+
+    &__request{
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        &Img{
+            width: 140px;
+            height: auto;  
+            margin: 0 auto;  
+        }
+      
+        &Title{
+            font-weight: $typo-bold;
+            font-size: $typo-h2;
+            color: $color-blue;
+            margin: 0 auto;
+        }
+
+        &Explication{
+            width: 260px;
+            text-align: center;
+            margin-top: 0px;
+            margin: 0 auto;
+        }
+
+        &Arrow{
+            height: auto;
+            margin-left: 50%;
+            width: fit-content;
+        }
+    }
+
+    &__button{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 100px;
+        margin-top: -80px;
+
+        &Add{
+            background-image: url(/resources/plus_icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px;
+        }
+    }
+
+    &__order {
+        display: flex;
+
+        & img {
+            width: 25px;
+        }
+    }
+
+    &__select {
+        appearance: none;
+        width: 100px;
+        height: 33px;
+        background: none;
+        border: none;
+        color: $color-darkGray;
+        background-image: url('/resources/expandIcon.svg');
+        background-repeat: no-repeat;
+        background-position: right 0 top 60%, 0 0;  
+        background-size: 15px;
+        margin-left: 20px; 
+    }
+
+    &__requests {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+}
+
+@media (max-width: $screen-medium) {
+    .content {
+        position: relative;
+        top: 0;
+        margin: 0;
+        width: 100vw;
+        padding-top: 70px;
+    }
+}

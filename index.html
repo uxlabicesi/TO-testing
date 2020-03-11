@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talentos Online</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="mainBanner">
+        <div class="banner">
+            <img src="./resources/login_img.png" alt="" class="banner__img">
+            <div class="banner__diamond">
+                <img src="./resources/romboSmall.png" alt="" class="banner__diamondSmall">
+                <img src="./resources/romboBig.png" alt="" class="banner__diamondBig">
+            </div>
+            <h1 class="banner__title">Encontramos el mejor talento para tu empresa</h1>
+
+        </div>
+        
+        <div class="login">
+            
+            <h1 class="login__title">Iniciar Sesión</h1>
+            <h3 class="login__explanation">Bienvenido, por favor digita tus datos a continuación para ingresar.</h3>
+            
+            <form action="#" class="login__form">
+                <div class="textInput__container">
+                    <label for="form_id" class="label login__label label--login">Documento de identificación</label>
+                    <input id="form_id" class="textInput login__id" type="text" name="">
+                </div>
+                
+                <div class="textInput__container">
+                    <label for="form_password" class="label login__label label--login">Contraseña</label>
+                    <input class="textInput login__pass" type="text" name="" id="form_password">
+                </div>
+                
+                <button class="login__formBtn btn btn--large">Iniciar Sesión</button>
+            </form>
+            <div class="login__border"></div>
+            <h3 class="login__account"><a href="./login_register.html">¿Aún no tienes cuenta? Regístrate</a></h3>
+            <button class="login__register btn btn--large">Registrarse</button>
+            
+        </div>
+    </div>
+    
+    <script src="./scripts/inputText_Microinteraction.js"></script>
+</body>
+</html>

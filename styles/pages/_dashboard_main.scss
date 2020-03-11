@@ -1,0 +1,332 @@
+.mainheader{
+    position: fixed;
+    display: flex;
+    background-color: $color-green;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(121, 175, 58, 0.3);
+    height: 70px;
+    z-index: 10;
+
+    &__menu {
+        display: none;
+        align-items: center;
+        color: $color-blue;
+        cursor: pointer;
+
+        & img {
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &__bell {
+        display: none;
+        width: 25px;
+    }
+
+    &__logo{
+        width: 194px;
+        height: 35px;
+        margin-left: 20px;
+    }
+
+    &__user{
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+        width: 230px;
+        justify-content: space-between;
+        align-items: center;
+
+        &Notification{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &Icon {
+                width: 25px;
+                height: auto;
+            }
+
+            &Amount {
+                width: 22px;
+                height: 22px;
+                border-radius: 12px;
+                background-color: $color-red;
+                border: solid 2px white;
+                position: absolute;
+                bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+
+                & p{
+                    margin: 0px;
+                }
+            }
+        }
+
+        &NotificationNumber{
+            margin-top: 15px;
+            margin-left: 11px;
+            position: absolute;
+            z-index: 2;
+        }
+
+        &NotificationText{
+            margin-top: 20px;
+            margin-left: 12px;
+            position: absolute;
+            z-index: 3;
+            color: white;
+            font-weight: $typo-bold;
+            font-size: 13px;
+        }
+
+        &Picture{
+            width: 45px;
+            height: auto;
+        }
+
+        &Profile{
+            display: flex;
+            flex-direction: column;
+    
+            &Name{
+                color: white;
+                margin: 0px;
+                font-size: $typo-h3;
+                font-weight: $typo-bold;
+                text-decoration: none;
+            }
+    
+            &Company{
+                color: white;
+                margin: 0px;
+                font-weight: $typo-regular;
+            }
+        }
+
+    }
+}
+
+.dashboardContent{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-top: 35px;
+    background-color: $color-lightGray;
+}
+
+.mainnav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 285px; 
+    height: calc(100vh - 70px);
+    min-height: 560px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    z-index: 1;
+    top: 70px;
+
+    & input {
+        padding-left: 50px;
+        margin: 40px 0px 20px 0px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__border{
+        width: 100%;
+        height: 1px;
+        background-color: #CFCFCF;
+    }
+
+    &__addRequest{
+        background-image: url('/resources/plus_icon.png');
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        background-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__notification{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 237px;
+        margin-bottom: 15px;
+        fill: $color-blue;
+
+        & a{
+            text-decoration: none;
+            font-weight: $typo-semibold;
+            color: $color-blue;
+            margin-left: 15px;
+            font-size: $typo-h4;
+        }
+
+        & img {
+            margin-left: 12px;
+            width: 25px;
+        }
+    }
+
+    &__requests{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 237px;
+        margin-bottom: 15px;
+
+        & a{
+            text-decoration: none;
+            font-weight: $typo-semibold;
+            color: $color-blue;
+            margin-left: 13px;
+            font-size: $typo-h4;
+        }
+
+        & img {
+            margin-left: 10px;
+        }
+    }
+
+    &__drafts{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 237px;
+        margin-bottom: 15px;
+
+        & a{
+            text-decoration: none;
+            font-weight: $typo-semibold;
+            color: $color-blue;
+            margin-left: 13px;
+            font-size: $typo-h4;
+        }
+
+        & img {
+            margin-left: 10px;
+        }
+
+        &Count{
+            font-size: $typo-h3;
+            color: $color-blue;
+            margin-left: 5px;
+            font-weight: $typo-semibold;
+        }
+    }
+
+    &__completed{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 237px;
+        margin-bottom: 15px;
+
+        & a{
+            text-decoration: none;
+            font-weight: $typo-semibold;
+            color: $color-blue;
+            margin-left: 11px;
+            font-size: $typo-h4;
+        }
+
+        & img {
+            margin-left: 10px;
+        }
+
+        &Count{
+            font-size: $typo-h3;
+            color: $color-blue;
+            margin-left: 5px;
+            font-weight: $typo-semibold;
+        }
+    }
+
+    &__footer{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        bottom: 0;
+        width: 285px;
+
+        &Help{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            width: 70%;
+        }
+
+        &Logout{
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            width: 70%;
+        }
+
+        
+        & a{
+            text-decoration: none;
+            font-weight: $typo-semibold;
+            color: $color-blue;
+            font-size: $typo-h4;
+            margin-left: 15px;
+        }
+       
+    }
+}
+
+@media (max-width: $screen-medium) {
+    .mainheader {
+        background: linear-gradient(to bottom, $color-lightGray, rgba($color-lightGray, .0));
+        box-shadow: none;
+        z-index: 3;
+
+        &__menu {
+            display: flex;
+            position: relative;
+        }
+
+        &__bell {
+            display: block;
+
+            & path {
+                fill: $color-blue;
+            }
+            
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__user {
+            display: none;
+        }
+    }
+
+    .mainnav {
+        height: 100vh;
+        top: 0;
+        background-color: $color-lightGray;
+        transition: all .3s ease-out;
+        transform: translateX(-285px);
+        z-index: 5;
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+}

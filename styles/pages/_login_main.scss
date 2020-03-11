@@ -1,0 +1,158 @@
+.mainBanner{
+    display: flex;
+    justify-content: space-between;
+    font-size: $typo-subtitle;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    &__img{
+        height: 100vh;
+    }
+
+    &__title{
+        position: absolute;
+        width: 10em;
+        color: white;
+        align-items: center;
+        top: 12em;
+        left: 2em;
+        font-size: 5vh;
+        margin: 0;
+    }
+
+    &__diamond{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 2;
+        margin-top: 3em;
+        margin-left: 45px;
+    }
+
+    &__diamondBig{
+        position: relative;
+        height: 15vh;
+        width: 10vh;
+        left: 3.5vh;
+    }
+
+    &__diamondSmall{
+        width: auto;
+        margin-right: 50px;
+        height: 8vh;
+    }
+
+    &--noScroll {
+        position: fixed;
+    }
+}
+
+
+.login{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 60px 50px;
+    background-color: $color-lightGray;
+    overflow-x: hidden;
+
+    &__title{
+        font-family: $typo-text;
+        font-size: $typo-h1;
+        font-weight: $typo-bold;
+        color: $color-blue;
+        margin-top: 0;
+    }
+
+    &__explanation{
+        font-family: $typo-text;
+        font-size: $typo-h3;
+        font-weight: $typo-regular;
+        width: 331px;
+        text-align: center;
+        color: $color-blue;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        height: 270px;
+        justify-content: space-evenly;
+    }
+
+    &__formBtn{
+        color: white;
+        font-weight: $typo-semibold;
+        background-color: $color-green;
+        padding: 10px;
+    }
+    
+    &__account{
+        font-weight: $typo-regular;
+        font-size: $typo-h3;
+        color: $color-blue;
+
+        & a {
+            font-weight: $typo-regular;
+            font-size: $typo-h3;
+            color: $color-blue;
+            text-decoration: none;
+        }
+    }
+
+    &__register{
+        color:white;
+        font-weight: $typo-semibold;
+        background-color: $color-blue;
+    }
+
+    &__border{
+        width: 331px;
+        height: 1px;
+        background-color: $color-gray;
+    }
+
+    &__id {
+        background-image: url('/resources/userIcon.svg');
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        background-size: 25px;
+        padding-left: 50px;
+    }
+    
+    &__pass {
+        background-image: url('/resources/passwordIcon.svg');
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        background-size: 25px;
+        padding-left: 50px;
+    }
+
+    &__label {
+        top: 16px;
+        left: 50px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: $screen-large), (max-height: 530px), (orientation: portrait) {
+    .banner {
+        display: none;
+    }
+}
+
+@media (max-width: $screen-small) {
+    .login {
+        min-height: 100vh;
+    }
+}
+
