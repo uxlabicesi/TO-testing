@@ -1,5 +1,1 @@
 # Talentos-Online
-
-## Pruebas iniciales
-
-

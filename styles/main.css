@@ -76,6 +76,9 @@ body {
   -webkit-box-shadow: 0px 5px 15px rgba(121, 175, 58, 0.34);
           box-shadow: 0px 5px 15px rgba(121, 175, 58, 0.34);
   border-radius: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
 }
 
 .btn--inactive {
@@ -1265,6 +1268,7 @@ body {
           align-items: center;
   width: 100%;
   bottom: 0;
+  left: 0;
   width: 285px;
 }
 
