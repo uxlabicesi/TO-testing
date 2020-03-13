@@ -151,7 +151,7 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("/resources/arrow.png");
+  background-image: url("../resources/arrow.png");
   background-repeat: no-repeat;
   background-position: right .7em top 50%, 0 0;
   width: 70%;
@@ -165,7 +165,7 @@ body {
 }
 
 .textInput--search {
-  background-image: url("/resources/searchIcon.svg");
+  background-image: url("../resources/searchIcon.svg");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 19px;
@@ -194,7 +194,7 @@ body {
 }
 
 .checkboxInput--search {
-  background-image: url("/resources/search_icon.png");
+  background-image: url("../resources/search_icon.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 25px;
@@ -217,7 +217,7 @@ body {
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
   padding: 0 25px;
-  background-image: url("/resources/expandIcon.svg");
+  background-image: url("../resources/expandIcon.svg");
   background-repeat: no-repeat;
   background-position: right .7em top 50%, 0 0;
   background-size: 15px;
@@ -331,7 +331,7 @@ body {
 }
 
 .content__buttonAdd {
-  background-image: url(/resources/plus_icon.png);
+  background-image: url("../resources/plus_icon.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px;
@@ -356,7 +356,7 @@ body {
   background: none;
   border: none;
   color: #494949;
-  background-image: url("/resources/expandIcon.svg");
+  background-image: url("../resources/expandIcon.svg");
   background-repeat: no-repeat;
   background-position: right 0 top 60%, 0 0;
   background-size: 15px;
