@@ -210,7 +210,7 @@ body {
           box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
-  background-image: url("/resources/expandIcon.svg");
+  background-image: url("../resources/expandIcon.svg");
   background-repeat: no-repeat;
   background-position: right .7em top 50%, 0 0;
   background-size: 15px;
@@ -726,7 +726,7 @@ body {
 }
 
 .login__id {
-  background-image: url("/resources/userIcon.svg");
+  background-image: url("../resources/userIcon.svg");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 25px;
@@ -744,7 +744,7 @@ body {
 }
 
 .login__pass {
-  background-image: url("/resources/passwordIcon.svg");
+  background-image: url("../resources/passwordIcon.svg");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 25px;
@@ -1234,7 +1234,7 @@ body {
 }
 
 .mainnav__addRequest {
-  background-image: url("/resources/plus_icon.png");
+  background-image: url("../resources/plus_icon.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 18px;
