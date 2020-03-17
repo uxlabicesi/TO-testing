@@ -10,45 +10,45 @@
     margin-left: 62vh / 100vh * 100vh;
     padding: 50px 7%;
     background-color: $color-lightGray;
-
+    
     &__title {
         font-size: $typo-h1;
         width: 100%;
         margin-top: 0;
     }
-
+    
     &__body {
         overflow-x: hidden;
     }
-
+    
     &__container {
         width: 100%;
         display: flex;
     }
-
+    
     &__subtitle {
         font-size: $typo-h4;
         width: 90px;
         margin: 0;
     }
-
+    
     &__form {
         width: 100%;
-
+        
         & .textInput {
             width: calc(100% - 90px);
             margin: 20px 0;
             margin-left: 90px;
         }
     }
-
+    
     &__divider {
         width: 100%;
         height: 2px;
         background-color: $color-gray;
         margin: 25px 0;
     }
-
+    
     &__checkboxContainer {
         display: flex;
         margin-left: 90px;
@@ -62,28 +62,28 @@
             }
         }
     }
-
+    
     &__button {
         margin-left: 90px;
         margin-top: 30px;
         width: calc(100% - 90px);
         font-size: $typo-largeButton;
     }
-
+    
     &__text {
         font-size: $typo-h4;
         color: $color-darkGray;
         margin-left: 20%;
         width: 70%;
         text-align: center;
-
+        
         & a {
             font-weight: $typo-semibold;
             color: $color-darkGray;
             text-decoration: none;
         }
     }
-
+    
     &__label {
         margin-left: 90px;
         left: 25px;
@@ -109,11 +109,19 @@
     & input {
         border: 1px solid $color-red !important;
     }
-
+    
     & label {
         color: $color-red !important;
     }
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
 
 @media (max-width: $screen-large), (max-height: 530px), (orientation: portrait) {
     .register {
@@ -123,7 +131,7 @@
 
 @media (min-width: $screen-large) and (max-width: $screen-extraLarge) {
     .register {
-
+        
         &__button {
             font-size: 1.7vw;
         }
@@ -132,7 +140,7 @@
 
 @media (min-width: $screen-small) and (max-width: $screen-large) {
     .register {
-
+        
         &__button {
             font-size: $typo-button;
         }
@@ -142,24 +150,24 @@
 
 @media (max-width: $screen-small) {
     .register {
-
+        
         &__container {
             flex-direction: column;
         }
-
+        
         &__form {
             margin-top: 15px;
             
             & .textInput__container {
-
+                
                 & label, input {
                     margin-left: 0;
                     width: 100%;
                 }
             }
-
+            
             & .select {
-
+                
                 &--register {
                     margin-left: 0;
                 }
@@ -169,24 +177,24 @@
                 }
             }
         }
-
+        
         &__divider {
             margin-right: 0;
         }
-
+        
         &__checkboxContainer {
             margin: 0 auto;
             width: fit-content;
             margin-top: 10px;
         }
-
+        
         &__button {
             width: 100%;
             margin-left: 0;
             margin-top: 25px;
             font-size: $typo-button;
         }
-
+        
         &__text {
             width: 100%;
             margin-left: 0;

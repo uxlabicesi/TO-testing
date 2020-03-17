@@ -796,6 +796,10 @@ body {
   margin-top: 0;
 }
 
+.register__body {
+  overflow-x: hidden;
+}
+
 .register__container {
   width: 100%;
   display: -webkit-box;
@@ -895,6 +899,16 @@ body {
 
 .has-error label {
   color: #D23A3A !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media (max-width: 992px), (max-height: 530px), (orientation: portrait) {
