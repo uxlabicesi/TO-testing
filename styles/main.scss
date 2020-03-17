@@ -9,11 +9,11 @@ body{
 }
 
 
-@import 'variables';
-@import 'buttons';
-@import 'inputs';
-@import 'select';
-@import 'content';
+@import 'components/variables';
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/select';
+@import 'components/content';
 @import 'components/request';
 @import 'pages/login_main';
 @import 'pages/login_register';

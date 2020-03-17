@@ -19,6 +19,12 @@
         border-radius: 10px;
         font-size: $typo-h3;
         text-shadow: 0.5px -0.5px 0px rgba(0, 0, 0, 0.25);
+        font-weight: $typo-semibold;
+        
+    }
+
+    &--blue {
+        background-color: $color-blue;
     }
 
     &--rounded {

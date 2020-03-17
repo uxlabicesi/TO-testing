@@ -1,4 +1,18 @@
 .content{
+
+    &__head{
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+
+        &Title{
+            margin-top: 0px;
+        }
+
+        &Perfil{
+            margin-top: 15px;
+        }
+    }
     
     
     &__infoCard{

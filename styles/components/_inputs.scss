@@ -46,32 +46,17 @@
 
     &__container {
         position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
     &:focus {
         outline: none;
         border: 1px solid black;
     }
-
-    &--select {
-        padding: 0 25px;
-        appearance: none;
-        background-image: url('../resources/arrow.png');
-        background-repeat: no-repeat;
-        background-position: right .7em top 50%, 0 0;
-        width: 70%;
-        margin: 15px 0;
-        margin-left: 20%;
-        color: $color-gray;
-
-        &:focus {
-            color: black;
-        }
-    }
-
-    
+        
     &--search{
-        background-image: url('../resources/searchIcon.svg');
+        background-image: url('/resources/searchIcon.svg');
         background-repeat: no-repeat;
         background-position: 15px center;
         background-size: 19px;
@@ -98,7 +83,7 @@
     }
 
     &--search{
-        background-image: url('../resources/search_icon.png');
+        background-image: url('/resources/search_icon.png');
         background-repeat: no-repeat;
         background-position: 15px center;
         background-size: 25px;

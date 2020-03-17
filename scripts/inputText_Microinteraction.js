@@ -1,6 +1,6 @@
 function handleLoad() {
 
-    const inputs = document.querySelectorAll('input[type=text]');
+    const inputs = document.querySelectorAll('.textInput');
 
     inputs.forEach(input => {
         input.addEventListener('focus', (event) => {
@@ -19,9 +19,8 @@ function handleLoad() {
 
 
             if(input.value) {
-                label.classList.add('label--none');
-            } else {
-                label.classList.remove('label--none');
+                label.classList.add('label--active');
+                event.target.parentElement.classList.add('textInput--focused');
             }
         });
     });

@@ -26,23 +26,24 @@
             <form action="#" class="login__form">
                 <div class="textInput__container">
                     <label for="form_id" class="label login__label label--login">Documento de identificación</label>
-                    <input id="form_id" class="textInput login__id" type="text" name="">
+                    <input id="form_id" class="textInput login__id" type="number" name="">
                 </div>
                 
                 <div class="textInput__container">
                     <label for="form_password" class="label login__label label--login">Contraseña</label>
-                    <input class="textInput login__pass" type="text" name="" id="form_password">
+                    <input class="textInput login__pass" type="password" name="" id="form_password">
                 </div>
                 
-                <button class="login__formBtn btn btn--large">Iniciar Sesión</button>
+                <button class="btn btn--large">Iniciar Sesión</button>
             </form>
             <div class="login__border"></div>
             <h3 class="login__account"><a href="./login_register.html">¿Aún no tienes cuenta? Regístrate</a></h3>
-            <button class="login__register btn btn--large">Registrarse</button>
+            <button class="btn btn--large btn--blue">Registrarse</button>
             
         </div>
     </div>
     
-    <script src="./scripts/inputText_Microinteraction.js"></script>
+    <script src="../scripts/inputText_Microinteraction.js"></script>
+    <script src="../scripts/login.js"></script>
 </body>
 </html>

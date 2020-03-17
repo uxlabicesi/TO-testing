@@ -1,0 +1,127 @@
+.select {
+    appearance: none;
+    height: 55px;
+    border: 1px solid $color-gray;
+    border-radius: 10px;
+    font-size: $typo-button;
+    background-color: #FFFFFF;     
+    box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+    transition: all .2s ease-out;
+    background-image: url('/resources/expandIcon.svg');
+    background-repeat: no-repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: 15px;
+    color: $color-gray;
+    margin: 20px 0;
+    margin-left: 90px;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        width: 100%;
+    }
+
+    &__selected {
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 25px;
+    }
+
+    & .select__option, .select__selected {
+        cursor: pointer;
+    }
+
+    &__optionsContainer {
+        background-color: #FFF;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 3;
+        opacity: 0;
+        max-height: 0;
+        transition: all .2s ease-out;
+        overflow-y: hidden;
+
+        &--active {
+            padding: 10px 0;
+            display: block;
+            max-height: 260px;
+            opacity: 1;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+                background-color: $color-lightGray;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $color-gray;
+                border-radius: 10px;
+            }
+        }
+
+        & .select__option {
+            padding: 10px 25px;
+
+            &:hover {
+                background-color: $color-gray;
+            }
+
+            & label {
+                cursor: pointer;
+                color: $color-darkGray;
+                width: 100%;
+            }
+
+            & input {
+                display: none;
+            }
+        }
+    }
+
+    &__label {
+        position: absolute;
+        transition: all .2s ease-out;
+        font-size: $typo-button;
+        font-weight: $typo-regular;
+        color: $color-gray;
+        cursor: pointer;
+        opacity: 1;
+        width: 58%;
+        overflow: hidden;
+        white-space: nowrap; 
+
+        &--register {
+            margin-left: 115px;
+            margin-top: 35px;
+        }
+
+        &--focused {
+            transform: translate(-25px, -225%);
+            font-size: $typo-h4;
+            font-weight: $typo-bold;
+            color: $color-blue;
+        }
+    }
+
+    &:focus {
+        color: black;
+        outline: none;
+        border: 1px solid black;
+    }
+
+    
+
+    & .option {
+        appearance: none;
+        padding: 5px 0;
+        border: none;
+        background: white;
+
+        &::selection {
+            background: $color-lightGray;
+        }
+    }
+}

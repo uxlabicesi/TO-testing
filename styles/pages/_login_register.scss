@@ -32,9 +32,9 @@
         width: 100%;
 
         & .textInput {
-            width: 70%;
-            margin: 15px 0;
-            margin-left: 20%;
+            width: calc(100% - 90px);
+            margin: 20px 0;
+            margin-left: 90px;
         }
     }
 
@@ -43,12 +43,11 @@
         height: 2px;
         background-color: $color-gray;
         margin: 25px 0;
-        margin-right: 15%;
     }
 
     &__checkboxContainer {
         display: flex;
-        margin-left: 20%;
+        margin-left: 90px;
         margin-top: 10px;
         & p {
             margin: 4px 10px;
@@ -61,9 +60,9 @@
     }
 
     &__button {
-        margin-left: 20%;
+        margin-left: 90px;
         margin-top: 30px;
-        width: 70%;
+        width: calc(100% - 90px);
         font-size: $typo-largeButton;
     }
 
@@ -82,10 +81,28 @@
     }
 
     &__label {
-        margin-left: 20%;
+        margin-left: 90px;
         left: 25px;
-        top: 32px;
+        top: 40%;
     }
+}
+
+.has-error {
+    & input {
+        border: 1px solid $color-red !important;
+    }
+
+    & label {
+        color: $color-red !important;
+    }
+}
+
+.help-block{
+    position: absolute;
+    color: $color-red;
+    font-size: $typo-h4;
+    margin-left: 90px;
+    top: 90%;
 }
 
 @media (max-width: $screen-large), (max-height: 530px), (orientation: portrait) {
