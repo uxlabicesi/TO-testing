@@ -108,7 +108,7 @@
     }
 
     &__id {
-        background-image: url('/resources/userIcon.svg');
+        background-image: url('./resources/userIcon.svg');
         background-repeat: no-repeat;
         background-position: 15px center;
         background-size: 25px;
@@ -125,7 +125,7 @@
 
     
     &__pass {
-        background-image: url('/resources/passwordIcon.svg');
+        background-image: url('./resources/passwordIcon.svg');
         background-repeat: no-repeat;
         background-position: 15px center;
         background-size: 25px;
