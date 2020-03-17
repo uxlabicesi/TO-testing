@@ -87,7 +87,21 @@
     }
 }
 
+.help-block{
+    position: absolute;
+    color: $color-red;
+    font-size: $typo-h4;
+    margin-left: 90px;
+    top: 85%;
+}
+
+.form-group {
+    margin-bottom: 0;
+    transition: all .2s ease-out;
+}
+
 .has-error {
+    margin-bottom: 20px;
     & input {
         border: 1px solid $color-red !important;
     }
@@ -95,14 +109,6 @@
     & label {
         color: $color-red !important;
     }
-}
-
-.help-block{
-    position: absolute;
-    color: $color-red;
-    font-size: $typo-h4;
-    margin-left: 90px;
-    top: 90%;
 }
 
 @media (max-width: $screen-large), (max-height: 530px), (orientation: portrait) {
