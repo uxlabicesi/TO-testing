@@ -154,9 +154,15 @@
                 }
             }
 
-            & select {
-                margin-left: 0;
-                width: 100%;
+            & .select {
+
+                &--register {
+                    margin-left: 0;
+                }
+                
+                &__label--register {
+                    margin-left: 25px;
+                }
             }
         }
 

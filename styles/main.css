@@ -929,9 +929,11 @@ body {
     margin-left: 0;
     width: 100%;
   }
-  .register__form select {
+  .register__form .select--register {
     margin-left: 0;
-    width: 100%;
+  }
+  .register__form .select__label--register {
+    margin-left: 25px;
   }
   .register__divider {
     margin-right: 0;
