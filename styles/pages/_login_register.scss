@@ -17,6 +17,10 @@
         margin-top: 0;
     }
 
+    &__body {
+        overflow-x: hidden;
+    }
+
     &__container {
         width: 100%;
         display: flex;
