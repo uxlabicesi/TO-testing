@@ -17,11 +17,18 @@ window.addEventListener('load', () => {
     });
     
     selectList.forEach((select) => {
-        
+        const options = select.querySelectorAll('.select__option');
+        const searchBox = select.querySelector('.select__searchBox input');
         select.querySelector('.select__label').addEventListener('click', handleClick);
         select.querySelector('.select__selected').addEventListener('click', handleClick);
+
+        if(searchBox) {
+            searchBox.addEventListener('keyup', (event) => {
+                filterList(event.target.value, options);
+            });
+        }
         
-        const options = select.querySelectorAll('.select__option');
+       
         
         options.forEach((optionsContainer) => {
             optionsContainer.addEventListener('click', selectOption);
@@ -31,9 +38,7 @@ window.addEventListener('load', () => {
     function handleClick(event) {
         
         const selectContainer = event.target.closest('.select__container');
-        
         const options = selectContainer.querySelector('.select__optionsContainer');
-        
         const value = selectContainer.querySelector('input');
         
         options.classList.toggle('select__optionsContainer--active');
@@ -60,5 +65,16 @@ window.addEventListener('load', () => {
         selectLabel.classList.add('select__label--focused');
     }
     
-    
+    function filterList(value, optionsList) {
+        value = value.toLowerCase();
+        optionsList.forEach((option) => {
+            let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
+
+            if(label.indexOf(value) != -1) {
+                option.style.display = 'block';
+            } else {
+                option.style.display = 'none';
+            }
+        });
+    }
 });
