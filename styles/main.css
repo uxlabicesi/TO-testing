@@ -1435,6 +1435,10 @@ input[type=number] {
   width: 70%;
 }
 
+.mainnav__footerHelp a {
+  color: #294F75;
+}
+
 .mainnav__footerLogout {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1446,10 +1450,13 @@ input[type=number] {
   width: 70%;
 }
 
+.mainnav__footerLogout a {
+  color: #D23A3A;
+}
+
 .mainnav__footer a {
   text-decoration: none;
   font-weight: 600;
-  color: #294F75;
   font-size: 14px;
   margin-left: 15px;
 }
