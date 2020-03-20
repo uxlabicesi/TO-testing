@@ -141,3 +141,12 @@
         }
     }
 }
+
+@media (max-width: $screen-small) {
+    .select {
+
+        &__label {
+            width: calc(100% - 60px);
+        }
+    }
+}

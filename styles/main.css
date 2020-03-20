@@ -355,6 +355,12 @@ body {
   outline: none;
 }
 
+@media (max-width: 576px) {
+  .select__label {
+    width: calc(100% - 60px);
+  }
+}
+
 .content {
   position: relative;
   top: 70px;
