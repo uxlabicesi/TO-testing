@@ -135,7 +135,7 @@ input[type=number] { -moz-appearance:textfield; }
         &__button {
             font-size: 1.7vw;
         }
-    }
+    }  
 }
 
 @media (min-width: $screen-small) and (max-width: $screen-large) {
@@ -144,11 +144,16 @@ input[type=number] { -moz-appearance:textfield; }
         &__button {
             font-size: $typo-button;
         }
-    }
+    }  
 }
 
 
 @media (max-width: $screen-small) {
+
+    .help-block{
+        margin-left: 0px;
+    }  
+
     .register {
         
         &__container {
@@ -199,5 +204,5 @@ input[type=number] { -moz-appearance:textfield; }
             width: 100%;
             margin-left: 0;
         }   
-    }    
+    }
 }

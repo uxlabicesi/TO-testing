@@ -945,6 +945,9 @@ input[type=number] {
 }
 
 @media (max-width: 576px) {
+  .help-block {
+    margin-left: 0px;
+  }
   .register__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
