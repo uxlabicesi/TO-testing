@@ -112,6 +112,8 @@
             border-radius: 10px;
             width: 60%;
             height: 100%;
+            padding: 25px;
+
 
             &Logo{
                 display: block;
@@ -123,7 +125,8 @@
                 font-size: 28px;
                 float: right;
                 font-weight: bold;
-                margin-right: 10px;
+                margin-right: -15px;
+                margin-top: -25px;
             }
 
             &Close:hover{
@@ -139,7 +142,6 @@
             }
 
             &Body{
-               padding: 25px;
                position: relative; 
                height: 100%;
             }
