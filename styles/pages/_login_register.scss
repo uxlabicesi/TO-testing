@@ -205,6 +205,13 @@ input[type=number] { -moz-appearance:textfield; }
         &__button {
             font-size: 1.7vw;
         }
+
+        &__modal {
+
+            &ContentText {
+                height: 75%;
+            }
+        }
     }  
 }
 
@@ -213,6 +220,17 @@ input[type=number] { -moz-appearance:textfield; }
         
         &__button {
             font-size: $typo-button;
+        }
+
+        &__modal {
+
+            &ContentTitle {
+                font-size: 18px;
+            }
+
+            &ContentText {
+                height: 78%;;
+            }
         }
     }  
 }
@@ -274,5 +292,22 @@ input[type=number] { -moz-appearance:textfield; }
             width: 100%;
             margin-left: 0;
         }   
+
+        &__modal {
+
+            &Content {
+                width: 80%;
+
+                &Title {
+                    font-size: $typo-button;
+                }
+
+                &Text {
+                    height: 70%;
+                }
+            }
+
+
+        }
     }
 }
