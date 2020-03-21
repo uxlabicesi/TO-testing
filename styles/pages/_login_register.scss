@@ -37,7 +37,7 @@
         
         & .textInput {
             width: calc(100% - 90px);
-            margin: 20px 0;
+            margin-bottom: 5px;
             margin-left: 90px;
         }
     }
@@ -87,12 +87,12 @@
     &__label {
         margin-left: 90px;
         left: 25px;
-        top: 40%;
+        top: 17px;
     }
 }
 
 .help-block{
-    position: absolute;
+    position: relative;
     color: $color-red;
     font-size: $typo-h4;
     margin-left: 90px;

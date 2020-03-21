@@ -152,6 +152,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 35px;
 }
 
 .textInput:focus {
@@ -841,7 +842,7 @@ body {
 
 .register__form .textInput {
   width: calc(100% - 90px);
-  margin: 20px 0;
+  margin-bottom: 5px;
   margin-left: 90px;
 }
 
@@ -894,11 +895,11 @@ body {
 .register__label {
   margin-left: 90px;
   left: 25px;
-  top: 40%;
+  top: 17px;
 }
 
 .help-block {
-  position: absolute;
+  position: relative;
   color: #D23A3A;
   font-size: 14px;
   margin-left: 90px;
