@@ -97,15 +97,20 @@ window.addEventListener('load', () => {
                         }
                     }
                 },
-                nit: {
+                nitNumber: {
                     validators: {
                         notEmpty: {
                             message: 'Este campo es obligatorio'
+                        },
+                        regexp: {
+                            regexp: /^[0-9]+$/,
+                            message: 'No se debe usar ni . ni -'
+                        },
+                        stringLength: {
+                            min: 9,
+                            max: 9,
+                            message: 'El nit debe contener 9 números'
                         }
-                    },
-                    regexp: {
-                        regexp: /^[0-9]+$/,
-                        message: 'El nit solo puede contener números'
                     }
                 },
                 sector: {
