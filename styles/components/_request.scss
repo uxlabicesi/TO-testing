@@ -94,3 +94,10 @@
         margin-bottom: 0;
     }
 }
+
+@media (max-width: $screen-small) {
+    .request{
+        margin: 10px 0px;
+    }
+ 
+ }

@@ -108,3 +108,20 @@
         padding-top: 70px;
     }
 }
+
+@media (max-width: $screen-small) {
+   .content{
+       &__requests{
+           display: flex;
+           flex-direction: column;
+           align-content: center;
+       }
+
+       &__title{
+           margin-right: 30px;
+       }
+   }
+
+
+
+}
