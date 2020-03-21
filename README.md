@@ -2,40 +2,49 @@
 
 ## Componentes
 
+### Loader
+~~~
+<div class="loader__container loader__container--active">
+  <div class="loader">Cargando...</div>
+</div>
+~~~
+**Clase** .loader__container--active //Remover esta clase hace que el loader no se muestre.
+![Loader](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/loader.png)
+
 ### Inputs
 **Clase** .textInput__container
 
-![Input de texto](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/TextInput.png)
+![Input de texto](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/TextInput.png)
 
 **Clase** .textInput__container--search
 
-![Input de texto](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/TextInputSearch.png)
+![Input de texto](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/TextInputSearch.png)
 
 **Clase** .textInput__container--focused
 
-![Input de texto](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/TextInputActive.png)
+![Input de texto](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/TextInputActive.png)
 
 
 ### Botones
 **Clase** .btn
 
-![Botón](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/button.png)
+![Botón](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/button.png)
 
 **Clase** .btn--large .btn--blue
 
-![Botón](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/buttonBlue.png)
+![Botón](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/buttonBlue.png)
 
 **Clase** .btn--Xlarge
 
-![Botón](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/buttonLarge.png)
+![Botón](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/buttonLarge.png)
 
 **Clase** .btn--add
 
-![Botón](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/buttonadd.png)
+![Botón](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/buttonadd.png)
 
 **Clase** .btn--inactive
 
-![Botón](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/buttonLargeInactive.png)
+![Botón](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/buttonLargeInactive.png)
 
 
 ### Solicitudes
@@ -75,19 +84,19 @@
 
 **Clase** .request__status--completed
 
-![Solicitud](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/request.png)
+![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/request.png)
 
 **Clase** .request__status--waiting
 
-![Solicitud](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/requestWaiting.png)
+![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestWaiting.png)
 
 **Clase** .request__status--inactive
 
-![Solicitud](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/requestInactive.png)
+![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestInactive.png)
 
 **Clase** .request__status--draft
 
-![Solicitud](https://github.com/juanbravozu/Talentos-Online/blob/master/README%20images/requestDraft.png)
+![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestDraft.png)
 
 
 
