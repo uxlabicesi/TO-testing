@@ -1048,10 +1048,11 @@ body {
 }
 
 .register__modalContentText {
-  text-align: left;
+  text-align: justify;
   font-size: 14px;
   height: 80%;
   overflow-y: auto;
+  padding-right: 10px;
 }
 
 .help-block {
