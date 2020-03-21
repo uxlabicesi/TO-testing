@@ -103,7 +103,7 @@ window.addEventListener('load', () => {
                             message: 'Este campo es obligatorio'
                         },
                         regexp: {
-                            regexp: /^[0-9]+$/,
+                            regexp: /^[0-9a-zA-Z]+$/,
                             message: 'No se debe usar ni . ni -'
                         },
                         stringLength: {

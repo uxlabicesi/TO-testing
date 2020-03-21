@@ -40,4 +40,35 @@ window.addEventListener('load', () => {
 
         isValid = true;
     }
+
+    var modal = document.querySelector('.register__modal');
+    var terms = document.querySelector('.register__terms');
+    var close = document.querySelector('.register__modalContentClose');
+    var body = document.querySelector('.register__body');
+
+
+    terms.addEventListener('click',function(){
+        modal.style.display= "block";
+        body.style.position = "static";
+		body.style.height = "100%";
+		body.style.overflow = "hidden";
+    });
+
+    close.addEventListener('click',function(){
+        modal.style.display = "none";
+        body.style.position = "inherit";
+        body.style.height = "auto";
+        body.style.overflow = "visible";
+    });
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        }
+    }
+
 });
