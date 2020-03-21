@@ -1,16 +1,7 @@
 window.addEventListener('load', () => {
     $(document).ready(function() {
 
-        $('.textInput__container').bootstrapValidator({   
-    
-            message: 'This value is not valid',
-    
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
-    
+        $('#id_formSecondPart').bootstrapValidator({ 
             fields: {
                 username: {
                     message: 'The username is not valid',
@@ -55,13 +46,6 @@ window.addEventListener('load', () => {
                         }
                     }
                 },
-                company: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        }
-                    }
-                },
                 password: {
                     validators: {
                         notEmpty: {
@@ -70,6 +54,46 @@ window.addEventListener('load', () => {
                         stringLength: {
                             min: 8,
                             message: 'La contraseña debe tener mínimo 8 caracteres'
+                        },
+                        identical: {
+                            field: 'confirmPassword',
+                            message: 'Las contraseñas no coinciden'
+                        }
+                    }
+                },
+                confirmPassword: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
+                        },
+                        stringLength: {
+                            min: 8,
+                            message: 'La contraseña debe tener mínimo 8 caracteres'
+                        },
+                        identical: {
+                            field: 'password',
+                            message: 'Las contraseñas no coinciden'
+                        }
+                    }
+                },
+            }
+        });
+
+        $('#id_formFirstPart').bootstrapValidator({   
+    
+            message: 'This value is not valid',
+    
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+    
+            fields: {
+                company: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
                         }
                     }
                 },
