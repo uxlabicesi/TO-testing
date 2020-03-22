@@ -83,8 +83,8 @@
                                 <p class="select__label select__label--register select__label--sector">¿A qué sector
                                     pertenece?</p>
                                 <select class="select2__selector--sector" name="sector" required>
+                                     <!-- empty option is requiered for placeholder -->
                                     <option></option>
-                                    <!--<option disabled selected>Selecciona una opción</option>-->
                                     <option value="O1">Opción 1</option>
                                     <option value="O2">Opción 2</option>
                                     <option value="O3">Opción 3</option>
@@ -104,8 +104,8 @@
                                 <p class="select__label select__label--register  select__label--city">¿En qué ciudad
                                     está su oficina principal?</p>
                                 <select class="select2__selector--city" name="city" required>
+                                    <!-- empty option is requiered for placeholder -->
                                     <option></option>
-                                    <!--<option disabled selected>Selecciona una opción</option>-->
                                     <option value="O1">Opción 1</option>
                                     <option value="O2">Opción 2</option>
                                     <option value="O3">Opción 3</option>
@@ -118,7 +118,6 @@
                             </div>
                         </div>
                         <!-- end select container using select2 -->
-
 
                     </form>
                 </div>
@@ -604,8 +603,9 @@
     </section>
     <!-- scripts for bootstrap validator-->
     <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>-->
-    <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+   
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>-->
     
 
@@ -619,12 +619,11 @@
     <script src="libs/chosen_v1.8.7/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
     <script src="libs/chosen_v1.8.7/docsupport/init.js" type="text/javascript" charset="utf-8"></script>-->
 
-    <!-- scripts select2 :  for more info goto : https://select2.org/ -->
+    <!-- scripts select2 more info at : https://select2.org/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.full.min.js"></script>
 
-    <!-- scripts for toaster -->
+    <!-- scripts for toaster more info at : https://codeseven.github.io/toastr/ -->
     <script src="libs/toastr-2.1.4-7/toastr.js"></script>
-    
     
     <script>
         toastr.options = {
@@ -653,7 +652,7 @@
 
      <!-- custom scripts -->
      <script src="./scripts/inputText_Microinteraction.js"></script>
-     <!--<script src="./scripts/registerInput_validator.js"></script>-->
+     <script src="./scripts/registerInput_validator.js"></script>
      <script src="./scripts/login_register.js"></script>
      <script src="./scripts/select_interaction.js"></script>
 
