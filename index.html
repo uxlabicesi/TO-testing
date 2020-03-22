@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talentos Online</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="libs/toastr-2.1.4-7/build/toastr.css"/>
 </head>
 <body>
     <div class="loader__container">
@@ -50,5 +51,32 @@
     
     <script src="./scripts/inputText_Microinteraction.js"></script>
     <script src="./scripts/login.js"></script>
+
+    <!-- scripts for toaster -->
+        <script src="libs/toastr-2.1.4-7/toastr.js"></script>
+        <script>
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": true,
+                "progressBar": true,
+                "rtl": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": 300,
+                "hideDuration": 1000,
+                "timeOut": 5000,
+                "extendedTimeOut": 1000,
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr.info('Mensaje de información','Titulo Informativo')
+            toastr.warning('Mensaje de advertencia', 'Titulo Advertencia')
+            toastr.success('Mensaje éxito', 'Titulo Éxito')
+            toastr.error('Mensaje error', 'Titulo Error')
+        </script>
 </body>
 </html>

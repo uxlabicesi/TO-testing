@@ -1,3 +1,23 @@
+.selectadd{
+    //position: relative;
+    //appearance: none;
+    //height: 55px;
+    //border: 1px solid $color-gray;
+    //border-radius: 10px;
+    font-size: $typo-button;
+    //background-color: #FFFFFF;     
+    //box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+    transition: all .2s ease-out;
+    //background-image: url('../resources/expandIcon.svg');
+    //background-repeat: no-repeat;
+    //background-position: right .7em top 50%, 0 0;
+    //background-size: 15px;
+    //color: $color-gray;
+    margin: 20px 0;
+    margin-left: 90px;
+    width: 100%;
+}
+
 .select {
     position: relative;
     appearance: none;
@@ -98,12 +118,13 @@
         z-index: 2;
 
         &--register {
-            margin-left: 115px;
-            margin-top: 35px;
+            margin-left: 25px;
+            margin-top: 17px;
+            visibility: hidden;
         }
 
         &--focused {
-            transform: translate(-25px, -225%);
+            transform: translate(0px, -225%);
             font-size: $typo-h4;
             font-weight: $typo-bold;
             color: $color-blue;
@@ -115,8 +136,6 @@
         outline: none;
         border: 1px solid black;
     }
-
-    
 
     & .option {
         appearance: none;
@@ -143,8 +162,11 @@
 }
 
 @media (max-width: $screen-small) {
-    .select {
+    .selectadd{
+        margin-left: 0;
+    }
 
+    .select {
         &__label {
             width: calc(100% - 60px);
         }
