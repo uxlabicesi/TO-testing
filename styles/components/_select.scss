@@ -13,7 +13,8 @@
     background-position: right .7em top 50%, 0 0;
     background-size: 15px;
     color: $color-gray;
-    margin: 20px 0;
+    margin-top: 35px;
+    margin-bottom: 5px; 
     margin-left: 90px;
     width: 100%;
 
@@ -99,7 +100,7 @@
 
         &--register {
             margin-left: 115px;
-            margin-top: 35px;
+            margin-top: 50px;
         }
 
         &--focused {

@@ -49,6 +49,10 @@
         display: flex;
         flex-direction: column;
         margin-top: 35px;
+
+        &--marginless {
+            margin: 0;
+        }
     }
 
     &:focus {

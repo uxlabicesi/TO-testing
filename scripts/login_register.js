@@ -71,4 +71,7 @@ window.addEventListener('load', () => {
         }
     }
 
+    function createRequest() {
+        
+    }
 });
