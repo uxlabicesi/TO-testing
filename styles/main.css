@@ -203,6 +203,15 @@ body {
   color: #B0B0B0;
 }
 
+.selectadd {
+  font-size: 16px;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  margin: 20px 0;
+  margin-left: 90px;
+  width: 100%;
+}
+
 .select {
   position: relative;
   -webkit-appearance: none;
@@ -315,13 +324,14 @@ body {
 }
 
 .select__label--register {
-  margin-left: 115px;
-  margin-top: 50px;
+  margin-left: 25px;
+  margin-top: 17px;
+  visibility: hidden;
 }
 
 .select__label--focused {
-  -webkit-transform: translate(-25px, -225%);
-          transform: translate(-25px, -225%);
+  -webkit-transform: translate(0px, -225%);
+          transform: translate(0px, -225%);
   font-size: 14px;
   font-weight: 700;
   color: #294F75;
@@ -363,6 +373,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .selectadd {
+    margin-left: 0;
+  }
   .select__label {
     width: calc(100% - 60px);
   }
@@ -1054,10 +1067,11 @@ body {
 }
 
 .register__modalContentText {
-  text-align: left;
+  text-align: justify;
   font-size: 14px;
   height: 80%;
   overflow-y: auto;
+  padding-right: 10px;
 }
 
 .help-block {

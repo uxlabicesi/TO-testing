@@ -155,10 +155,11 @@
             }
 
             &Text{
-                text-align: left;
+                text-align: justify;
                 font-size: $typo-h4;
                 height: 80%;
                 overflow-y: auto;
+                padding-right: 10px;
             }
         }
     }

@@ -79,17 +79,17 @@ window.addEventListener('load', () => {
             }
         });
 
-        $('#id_formFirstPart').bootstrapValidator({   
+        //$('#id_formFirstPart').bootstrapValidator({   
     
-            message: 'This value is not valid',
+            //message: 'This value is not valid',
     
-            feedbackIcons: {
+            /*feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
                 invalid: 'glyphicon glyphicon-remove',
                 validating: 'glyphicon glyphicon-refresh'
-            },
+            },*/
     
-            fields: {
+            /*fields: {
                 company: {
                     validators: {
                         notEmpty: {
@@ -127,12 +127,12 @@ window.addEventListener('load', () => {
                         }
                     }
                 },
-            }
+            }*/
             
-        });
+       // });
     });
     
-    var confirmPassword = document.querySelector('.passwordConfirmation');
+   /* var confirmPassword = document.querySelector('.passwordConfirmation');
     var password = document.querySelector('.password');
 
     confirmPassword.addEventListener('input', () => {
@@ -162,7 +162,7 @@ window.addEventListener('load', () => {
             container.classList.add('has-success');
             container.classList.remove('has-error');
         }
-    });
+    });*/
 });
 
 
