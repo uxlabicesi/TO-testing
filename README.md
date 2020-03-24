@@ -104,6 +104,7 @@
 
 Para crear una tarjeta de solicitud se debe utilizar la función createRequest en /scripts/createRequest.js.
 La función recibe un JSON con la siguiente estructura:
+
 {
 
   job: **String** con el nombre del cargo,
@@ -116,7 +117,7 @@ La función recibe un JSON con la siguiente estructura:
   
   days: **String** Días de trabajo, ej: 'Lunes a Viernes',
   
-  payment: Pago con formato, ej: '2\'500.000 COP',
+  payment: **String** Pago con formato, ej: '2\'500.000 COP',
   
   status: **Arreglo** con dos números, el primero indica la etapa del proceso en la que se encuentra la solicitud, es un número entre 0   y 4; y el segundo es 0 o 1, 0 si el usuario aún debe realizar alguna acción y 1 si no debe realizar ninguna acción,
   
