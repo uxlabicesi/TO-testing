@@ -541,7 +541,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 30%;
+  width: 290px;
   min-width: 223px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -624,9 +624,14 @@ body {
   color: #D23A3A;
 }
 
-.request__status--waiting {
+.request__status--green {
   background-color: #79AF3a;
   color: #79AF3a;
+}
+
+.request__status--yellow {
+  background-color: #E6CF00;
+  color: #E6CF00;
 }
 
 .request__status--inactive {

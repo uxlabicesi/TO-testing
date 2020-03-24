@@ -70,8 +70,4 @@ window.addEventListener('load', () => {
             body.style.overflow = "visible";
         }
     }
-
-    function createRequest() {
-        
-    }
 });
