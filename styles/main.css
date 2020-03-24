@@ -26,7 +26,7 @@ body {
   cursor: pointer;
   vertical-align: middle;
   text-decoration: none;
-  background-color: #79AF3a;
+  background-color: #339933;
   color: #FAFAFA;
   border: none;
   text-shadow: 0.5px -0.5px 0px rgba(0, 0, 0, 0.25);
@@ -625,8 +625,8 @@ body {
 }
 
 .request__status--green {
-  background-color: #79AF3a;
-  color: #79AF3a;
+  background-color: #339933;
+  color: #339933;
 }
 
 .request__status--yellow {
@@ -676,7 +676,7 @@ body {
 
 .loader__container {
   position: fixed;
-  background-color: #79AF3a;
+  background-color: #339933;
   width: 100vw;
   height: 100vh;
   z-index: 10;
@@ -1279,7 +1279,7 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #79AF3a;
+  background-color: #339933;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

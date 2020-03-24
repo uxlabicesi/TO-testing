@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
     $(document).ready(function() {
 
-        $('#id_formSecondPart').bootstrapValidator({ 
+        $('#id_validatorForm').bootstrapValidator({ 
             fields: {
                 username: {
                     message: 'The username is not valid',
@@ -55,6 +55,10 @@ window.addEventListener('load', () => {
                             min: 8,
                             message: 'La contraseña debe tener mínimo 8 caracteres'
                         },
+                        regexp: {
+                            regexp: /^(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
+                            message: 'La contraseña debe tener por lo menos 8 caracteres que incluyan una 1 minúscula y 1 mayúscula'
+                        },
                         identical: {
                             field: 'confirmPassword',
                             message: 'Las contraseñas no coinciden'
@@ -70,9 +74,50 @@ window.addEventListener('load', () => {
                             min: 8,
                             message: 'La contraseña debe tener mínimo 8 caracteres'
                         },
+                        regexp: {
+                            regexp: /^(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
+                            message: 'La contraseña debe tener por lo menos 8 caracteres que incluyan una 1 minúscula y 1 mayúscula'
+                        },
                         identical: {
                             field: 'password',
                             message: 'Las contraseñas no coinciden'
+                        }
+                    }
+                },
+                company: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
+                        }
+                    }
+                },
+                nitNumber: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
+                        },
+                        regexp: {
+                            regexp: /^[0-9a-zA-Z]+$/,
+                            message: 'No se debe usar ni . ni -'
+                        },
+                        stringLength: {
+                            min: 9,
+                            max: 9,
+                            message: 'El nit debe contener 9 números'
+                        }
+                    }
+                },
+                sector: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
+                        }
+                    }
+                },
+                city: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
                         }
                     }
                 },
