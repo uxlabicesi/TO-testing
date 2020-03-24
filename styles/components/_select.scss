@@ -18,6 +18,7 @@
     width: 100%;
 }
 
+
 .select {
     position: relative;
     appearance: none;
@@ -119,13 +120,13 @@
         z-index: 2;
 
         &--register {
-            margin-left: 25px;
+            margin-left: 26px;
             margin-top: 17px;
             visibility: hidden;
         }
 
         &--focused {
-            transform: translate(0px, -225%);
+            transform: translate(0px, -150%);
             font-size: $typo-h4;
             font-weight: $typo-bold;
             color: $color-blue;

@@ -38,9 +38,7 @@
             </div>
             <h1 class="banner__title">Encontramos el mejor talento para tu empresa</h1>
         </div>
-
-        <div id="id_validatorForm" action="">
-
+        
         <div class="container register">
             <h1 class="register__title">Registro de Empresa</h1>
             <div class="register__container">
@@ -50,10 +48,10 @@
                 </div>
 
                 <div class="register__form bootstrapSelectForm" id="register__form">
-                    <form id="id_formFirstPart" action="">
-                        <div class="textInput__container form-group textInput__container--marginless">
+                    <form id="id_formFirstPart" class="registerForm" action="">
+                        <div class="textInput__container textInput__container--marginless form-group">
                             <label for="form_companyName" class="label register__label label--register">¿Cómo se llama tu empresa?</label>
-                            <input type="text" class="textInput textInput--register" id="form_companyName" name="company">
+                            <input type="text" class="textInput textInput--register" id="form_companyName" name="company" autocomplete="organization">
                         </div>
 
                         <div class="textInput__container form-group">
@@ -63,25 +61,13 @@
                                 required>
                         </div>
 
-                        <!-- chosen field start -->
-                        <!--<div class="select__container">
-                            <p class="select__label select__label--register">¿A qué sector pertenece?</p>
-                            <div class="select select--register">
-                            <select data-placeholder="Choose a Country..." class="select__value chosen-select" tabindex="2">
-                                <option value=""></option>
-                                <option value="United States">United States</option>
-                            </select>
-                            </div>
-                        </div>-->
-                        <!-- chosen field end -->
-
-                        <div class="separator__vertical" style="margin-top:15px"></div>
+                        <div class="separator__vertical form-group" style="margin-top:15px"></div>
 
                         <!-- start select container using select2 -->
                         <div class="select__container">
-                            <div class="selectadd">
-                                <p class="select__label select__label--register select__label--sector">¿A qué sector
-                                    pertenece?</p>
+                            <div class="selectadd form-group">
+                                <label class="select__label select__label--register select__label--sector">¿A qué sector
+                                    pertenece?</label>
                                 <select class="select2__selector--sector" name="sector" required>
                                      <!-- empty option is requiered for placeholder -->
                                     <option></option>
@@ -96,13 +82,10 @@
                                 </select>
                             </div>
                         </div>
-                        <!-- end select container using select2 -->
-
-                        <!-- start select container using select2 -->
                         <div class="select__container">
-                            <div class="selectadd">
-                                <p class="select__label select__label--register  select__label--city">¿En qué ciudad
-                                    está su oficina principal?</p>
+                            <div class="form-group selectadd">
+                                <label class="select__label select__label--register select__label--city">¿En qué ciudad
+                                    está su oficina principal?</label>
                                 <select class="select2__selector--city" name="city" required>
                                     <!-- empty option is requiered for placeholder -->
                                     <option></option>
@@ -136,8 +119,8 @@
                     
                     <div class="separator__vertical" style="margin-top:15px"></div>
 
-                    <form id="id_formSecondPart"action="">
-                        <div class="textInput__container form-group textInput__container--marginless">
+                    <form id="id_formSecondPart" class="registerForm" action="">
+                        <div class="textInput__container textInput__container--marginless form-group">
                             <label for="form_username" class="label register__label label--register">¿Con quién vamos a conversar?</label>
                             <input type="text" class="textInput textInput--register" id="form_username" name="username" required>
                         </div>
@@ -146,7 +129,7 @@
                             <label for="form_number" class="label register__label label--register">¿A qué número te
                                 podemos llamar?</label>
                             <input type="number" class="textInput textInput--register" id="form_number" name="number"
-                                required>
+                            equired autocomplete="tel">
                         </div>
 
                         <div class="textInput__container form-group">
@@ -172,19 +155,19 @@
                                 autocomplete="new-password" required>
                         </div>
 
-                        <div class="register__checkboxContainer">
+                        <div class="register__checkboxContainer form-group">
                             <input type="checkbox" class="checkboxInput">
                             <p>Acepto los <a class="register__terms" href="#">Términos y Condiciones</a></p>
                         </div>
 
-                        <button class="btn btn--Xlarge btn--inactive register__button">R E G I S T R A R S E</button>
+                        <button class="btn btn--Xlarge btn--inactive register__button form-group" onclick="submitForms()">R E G I S T R A R S E</button>
 
-                        <p class="register__text">¿Ya tienes una cuenta? <a href="./">Ingresa</a></p>
+                        <p class="register__text form-group">¿Ya tienes una cuenta? <a href="./index.html">Ingresa</a></p>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+    
 
         <div class="register__modal">
             <div class="register__modalContent">
@@ -604,13 +587,15 @@
             </div>
         </div>
     </section>
+
+    <!------------------------------------>
+    <!--------- General Scripts ---------->
+    <!------------------------------------>
+
     <!-- scripts for bootstrap validator-->
     <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>-->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
-   
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>-->
-    
 
     <!-- scripts for chosen (needs to be removed)-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>

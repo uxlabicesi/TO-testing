@@ -1,10 +1,10 @@
 window.addEventListener('load', () => {
     $(document).ready(function() {
 
-        $('#id_validatorForm').bootstrapValidator({ 
+        $('.registerForm').bootstrapValidator({ 
             fields: {
                 username: {
-                    message: 'The username is not valid',
+                    //message: 'The username is not valid',
                     validators: {
                         notEmpty: {
                             message: 'Este campo es obligatorio'
@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
                             message: 'Este campo es obligatorio'
                         },
                         emailAddress: {
-                            message: 'El correo electronico no es valido'
+                            message: 'El correo electrónico no es valido'
                         } 
                     }
                 },
@@ -103,9 +103,9 @@ window.addEventListener('load', () => {
                         stringLength: {
                             min: 9,
                             max: 9,
-                            message: 'El nit debe contener 9 números'
+                            message: 'El nit debe contener 9 números y no incluir el dígito de verificación.'
                         }
-                    }
+                    },
                 },
                 sector: {
                     validators: {
@@ -123,58 +123,6 @@ window.addEventListener('load', () => {
                 },
             }
         });
-
-        //$('#id_formFirstPart').bootstrapValidator({   
-    
-            //message: 'This value is not valid',
-    
-            /*feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },*/
-    
-            /*fields: {
-                company: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        }
-                    }
-                },
-                nitNumber: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        },
-                        regexp: {
-                            regexp: /^[0-9a-zA-Z]+$/,
-                            message: 'No se debe usar ni . ni -'
-                        },
-                        stringLength: {
-                            min: 9,
-                            max: 9,
-                            message: 'El nit debe contener 9 números'
-                        }
-                    }
-                },
-                sector: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        }
-                    }
-                },
-                city: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        }
-                    }
-                },
-            }*/
-            
-       // });
     });
     
    /* var confirmPassword = document.querySelector('.passwordConfirmation');
