@@ -1,19 +1,4 @@
 window.addEventListener('load', () => {
-    let information = {
-        job: 'Diseñador UX',
-        time: 7,
-        cities: ['Cali', 'Buenaventura'],
-        length: 'Término fijo a 1 año',
-        days: 'Lunes a Viernes',
-        payment: '2\'500.000 COP',
-        status: [2, 1],
-        draft: false,
-        finished: false
-    };
-
-    createRequest(information);
-
-    console.log(information);
 
     function createRequest(information) {
         let requestsContainer = document.querySelector('.content__requests');
