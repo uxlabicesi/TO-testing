@@ -74,7 +74,7 @@
     <div class="request__status request__status--completed"></div>
     <div class="request__status request__status--completed"></div>
     <div class="request__status request__status--completed"></div>
-    <div class="request__status request__status--waiting"></div>
+    <div class="request__status request__status--green"></div>
     <div class="request__status request__status--inactive"></div>
   </div>
 
@@ -86,7 +86,7 @@
 
 ![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/request.png)
 
-**Clase** .request__status--waiting
+**Clase** .request__status--green
 
 ![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestWaiting.png)
 
@@ -98,5 +98,18 @@
 
 ![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestDraft.png)
 
+Para crear una tarjeta de solicitud se debe utilizar la función createRequest en /scripts/createRequest.js.
+La función recibe un JSON con la siguiente estructura:
+{
+  job: **String** con el nombre del cargo,
+  time: **Número** de días faltantes,
+  cities: **Arreglo** con el nombre de las ciudades,
+  length: **String** Duración del contrato, ej: 'Término fijo a un año',
+  days: **String** Días de trabajo, ej: 'Lunes a Viernes',
+  payment: Pago con formato, ej: '2\'500.000 COP',
+  status: **Arreglo** con dos números, el primero indica la etapa del proceso en la que se encuentra la solicitud, es un número entre 0   y 4; y el segundo es 0 o 1, 0 si el usuario aún debe realizar alguna acción y 1 si no debe realizar ninguna acción,
+  draft: **booleano** indicando si se trata de un borrador, true indica que es borrador.
+  finished: **booleano** indicando si se trata de una solicitud terminada, true indica que la solicitud finalizó  
+}
 
 
