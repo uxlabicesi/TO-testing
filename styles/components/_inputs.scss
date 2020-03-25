@@ -61,7 +61,7 @@
     }
         
     &--search{
-        background-image: url('../resources/searchIcon.svg');
+        background-image: $bgImageSearchIconNavBar;
         background-repeat: no-repeat;
         background-position: 15px center;
         background-size: 19px;
