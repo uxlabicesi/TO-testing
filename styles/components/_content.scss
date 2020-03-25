@@ -61,7 +61,7 @@
         margin-top: -80px;
 
         &Add{
-            background-image: url('/resources/plus_icon.png');
+            background-image: $bgImagePlusIconNavBar;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 25px;
@@ -83,7 +83,7 @@
         background: none;
         border: none;
         color: $color-darkGray;
-        background-image: url('/resources/expandIcon.svg');
+        background-image: url('../resources/expandIcon.svg');
         background-repeat: no-repeat;
         background-position: right 0 top 60%, 0 0;  
         background-size: 15px;
@@ -101,6 +101,7 @@
 
 @media (max-width: $screen-medium) {
     .content {
+        min-width: 342px;
         position: relative;
         top: 0;
         margin: 0;
@@ -111,6 +112,7 @@
 
 @media (max-width: $screen-small) {
    .content{
+       min-width: 342px;
        &__requests{
            display: flex;
            flex-direction: column;

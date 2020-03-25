@@ -165,7 +165,7 @@ body {
 }
 
 .textInput--search {
-  background-image: url("/resources/searchIcon.svg");
+  background-image: url("../resources/searchIcon.svg");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 19px;
@@ -194,7 +194,7 @@ body {
 }
 
 .checkboxInput--search {
-  background-image: url("/resources/search_icon.png");
+  background-image: url("../resources/search_icon.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 25px;
@@ -462,7 +462,7 @@ body {
 }
 
 .content__buttonAdd {
-  background-image: url("/resources/plus_icon.png");
+  background-image: url("../resources/plus_icon.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px;
@@ -487,7 +487,7 @@ body {
   background: none;
   border: none;
   color: #494949;
-  background-image: url("/resources/expandIcon.svg");
+  background-image: url("../resources/expandIcon.svg");
   background-repeat: no-repeat;
   background-position: right 0 top 60%, 0 0;
   background-size: 15px;
@@ -508,6 +508,7 @@ body {
 
 @media (max-width: 769px) {
   .content {
+    min-width: 342px;
     position: relative;
     top: 0;
     margin: 0;
@@ -517,6 +518,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .content {
+    min-width: 342px;
+  }
   .content__requests {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1479,7 +1483,7 @@ input[type=number] {
 }
 
 .mainnav__addRequest {
-  background-image: url("/resources/plus_icon.png");
+  background-image: url("../resources/plus_icon.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 18px;

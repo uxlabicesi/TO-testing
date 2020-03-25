@@ -153,7 +153,7 @@
     }
 
     &__addRequest{
-        background-image: url('/resources/plus_icon.png');
+        background-image: $bgImagePlusIconNavBar;
         background-repeat: no-repeat;
         background-position: 15px center;
         background-size: 18px;
