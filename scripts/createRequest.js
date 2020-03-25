@@ -1,18 +1,68 @@
 window.addEventListener('load', () => {
 
+    let sample = {
+        "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
+        "time": 1,
+        "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
+        "length": "Término fijo a un año",
+        "days": "Lunes a Viernes",
+        "date": "25/03/2020",
+        "payment": "2'500.000 COP",
+        "status": [2, 1],
+        "draft": false,
+        "finished": false
+    }
+
+    let sample2 = {
+        "job": "ANALISTA DE MERCADEO PREGRADO",
+        "time": 0,
+        "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
+        "length": "Término fijo a un año",
+        "days": "Lunes a Viernes",
+        "date": "25/03/2020",
+        "payment": "2'500.000 COP",
+        "status": [4, 0],
+        "draft": false,
+        "finished": false
+    }
+
+    createRequest(sample);
+    createRequest(sample2);
+
+        /**
+     * 
+     * @param { } information 
+     * 
+     * Para crear una tarjeta de solicitud se debe utilizar la función createRequest en /scripts/createRequest.js.
+        La función recibe un JSON con la siguiente estructura:
+        {
+        job: **String** con el nombre del cargo,
+        time: **Número** de días faltantes,
+        cities: **Arreglo** con el nombre de las ciudades,
+        length: **String** Duración del contrato, ej: 'Término fijo a un año',
+        days: **String** Días de trabajo, ej: 'Lunes a Viernes',
+        date: **String** que contiene la fecha en formato DD/MM/YYYY ej. 25/03/2020,
+        payment: **String** Pago con formato, ej: '2\'500.000 COP',
+        status: **Arreglo** con dos números, el primero indica la etapa del proceso en la que se encuentra la solicitud, es un número entre 0   y 4; y el segundo es 0 o 1, 0 si el usuario aún debe realizar alguna acción y 1 si no debe realizar ninguna acción,
+        draft: **booleano** indicando si se trata de un borrador, true indica que es borrador.
+        finished: **booleano** indicando si se trata de una solicitud terminada, true indica que la solicitud finalizó 
+        }
+     */
+
     function createRequest(information) {
         let requestsContainer = document.querySelector('.content__requests');
 
         let jobTitle = information.job;
         let time = information.time;
-        let city;
-        if(information.cities.length > 1) {
+        let city = information.cities;
+        if (city.length > 1) {
             city = 'Varias ciudades';
         } else {
             city = information.cities[0];
         }
         let jobLength = information.length;
         let workDays = information.days;
+        let creationDate = information.date;
         let payment = information.payment;
         let status = information.status;
         let draft = information.draft;
@@ -20,29 +70,39 @@ window.addEventListener('load', () => {
 
         let request = document.createElement('div');
         request.classList.add('request');
-        if(finished) request.classList.add('request--finished');
+        if (finished) request.classList.add('request--finished');
 
         let title = document.createElement('div');
         title.classList.add('request__title');
 
         let requestJobTitle = document.createElement('h2');
         requestJobTitle.classList.add('request__job');
-        if(jobTitle.length < 13) {
+
+        let newJobtittle = jobTitle.toLowerCase();
+        jobTitle = newJobtittle[0].toUpperCase() + newJobtittle.slice(1);
+        if (jobTitle.length < 13) {
             requestJobTitle.innerHTML = jobTitle;
         } else {
-            requestJobTitle.innerHTML = jobTitle.slice(0,12) + '...';
+            requestJobTitle.innerHTML = jobTitle.slice(0, 12) + '...';
         }
-        
-        
+
         let requestTime = document.createElement('p');
         requestTime.classList.add('request__time');
-        if(!draft) {
-            requestTime.innerHTML = 'Faltan ' + time + 'días';
+        if (!draft) {
+            if (time <= 0) {
+                time = 0;
+                requestTime.classList.add('request__time--delayed');
+                requestTime.classList.remove('request__time--ontime');
+            } else {
+                requestTime.classList.remove('request__time--delayed');
+                requestTime.classList.add('request__time--ontime');
+            }
+            requestTime.innerHTML = 'Faltan ' + time + ' días';
         } else {
             requestTime.innerHTML = 'Borrador';
             request.classList.add('request--draft');
         }
-        
+
         title.appendChild(requestJobTitle);
         title.appendChild(requestTime);
         request.appendChild(title);
@@ -59,9 +119,13 @@ window.addEventListener('load', () => {
         let requestDays = document.createElement('p');
         requestDays.innerHTML = workDays;
 
+        let requestDate = document.createElement('p');
+        requestDate.innerHTML = "Solicitado: " + creationDate;
+
         requestInfo.appendChild(requestCity);
         requestInfo.appendChild(requestLength);
         requestInfo.appendChild(requestDays);
+        requestInfo.appendChild(requestDate);
         request.appendChild(requestInfo);
 
         let requestPrice = document.createElement('h4');
@@ -76,24 +140,24 @@ window.addEventListener('load', () => {
         let requestState = document.createElement('p');
         requestState.classList.add('request__state');
 
-        for(let i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
             let statusBar = document.createElement('div');
             statusBar.classList.add('request__status');
-            
-            if(!draft && !finished) {
-                if(i < status[0]) {
-                    statusBar.classList.add('request__status--completed');
-                } else if(i === status[0]) {
 
-                    if(status[1] === 0) {
+            if (!draft && !finished) {
+                if (i < status[0]) {
+                    statusBar.classList.add('request__status--completed');
+                } else if (i === status[0]) {
+
+                    if (status[1] === 0) {
                         statusBar.classList.add('request__status--yellow');
                         requestState.classList.add('request__state--yellow');
                     } else {
                         statusBar.classList.add('request__status--green');
                         requestState.classList.add('request__state--green');
                     }
-                    
-                    switch(status[0]) {
+
+                    switch (status[0]) {
                         case 0:
                             requestState.innerHTML = 'Pendiente de pago';
                             break;
@@ -117,16 +181,16 @@ window.addEventListener('load', () => {
                 } else {
                     statusBar.classList.add('request__status--inactive');
                 }
-            } else if(draft) {
+            } else if (draft) {
                 statusBar.classList.add('request__status--draft');
                 requestState.classList.add('request__state--draft');
                 requestState.innerHTML = 'Borrador';
-            } else if(finished) {
+            } else if (finished) {
                 statusBar.classList.add('request__status--green');
                 requestState.classList.add('request__state--green');
                 requestState.innerHTML = 'Finalizado';
             }
-            
+
             requestStatusBar.appendChild(statusBar);
         }
 

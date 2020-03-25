@@ -10,6 +10,15 @@
     margin: 10px 20px 10px 0;
     padding: 15px 20px;
 
+    &__time{
+        &--ontime{
+            color: $color-blue;
+        }
+        &--delayed{
+            color: $color-red;
+        }
+    }
+
     &__title {
         display: flex;
         width: 100%;
@@ -37,6 +46,11 @@
     }
 
     &__price {
+        color: $color-blue;
+        margin: 0;
+        margin-top: 10px;
+    }
+    &__initialDate {
         color: $color-blue;
         margin: 0;
         margin-top: 10px;
@@ -87,6 +101,10 @@
         }
 
         &--inactive {
+            background-color: $color-gray;
+            color: $color-gray;
+        }
+        &--waiting {
             background-color: $color-gray;
             color: $color-gray;
         }

@@ -168,6 +168,7 @@
         width: 237px;
         margin-bottom: 15px;
         fill: $color-blue;
+        font-weight: $typo-semibold;
 
         & a{
             text-decoration: none;
@@ -176,7 +177,7 @@
             margin-left: 15px;
             font-size: $typo-h4;
             &:active{
-                font-weight: $typo-bold;
+                font-weight: $typo-bolder;
             }
         }
 
@@ -185,7 +186,7 @@
             width: 25px;
         }
         &--active{
-            font-weight: $typo-bold;
+            font-weight: $typo-bolder;
         }
     }
 
@@ -195,6 +196,7 @@
         align-items: center;
         width: 237px;
         margin-bottom: 15px;
+        font-weight: $typo-semibold;
 
         & a{
             text-decoration: none;
@@ -203,7 +205,7 @@
             margin-left: 13px;
             font-size: $typo-h4;
             &:active{
-                font-weight: $typo-bold;
+                font-weight: $typo-bolder;
             }
         }
 
@@ -212,7 +214,7 @@
         }
 
         &--active{
-            font-weight: $typo-bold;
+            font-weight: $typo-bolder;
         }
     }
 
@@ -223,6 +225,7 @@
         align-items: center;
         width: 237px;
         margin-bottom: 15px;
+        font-weight: $typo-semibold;
 
         & a{
             text-decoration: none;
@@ -231,7 +234,7 @@
             margin-left: 13px;
             font-size: $typo-h4;
             &:active{
-                font-weight: $typo-bold;
+                font-weight: $typo-bolder;
             }
         }
 
@@ -247,7 +250,7 @@
         }
 
         &--active{
-            font-weight: $typo-bold;
+            font-weight: $typo-bolder;
         }
     }
 
@@ -257,15 +260,16 @@
         align-items: center;
         width: 237px;
         margin-bottom: 15px;
+        font-weight: $typo-semibold;
 
         & a{
             text-decoration: none;
-           //font-weight: $typo-semibold;
+            //font-weight: $typo-semibold;
             color: $color-blue;
             margin-left: 11px;
             font-size: $typo-h4;
             &:active{
-                font-weight: $typo-bold;
+                font-weight: $typo-bolder;
             }
         }
 
@@ -281,7 +285,7 @@
         }
 
         &--active{
-            font-weight: $typo-bold;
+            font-weight: $typo-bolder;
         }
     }
 
