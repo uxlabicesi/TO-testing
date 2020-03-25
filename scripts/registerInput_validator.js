@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
         $('.registerForm').bootstrapValidator({ 
             fields: {
                 username: {
-                    //message: 'The username is not valid',
+
                     validators: {
                         notEmpty: {
                             message: 'Este campo es obligatorio'
@@ -124,38 +124,6 @@ window.addEventListener('load', () => {
             }
         });
     });
-    
-   /* var confirmPassword = document.querySelector('.passwordConfirmation');
-    var password = document.querySelector('.password');
-
-    confirmPassword.addEventListener('input', () => {
-        const container = confirmPassword.closest('.textInput__container');
-        let errorMessages = container.querySelectorAll('small');
-        errorMessages.forEach((error) => {
-            error.remove();
-        });
-        
-        if(!confirmPassword.value) {
-            container.classList.add('has-error');
-            container.classList.remove('has-success');
-
-            let errorMessage = document.createElement('small');
-            errorMessage.classList.add('help-block');
-            errorMessage.innerHTML = 'Este campo es obligatorio';
-            container.appendChild(errorMessage);
-        } else if(confirmPassword.value.length < 8 || confirmPassword.value != password.value) {
-            container.classList.add('has-error');
-            container.classList.remove('has-success');
-
-            let errorMessage = document.createElement('small');
-            errorMessage.classList.add('help-block');
-            errorMessage.innerHTML = 'Las contraseñas no coinciden';
-            container.appendChild(errorMessage);
-        } else {
-            container.classList.add('has-success');
-            container.classList.remove('has-error');
-        }
-    });*/
 });
 
 

@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
     checkbox.addEventListener('change', checkValid);
 
     function checkValid(event) {
-        console.log('Validate');
+        //console.log('Validate');
 
         textInputs.forEach((textInput) => {
             if(!(isValid && textInput.classList.contains('has-success'))) {
