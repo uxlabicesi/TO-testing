@@ -5,21 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- old links and references, need to be removed on need commit -->
-    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"></link>-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">-->
-    <!--<link rel="stylesheet" href="libs/chosen_v1.8.7/chosen.css">-->
-
     <!-- external styles -->
-    <link href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" rel="stylesheet"></link>
-    <link href="libs/toastr-2.1.4-7/build/toastr.css" rel="stylesheet" />
+    <link href="libs/bootstrapvalidator-0.5.2/dist/css/bootstrapValidator.min.css" rel="stylesheet"></link>
+    <link href="libs/toastr-2.1.4-7/build/toastr.min.css" rel="stylesheet" />
     <link href="libs/select2-4.0.13/src/scss/core.css" rel="stylesheet" />
-
-    <!-- own styles -->
-    <link rel="stylesheet" href="./styles/main.css">
 
     <!-- general scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+     <!-- own styles -->
+     <link rel="stylesheet" href="./styles/main.css">
     
     <title>Talentos Online</title>
 </head>
@@ -70,15 +65,16 @@
                                     pertenece?</label>
                                 <select class="select2__selector--sector" name="sector" required>
                                      <!-- empty option is requiered for placeholder -->
-                                    <option></option>
-                                    <option value="O1">Opción 1</option>
-                                    <option value="O2">Opción 2</option>
-                                    <option value="O3">Opción 3</option>
-                                    <option value="O4">Opción 4</option>
-                                    <option value="O5">Opción 5</option>
-                                    <option value="O6">Opción 6</option>
-                                    <option value="O7">Opción 7</option>
-                                    <option value="O8">Opción 8</option>
+                                     <option></option>
+                                     <option value="O0"></option>
+                                     <option value="O1">Opción 1</option>
+                                     <option value="O2">Opción 2</option>
+                                     <option value="O3">Opción 3</option>
+                                     <option value="O4">Opción 4</option>
+                                     <option value="O5">Opción 5</option>
+                                     <option value="O6">Opción 6</option>
+                                     <option value="O7">Opción 7</option>
+                                     <option value="O8">Opción 8</option>
                                 </select>
                             </div>
                         </div>
@@ -632,10 +628,12 @@
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
         }
-        // toastr.info('Mensaje de información','Titulo Informativo')
-        // toastr.warning('Mensaje de advertencia', 'Titulo Advertencia')
-        // toastr.success('Mensaje éxito', 'Titulo Éxito')
-        // toastr.error('Mensaje error', 'Titulo Error')
+        // Para implememtación modificar y activar los métodos a continuación
+        /*
+         toastr.info('Mensaje de información','Titulo Informativo')
+         toastr.warning('Mensaje de advertencia', 'Titulo Advertencia')
+         toastr.success('Mensaje éxito', 'Titulo Éxito')
+         toastr.error('Mensaje error', 'Titulo Error')*/
     </script>
 
      <!-- custom scripts -->
