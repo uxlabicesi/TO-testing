@@ -462,7 +462,7 @@ body {
 }
 
 .content__buttonAdd {
-  background-image: url(/resources/plus_icon.png);
+  background-image: url("/resources/plus_icon.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px;
