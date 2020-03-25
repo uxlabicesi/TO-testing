@@ -194,7 +194,7 @@ body {
 }
 
 .checkboxInput--search {
-  background-image: url("../resources/search_icon.png");
+  background-image: url("../resources/searchIcon.svg");
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 25px;
