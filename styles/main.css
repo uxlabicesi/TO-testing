@@ -1509,15 +1509,22 @@ input[type=number] {
 
 .mainnav__notification a {
   text-decoration: none;
-  font-weight: 600;
   color: #294F75;
   margin-left: 15px;
   font-size: 14px;
 }
 
+.mainnav__notification a:active {
+  font-weight: 700;
+}
+
 .mainnav__notification img {
   margin-left: 12px;
   width: 25px;
+}
+
+.mainnav__notification--active {
+  font-weight: 700;
 }
 
 .mainnav__requests {
@@ -1537,14 +1544,21 @@ input[type=number] {
 
 .mainnav__requests a {
   text-decoration: none;
-  font-weight: 600;
   color: #294F75;
   margin-left: 13px;
   font-size: 14px;
 }
 
+.mainnav__requests a:active {
+  font-weight: 700;
+}
+
 .mainnav__requests img {
   margin-left: 10px;
+}
+
+.mainnav__requests--active {
+  font-weight: 700;
 }
 
 .mainnav__drafts {
@@ -1564,10 +1578,13 @@ input[type=number] {
 
 .mainnav__drafts a {
   text-decoration: none;
-  font-weight: 600;
   color: #294F75;
   margin-left: 13px;
   font-size: 14px;
+}
+
+.mainnav__drafts a:active {
+  font-weight: 700;
 }
 
 .mainnav__drafts img {
@@ -1579,6 +1596,10 @@ input[type=number] {
   color: #294F75;
   margin-left: 5px;
   font-weight: 600;
+}
+
+.mainnav__drafts--active {
+  font-weight: 700;
 }
 
 .mainnav__completed {
@@ -1598,10 +1619,13 @@ input[type=number] {
 
 .mainnav__completed a {
   text-decoration: none;
-  font-weight: 600;
   color: #294F75;
   margin-left: 11px;
   font-size: 14px;
+}
+
+.mainnav__completed a:active {
+  font-weight: 700;
 }
 
 .mainnav__completed img {
@@ -1613,6 +1637,10 @@ input[type=number] {
   color: #294F75;
   margin-left: 5px;
   font-weight: 600;
+}
+
+.mainnav__completed--active {
+  font-weight: 700;
 }
 
 .mainnav__footer {
