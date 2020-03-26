@@ -26,8 +26,10 @@ window.addEventListener('load', () => {
         "finished": false
     }
 
-    createRequest(sample);
-    createRequest(sample2);
+    for(let i = 0 ; i < 100 ; i++){
+        createRequest(sample);
+        createRequest(sample2);
+    }
 
         /**
      * 
