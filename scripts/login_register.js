@@ -1,4 +1,10 @@
 window.addEventListener('load', () => {
+
+    /*
+        Checks if all inputs on the register form have value, and if the terms and conditions checkbox
+        has been checked, when these conditions are met, adds the class "btn--active" and removes
+        the class "btn--inactive" from the register button
+     */
     const registerBtn = document.querySelector('.register__button');
     const textInputs = document.querySelectorAll('.textInput__container');
     const selectList = document.querySelectorAll('.select__value');
@@ -14,7 +20,6 @@ window.addEventListener('load', () => {
     checkbox.addEventListener('change', checkValid);
 
     function checkValid(event) {
-        //console.log('Validate');
 
         textInputs.forEach((textInput) => {
             if(!(isValid && textInput.classList.contains('has-success'))) {
@@ -41,6 +46,9 @@ window.addEventListener('load', () => {
         isValid = true;
     }
 
+    /*
+        Opens and closes the terms and conditions modal by changing its style
+     */
     var modal = document.querySelector('.register__modal');
     var terms = document.querySelector('.register__terms');
     var close = document.querySelector('.register__modalContentClose');

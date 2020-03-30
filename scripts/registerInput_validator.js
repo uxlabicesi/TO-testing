@@ -1,3 +1,7 @@
+/*
+    Validates the register form using BootstrapValidator. 
+ */
+
 window.addEventListener('load', () => {
     $(document).ready(function() {
 

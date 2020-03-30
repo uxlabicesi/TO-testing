@@ -1,3 +1,8 @@
+/*
+    This script has the function of show or hide the navigation menu by adding or removing the
+    "mainnav--active" class from the navigation when the user clicks or taps on the burger menu
+    icon on the small screen version of the dashboard
+ */
 function handleLoad() {
 
     let menuButton = document.querySelector('.mainheader__menu');
