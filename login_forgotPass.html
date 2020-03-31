@@ -24,32 +24,26 @@
             <h1 class="banner__title">Encontramos el mejor talento para tu empresa</h1>
 
     </div>
+
+    <div class="forgotPassword">
+            
+        <h1 class="forgotPassword__title">Olvidaste tu contraseña</h1>
+        <h3 class="forgotPassword__explanation">Ingresa tu dirección de correo electrónico que usaste para registrarte. Te enviaremos un mensaje con tu nombre de usuario y un enlace para restablecer tu contraseña.</h3>
         
-        <div class="login">
+        <form action="#" class="forgotPassword__form">
+
+            <div class="textInput__container textInput__container--marginless">
+                <label for="form_email" class="label forgotPassword__label label--login">Correo electrónico</label>
+                <input class="textInput forgotPassword__email" type="email" name="" id="form_email" autocomplete="current-email">
+            </div>
             
-            <h1 class="login__title">Iniciar sesión</h1>
-            <h3 class="login__explanation">Bienvenido, por favor digita tus datos a continuación para ingresar.</h3>
-            
-            <form action="#" class="login__form">
-                <div class="textInput__container textInput__container--marginless">
-                    <label for="form_id" class="label login__label label--login">Usuario</label>
-                    <input id="form_id" class="textInput login__id" type="text" name="" autocomplete="username">
-                </div>
-                
-                <div class="textInput__container textInput__container--marginless">
-                    <label for="form_password" class="label login__label label--login">Contraseña</label>
-                    <input class="textInput login__pass" type="password" name="" id="form_password" autocomplete="current-password">
-                </div>
-                
-                <button class="btn btn--large">Iniciar sesión</button>
-            </form>
-            <div class="login__border"></div>
-            <h3 class="login__account"><a href="./login_register.html">¿Aún no tienes cuenta? Regístrate</a></h3>
-            <button class="btn btn--large btn--blue">Registrarse</button>
-            
-        </div>
+            <button class="btn btn--large">Enviar</button>
+        </form>
+
+        <h3 class="forgotPassword__cancel"><a href="./index.html">Cancelar</a></h3>
+        
     </div>
-    
+
     <script src="./scripts/inputText_Microinteraction.js"></script>
     <script src="./scripts/login.js"></script>
 

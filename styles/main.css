@@ -1952,6 +1952,76 @@ input[type=number] {
   font-weight: 600;
 }
 
+.forgotPassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 60px 50px;
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+
+.forgotPassword__title {
+  font-family: "Open Sans";
+  font-size: 36px;
+  font-weight: 700;
+  color: #294F75;
+  margin-top: 0;
+}
+
+.forgotPassword__explanation {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  width: 450px;
+  text-align: center;
+  color: #294F75;
+}
+
+.forgotPassword__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 150px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.forgotPassword__label {
+  top: 16px;
+  width: 100%;
+}
+
+.forgotPassword__cancel {
+  font-weight: 400;
+  font-size: 16px;
+  color: #294F75;
+  margin-top: 0px;
+}
+
+.forgotPassword__cancel a {
+  font-weight: 400;
+  font-size: 16px;
+  color: #294F75;
+  text-decoration: none;
+}
+
 * {
   font-family: 'Open Sans';
   -webkit-box-sizing: border-box;
