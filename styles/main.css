@@ -545,7 +545,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 290px;
+  width: 305px;
   min-width: 223px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -556,6 +556,14 @@ body {
   background-color: white;
   margin: 10px 20px 10px 0;
   padding: 15px 20px;
+}
+
+.request--gray .request__title h2 {
+  color: #494949;
+}
+
+.request--gray .request__information p, .request--gray .request__price, .request--gray .request__state {
+  color: #C4C4C4;
 }
 
 .request__time--ontime {

@@ -1,7 +1,7 @@
 .request {
     display: flex;
     flex-direction: column;
-    width: 290px;
+    width: 305px;
     min-width: 223px;
     height: fit-content;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -9,6 +9,18 @@
     background-color: white;
     margin: 10px 20px 10px 0;
     padding: 15px 20px;
+
+    &--gray {
+        & .request__title {
+            & h2 {
+                color: $color-darkGray;
+            }
+        }
+        
+        & .request__information p, .request__price, .request__state {
+            color: $color-gray;
+        }
+    }
 
     &__time{
         &--ontime{

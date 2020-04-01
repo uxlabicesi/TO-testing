@@ -14,19 +14,19 @@ window.addEventListener('load', () => {
     }
 
     let sample2 = {
-        "job": "ANALISTA DE MERCADEO PREGRADO",
+        "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
         "time": 0,
         "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
         "length": "Término fijo a un año",
         "days": "Lunes a Viernes",
         "date": "25/03/2020",
         "payment": "2'500.000 COP",
-        "status": [4, 0],
+        "status": [2, 1],
         "draft": false,
         "finished": false
     }
 
-    for(let i = 0 ; i < 100 ; i++){
+    for(let i = 0 ; i < 10 ; i++){
         createRequest(sample);
         createRequest(sample2);
     }
@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
 
         let request = document.createElement('div');
         request.classList.add('request');
-        if (finished) request.classList.add('request--finished');
+        if (finished || draft) request.classList.add('request--gray');
 
         let title = document.createElement('div');
         title.classList.add('request__title');
