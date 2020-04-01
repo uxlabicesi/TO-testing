@@ -913,6 +913,7 @@ body {
   background-position: 15px center;
   background-size: 25px;
   padding-left: 50px;
+  margin-bottom: 15px;
 }
 
 .login__label {
