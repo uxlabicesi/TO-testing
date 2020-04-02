@@ -117,13 +117,27 @@
            display: flex;
            flex-direction: column;
            align-content: center;
+           flex-wrap: nowrap;
+           align-items: center;
        }
 
        &__title{
            margin-right: 30px;
        }
-   }
-
-
-
+    }
 }
+
+@media (max-width: $screen-medium) {
+    .content{
+        &__requests{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
+}
+
+
+
