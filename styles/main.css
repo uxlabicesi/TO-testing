@@ -994,9 +994,7 @@ body {
 }
 
 .candidate {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1086,6 +1084,61 @@ body {
   background-size: 20px;
   background-position: 0% 50%;
   padding-left: 30px;
+}
+
+.noCandidate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.noCandidate__img {
+  width: 140px;
+  height: auto;
+}
+
+.noCandidate__title {
+  width: 260px;
+  text-align: center;
+  color: #294F75;
+  margin: 5px;
+  font-size: 22px;
+}
+
+.noCandidate__info {
+  width: 250px;
+  text-align: center;
+  color: #494949;
+}
+
+.noCandidate__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 450px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.noCandidate__options p {
+  margin: 0px;
+  color: #494949;
+}
+
+.noCandidate__options a {
+  color: #294F75;
 }
 
 .mainBanner {
