@@ -92,6 +92,19 @@ body {
   background-color: #C4C4C4;
 }
 
+.btn--noFill {
+  width: 152px;
+  height: 54px;
+  border: 1px solid #294F75;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  background: none;
+  color: #294F75;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .label {
   position: absolute;
   -webkit-transition: all .2s ease-out;
@@ -1021,6 +1034,101 @@ body {
 
 .status--inactive svg path {
   fill: #C4C4C4;
+}
+
+.candidate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.candidate__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.candidate__profileImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin-right: 15px;
+}
+
+.candidate__profileTitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.candidate__profileTitlesName {
+  color: #294F75;
+  margin: 0px;
+  font-size: 30px;
+}
+
+.candidate__profileTitlesJob {
+  margin: 0px;
+  font-size: 16px;
+  color: #494949;
+}
+
+.candidate__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.candidate__infoCel {
+  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  color: #494949;
+  background-image: url("../resources/cellphoneIcon.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 20px;
+  background-position: 0% 50%;
+  padding-left: 30px;
+}
+
+.candidate__infoEmail {
+  margin: 0px;
+  color: #494949;
+  font-size: 16px;
+  background-image: url("../resources/emailIcon.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 20px;
+  background-position: 0% 50%;
+  padding-left: 30px;
 }
 
 .mainBanner {

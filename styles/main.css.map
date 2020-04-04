@@ -11,6 +11,7 @@
         "components/_request.scss",
         "components/_loader.scss",
         "components/_reqDetails.scss",
+        "components/_candidate.scss",
         "pages/_login_main.scss",
         "pages/_login_register.scss",
         "pages/_cultural_analysis.scss",
