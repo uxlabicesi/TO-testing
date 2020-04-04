@@ -21,6 +21,7 @@
         font-weight: $typo-semibold;
         font-size: $typo-subtitle;
         margin: 0;
+        margin-right: 10px;
     }
 
     &__flexContainer {
@@ -30,7 +31,8 @@
         width: 100%;
 
         &--small {
-            width: 300px;
+            max-width: 450px;
+            justify-content: flex-start;
         }
     }
 

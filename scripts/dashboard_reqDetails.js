@@ -1,4 +1,12 @@
+/*
+    This scripts has the purpose of showing/hiding the status list and changing between displaying the 
+    request information or the candidates for that request. Both tasks are achieved through adding/removing
+    classes to the elements affected.    
+ */
+
 function handleLoad() {
+
+    // Show/Hide the status list
     const status = document.querySelector('.status');
     const statusList = document.querySelector('.status__list');
 
@@ -11,6 +19,7 @@ function handleLoad() {
         statusList.classList.remove('status__list--active');
     });
 
+    // Changing between displaying the request's information and request's candidates
     const candidateBtn = document.querySelector('.reqDetails__candidate');
     const requestBtn = document.querySelector('.reqDetails__request');
     const candidatesContainer = document.querySelector('.reqDetails__candidates');

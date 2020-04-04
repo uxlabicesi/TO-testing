@@ -807,6 +807,7 @@ body {
   font-weight: 600;
   font-size: 30px;
   margin: 0;
+  margin-right: 10px;
 }
 
 .reqDetails__flexContainer {
@@ -823,7 +824,10 @@ body {
 }
 
 .reqDetails__flexContainer--small {
-  width: 300px;
+  max-width: 450px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .reqDetails__remainingTime {
@@ -1059,7 +1063,9 @@ body {
 }
 
 .candidate {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
