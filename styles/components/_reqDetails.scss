@@ -135,6 +135,25 @@
             }
         }        
     }
+
+    &__candidates {
+        opacity: 0;
+        position: absolute;
+        transition: all .2s ease-out;
+    }
+
+    &__details {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        transition: all .2s ease-out;
+    }
+
+    &__content--active {
+        position: relative;
+        opacity: 1;
+        display: block;
+    }
 }
 
 .status {
@@ -168,6 +187,7 @@
         transition: all .2s ease-out;
         transform: translateX(30%);
         opacity: 0;
+        pointer-events: none;
 
         &--active {
             transform: translateX(0);
