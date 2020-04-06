@@ -1282,6 +1282,166 @@ body {
   color: #294F75;
 }
 
+.canDetails {
+  margin-right: 20px;
+}
+
+.canDetails__content {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.canDetails__contentHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.canDetails__contentHeaderImg {
+  width: 65px;
+  height: 65px;
+  border-radius: 40px;
+  margin-left: 10px;
+}
+
+.canDetails__contentHeaderTitles {
+  margin-left: 15px;
+}
+
+.canDetails__contentHeaderTitlesTitle {
+  font-size: 30px;
+  margin: 0px;
+  color: #294F75;
+}
+
+.canDetails__contentHeaderTitlesJob {
+  font-size: 16px;
+  margin: 0px;
+  color: #494949;
+  font-weight: 400;
+}
+
+.canDetails__contentHeaderTitlesJobStrong {
+  font-weight: 700;
+}
+
+.canDetails__contentSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 0;
+}
+
+.canDetails__contentSection--first {
+  padding-top: 0;
+}
+
+.canDetails__contentSection--dark {
+  background: rgba(41, 79, 117, 0.05);
+}
+
+.canDetails__contentSection h3 {
+  color: #294F75;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: end;
+  -webkit-box-flex: 1.3;
+      -ms-flex: 1.3;
+          flex: 1.3;
+}
+
+.canDetails__contentSectionReferences {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  color: #494949;
+  list-style-position: inside;
+  padding-left: 40px;
+}
+
+.canDetails__contentSectionReferences h4 {
+  margin: 16px 0px;
+  color: #494949;
+}
+
+.canDetails__infoSection {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  color: #494949;
+  list-style-position: inside;
+}
+
+.canDetails__infoSection li {
+  margin-bottom: 15px;
+}
+
+.canDetails__infoSection--bullet li {
+  list-style: none;
+}
+
+.canDetails__infoSection--bullet li::before {
+  content: '•';
+  font-size: 12px;
+  padding-right: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.canDetails__details {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  margin-top: 20px;
+}
+
+.canDetails__content--active {
+  position: relative;
+  opacity: 1;
+  display: block;
+}
+
+.canDetails__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: 1px solid #C4C4C4;
+}
+
+.canDetails__buttonsGroup {
+  margin-top: 20px;
+}
+
 .mainBanner {
   display: -webkit-box;
   display: -ms-flexbox;

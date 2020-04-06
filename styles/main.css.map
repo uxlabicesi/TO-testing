@@ -13,6 +13,7 @@
         "components/_reqDetails.scss",
         "components/_candidate.scss",
         "components/_noCandidates.scss",
+        "components/_candidateDetails.scss",
         "pages/_login_main.scss",
         "pages/_login_register.scss",
         "pages/_cultural_analysis.scss",
