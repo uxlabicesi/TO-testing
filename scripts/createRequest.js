@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-    let sample = {
+    /*let sample = {
         "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
         "time": 1,
         "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
     for(let i = 0 ; i < 10 ; i++){
         createRequest(sample);
         createRequest(sample2);
-    }
+    }*/
 
         /**
      * 
@@ -51,8 +51,8 @@ window.addEventListener('load', () => {
         }
      */
 
-    function createRequest(information) {
-        let requestsContainer = document.querySelector('.content__requests');
+    function createRequest(information, root='.content__requests') {
+        let requestsContainer = document.querySelector(root);
 
         let jobTitle = information.job;
         let time = information.time;
