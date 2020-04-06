@@ -1,3 +1,7 @@
+
+// empty function will be updated after window load.
+let createRequest = (information, root='.content__requests') => {};
+
 window.addEventListener('load', () => {
 
     /*let sample = {
@@ -25,13 +29,7 @@ window.addEventListener('load', () => {
         "draft": false,
         "finished": false
     }
-
-    for(let i = 0 ; i < 10 ; i++){
-        createRequest(sample);
-        createRequest(sample2);
-    }*/
-
-        /**
+    /**
      * 
      * @param { } information 
      * 
@@ -51,7 +49,7 @@ window.addEventListener('load', () => {
         }
      */
 
-    function createRequest(information, root='.content__requests') {
+    createRequest = (information, root='.content__requests') => {
         let requestsContainer = document.querySelector(root);
 
         let jobTitle = information.job;
