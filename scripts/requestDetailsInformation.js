@@ -185,6 +185,9 @@ function handleLoad() {
                 let btn = document.createElement('button');
                 btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
                 btn.innerHTML = 'Ver detalles';
+                btn.addEventListener('click', () => {
+                    window.location.href = './dashboard_candidateDetails.html';
+                });
                 candidate.appendChild(btn);
 
                 candidates.appendChild(candidate);

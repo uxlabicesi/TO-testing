@@ -249,3 +249,38 @@
         }
     }
 }
+
+@media (max-width: $screen-large) {
+    .reqDetails {
+
+
+        &__flexContainer {
+
+            &--small {
+                flex-direction: column;
+                width: fit-content;
+
+                & h1 {
+                    position: relative;
+                    left: -10px;
+                }
+            }
+        }
+
+        &__contentSection {
+            flex-direction: column;
+            padding: 20px;
+
+             & h3 {
+                 text-align: start;
+             }
+        }
+    }
+
+    .status {
+
+        &__list {
+            right: -70px;
+        }
+    }
+}

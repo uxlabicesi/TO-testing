@@ -24,6 +24,7 @@ function handleLoad() {
     const requestBtn = document.querySelector('.reqDetails__request');
     const candidatesContainer = document.querySelector('.reqDetails__candidates');
     const requestContainer = document.querySelector('.reqDetails__details');
+    const detailsBtn = document.querySelectorAll('.candidate__btn');
 
     candidateBtn.addEventListener('click', () => {
         candidateBtn.classList.add('reqDetails__contentCategory--active');

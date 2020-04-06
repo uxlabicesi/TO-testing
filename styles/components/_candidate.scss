@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: 15px;
     border-bottom: 1px solid $color-gray;
+    font-size: 1.1vw;
 
     &__profile{
         display: flex;
@@ -12,8 +13,8 @@
         align-items: center;
     
         &Img{
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 40px;
             margin-right: 15px;
         }
@@ -25,13 +26,13 @@
             &Name{
                 color: $color-blue;
                 margin: 0px;
-                font-size: $typo-subtitle;
+                font-size: 2em;
                 font-weight: $typo-semibold;
             }
     
             &Job{
                 margin: 0px;
-                font-size: $typo-h3;
+                font-size: 1em;
                 color: $color-darkGray;
             }
         }
@@ -42,9 +43,10 @@
     &__info{
         display: flex;
         flex-direction: column;
+        margin: 0 10px;
 
         &Cel{
-            font-size: $typo-h3;
+            font-size: 1em;
             margin-top: 0px;
             margin-bottom: 2px;
             color: $color-darkGray;
@@ -59,7 +61,7 @@
         &Email{
             margin: 0px;
             color: $color-darkGray;
-            font-size: $typo-h3;
+            font-size: 1em;
             background-image: url('../resources/emailIcon.svg');;
             background-repeat: no-repeat;
             background-position: left;
@@ -69,4 +71,48 @@
         }
     }
 
+    &__btn {
+        width: 22%;
+    }
+
+}
+
+@media (max-width: $screen-large) {
+    .candidate {    
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__btn {
+            display: none;
+        }
+    
+        &__profile {
+            margin-top: 15px;
+
+            &Img {
+                width: 40px;
+                height: 40px;
+            }
+    
+            &Titles {
+                &Name {
+                    font-size: $typo-h3;
+                }
+    
+                &Job {
+                    font-size: $typo-xSmall;
+                }
+            }
+        }
+
+        &__info {
+            margin: 15px 55px;
+
+            & h2, h3 {
+                font-size: $typo-xSmall;
+            }
+        }
+    }
+
+    
 }

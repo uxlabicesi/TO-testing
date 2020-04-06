@@ -1062,6 +1062,35 @@ body {
   fill: #C4C4C4;
 }
 
+@media (max-width: 992px) {
+  .reqDetails__flexContainer--small {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .reqDetails__flexContainer--small h1 {
+    position: relative;
+    left: -10px;
+  }
+  .reqDetails__contentSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .reqDetails__contentSection h3 {
+    text-align: start;
+  }
+  .status__list {
+    right: -70px;
+  }
+}
+
 .candidate {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1078,6 +1107,7 @@ body {
           justify-content: space-between;
   padding: 15px;
   border-bottom: 1px solid #C4C4C4;
+  font-size: 1.1vw;
 }
 
 .candidate__profile {
@@ -1094,8 +1124,8 @@ body {
 }
 
 .candidate__profileImg {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 40px;
   margin-right: 15px;
 }
@@ -1113,13 +1143,13 @@ body {
 .candidate__profileTitlesName {
   color: #294F75;
   margin: 0px;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 600;
 }
 
 .candidate__profileTitlesJob {
   margin: 0px;
-  font-size: 16px;
+  font-size: 1em;
   color: #494949;
 }
 
@@ -1131,10 +1161,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 10px;
 }
 
 .candidate__infoCel {
-  font-size: 16px;
+  font-size: 1em;
   margin-top: 0px;
   margin-bottom: 2px;
   color: #494949;
@@ -1149,13 +1180,51 @@ body {
 .candidate__infoEmail {
   margin: 0px;
   color: #494949;
-  font-size: 16px;
+  font-size: 1em;
   background-image: url("../resources/emailIcon.svg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: 20px;
   background-position: 0% 50%;
   padding-left: 30px;
+}
+
+.candidate__btn {
+  width: 22%;
+}
+
+@media (max-width: 992px) {
+  .candidate {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .candidate__btn {
+    display: none;
+  }
+  .candidate__profile {
+    margin-top: 15px;
+  }
+  .candidate__profileImg {
+    width: 40px;
+    height: 40px;
+  }
+  .candidate__profileTitlesName {
+    font-size: 16px;
+  }
+  .candidate__profileTitlesJob {
+    font-size: 12px;
+  }
+  .candidate__info {
+    margin: 15px 55px;
+  }
+  .candidate__info h2, .candidate__info h3 {
+    font-size: 12px;
+  }
 }
 
 .noCandidate {
