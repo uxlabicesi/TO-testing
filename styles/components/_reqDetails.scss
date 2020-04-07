@@ -284,3 +284,21 @@
         }
     }
 }
+
+@media (max-width: $screen-small) {
+    .reqDetails__infoSection{
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: $screen-medium) {
+    .reqDetails__infoSection{
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: $screen-large) {
+    .reqDetails__infoSection{
+        padding-left: 0px;
+    }
+}
