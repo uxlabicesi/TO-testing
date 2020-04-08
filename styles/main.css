@@ -1095,6 +1095,9 @@ body {
   .reqDetails__infoSection {
     padding-left: 0px;
   }
+  .reqDetails {
+    margin-right: 0px;
+  }
 }
 
 @media (max-width: 769px) {
