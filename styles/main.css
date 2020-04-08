@@ -1091,6 +1091,24 @@ body {
   }
 }
 
+@media (max-width: 576px) {
+  .reqDetails__infoSection {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 769px) {
+  .reqDetails__infoSection {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .reqDetails__infoSection {
+    padding-left: 0px;
+  }
+}
+
 .candidate {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1143,7 +1161,7 @@ body {
 .candidate__profileTitlesName {
   color: #294F75;
   margin: 0px;
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 600;
 }
 
@@ -1166,6 +1184,7 @@ body {
 
 .candidate__infoCel {
   font-size: 1em;
+  font-weight: 400;
   margin-top: 0px;
   margin-bottom: 2px;
   color: #494949;
@@ -1181,6 +1200,7 @@ body {
   margin: 0px;
   color: #494949;
   font-size: 1em;
+  font-weight: 400;
   background-image: url("../resources/emailIcon.svg");
   background-repeat: no-repeat;
   background-position: left;
