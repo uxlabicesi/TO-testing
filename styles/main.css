@@ -946,6 +946,7 @@ body {
 }
 
 .reqDetails__candidates {
+  display: none;
   opacity: 0;
   position: absolute;
   -webkit-transition: all .2s ease-out;
@@ -1006,6 +1007,7 @@ body {
           transform: translateX(30%);
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 
 .status__list--active {
