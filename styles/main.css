@@ -1391,22 +1391,25 @@ body {
           flex: 3;
   color: #494949;
   list-style-position: inside;
+  list-style: none;
 }
 
 .canDetails__infoSection li {
   margin-bottom: 15px;
 }
 
-.canDetails__infoSection--bullet li {
-  list-style: none;
+.canDetails__infoSection--references li {
+  margin-bottom: 20px;
 }
 
-.canDetails__infoSection--bullet li::before {
-  content: '•';
-  font-size: 12px;
-  padding-right: 5px;
-  position: relative;
-  top: -1px;
+.canDetails__infoSection--references li h4 {
+  margin-top: 0;
+  margin-bottom: 0.7em;
+}
+
+.canDetails__infoSection--references li p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 .canDetails__details {
@@ -1424,7 +1427,11 @@ body {
   display: block;
 }
 
-.canDetails__buttons {
+.canDetails__buttonsGroup {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: #FAFAFA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1436,10 +1443,60 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-top: 1px solid #C4C4C4;
+  padding: 20px;
 }
 
-.canDetails__buttonsGroup {
-  margin-top: 20px;
+.canDetails__buttonsGroup .btn {
+  margin: 0 10px;
+}
+
+@media (max-width: 992px) {
+  .canDetails__infoSection {
+    padding-left: 0;
+  }
+  .canDetails__flexContainer--small {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .canDetails__flexContainer--small h1 {
+    position: relative;
+    left: -10px;
+  }
+  .canDetails__contentSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
+  .canDetails__contentSection h3 {
+    text-align: start;
+  }
+}
+
+@media (max-width: 769px) {
+  .canDetails__buttonsGroup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .canDetails__buttonsGroup .btn {
+    width: 100%;
+    max-width: 470px;
+    margin: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .mainBanner {

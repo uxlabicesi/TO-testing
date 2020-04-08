@@ -80,7 +80,7 @@
         </section>
         
         <div class="content reqDetails">
-            <a href="./dashboard_requests.html" class="reqDetails__back">ATRÁS</a>
+            <a href="./dashboard_requestDetails.html" class="reqDetails__back">ATRÁS</a>
             
             <div class="reqDetails__flexContainer">
                 <div class="reqDetails__flexContainer reqDetails__flexContainer--small">
@@ -151,7 +151,7 @@
                     <img src="/resources/imgPerfil.jpg" class="canDetails__contentHeaderImg" alt="">
                     <div class="canDetails__contentHeaderTitles">
                         <h2 class="canDetails__contentHeaderTitlesTitle">Fabio Arias</h2>
-                        <h3 class="canDetails__contentHeaderTitlesJob"> <strong class="canDetails__contentHeaderJobStrong">Diseñador de Medios Interactivos</strong> [Candidato / Ezenza]</h3>
+                        <h3 class="canDetails__contentHeaderTitlesJob"> <strong class="canDetails__contentHeaderJobStrong">Diseñador de Medios Interactivos</strong> [Candidato / <span class="origin">Ezenza</span>]</h3>
                     </div>
                 </div>
 
@@ -159,7 +159,7 @@
                     <div class="canDetails__contentSection canDetails__contentSection--dark">
                         <h3>DATOS PERSONALES</h3>
     
-                        <ul class="canDetails__infoSection canDetails__infoSection--bullet">
+                        <ul class="canDetails__infoSection">
                             <li><strong>Identificación:</strong> <span class="id"></span></li>
                             <li><strong>Teléfono:</strong> <span class="tel"></span></li>
                             <li><strong>Edad:</strong> <span class="age"></span></li>
@@ -170,9 +170,9 @@
                     <div class="canDetails__contentSection">
                         <h3>EXPERIENCIA LABORAL</h3>
     
-                        <ol class="canDetails__infoSection canDetails__infoSection--functions">
+                        <ul class="canDetails__infoSection canDetails__infoSection--exp">
 
-                        </ol>
+                        </ul>
     
                     </div>
     
@@ -194,12 +194,9 @@
     
                     <div class="canDetails__contentSection canDetails__contentSection--dark">
                         <h3>REFERENCIAS PERSONALES</h3>
-                        <div class="canDetails__contentSectionReferences">
-                            <h4>Referencia Personal 1</h4>
-                            <ol class="canDetails__infoSection canDetails__infoSection--references">
-    
-                            </ol>
-                        </div>
+                        <ol class="canDetails__infoSection canDetails__infoSection--references">
+
+                        </ol>
                     </div>
 
                     <div class="canDetails__contentSection">
@@ -207,11 +204,9 @@
                         <img class="canDetails__infoSection canDetails__infoSection--culture"></img>
                     </div>
 
-                    <div class="canDetails__buttons">
-                        <div class="canDetails__buttonsGroup">
-                            <button class="btn btn--medium">Seleccionar candidato</button>
-                            <button class="btn btn--medium btn--blue">Ver informe</button>
-                        </div>
+                    <div class="canDetails__buttonsGroup">
+                        <button class="btn btn--medium">Seleccionar candidato</button>
+                        <button class="btn btn--medium btn--blue">Ver informe</button>
                     </div>
 
                 </div>
@@ -222,6 +217,6 @@
     
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/dashboard_reqDetails.js"></script>
-    <!-- <script src="./scripts/requestDetailsInformation.js"></script> -->
+    <script src="./scripts/candidateDetailsInformation.js"></script>
 </body>
 </html>

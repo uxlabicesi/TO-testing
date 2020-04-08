@@ -26,19 +26,23 @@ function handleLoad() {
     const requestContainer = document.querySelector('.reqDetails__details');
     const detailsBtn = document.querySelectorAll('.candidate__btn');
 
-    candidateBtn.addEventListener('click', () => {
-        candidateBtn.classList.add('reqDetails__contentCategory--active');
-        requestBtn.classList.remove('reqDetails__contentCategory--active');
-        candidatesContainer.classList.add('reqDetails__content--active');
-        requestContainer.classList.remove('reqDetails__content--active');
-    });
+    if(candidateBtn) {
+        candidateBtn.addEventListener('click', () => {
+            candidateBtn.classList.add('reqDetails__contentCategory--active');
+            requestBtn.classList.remove('reqDetails__contentCategory--active');
+            candidatesContainer.classList.add('reqDetails__content--active');
+            requestContainer.classList.remove('reqDetails__content--active');
+        });
+    }
 
-    requestBtn.addEventListener('click', () => {
-        candidateBtn.classList.remove('reqDetails__contentCategory--active');
-        requestBtn.classList.add('reqDetails__contentCategory--active');
-        candidatesContainer.classList.remove('reqDetails__content--active');
-        requestContainer.classList.add('reqDetails__content--active');
-    });
+    if(requestBtn) {
+        requestBtn.addEventListener('click', () => {
+            candidateBtn.classList.remove('reqDetails__contentCategory--active');
+            requestBtn.classList.add('reqDetails__contentCategory--active');
+            candidatesContainer.classList.remove('reqDetails__content--active');
+            requestContainer.classList.add('reqDetails__content--active');
+        }); 
+    }
 }
 
 window.addEventListener('load', handleLoad);
