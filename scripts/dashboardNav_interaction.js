@@ -3,7 +3,7 @@
     "mainnav--active" class from the navigation when the user clicks or taps on the burger menu
     icon on the small screen version of the dashboard
  */
-function handleLoad() {
+window.addEventListener('load', () => {
 
     let menuButton = document.querySelector('.mainheader__menu');
 
@@ -21,6 +21,4 @@ function handleLoad() {
         nav.classList.add('mainnav--active');
         console.log('evento');
     });
-}
-
-window.addEventListener('load', handleLoad);
+});

@@ -1,73 +1,8 @@
-function handleLoad() {
 
-    var sample = {
-        name: 'Abogado',
-        amount: '20',
-        status: [2, 1],
-        remainingTime: 12,
-        positionName: 'Diseñador Web',
-        positionLevel: 'Técnico',
-        city: 'Santiago de Cali - Valle del Cauca',
-        time: 'Medio tiempo',
-        hiring: 'Término indefinido',
-        wage: '2\'500.500 COP',
-        functions: ['Diseño de interfaz de usuario',
-                    'Investigación de usuarios',
-                    'Evaluación de usabilidad',
-                    'Creación de conceptos',
-                    'Sustentación de propuestas'],
-        academicLevel: 'Universitario',
-        profession: 'Diseñador',
-        knowledge: 'UX, UI, Research, Lean, Agile',
-        observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
-        skills: ['Desarrollo de prototipos',
-                'Definición de Insights',
-                'Evaluación de productos',
-                'Documentación de procesos',
-                'Facilitación de equipos de trabajo'],
-        requirements: ['Desarrollo de prototipos',
-                    'Definición de Insights',
-                    'Evaluación de productos',
-                    'Documentación de procesos',
-                    'Facilitación de equipos de trabajo'],
-        candidates: [
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
+// empty function will be updated after window load.
+let requestDetailedInformation = (info) => {};
 
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-        ]
-    }
+window.addEventListener('load', () => {
 
     /**
      * 
@@ -103,10 +38,9 @@ function handleLoad() {
             }
         }
      */
+    
+    requestDetailedInformation = (info) => {
 
-    addInformation(sample);
-
-    function addInformation(info) {
         const title = document.querySelector('.reqDetails__title');
         const status = document.querySelector('.status');
         const statusCurrent = document.querySelector('.status__current');
@@ -282,6 +216,75 @@ function handleLoad() {
 
         title.innerHTML = info.name + ' (' + info.amount+')';
     }
-}  
+    // TODO REMOVE AFTER DEBUG
+    var sample = {
+        name: 'Abogado',
+        amount: '20',
+        status: [2, 1],
+        remainingTime: 12,
+        positionName: 'Diseñador Web',
+        positionLevel: 'Técnico',
+        city: 'Santiago de Cali - Valle del Cauca',
+        time: 'Medio tiempo',
+        hiring: 'Término indefinido',
+        wage: '2\'500.500 COP',
+        functions: ['Diseño de interfaz de usuario',
+                    'Investigación de usuarios',
+                    'Evaluación de usabilidad',
+                    'Creación de conceptos',
+                    'Sustentación de propuestas'],
+        academicLevel: 'Universitario',
+        profession: 'Diseñador',
+        knowledge: 'UX, UI, Research, Lean, Agile',
+        observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
+        skills: ['Desarrollo de prototipos',
+                'Definición de Insights',
+                'Evaluación de productos',
+                'Documentación de procesos',
+                'Facilitación de equipos de trabajo'],
+        requirements: ['Desarrollo de prototipos',
+                    'Definición de Insights',
+                    'Evaluación de productos',
+                    'Documentación de procesos',
+                    'Facilitación de equipos de trabajo'],
+        candidates: [
+            {
+                profilePic: '/resources/imgPerfil.jpg',
+                name: 'Fabio Arias M',
+                job: 'Diseñador Gráfico',
+                telephone: ['+57 (300) 8200838',
+                            '032 5552334'],
+                email: 'fabio.arias@candidatos.com.co',
+            },
 
-window.addEventListener('load', handleLoad);
+            {
+                profilePic: '/resources/imgPerfil.jpg',
+                name: 'Fabio Arias M',
+                job: 'Diseñador Gráfico',
+                telephone: ['+57 (300) 8200838',
+                            '032 5552334'],
+                email: 'fabio.arias@candidatos.com.co',
+            },
+
+            {
+                profilePic: '/resources/imgPerfil.jpg',
+                name: 'Fabio Arias M',
+                job: 'Diseñador Gráfico',
+                telephone: ['+57 (300) 8200838',
+                            '032 5552334'],
+                email: 'fabio.arias@candidatos.com.co',
+            },
+
+            {
+                profilePic: '/resources/imgPerfil.jpg',
+                name: 'Fabio Arias M',
+                job: 'Diseñador Gráfico',
+                telephone: ['+57 (300) 8200838',
+                            '032 5552334'],
+                email: 'fabio.arias@candidatos.com.co',
+            },
+        ]
+    }
+    requestDetailedInformation(sample);
+
+});

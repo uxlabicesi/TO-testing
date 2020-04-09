@@ -4,7 +4,7 @@
     class from the input's label
  */
 
-function handleLoad() {
+window.addEventListener('load', () => {
 
     const inputs = document.querySelectorAll('.textInput');
 
@@ -33,6 +33,4 @@ function handleLoad() {
             }
         });
     });
-}
-
-window.addEventListener('load', handleLoad);
+});

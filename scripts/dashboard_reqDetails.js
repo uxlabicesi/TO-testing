@@ -4,7 +4,7 @@
     classes to the elements affected.    
  */
 
-function handleLoad() {
+window.addEventListener('load', () => {
 
     // Show/Hide the status list
     const status = document.querySelector('.status');
@@ -43,6 +43,4 @@ function handleLoad() {
             requestContainer.classList.add('reqDetails__content--active');
         }); 
     }
-}
-
-window.addEventListener('load', handleLoad);
+});
