@@ -1,6 +1,7 @@
 
 // empty function will be updated after window load.
 let requestDetailedInformation = (info) => {};
+let candidates = (info) => {};
 
 window.addEventListener('load', () => {
 
@@ -28,15 +29,17 @@ window.addEventListener('load', () => {
         observations: **String** con las observaciones,
         skills: **Arreglo** con las competencias requeridas.
         requirements: **Arreglo** con los requerimientos del cargo,
-        candidates: **Arreglo** con los candidatos al puesto, deben ser JSON con la siguiente estructura:
-            {
-            profilePic: **String** con la ruta a la imagen de perfil,
-            name: **String** con el nombre del candidato,
-            job: **String** con la profesión del candidato, 
-            telephone: **Arreglo** con el número, o los números, de teléfono del candidato. Deben estar en String y en el formato adecuado de número telefónico,
-            email: **String** con el correo electrónico del candidato,
-            }
-        }
+     */
+
+    /* Para visualizar las tarjetas de los candidatos de una solicitud se debe utilizar la función candidates en /scripts/requestDetailsInformation.js.
+        La función recibe un Arreglo de Objetos con la siguiente estructura:
+    {
+        profilePic: **String** con la ruta a la imagen de perfil,
+        name: **String** con el nombre del candidato,
+        job: **String** con la profesión del candidato, 
+        telephone: **Arreglo** con el número, o los números, de teléfono del candidato. Deben estar en String y en el formato adecuado de número telefónico,
+        email: **String** con el correo electrónico del candidato,
+    }
      */
     
     requestDetailedInformation = (info) => {
@@ -59,74 +62,6 @@ window.addEventListener('load', () => {
         const observations = document.querySelector('.observations');
         const skills = document.querySelector('.reqDetails__infoSection--skills');
         const requirements = document.querySelector('.reqDetails__infoSection--requirements');
-
-        if(info.candidates.length > 0) {
-            const candidates = document.querySelector('.reqDetails__candidates');
-
-            candidates.innerHTML = '';
-
-            info.candidates.forEach((e) => {
-                let candidate = document.createElement('div');
-                candidate.classList.add('candidate');
-
-                let profile = document.createElement('div');
-                profile.classList.add('candidate__profile');
-
-                let profilePic = document.createElement('img');
-                profilePic.setAttribute('src', "."+e.profilePic);
-                profilePic.classList.add('candidate__profileImg');
-                profile.appendChild(profilePic);
-
-                let profileTitles = document.createElement('div')
-                profileTitles.classList.add('candidate__profileTitles');
-                
-                let candidateName = document.createElement('h2');
-                candidateName.classList.add('candidate__profileTitlesName');
-                candidateName.innerHTML = e.name;
-                profileTitles.appendChild(candidateName);
-
-                let candidateJob = document.createElement('h3');
-                candidateJob.classList.add('candidate__profileTitlesJob');
-                candidateJob.innerHTML = e.job;
-                profileTitles.appendChild(candidateJob);
-                profile.appendChild(profileTitles);
-                candidate.appendChild(profile);
-
-                let candidateInfo = document.createElement('div');
-                candidateInfo.classList.add('candidate__info');
-
-                let cel = document.createElement('h2');
-                cel.classList.add('candidate__infoCel');
-                if(e.telephone > 1) {
-                    e.telephone.forEach((number, index) => {
-                        if(e.telephone.length === index-1) {
-                            cel.innerHTML += number;
-                        } else {
-                            cel.innerHTML += number + ' / ';
-                        }
-                    });
-                } else {
-                    cel.innerHTML = e.telephone[0];
-                }
-                candidateInfo.appendChild(cel);
-
-                let email = document.createElement('h3');
-                email.classList.add('candidate__infoEmail');
-                email.innerHTML = e.email;
-                candidateInfo.appendChild(email);
-                candidate.appendChild(candidateInfo);
-
-                let btn = document.createElement('button');
-                btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
-                btn.innerHTML = 'Ver detalles';
-                btn.addEventListener('click', () => {
-                    window.location.href = './dashboard_candidateDetails.html';
-                });
-                candidate.appendChild(btn);
-
-                candidates.appendChild(candidate);
-            });
-        }
 
         info.requirements.forEach((e) => {
             let item = document.createElement('li');
@@ -216,6 +151,76 @@ window.addEventListener('load', () => {
 
         title.innerHTML = info.name + ' (' + info.amount+')';
     }
+
+    candidates = (info) => {
+        if(info.length > 0) {
+            const candidates = document.querySelector('.reqDetails__candidates');
+
+            candidates.innerHTML = '';
+
+            info.forEach((e) => {
+                let candidate = document.createElement('div');
+                candidate.classList.add('candidate');
+
+                let profile = document.createElement('div');
+                profile.classList.add('candidate__profile');
+
+                let profilePic = document.createElement('img');
+                profilePic.setAttribute('src', "."+e.profilePic);
+                profilePic.classList.add('candidate__profileImg');
+                profile.appendChild(profilePic);
+
+                let profileTitles = document.createElement('div')
+                profileTitles.classList.add('candidate__profileTitles');
+                
+                let candidateName = document.createElement('h2');
+                candidateName.classList.add('candidate__profileTitlesName');
+                candidateName.innerHTML = e.name;
+                profileTitles.appendChild(candidateName);
+
+                let candidateJob = document.createElement('h3');
+                candidateJob.classList.add('candidate__profileTitlesJob');
+                candidateJob.innerHTML = e.job;
+                profileTitles.appendChild(candidateJob);
+                profile.appendChild(profileTitles);
+                candidate.appendChild(profile);
+
+                let candidateInfo = document.createElement('div');
+                candidateInfo.classList.add('candidate__info');
+
+                let cel = document.createElement('h2');
+                cel.classList.add('candidate__infoCel');
+                if(e.telephone > 1) {
+                    e.telephone.forEach((number, index) => {
+                        if(e.telephone.length === index-1) {
+                            cel.innerHTML += number;
+                        } else {
+                            cel.innerHTML += number + ' / ';
+                        }
+                    });
+                } else {
+                    cel.innerHTML = e.telephone[0];
+                }
+                candidateInfo.appendChild(cel);
+
+                let email = document.createElement('h3');
+                email.classList.add('candidate__infoEmail');
+                email.innerHTML = e.email;
+                candidateInfo.appendChild(email);
+                candidate.appendChild(candidateInfo);
+
+                let btn = document.createElement('button');
+                btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
+                btn.innerHTML = 'Ver detalles';
+                btn.addEventListener('click', () => {
+                    window.location.href = './dashboard_candidateDetails.html';
+                });
+                candidate.appendChild(btn);
+
+                candidates.appendChild(candidate);
+            });
+        }
+    }
     // TODO REMOVE AFTER DEBUG
     var sample = {
         name: 'Abogado',
@@ -247,44 +252,47 @@ window.addEventListener('load', () => {
                     'Evaluación de productos',
                     'Documentación de procesos',
                     'Facilitación de equipos de trabajo'],
-        candidates: [
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-
-            {
-                profilePic: '/resources/imgPerfil.jpg',
-                name: 'Fabio Arias M',
-                job: 'Diseñador Gráfico',
-                telephone: ['+57 (300) 8200838',
-                            '032 5552334'],
-                email: 'fabio.arias@candidatos.com.co',
-            },
-        ]
     }
+
+    var candidateSample = [
+        {
+            profilePic: '/resources/imgPerfil.jpg',
+            name: 'Fabio Arias M',
+            job: 'Diseñador Gráfico',
+            telephone: ['+57 (300) 8200838',
+                        '032 5552334'],
+            email: 'fabio.arias@candidatos.com.co',
+        },
+
+        {
+            profilePic: '/resources/imgPerfil.jpg',
+            name: 'Fabio Arias M',
+            job: 'Diseñador Gráfico',
+            telephone: ['+57 (300) 8200838',
+                        '032 5552334'],
+            email: 'fabio.arias@candidatos.com.co',
+        },
+
+        {
+            profilePic: '/resources/imgPerfil.jpg',
+            name: 'Fabio Arias M',
+            job: 'Diseñador Gráfico',
+            telephone: ['+57 (300) 8200838',
+                        '032 5552334'],
+            email: 'fabio.arias@candidatos.com.co',
+        },
+
+        {
+            profilePic: '/resources/imgPerfil.jpg',
+            name: 'Fabio Arias M',
+            job: 'Diseñador Gráfico',
+            telephone: ['+57 (300) 8200838',
+                        '032 5552334'],
+            email: 'fabio.arias@candidatos.com.co',
+        },
+    ];
+
     requestDetailedInformation(sample);
+    candidates(candidateSample);
 
 });
