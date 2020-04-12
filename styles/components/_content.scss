@@ -6,6 +6,10 @@
     margin-left: 285px;
     background-color: $color-lightGray;
 
+    & h1 {
+        color: $color-blue;
+    }
+
     &__containerFlex {
         display: flex;
         width: 100%;

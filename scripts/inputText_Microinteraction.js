@@ -21,15 +21,12 @@ window.addEventListener('load', () => {
 
         // Deactivates the microinteraction when the input loses focus, ONLY if the input is still empty
         input.addEventListener('blur', (event) => {
-            event.target.parentElement.classList.remove('textInput--focused');
 
             let label = event.target.parentElement.querySelector('label');
-            label.classList.remove('label--active');
 
-
-            if(input.value) {
-                label.classList.add('label--active');
-                event.target.parentElement.classList.add('textInput--focused');
+            if(!input.value) {
+                label.classList.remove('label--active');
+                event.target.parentElement.classList.remove('textInput--focused');
             }
         });
     });

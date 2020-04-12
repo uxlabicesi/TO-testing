@@ -17,6 +17,11 @@
     &--active {
         width: 80%;
     }
+
+    &--reqCreation {
+        top: 16px;
+        left: 25px;
+    }
 }
 
 .textInput--focused .label {
@@ -31,10 +36,14 @@
     &--login {
         transform: translate(-50px, -215%);
     }
+
+    &--reqCreation {
+        transform: translate(-25px, -225%);
+        font-size: $typo-button;
+    }
 }
 
 .textInput {
-    width: 331px;
     height: 55px;
     border: 1px solid $color-gray;
     border-radius: 10px;
@@ -52,6 +61,17 @@
 
         &--marginless {
             margin: 0;
+        }
+
+        &--reqCreation {
+            
+            &2col {
+                width: 47%; 
+            }
+
+            &3col {
+                width: 29%;
+            }
         }
     }
 

@@ -16,6 +16,11 @@
     margin: 20px 0;
     margin-left: 90px;
     width: 100%;
+
+    &--reqCreation {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
 }
 
 
@@ -43,6 +48,10 @@
         position: relative;
         display: flex;
         width: 100%;
+
+        &--reqCreation {
+            width: 47%;
+        }
     }
 
     &__selected {
