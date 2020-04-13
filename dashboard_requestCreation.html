@@ -95,21 +95,53 @@
                             <input type="text" class="textInput" id="form_position" name="" required>
                         </div>
 
-                        <div class="textInput__container textInput__container--reqCreation2col">
-                            <label for="form_level" class="label label--reqCreation">NIVEL DEL CARGO</label>
-                            <input type="text" class="textInput" id="form_level" name="" required>
+                        <div class="select__container select__container--reqCreation2col">
+                            <div class="selectadd selectadd--reqCreation form-group">
+                                <label class="select__label select__label--register select__label--level">NIVEL DEL CARGO</label>
+                                <select class="select2__selector--level" name="city" required>
+                                     <!-- empty option is requiered for placeholder -->
+                                     <option></option>
+                                     <option value="O0"></option>
+                                     <option value="O1">Opción 1</option>
+                                     <option value="O2">Opción 2</option>
+                                     <option value="O3">Opción 3</option>
+                                     <option value="O4">Opción 4</option>
+                                     <option value="O5">Opción 5</option>
+                                     <option value="O6">Opción 6</option>
+                                     <option value="O7">Opción 7</option>
+                                     <option value="O8">Opción 8</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
                     <div class="reqCreation__row">
-                        <div class="textInput__container textInput__container--reqCreation3col">
-                            <label for="form_hiring" class="label label--reqCreation">TIPO DE CONTRATACIÓN</label>
-                            <input type="text" class="textInput" id="form_hiring" name="" required>
+                        <div class="select__container select__container--reqCreation3col">
+                            <div class="selectadd selectadd--reqCreation form-group">
+                                <label class="select__label select__label--register select__label--hiring">TIPO DE CONTRATACIÓN</label>
+                                <select class="select2__selector--hiring" name="hiring" required>
+                                     <!-- empty option is requiered for placeholder -->
+                                     <option></option>
+                                     <option value="O0"></option>
+                                     <option value="O1">Término fijo</option>
+                                     <option value="O2">Indefinido</option>
+                                     <option value="O3">Prestación de servicios</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div class="textInput__container textInput__container--reqCreation3col">
-                            <label for="form_workingday" class="label label--reqCreation">JORNADA</label>
-                            <input type="text" class="textInput" id="form_workingday" name="" required>
+                        <div class="select__container select__container--reqCreation3col">
+                            <div class="selectadd selectadd--reqCreation form-group">
+                                <label class="select__label select__label--register select__label--workingday">JORNADA</label>
+                                <select class="select2__selector--workingday" name="workingday" required>
+                                     <!-- empty option is requiered for placeholder -->
+                                     <option></option>
+                                     <option value="O0"></option>
+                                     <option value="O1">Tiempo completo</option>
+                                     <option value="O2">Medio tiempo</option>
+                                     <option value="O3">Por horas</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="textInput__container textInput__container--reqCreation3col">
@@ -119,10 +151,10 @@
                     </div>
 
                     <div class="reqCreation__row">
-                        <div class="select__container select__container--reqCreation">
+                        <div class="select__container select__container--reqCreation2col">
                             <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--sector">CIUDAD</label>
-                                <select class="select2__selector--sector" name="sector" required>
+                                <label class="select__label select__label--register select__label--reqCity">CIUDAD</label>
+                                <select class="select2__selector--reqCity" name="city" required>
                                      <!-- empty option is requiered for placeholder -->
                                      <option></option>
                                      <option value="O0"></option>
@@ -143,6 +175,8 @@
                             <input type="number" value="0" class="textInput" name="" required>
                         </div>
                     </div>
+
+                    <button class="btn btn--large btn--blue btn--rounded">Agregar otra ciudad</button>
                 </form>
             </div>
         </section>

@@ -130,6 +130,7 @@ body {
 .label--reqCreation {
   top: 16px;
   left: 25px;
+  width: 75%;
 }
 
 .textInput--focused .label {
@@ -282,8 +283,12 @@ body {
   width: 100%;
 }
 
-.select__container--reqCreation {
+.select__container--reqCreation2col {
   width: 47%;
+}
+
+.select__container--reqCreation3col {
+  width: 29%;
 }
 
 .select__selected {
@@ -358,7 +363,7 @@ body {
   color: #C4C4C4;
   cursor: pointer;
   opacity: 1;
-  width: calc(100% - 150px);
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   z-index: 2;
@@ -376,6 +381,10 @@ body {
   font-size: 13px;
   font-weight: 700;
   color: #294F75;
+}
+
+.select__label--focusedreqCreation {
+  font-size: 16px;
 }
 
 .select:focus {
@@ -2894,19 +2903,42 @@ input[type=number] {
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 30px;
   width: 100%;
+  margin-bottom: 30px;
+}
+
+.reqCreation form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px;
+}
+
+.reqCreation form .btn {
+  margin: 30px auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .reqCreation h2 {
   color: #294F75;
   font-size: 20px;
   font-weight: 700;
+  margin-left: 30px;
+  padding-top: 30px;
 }
 
 .reqCreation p {
   color: #294F75;
   margin-bottom: 20px;
+  margin-left: 30px;
 }
 
 .reqCreation__row {
@@ -2914,7 +2946,7 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10px 0;
+  margin-top: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
