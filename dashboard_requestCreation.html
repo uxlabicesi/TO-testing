@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="./resources/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
     <link href="libs/select2-4.0.13/src/scss/core.css" rel="stylesheet" />
+      <!-- external styles -->
+    <link href="libs/bootstrapvalidator-0.5.2/dist/css/bootstrapValidator.min.css" rel="stylesheet"></link>
+     <!-- general scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
@@ -88,39 +91,39 @@
                 <h2>INFORMACIÓN DEL CARGO</h2>
                 <p>Registra a continuación la información del cargo que solicitas.</p>
 
-                <form>
+                <form class="reqForm" id="reqForm">
                     <div class="reqCreation__row">
-                        <div class="textInput__container textInput__container--reqCreation2col">
+                        <div class="textInput__container textInput__container--reqCreation2col form-group">
                             <label for="form_position" class="label label--reqCreation">NOMBRE DEL CARGO</label>
-                            <input type="text" class="textInput" id="form_position" name="" required>
+                            <input type="text" class="textInput" id="form_position" name="job" required>
                         </div>
 
-                        <div class="textInput__container textInput__container--reqCreation2col">
+                        <div class="textInput__container textInput__container--reqCreation2col form-group">
                             <label for="form_level" class="label label--reqCreation">NIVEL DEL CARGO</label>
-                            <input type="text" class="textInput" id="form_level" name="" required>
+                            <input type="text" class="textInput" id="form_level" name="level" required>
                         </div>
                     </div>
 
                     <div class="reqCreation__row">
-                        <div class="textInput__container textInput__container--reqCreation3col">
+                        <div class="textInput__container textInput__container--reqCreation3col form-group">
                             <label for="form_hiring" class="label label--reqCreation">TIPO DE CONTRATACIÓN</label>
-                            <input type="text" class="textInput" id="form_hiring" name="" required>
+                            <input type="text" class="textInput" id="form_hiring" name="hiring" required>
                         </div>
 
-                        <div class="textInput__container textInput__container--reqCreation3col">
+                        <div class="textInput__container textInput__container--reqCreation3col form-group">
                             <label for="form_workingday" class="label label--reqCreation">JORNADA</label>
-                            <input type="text" class="textInput" id="form_workingday" name="" required>
+                            <input type="text" class="textInput" id="form_workingday" name="workingday" required>
                         </div>
 
-                        <div class="textInput__container textInput__container--reqCreation3col">
+                        <div class="textInput__container textInput__container--reqCreation3col form-group">
                             <label for="form_wage" class="label label--reqCreation">SALARIO</label>
-                            <input type="text" class="textInput" id="form_wage" name="" required>
+                            <input type="text" class="textInput" id="form_wage" name="wage" required>
                         </div>
                     </div>
 
                     <div class="reqCreation__row">
                         <div class="select__container select__container--reqCreation">
-                            <div class="selectadd selectadd--reqCreation form-group">
+                            <div class="selectadd selectadd--reqCreation form-group ">
                                 <label class="select__label select__label--register select__label--sector">CIUDAD</label>
                                 <select class="select2__selector--sector" name="sector" required>
                                      <!-- empty option is requiered for placeholder -->
@@ -138,7 +141,7 @@
                             </div>
                         </div>
 
-                        <div class="textInput__container textInput--focused textInput__container--reqCreation2col">
+                        <div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
                             <label class="label label--active label--reqCreation">CANTIDAD</label>
                             <input type="number" value="0" class="textInput" name="" required>
                         </div>
@@ -152,5 +155,11 @@
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/inputText_Microinteraction.js"></script>
     <script src="./scripts/select_interaction.js"></script>
+    <script src="./scripts/requestCreation_validator.js"></script>
+
+        <!-- scripts for bootstrap validator-->
+    <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="libs/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>
 </body>
 </html>
