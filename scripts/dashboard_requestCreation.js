@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
     const form = document.querySelector('form');
     const addCity = document.querySelector('.btn--blue');
+    let cityCount = 0;
 
     addCity.addEventListener('click', () => {
         console.log('ya está');
@@ -17,14 +18,42 @@ window.addEventListener('load', () => {
         selectContainer.appendChild(selectAdd);
 
         const label = document.createElement('label');
-        label.classList.add('select__label', 'select__label--register', 'select__label--reqCity');
+        label.classList.add('select__label', 'select__label--register', 'select__label--reqCity'+cityCount);
         label.innerHTML = 'CIUDAD';
         selectAdd.appendChild(label);
 
         const select = document.createElement('select');
-        select.classList.add('select2__selector--reqCity');
+        select.classList.add('select2__selector--reqCity'+cityCount);
         select.setAttribute('name', 'city');
-        selectAdd.appendChild(select)
+        selectAdd.appendChild(select);
+
+        $('.select2__selector--reqCity'+cityCount).select2({
+            tags: true,
+            placeholder: "CIUDAD",
+            theme: "talentos",
+            width: '100%', // need to override the changed default
+            containerCss: {
+                "height": "55px"
+            },
+            //debug: true,  // used for verbose console
+        });
+
+        $('.select2__selector--reqCity'+cityCount).on('select2:open', function (e) {
+            document.querySelector('.select__label--reqCity'+cityCount).classList.remove(
+                'select__label--register');
+            document.querySelector('.select__label--reqCity'+cityCount).classList.add('select__label--focused');
+        });
+    
+        $('.select2__selector--reqCity'+cityCount).on('select2:close', function (e) {
+            let value = $('.select2__selector--reqCity'+cityCount).select2('data')[0].id;
+            if(value === ''){
+                document.querySelector('.select__label--reqCity'+cityCount).classList.add('select__label--register');
+            document.querySelector('.select__label--reqCity'+cityCount).classList.remove(
+                'select__label--focused');
+            }
+        });
+
+        cityCount++;
 
         for(var i = 0; i < 10; i++) {
             const option = document.createElement('option');
@@ -35,33 +64,64 @@ window.addEventListener('load', () => {
 
             select.appendChild(option);
         }
-    })
-});
 
-/**
- * <div class="reqCreation__row">
-                        <div class="select__container select__container--reqCreation2col">
-                            <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--reqCity">CIUDAD</label>
-                                <select class="select2__selector--reqCity" name="city" required>
-                                     <!-- empty option is requiered for placeholder -->
-                                     <option></option>
-                                     <option value="O0"></option>
-                                     <option value="O1">Opción 1</option>
-                                     <option value="O2">Opción 2</option>
-                                     <option value="O3">Opción 3</option>
-                                     <option value="O4">Opción 4</option>
-                                     <option value="O5">Opción 5</option>
-                                     <option value="O6">Opción 6</option>
-                                     <option value="O7">Opción 7</option>
-                                     <option value="O8">Opción 8</option>
-                                </select>
-                            </div>
-                        </div>
+        const amountContainer = document.createElement('div');
+        amountContainer.classList.add('textInput__container', 'textInput--focused', 'textInput__container--reqCreation2col', 'form-group');
+        row.appendChild(amountContainer);
 
-                        <div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
-                            <label class="label label--active label--reqCreation">CANTIDAD</label>
-                            <input type="number" value="0" class="textInput" name="" required>
-                        </div>
-                    </div>
+        const amountLabel = document.createElement('label');
+        amountLabel.classList.add('label', 'label--active', 'label--reqCreation');
+        amountLabel.innerHTML = 'CANTIDAD';
+        amountContainer.appendChild(amountLabel);
+
+        const textInputNumberContainer = document.createElement('div');
+        textInputNumberContainer.classList.add('textInput--number');
+        amountContainer.appendChild(textInputNumberContainer);
+
+        const minusBtn = document.createElement('button');
+        minusBtn.classList.add('textInput__changeBtn', 'textInput__changeBtn--minus');
+        minusBtn.innerHTML = '-';
+        minusBtn.addEventListener('click', changeValue);
+        textInputNumberContainer.appendChild(minusBtn);
+
+        const textInputNumber = document.createElement('input');
+        textInputNumber.classList.add('textInput');
+        textInputNumber.setAttribute('type', 'number');
+        textInputNumber.value = '0';
+        textInputNumberContainer.appendChild(textInputNumber);
+
+        const plusBtn = document.createElement('button');
+        plusBtn.classList.add('textInput__changeBtn', 'textInput__changeBtn--plus');
+        plusBtn.innerHTML = '-';
+        plusBtn.addEventListener('click', changeValue);
+        textInputNumberContainer.appendChild(plusBtn);
+    });
+
+    /**
+<div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
+    <label class="label label--active label--reqCreation">CANTIDAD</label>
+    <div class="textInput--number">
+        <button class="textInput__changeBtn textInput__changeBtn--minus">-</button>
+        <input type="number" value="0" class="textInput" name="" required>
+        <button class="textInput__changeBtn textInput__changeBtn--plus">+</button>
+    </div>
+    
+</div>
  */
+    const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
+
+    changeValueBtns.forEach((e) => {
+        e.addEventListener('click', changeValue);
+    });
+
+    function changeValue(event) {
+        const plusBtn = event.target;
+        const numberInput = plusBtn.closest('.textInput--number').querySelector('.textInput');
+
+        if(plusBtn.classList.contains('textInput__changeBtn--minus')) {
+            if(numberInput.value > 1) numberInput.value--;
+        } else {
+            numberInput.value++;
+        }
+    }
+});
