@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
         if(target.closest('.mainnav') == null && target.closest('.mainheader__menu') != menuButton) {
             nav.classList.remove('mainnav--active');
         }
-        console.log(target);
+        //console.log(target);
     });
 
     menuButton.addEventListener('click', () => {
