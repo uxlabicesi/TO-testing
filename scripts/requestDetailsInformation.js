@@ -18,7 +18,8 @@ window.addEventListener('load', () => {
         remainingTime: **Número** de días faltantes,
         positionName: **String** con el nombre del cargo,
         positionLevel: **String** con el nivel del cargo,
-        city: **String** con el nombre de la ciudad,
+        cities: **String array** con los nombres de las ciudades,
+        amountPerCity: **array** número de personas por ciudad (Mismo orden de las ciudades),
         time: **String** con la jornada de trabajo,
         hiring: **String** con el tipo de contratación,
         wage: **String** con el salario,
@@ -52,6 +53,7 @@ window.addEventListener('load', () => {
         const positionName = document.querySelector('.positionName');
         const positionLevel = document.querySelector('.positionLevel');
         const city = document.querySelector('.city');
+        //const amount = document.querySelector('.city');
         const time = document.querySelector('.time');
         const hiring = document.querySelector('.hiring');
         const wage = document.querySelector('.wage');
@@ -63,11 +65,11 @@ window.addEventListener('load', () => {
         const skills = document.querySelector('.reqDetails__infoSection--skills');
         const requirements = document.querySelector('.reqDetails__infoSection--requirements');
 
-        info.requirements.forEach((e) => {
+        /*info.requirements.forEach((e) => {
             let item = document.createElement('li');
             item.innerHTML = e;
             requirements.appendChild(item);
-        });
+        });*/
 
         info.skills.forEach((e) => {
             let item = document.createElement('li');
@@ -95,7 +97,16 @@ window.addEventListener('load', () => {
 
         time.innerHTML = info.time;
 
-        city.innerHTML = info.city;
+        //city.innerHTML = info.city;
+        let aux = 0
+        info.cities.forEach((e) => {
+            let item = document.createElement('div');
+            item.classList.add('reqDetails__infoSection--cities');
+            //item.style = "margin-left:15px;"
+            item.innerHTML = "" + e + " (" + info.amountPerCity[aux] + ")";
+            city.appendChild(item);
+            aux++;
+        });
 
         positionLevel.innerHTML = info.positionLevel;
 
@@ -119,18 +130,22 @@ window.addEventListener('load', () => {
                 break;
 
             case 1: 
+                statusCurrent.innerHTML = 'En verificación';
+            break;
+
+            case 2: 
                 statusCurrent.innerHTML = 'Iniciado';
                 break;
 
-            case 2: 
+            case 3: 
                 statusCurrent.innerHTML = 'En proceso de búsqueda';
                 break;
 
-            case 3: 
+            case 4: 
                 statusCurrent.innerHTML = 'En espera de selección';
                 break;
 
-            case 4: 
+            case 5: 
                 statusCurrent.innerHTML = 'Finalizó el proceso';
                 break;
         }
@@ -223,13 +238,16 @@ window.addEventListener('load', () => {
     }
     // TODO REMOVE AFTER DEBUG
     var sample = {
-        name: 'Abogado',
+        name: 'Diseñador',
         amount: '20',
-        status: [2, 1],
+        status: [1, 1],
         remainingTime: 12,
         positionName: 'Diseñador Web',
         positionLevel: 'Técnico',
-        city: 'Santiago de Cali - Valle del Cauca',
+        cities: ['Santiago de Cali - Valle del Cauca',
+                 'Popayán, Cauca',
+                 'Palmira, Valle del Cauca'],
+        amountPerCity:[10,5,3],
         time: 'Medio tiempo',
         hiring: 'Término indefinido',
         wage: '2\'500.500 COP',

@@ -1015,6 +1015,11 @@ body {
   margin-bottom: 15px;
 }
 
+.reqDetails__infoSection--cities {
+  margin-left: 15px;
+  padding: 5px;
+}
+
 .reqDetails__infoSection--bullet li {
   list-style: none;
 }
