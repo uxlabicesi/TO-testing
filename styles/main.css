@@ -192,6 +192,10 @@ body {
   width: 29%;
 }
 
+.textInput__container--reqFunctions {
+  margin-top: 0px;
+}
+
 .textInput:focus {
   outline: none;
   border: 1px solid black;
@@ -2954,6 +2958,61 @@ input[type=number] {
       -ms-flex-align: end;
           align-items: flex-end;
   height: 90px;
+}
+
+.reqCreation__functions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reqCreation__functionsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.reqCreation__functionsContainerBtnMove {
+  margin-right: 20px;
+  color: none;
+  background-color: transparent !important;
+  border: none;
+  background-image: url(../resources/moveIcon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.reqCreation__functionsContainerBtnDelete {
+  margin-left: 20px;
+  color: none;
+  background-color: transparent !important;
+  border: none;
+  background-image: url(../resources/deteleIcon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
 }
 
 * {
