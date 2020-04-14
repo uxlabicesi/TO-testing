@@ -148,6 +148,16 @@
         opacity: 0;
         position: absolute;
         transition: all .2s ease-out;
+        &__tabButton{
+            &--hide{
+                & p{
+                    visibility: hidden;
+                    margin: 0;
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
     }
 
     &__details {

@@ -1,7 +1,7 @@
 
 // empty function will be updated after window load.
 let requestDetailedInformation = (info) => {};
-let candidates = (info) => {};
+//let candidates = (info) => {};
 
 window.addEventListener('load', () => {
 
@@ -63,6 +63,9 @@ window.addEventListener('load', () => {
         const observations = document.querySelector('.observations');
         const skills = document.querySelector('.reqDetails__infoSection--skills');
 
+        const candidatesTabButton = document.querySelector('.reqDetails__candidates__tabButton');
+        
+
         /*info.requirements.forEach((e) => {
             let item = document.createElement('li');
             item.innerHTML = e;
@@ -96,31 +99,40 @@ window.addEventListener('load', () => {
         time.innerHTML = info.time;
 
         //city.innerHTML = info.city;
-        let aux = 0
-        info.cities.forEach((e) => {
+
+        info.cities.forEach((e, index) => {
             let item = document.createElement('div');
             item.classList.add('reqDetails__infoSection--cities');
             //item.style = "margin-left:15px;"
-            item.innerHTML = "" + e + " (" + info.amountPerCity[aux] + ")";
+            item.innerHTML = "" + e + " (" + info.amountPerCity[index] + ")";
             city.appendChild(item);
-            aux++;
+
         });
 
         positionLevel.innerHTML = info.positionLevel;
 
-        if(info.remainingTime === 1) {
-            remainingTime.innerHTML = 'Falta 1 día';
-        } else {
-            remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
-        }
-
-        if(status[1] === 0) {
-            status.classList.add('status--yellow');
-        } else {
-            status.classList.add('status--green');
+        if(info.status[0] === -1) {
+            remainingTime.innerHTML = 'Borrador';
+            status.classList.add('status--gray');
+            candidatesTabButton.classList.add('reqDetails__candidates__tabButton--hide');
+        }else{
+            candidatesTabButton.classList.remove('reqDetails__candidates__tabButton--hide');
+            if(info.remainingTime === 1) {
+                remainingTime.innerHTML = 'Falta 1 día';
+            } else {
+                remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
+            }
+            if(status[1] === 0) {
+                status.classList.add('status--yellow');
+            } else {
+                status.classList.add('status--green');
+            }
         }
 
         switch(info.status[0]) {
+            case -1:
+                statusCurrent.innerHTML = 'Borrador';
+                break;
             case 0:
                 statusCurrent.innerHTML = 'Pendiente de pago';
                 break;
@@ -146,19 +158,25 @@ window.addEventListener('load', () => {
                 break;
         }
 
-        statusList.forEach((e, index) => {
-            if(index < info.status[0]) {
-                e.classList.add('status--completed');
-            } else if (index === info.status[0]) {
-                if(info.status[1] === 0) {
-                    e.classList.add('status--yellow');
+        if(status[0] === -1) {
+            statusList.add('status--inactive')
+        }else{
+            statusList.forEach((e, index) => {
+                if(index < info.status[0]) {
+                    e.classList.add('status--completed');
+                } else if (index === info.status[0]) {
+                    if(info.status[1] === 0) {
+                        e.classList.add('status--yellow');
+                    } else {
+                        e.classList.add('status--green');
+                    }
                 } else {
-                    e.classList.add('status--green');
+                    e.classList.add('status--inactive');
                 }
-            } else {
-                e.classList.add('status--inactive');
-            }
-        });
+            });
+        }
+       
+
 
         title.innerHTML = info.name + ' (' + info.amount+')';
         name.innerHTML = info.name;
@@ -168,7 +186,7 @@ window.addEventListener('load', () => {
     var sample = {
         name: 'Diseñador Web',
         amount: '20',
-        status: [1, 1],
+        status: [0, 1], // -1, 0 para borradores
         remainingTime: 12,
         positionLevel: 'Técnico',
         cities: ['Santiago de Cali - Valle del Cauca',
@@ -200,6 +218,6 @@ window.addEventListener('load', () => {
     }
 
     requestDetailedInformation(sample);
-    candidates(candidateSample);
+    
 
 });
