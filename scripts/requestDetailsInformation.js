@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
         knowledge: **String** con los conocimientos requeridos,
         observations: **String** con las observaciones,
         skills: **Arreglo** con las competencias requeridas.
-        requirements: **Arreglo** con los requerimientos del cargo,
+        //requirements: **Arreglo** con los requerimientos del cargo,
      */
 
     /* Para visualizar las tarjetas de los candidatos de una solicitud se debe utilizar la función candidates en /scripts/requestDetailsInformation.js.
@@ -210,11 +210,11 @@ window.addEventListener('load', () => {
                 'Evaluación de productos',
                 'Documentación de procesos',
                 'Facilitación de equipos de trabajo'],
-        requirements: ['Desarrollo de prototipos',
+        /*requirements: ['Desarrollo de prototipos',
                     'Definición de Insights',
                     'Evaluación de productos',
                     'Documentación de procesos',
-                    'Facilitación de equipos de trabajo'],
+                    'Facilitación de equipos de trabajo'],*/
     }
 
     requestDetailedInformation(sample);
