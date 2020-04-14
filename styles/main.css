@@ -168,6 +168,48 @@ body {
   transition: all .2s ease-out;
 }
 
+.textInput--number {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.textInput--number .textInput {
+  border-radius: 0;
+  width: 70%;
+  padding: 0;
+  text-align: center;
+}
+
+.textInput__changeBtn {
+  margin: 0;
+  width: 15%;
+  background: none;
+  font-size: 24px;
+  -webkit-box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid #C4C4C4;
+  color: #C4C4C4;
+  cursor: pointer;
+}
+
+.textInput__changeBtn--minus {
+  border-radius: 10px 0 0 10px;
+}
+
+.textInput__changeBtn--plus {
+  border-radius: 0 10px 10px 0;
+}
+
+.textInput__changeBtn:hover {
+  background-color: #FAFAFA;
+}
+
+.textInput__changeBtn:focus {
+  outline: none;
+}
+
 .textInput__container {
   position: relative;
   display: -webkit-box;
@@ -975,6 +1017,11 @@ body {
 
 .reqDetails__infoSection li {
   margin-bottom: 15px;
+}
+
+.reqDetails__infoSection--cities {
+  margin-left: 15px;
+  padding: 5px;
 }
 
 .reqDetails__infoSection--bullet li {

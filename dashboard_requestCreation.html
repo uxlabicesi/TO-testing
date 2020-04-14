@@ -175,7 +175,12 @@
 
                         <div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
                             <label class="label label--active label--reqCreation">CANTIDAD</label>
-                            <input type="number" value="0" class="textInput" name="" required>
+                            <div class="textInput--number">
+                                <button class="textInput__changeBtn textInput__changeBtn--minus">-</button>
+                                <input type="number" value="1" class="textInput" name="" min="1" step="1" required>
+                                <button class="textInput__changeBtn textInput__changeBtn--plus">+</button>
+                            </div>
+                            
                         </div>
                     </div>
 
