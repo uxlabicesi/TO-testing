@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
         amount: **String** con la cantidad requerida,
         status **Arreglo** con dos números, el primero indica la etapa del proceso en la que se encuentra la solicitud, es un número entre 0   y 4; y el segundo es 0 o 1, 0 si el usuario aún debe realizar alguna acción y 1 si no debe realizar ninguna acción,
         remainingTime: **Número** de días faltantes,
-        positionName: **String** con el nombre del cargo,
         positionLevel: **String** con el nivel del cargo,
         cities: **String array** con los nombres de las ciudades,
         amountPerCity: **array** número de personas por ciudad (Mismo orden de las ciudades),
@@ -46,11 +45,11 @@ window.addEventListener('load', () => {
     requestDetailedInformation = (info) => {
 
         const title = document.querySelector('.reqDetails__title');
+        const name = document.querySelector('.name');
         const status = document.querySelector('.status');
         const statusCurrent = document.querySelector('.status__current');
         const statusList = document.querySelectorAll('.status__listItem');
         const remainingTime = document.querySelector('.reqDetails__remainingTime');
-        const positionName = document.querySelector('.positionName');
         const positionLevel = document.querySelector('.positionLevel');
         const city = document.querySelector('.city');
         //const amount = document.querySelector('.city');
@@ -63,7 +62,6 @@ window.addEventListener('load', () => {
         const knowledge = document.querySelector('.knowledge');
         const observations = document.querySelector('.observations');
         const skills = document.querySelector('.reqDetails__infoSection--skills');
-        const requirements = document.querySelector('.reqDetails__infoSection--requirements');
 
         /*info.requirements.forEach((e) => {
             let item = document.createElement('li');
@@ -109,8 +107,6 @@ window.addEventListener('load', () => {
         });
 
         positionLevel.innerHTML = info.positionLevel;
-
-        positionName.innerHTML = info.positionName;
 
         if(info.remainingTime === 1) {
             remainingTime.innerHTML = 'Falta 1 día';
@@ -165,84 +161,15 @@ window.addEventListener('load', () => {
         });
 
         title.innerHTML = info.name + ' (' + info.amount+')';
+        name.innerHTML = info.name;
     }
 
-    candidates = (info) => {
-        if(info.length > 0) {
-            const candidates = document.querySelector('.reqDetails__candidates');
-
-            candidates.innerHTML = '';
-
-            info.forEach((e) => {
-                let candidate = document.createElement('div');
-                candidate.classList.add('candidate');
-
-                let profile = document.createElement('div');
-                profile.classList.add('candidate__profile');
-
-                let profilePic = document.createElement('img');
-                profilePic.setAttribute('src', "."+e.profilePic);
-                profilePic.classList.add('candidate__profileImg');
-                profile.appendChild(profilePic);
-
-                let profileTitles = document.createElement('div')
-                profileTitles.classList.add('candidate__profileTitles');
-                
-                let candidateName = document.createElement('h2');
-                candidateName.classList.add('candidate__profileTitlesName');
-                candidateName.innerHTML = e.name;
-                profileTitles.appendChild(candidateName);
-
-                let candidateJob = document.createElement('h3');
-                candidateJob.classList.add('candidate__profileTitlesJob');
-                candidateJob.innerHTML = e.job;
-                profileTitles.appendChild(candidateJob);
-                profile.appendChild(profileTitles);
-                candidate.appendChild(profile);
-
-                let candidateInfo = document.createElement('div');
-                candidateInfo.classList.add('candidate__info');
-
-                let cel = document.createElement('h2');
-                cel.classList.add('candidate__infoCel');
-                if(e.telephone > 1) {
-                    e.telephone.forEach((number, index) => {
-                        if(e.telephone.length === index-1) {
-                            cel.innerHTML += number;
-                        } else {
-                            cel.innerHTML += number + ' / ';
-                        }
-                    });
-                } else {
-                    cel.innerHTML = e.telephone[0];
-                }
-                candidateInfo.appendChild(cel);
-
-                let email = document.createElement('h3');
-                email.classList.add('candidate__infoEmail');
-                email.innerHTML = e.email;
-                candidateInfo.appendChild(email);
-                candidate.appendChild(candidateInfo);
-
-                let btn = document.createElement('button');
-                btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
-                btn.innerHTML = 'Ver detalles';
-                btn.addEventListener('click', () => {
-                    window.location.href = './dashboard_candidateDetails.html';
-                });
-                candidate.appendChild(btn);
-
-                candidates.appendChild(candidate);
-            });
-        }
-    }
     // TODO REMOVE AFTER DEBUG
     var sample = {
-        name: 'Diseñador',
+        name: 'Diseñador Web',
         amount: '20',
         status: [1, 1],
         remainingTime: 12,
-        positionName: 'Diseñador Web',
         positionLevel: 'Técnico',
         cities: ['Santiago de Cali - Valle del Cauca',
                  'Popayán, Cauca',
@@ -271,44 +198,6 @@ window.addEventListener('load', () => {
                     'Documentación de procesos',
                     'Facilitación de equipos de trabajo'],
     }
-
-    var candidateSample = [
-        {
-            profilePic: '/resources/imgPerfil.jpg',
-            name: 'Fabio Arias M',
-            job: 'Diseñador Gráfico',
-            telephone: ['+57 (300) 8200838',
-                        '032 5552334'],
-            email: 'fabio.arias@candidatos.com.co',
-        },
-
-        {
-            profilePic: '/resources/imgPerfil.jpg',
-            name: 'Fabio Arias M',
-            job: 'Diseñador Gráfico',
-            telephone: ['+57 (300) 8200838',
-                        '032 5552334'],
-            email: 'fabio.arias@candidatos.com.co',
-        },
-
-        {
-            profilePic: '/resources/imgPerfil.jpg',
-            name: 'Fabio Arias M',
-            job: 'Diseñador Gráfico',
-            telephone: ['+57 (300) 8200838',
-                        '032 5552334'],
-            email: 'fabio.arias@candidatos.com.co',
-        },
-
-        {
-            profilePic: '/resources/imgPerfil.jpg',
-            name: 'Fabio Arias M',
-            job: 'Diseñador Gráfico',
-            telephone: ['+57 (300) 8200838',
-                        '032 5552334'],
-            email: 'fabio.arias@candidatos.com.co',
-        },
-    ];
 
     requestDetailedInformation(sample);
     candidates(candidateSample);
