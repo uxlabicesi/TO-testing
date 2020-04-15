@@ -914,7 +914,6 @@ body {
 }
 
 .reqDetails__flexContainer--small {
-  max-width: 450px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;

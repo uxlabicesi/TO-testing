@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="./resources/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
     <link href="libs/select2-4.0.13/src/scss/core.css" rel="stylesheet" />
-      <!-- external styles -->
+    <!-- external styles -->
     <link href="libs/bootstrapvalidator-0.5.2/dist/css/bootstrapValidator.min.css" rel="stylesheet"></link>
-     <!-- general scripts -->
+    <!-- general scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
@@ -83,137 +83,94 @@
                 </div>
             </div>      
         </section>
-
+        
         <section class="content">
             <h1>Crear una solicitud</h1>
-
+            
             <div class="reqCreation">
-                <h2>INFORMACIÓN DEL CARGO</h2>
-                <p>Registra a continuación la información del cargo que solicitas.</p>
-
+                <h2>REQUISITOS</h2>
+                <p>Registra a continuación los requisitos solicitados.</p>
+                
                 <form class="reqForm" id="reqForm">
                     <div class="reqCreation__row">
+                        <div class="select__container select__container--reqCreation2col">
+                            <div class="selectadd selectadd--reqCreation form-group">
+                                <label class="select__label select__label--register select__label--academicLevel">NIVEL ACADÉMICO</label>
+                                <select class="select2__selector--academicLevel" name="academicLevel" required>
+                                    <!-- empty option is requiered for placeholder -->
+                                    <option></option>
+                                    <option value="O0"></option>
+                                    <option value="O1">Opción 1</option>
+                                    <option value="O2">Opción 2</option>
+                                    <option value="O3">Opción 3</option>
+                                    <option value="O4">Opción 4</option>
+                                    <option value="O5">Opción 5</option>
+                                    <option value="O6">Opción 6</option>
+                                    <option value="O7">Opción 7</option>
+                                    <option value="O8">Opción 8</option>
+                                </select>
+                            </div>
+                        </div>
+                        
                         <div class="textInput__container textInput__container--reqCreation2col form-group">
-                            <label for="form_position" class="label label--reqCreation">NOMBRE DEL CARGO</label>
-                            <input type="text" class="textInput" id="form_position" name="job" required>
-                        </div>
-
-                        <div class="select__container select__container--reqCreation2col">
-                            <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--level">NIVEL DEL CARGO</label>
-                                <select class="select2__selector--level" name="city" required>
-                                     <!-- empty option is requiered for placeholder -->
-                                     <option></option>
-                                     <option value="O0"></option>
-                                     <option value="O1">Opción 1</option>
-                                     <option value="O2">Opción 2</option>
-                                     <option value="O3">Opción 3</option>
-                                     <option value="O4">Opción 4</option>
-                                     <option value="O5">Opción 5</option>
-                                     <option value="O6">Opción 6</option>
-                                     <option value="O7">Opción 7</option>
-                                     <option value="O8">Opción 8</option>
-                                </select>
-                            </div>
+                            <label for="form_profession" class="label label--reqCreation">PROFESIÓN</label>
+                            <input type="text" class="textInput" id="form_profession" name="job" required>
                         </div>
                     </div>
-
+                    
                     <div class="reqCreation__row">
-                        <div class="select__container select__container--reqCreation3col">
-                            <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--hiring">TIPO DE CONTRATACIÓN</label>
-                                <select class="select2__selector--hiring" name="hiring" required>
-                                     <!-- empty option is requiered for placeholder -->
-                                     <option></option>
-                                     <option value="O0"></option>
-                                     <option value="O1">Término fijo</option>
-                                     <option value="O2">Indefinido</option>
-                                     <option value="O3">Prestación de servicios</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="select__container select__container--reqCreation3col">
-                            <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--workingday">JORNADA</label>
-                                <select class="select2__selector--workingday" name="workingday" required>
-                                     <!-- empty option is requiered for placeholder -->
-                                     <option></option>
-                                     <option value="O0"></option>
-                                     <option value="O1">Tiempo completo</option>
-                                     <option value="O2">Medio tiempo</option>
-                                     <option value="O3">Por horas</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="textInput__container textInput__container--reqCreation3col form-group">
-                            <label for="form_wage" class="label label--reqCreation">SALARIO</label>
-                            <input type="text" class="textInput" id="form_wage" name="wage" required>
+                        <div class="selectadd selectadd--reqCreation form-group select__container--reqCreation2col">
+                            <label class="select__label select__label--register select__label--knowledge">CONOCIMIENTOS</label>
+                            <select class="select2__selector--knowledge" name="knowledge" required>
+                                <!-- empty option is requiered for placeholder -->
+                                <option></option>
+                                <option value="O0"></option>
+                                <option value="O1">Opción 1</option>
+                                <option value="O2">Opción 2</option>
+                                <option value="O3">Opción 3</option>
+                                <option value="O4">Opción 4</option>
+                                <option value="O5">Opción 5</option>
+                                <option value="O6">Opción 6</option>
+                                <option value="O7">Opción 7</option>
+                                <option value="O8">Opción 8</option>
+                            </select>
                         </div>
                     </div>
-
+                    
                     <div class="reqCreation__row">
-                        <div class="select__container select__container--reqCreation2col">
-                            <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--reqCity">CIUDAD</label>
-                                <select class="select2__selector--reqCity" name="city" required>
-                                     <!-- empty option is requiered for placeholder -->
-                                     <option></option>
-                                     <option value="O0"></option>
-                                     <option value="O1">Opción 1</option>
-                                     <option value="O2">Opción 2</option>
-                                     <option value="O3">Opción 3</option>
-                                     <option value="O4">Opción 4</option>
-                                     <option value="O5">Opción 5</option>
-                                     <option value="O6">Opción 6</option>
-                                     <option value="O7">Opción 7</option>
-                                     <option value="O8">Opción 8</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
-                            <label class="label label--active label--reqCreation">CANTIDAD</label>
-                            <div class="textInput--number">
-                                <button class="textInput__changeBtn textInput__changeBtn--minus">-</button>
-                                <input type="number" value="1" class="textInput" name="" min="1" step="1" required>
-                                <button class="textInput__changeBtn textInput__changeBtn--plus">+</button>
-                            </div>
-                            
+                        <div class="textInput__container textInput__container--reqCreation2col form-group">
+                            <label for="form_position" class="label label--reqCreation">PROFESIÓN</label>
+                            <textarea class="textInput textInput--area" id="form_observations" name="observations"></textarea>
                         </div>
                     </div>
-
-                    <button class="btn btn--large btn--blue btn--rounded">Agregar otra ciudad</button>
                 </form>
-
+                
                 <div class="reqCreation__footer">
                     <a href="#" class="reqCreation__back">Anterior</a>
-   
+                    
                     <div>
                         <div class="reqCreation__progress reqCreation__progress--completed"></div>
-                        <div class="reqCreation__progress"></div>
-                        <div class="reqCreation__progress"></div>
+                        <div class="reqCreation__progress reqCreation__progress--completed"></div>
+                        <div class="reqCreation__progress reqCreation__progress--completed"></div>
                         <div class="reqCreation__progress"></div>
                     </div>
-
+                    
                     <button class="btn btn--small reqCreation__next" data-href="./dashboard_requestFunctions.html">Siguiente ></button>
                 </div>
             </div>
         </section>
     </div>
-
+    
     <script src="libs/select2-4.0.13/dist/js/select2.full.min.js"></script>
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/inputText_Microinteraction.js"></script>
     <script src="./scripts/select_interaction.js"></script>
-    <script src="./scripts/dashboard_requestCreation.js"></script>
     <script src="./scripts/dashboard_requestCreationNextBtn.js"></script>
     <!--<script src="./scripts/requestCreation_validator.js"></script>-->
-
-        <!-- scripts for bootstrap validator-->
+    
+    <!-- scripts for bootstrap validator-->
     <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>-->
     <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="libs/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>-->
-</body>
-</html>
+        <script src="libs/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>-->
+    </body>
+    </html>

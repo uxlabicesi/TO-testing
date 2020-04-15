@@ -77,6 +77,28 @@ $(document).ready(function () {
         //debug: true,  // used for verbose console
     });
 
+    $('.select2__selector--academicLevel').select2({
+        tags: true,
+        placeholder: "NIVEL ACADÉMICO",
+        theme: "talentos",
+        width: '100%', // need to override the changed default
+        containerCss: {
+            "height": "55px"
+        },
+        //debug: true,  // used for verbose console
+    });
+
+    $('.select2__selector--knowledge').select2({
+        tags: true,
+        placeholder: "CONOCIMIENTOS",
+        theme: "talentos",
+        width: '100%', // need to override the changed default
+        containerCss: {
+            "height": "55px"
+        },
+        //debug: true,  // used for verbose console
+    });
+
     /*
         Next 2 functions were created for manage microinteraction,first one for control the open event 
         and add the class 'select__label--focused'; and remove the class 
@@ -184,4 +206,40 @@ $(document).ready(function () {
             'select__label--focused', 'select__label--focusedreqCreation');
         }
     });
+
+    
+//-------------------------------------------------------------------------------------------------------
+
+    $('.select2__selector--academicLevel').on('select2:open', function (e) {
+        document.querySelector('.select__label--academicLevel').classList.remove(
+            'select__label--register');
+        document.querySelector('.select__label--academicLevel').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+    });
+
+    $('.select2__selector--academicLevel').on('select2:close', function (e) {
+        let value = $('.select2__selector--academicLevel').select2('data')[0].id;
+        if(value === ''){
+            document.querySelector('.select__label--academicLevel').classList.add('select__label--register');
+        document.querySelector('.select__label--academicLevel').classList.remove(
+            'select__label--focused', 'select__label--focusedreqCreation');
+        }
+    });
+
+//-------------------------------------------------------------------------------------------------------
+
+    $('.select2__selector--knowledge').on('select2:open', function (e) {
+        document.querySelector('.select__label--knowledge').classList.remove(
+            'select__label--register');
+        document.querySelector('.select__label--knowledge').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+    });
+
+    $('.select2__selector--knowledge').on('select2:close', function (e) {
+        let value = $('.select2__selector--knowledge').select2('data')[0].id;
+        if(value === ''){
+            document.querySelector('.select__label--knowledge').classList.add('select__label--register');
+        document.querySelector('.select__label--knowledge').classList.remove(
+            'select__label--focused', 'select__label--focusedreqCreation');
+        }
+    });
 });
+

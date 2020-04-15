@@ -102,12 +102,6 @@ window.addEventListener('load', () => {
         e.addEventListener('click', changeValue);
     });
 
-    const nextBtn = document.querySelector('.reqCreation__next');
-
-    nextBtn.addEventListener('click', () => {
-        window.location.href = nextBtn.dataset.href;
-    });
-
     function changeValue(event) {
         const plusBtn = event.target;
         const numberInput = plusBtn.closest('.textInput--number').querySelector('.textInput');
