@@ -15,8 +15,8 @@ window.addEventListener('load', () => {
     });
 
     document.addEventListener('click', (event) => {
-        if(event.target.closest('.status') != status)
-        statusList.classList.remove('status__list--active');
+        if (event.target.closest('.status') != status)
+            statusList.classList.remove('status__list--active');
     });
 
     // Changing between displaying the request's information and request's candidates
@@ -26,7 +26,9 @@ window.addEventListener('load', () => {
     const requestContainer = document.querySelector('.reqDetails__details');
     const detailsBtn = document.querySelectorAll('.candidate__btn');
 
-    if(candidateBtn) {
+
+
+    if (candidateBtn) {
         candidateBtn.addEventListener('click', () => {
             candidateBtn.classList.add('reqDetails__contentCategory--active');
             requestBtn.classList.remove('reqDetails__contentCategory--active');
@@ -35,12 +37,16 @@ window.addEventListener('load', () => {
         });
     }
 
-    if(requestBtn) {
+    if (requestBtn) {
         requestBtn.addEventListener('click', () => {
             candidateBtn.classList.remove('reqDetails__contentCategory--active');
             requestBtn.classList.add('reqDetails__contentCategory--active');
             candidatesContainer.classList.remove('reqDetails__content--active');
             requestContainer.classList.add('reqDetails__content--active');
-        }); 
+        });
     }
+
+
+
+
 });
