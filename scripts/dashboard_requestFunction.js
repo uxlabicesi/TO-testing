@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
         const inputLabel = document.createElement('label');
         inputLabel.classList.add('label', 'label--reqCreation');
-        inputLabel.innerHTML = 'Función 1';
+        inputLabel.innerHTML = 'Función';
         inputLabel.htmlFor = 'function';
         containerInput.appendChild(inputLabel);
 
