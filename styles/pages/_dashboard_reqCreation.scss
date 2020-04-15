@@ -78,4 +78,37 @@
             }
         }
     }
+
+    &__footer {
+        display: flex;
+        background-color: $color-lightGray;
+        padding: 30px;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+        border-top: solid 1px $color-gray;
+        justify-content: space-between;
+
+        & div {
+            display: flex;
+        }
+    }
+
+    &__progress {
+        width: 10px;
+        height: 10px;
+        border-radius: 8px;
+        background-color: $color-gray;
+        margin: 15px;
+
+        &--completed {
+            background-color: $color-blue;
+        }
+    }
+
+    &__back {
+        font-size: $typo-body;
+        font-weight: $typo-semibold;
+        color: $color-blue;
+        text-decoration: none;
+    }
 }

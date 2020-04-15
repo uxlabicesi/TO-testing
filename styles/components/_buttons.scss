@@ -84,4 +84,8 @@
         font-size: $typo-h3;
         font-weight: $typo-semibold;
     }
+
+    &:focus {
+       outline: none; 
+    }
  }

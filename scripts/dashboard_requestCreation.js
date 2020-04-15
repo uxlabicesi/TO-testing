@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
     let cityCount = 0;
 
     addCity.addEventListener('click', () => {
-        console.log('ya está');
         const row = document.createElement('div');
         row.classList.add('reqCreation__row');
         form.insertBefore(row, addCity);
@@ -97,21 +96,16 @@ window.addEventListener('load', () => {
         textInputNumberContainer.appendChild(plusBtn);
     });
 
-    /**
-<div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
-    <label class="label label--active label--reqCreation">CANTIDAD</label>
-    <div class="textInput--number">
-        <button class="textInput__changeBtn textInput__changeBtn--minus">-</button>
-        <input type="number" value="0" class="textInput" name="" required>
-        <button class="textInput__changeBtn textInput__changeBtn--plus">+</button>
-    </div>
-    
-</div>
- */
     const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
 
     changeValueBtns.forEach((e) => {
         e.addEventListener('click', changeValue);
+    });
+
+    const nextBtn = document.querySelector('.reqCreation__next');
+
+    nextBtn.addEventListener('click', () => {
+        window.location.href = nextBtn.dataset.href;
     });
 
     function changeValue(event) {

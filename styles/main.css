@@ -105,6 +105,10 @@ body {
   font-weight: 600;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .label {
   position: absolute;
   -webkit-transition: all .2s ease-out;
@@ -3060,6 +3064,47 @@ input[type=number] {
   background-position: center;
   width: 40px;
   height: 40px;
+}
+
+.reqCreation__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FAFAFA;
+  padding: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 10px 10px;
+  border-top: solid 1px #C4C4C4;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reqCreation__footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reqCreation__progress {
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+  background-color: #C4C4C4;
+  margin: 15px;
+}
+
+.reqCreation__progress--completed {
+  background-color: #294F75;
+}
+
+.reqCreation__back {
+  font-size: 20px;
+  font-weight: 600;
+  color: #294F75;
+  text-decoration: none;
 }
 
 * {
