@@ -90,31 +90,44 @@
             <div class="reqCreation">
                 <h2>Funciones</h2>
                 <p>Registra a continuación las labores, actividades o responsabilidades que realiza el cargo. Por ejemplo: Dirigir procedimientos operativos, Realizar estadísticas de control.</p>
-            
-                <div class="reqCreation__functions">
-                    <div class="reqCreation__functionsContainer">
-                        <button class="reqCreation__functionsContainerBtnMove"></button>
-                        <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions">
-                            <label for="form_position" class="label label--reqCreation">Función 1</label>
-                            <input type="text" class="textInput" >
+                
+                <form class="reqForm" id="reqForm">
+                    <div class="reqCreation__functions">
+                    
+                        <div class="reqCreation__functionsContainer">
+                            <button class="reqCreation__functionsContainerBtnMove"></button>
+                            <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions">
+                                <label for="form_position" class="label label--reqCreation">Función 1</label>
+                                <input type="text" class="textInput" >
+                            </div>
+                            <button class="reqCreation__functionsContainerBtnDelete"></button>
                         </div>
-                        <button class="reqCreation__functionsContainerBtnDelete"></button>
-                    </div>
 
-                    <div class="reqCreation__functionsContainer">
-                        <button class="reqCreation__functionsContainerBtnMove"></button>
-                        <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions">
-                            <label for="function" class="label label--reqCreation">Función 1</label>
-                            <input type="text" class="textInput" id="function" >
+                        <div class="reqCreation__functionsContainer">
+                            <button class="reqCreation__functionsContainerBtnMove"></button>
+                                <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions">
+                                    <label for="function" class="label label--reqCreation">Función 1</label>
+                                    <input type="text" class="textInput" id="function">
+                                </div>
+                            <button class="reqCreation__functionsContainerBtnDelete"></button>
                         </div>
-                        <button class="reqCreation__functionsContainerBtnDelete"></button>
+                        <button class="btn btn--large btn--blue btn--rounded">Agregar otra función</button>
                     </div>
+                </form>
 
-
-                    <button class="btn btn--large btn--blue btn--rounded">Agregar otra función</button>
-
-
+                <div class="reqCreation__footer">
+                    <a href="#" class="reqCreation__back">Anterior</a>
+       
+                    <div>
+                        <div class="reqCreation__progress reqCreation__progress--completed"></div>
+                        <div class="reqCreation__progress"></div>
+                        <div class="reqCreation__progress"></div>
+                        <div class="reqCreation__progress"></div>
+                    </div>
+    
+                    <button class="btn btn--small reqCreation__next" data-href="./dashboard_requestFunctions.html">Siguiente ></button>
                 </div>
+                
             </div>
         </section>
         
@@ -122,5 +135,6 @@
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/inputText_Microinteraction.js"></script>
     <script src="./scripts/select_interaction.js"></script>
+    <script src="./scripts/dashboard_requestFunction.js"></script>
 </body>
 </html>
