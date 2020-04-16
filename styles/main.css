@@ -2465,7 +2465,7 @@ input[type=number] {
 .mainnav__notification a {
   text-decoration: none;
   color: #294F75;
-  margin-left: 15px;
+  margin-left: 13px;
   font-size: 13px;
 }
 
@@ -2474,8 +2474,15 @@ input[type=number] {
 }
 
 .mainnav__notification img {
-  margin-left: 12px;
+  margin-left: 10px;
   width: 25px;
+}
+
+.mainnav__notificationCount {
+  font-size: 16px;
+  color: #294F75;
+  margin-left: 5px;
+  font-weight: 600;
 }
 
 .mainnav__notification--active {
@@ -2511,6 +2518,13 @@ input[type=number] {
 
 .mainnav__requests img {
   margin-left: 10px;
+}
+
+.mainnav__requestsCount {
+  font-size: 16px;
+  color: #294F75;
+  margin-left: 5px;
+  font-weight: 600;
 }
 
 .mainnav__requests--active {
