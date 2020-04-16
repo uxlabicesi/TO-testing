@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
             label.classList.add('label--active');
         });
 
-        // Deactivates the microinteraction when the input loses focus, ONLY if the input is still empty
+        // Desactivates the microinteraction when the input loses focus, ONLY if the input is still empty
         input.addEventListener('blur', (event) => {
 
             let label = event.target.parentElement.querySelector('label');
