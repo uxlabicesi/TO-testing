@@ -1,11 +1,11 @@
 window.addEventListener('load', () => {
-    const reqCreation = document.querySelector('.reqCreation__functions');
+    const form = document.querySelector('form');
     const addFunction = document.querySelector('.btn--blue');
 
     addFunction.addEventListener('click',() => {
         const container = document.createElement('div');
         container.classList.add('reqCreation__functionsContainer');
-        reqCreation.insertBefore(container, addFunction);
+        form.appendChild(container)
 
         const btnMove = document.createElement('button');
         btnMove.classList.add('reqCreation__functionsContainerBtnMove');

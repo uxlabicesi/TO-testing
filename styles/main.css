@@ -3031,6 +3031,15 @@ input[type=number] {
           align-items: center;
 }
 
+.reqCreation__functions .btn {
+  margin: 0px auto 30px auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 .reqCreation__functionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3113,6 +3122,10 @@ input[type=number] {
   font-weight: 600;
   color: #294F75;
   text-decoration: none;
+}
+
+.reqForm {
+  width: 100%;
 }
 
 * {
