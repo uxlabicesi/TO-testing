@@ -15,6 +15,7 @@ window.addEventListener('load', () => {
 
     textInputs.forEach((textInput) => {
         textInput.addEventListener('change', checkValid);
+        textInput.addEventListener('keyup', checkValid);// Added for NC8146
     });
 
     checkbox.addEventListener('change', checkValid);
