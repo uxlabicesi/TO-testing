@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
             },
             //debug: true,  // used for verbose console
         });
-
+/*
         $('.select2__selector--reqCity'+cityCount).on('select2:open', function (e) {
             document.querySelector('.select__label--reqCity'+cityCount).classList.remove(
                 'select__label--register');
@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
             document.querySelector('.select__label--reqCity'+cityCount).classList.remove(
                 'select__label--focused');
             }
-        });
+        });*/
 
         cityCount++;
 

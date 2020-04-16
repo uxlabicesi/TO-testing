@@ -8,7 +8,8 @@
     & form {
         display: flex;
         flex-direction: column;
-        margin: 30px;
+        padding: 30px;
+        padding-top: 0;
 
         & .btn {
             margin: 30px auto;
@@ -97,11 +98,19 @@
         width: 10px;
         height: 10px;
         border-radius: 8px;
-        background-color: $color-gray;
         margin: 15px;
 
-        &--completed {
+        &--current {
             background-color: $color-blue;
+        }
+
+        &--incomplete {
+            background-color: $color-gray;
+        }
+
+        &--completed {
+            background-image: url('../resources/smallCheckIcon.svg');
+            background-size: cover;
         }
     }
 

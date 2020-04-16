@@ -172,6 +172,11 @@ body {
   transition: all .2s ease-out;
 }
 
+.textInput--area {
+  min-height: 160px;
+  padding-top: 10px;
+}
+
 .textInput--number {
   width: 100%;
   display: -webkit-box;
@@ -228,6 +233,10 @@ body {
 
 .textInput__container--marginless {
   margin: 0;
+}
+
+.textInput__container--reqCreation1col {
+  width: 100%;
 }
 
 .textInput__container--reqCreation2col {
@@ -2976,7 +2985,8 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 30px;
+  padding: 30px;
+  padding-top: 0;
 }
 
 .reqCreation form .btn {
@@ -3098,12 +3108,20 @@ input[type=number] {
   width: 10px;
   height: 10px;
   border-radius: 8px;
-  background-color: #C4C4C4;
   margin: 15px;
 }
 
-.reqCreation__progress--completed {
+.reqCreation__progress--current {
   background-color: #294F75;
+}
+
+.reqCreation__progress--incomplete {
+  background-color: #C4C4C4;
+}
+
+.reqCreation__progress--completed {
+  background-image: url("../resources/smallCheckIcon.svg");
+  background-size: cover;
 }
 
 .reqCreation__back {
