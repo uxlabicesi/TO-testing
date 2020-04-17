@@ -1086,7 +1086,7 @@ body {
           align-items: flex-end;
   cursor: pointer;
   z-index: 2;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .status p {
@@ -2960,7 +2960,13 @@ input[type=number] {
 }
 
 .content__card--inactive img {
-  content: url(/resources/checkInactive_icon.png);
+  content: url(../resources/checkInactive_icon.svg);
+}
+
+@media (max-width: 576px) {
+  .content__card {
+    height: 70px;
+  }
 }
 
 .content__head {
