@@ -174,7 +174,7 @@
             text-decoration: none;
             //font-weight: $typo-semibold;
             color: $color-blue;
-            margin-left: 15px;
+            margin-left: 13px;
             font-size: $typo-h4;
             &:active{
                 font-weight: $typo-bolder;
@@ -182,9 +182,17 @@
         }
 
         & img {
-            margin-left: 12px;
+            margin-left: 10px;
             width: 25px;
         }
+
+        &Count{
+            font-size: $typo-h3;
+            color: $color-blue;
+            margin-left: 5px;
+            font-weight: $typo-semibold;
+        }
+
         &--active{
             font-weight: $typo-bolder;
         }
@@ -211,6 +219,13 @@
 
         & img {
             margin-left: 10px;
+        }
+
+        &Count{
+            font-size: $typo-h3;
+            color: $color-blue;
+            margin-left: 5px;
+            font-weight: $typo-semibold;
         }
 
         &--active{
