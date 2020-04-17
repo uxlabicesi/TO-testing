@@ -10,6 +10,7 @@
         border-radius: 10px;
         width: 100%;
         height: fit-content;
+        padding-bottom: 0;
     
         &Header {
             display: flex;
@@ -110,6 +111,12 @@
         &--padded {
             padding-left: 40px;
             padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+
+            & .btn {
+                margin: 30px auto;
+            }
         }
     }
 
@@ -274,6 +281,7 @@
             justify-content: flex-end;
             border-top: 1px solid $color-gray;
             padding: 20px;
+            z-index: 4;
 
             & .btn {
                 margin: 0 10px;
@@ -288,6 +296,7 @@
 
         &__infoSection {
             padding-left: 0;
+            padding-right: 0;
         }
 
         &__flexContainer {
@@ -328,6 +337,21 @@
                 margin: 20px;
                 margin-bottom: 0;
             }            
+        }
+    }
+}
+
+@media (max-width: $screen-small) {
+    .canDetails {
+
+        &__infoSection {
+
+            &--padded {
+
+                & .btn {
+                    width: 100%;
+                }
+            }
         }
     }
 }
