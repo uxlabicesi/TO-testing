@@ -8,8 +8,11 @@ input.classlist
             const value = event.target.value;
             const faceIconsClass = 'canDetails__faceIcon';
             const faceIcons = event.target.closest('.canDetails__grade').querySelectorAll('.canDetails__faceIcon');
+            const firstLine = event.target.closest('.canDetails__grade').querySelector('.canDetails__rangeStep--first');
+            const lastLine = event.target.closest('.canDetails__grade').querySelector('.canDetails__rangeStep--last');
 
-            console.log(value);
+            firstLine.classList.remove('canDetails__rangeStep--hide');
+            lastLine.classList.remove('canDetails__rangeStep--hide');
 
             if(value < 2) {
                 faceIcons[1].classList.remove(faceIconsClass + '--yellow');
@@ -23,6 +26,13 @@ input.classlist
                 faceIcons[1].classList.remove(faceIconsClass + '--yellow');
                 faceIcons[2].classList.add(faceIconsClass + '--green');
                 faceIcons[0].classList.remove(faceIconsClass + '--red');
+            }
+
+            if(value == 0) {
+                console.log('Añadioo');
+                firstLine.classList.add('canDetails__rangeStep--hide');
+            } else if(value == 6) {
+                lastLine.classList.add('canDetails__rangeStep--hide');
             }
         });
     });

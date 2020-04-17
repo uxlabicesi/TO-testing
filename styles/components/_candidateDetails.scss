@@ -174,7 +174,7 @@
 
         &::-ms-track {
             appearance: none;
-            width: 98%;
+            width: 99.5%;
             cursor: pointer;  
             background: transparent; 
             border-color: transparent;
@@ -183,8 +183,8 @@
             border-top: 2px solid $color-gray;
             height: 1px;
             top: 10px;
-            margin: 0 1%;
             cursor: pointer;
+            margin-right: .5%;
         }
 
         &::-webkit-slider-runnable-track {
@@ -194,8 +194,8 @@
             height: 1px;
             top: 10px;
             cursor: pointer;
-            width: 98%;
-            margin: 0 1%;
+            width: 99.5%;
+            margin-right: .5%;
         }
 
         &::-moz-range-track {
@@ -205,14 +205,21 @@
             height: 1px;
             top: 10px;
             cursor: pointer;
+            width: 99.5%;
+            margin-right: .5%;
         }
 
         &Step {
             height: 8px;
             border: 1px solid $color-gray;
+            opacity: 1;
 
             &--large {
                 height: 14px;
+            }
+
+            &--hide {
+                opacity: 0;
             }
         }
     }
