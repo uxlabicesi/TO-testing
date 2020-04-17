@@ -106,6 +106,139 @@
                 margin-bottom: 0.5em;
             }
         }
+
+        &--padded {
+            padding-left: 40px;
+            padding-right: 20px;
+        }
+    }
+
+    &__grade {
+
+        & h4 {
+            font-size: $typo-button;
+            margin-top: 16px;
+            font-weight: $typo-regular;
+            color: $color-blue;
+        }
+
+        &Icons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__range {
+        appearance: none;
+        width: 100%;
+        background: transparent;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-ms-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 9px;
+            background-color: white;
+            border: 2px solid $color-gray;
+            position: relative;
+            z-index: 3;
+        }
+
+        &::-moz-range-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 9px;
+            background-color: white;
+            border: 2px solid $color-gray;
+            position: relative;
+            z-index: 3;
+        }
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 9px;
+            background-color: white;
+            border: 2px solid $color-gray;
+            margin-top: -10px;
+            position: relative;
+            z-index: 3;
+        }
+
+        &::-ms-track {
+            appearance: none;
+            width: 98%;
+            cursor: pointer;  
+            background: transparent; 
+            border-color: transparent;
+            color: transparent;
+            position: relative;
+            border-top: 2px solid $color-gray;
+            height: 1px;
+            top: 10px;
+            margin: 0 1%;
+            cursor: pointer;
+        }
+
+        &::-webkit-slider-runnable-track {
+            position: relative;
+            appearance: none;
+            border-top: 2px solid $color-gray;
+            height: 1px;
+            top: 10px;
+            cursor: pointer;
+            width: 98%;
+            margin: 0 1%;
+        }
+
+        &::-moz-range-track {
+            position: relative;
+            appearance: none;
+            border-top: 2px solid $color-gray;
+            height: 1px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        &Step {
+            height: 8px;
+            border: 1px solid $color-gray;
+
+            &--large {
+                height: 14px;
+            }
+        }
+    }
+
+    &__steps {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        top: -3px;
+    }
+
+    &__faceIcon {
+
+        &--red g path {
+            fill: $color-red;
+        }
+
+        &--yellow g path {
+            fill: $color-gold;
+        }
+
+        &--green g path {
+            fill: $color-green;
+        }
     }
 
     &__details {

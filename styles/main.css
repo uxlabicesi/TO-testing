@@ -1576,6 +1576,149 @@ body {
   margin-bottom: 0.5em;
 }
 
+.canDetails__infoSection--padded {
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.canDetails__grade h4 {
+  font-size: 16px;
+  margin-top: 16px;
+  font-weight: 400;
+  color: #294F75;
+}
+
+.canDetails__gradeIcons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.canDetails__range {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.canDetails__range:focus {
+  outline: none;
+}
+
+.canDetails__range::-ms-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9px;
+  background-color: white;
+  border: 2px solid #C4C4C4;
+  position: relative;
+  z-index: 3;
+}
+
+.canDetails__range::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9px;
+  background-color: white;
+  border: 2px solid #C4C4C4;
+  position: relative;
+  z-index: 3;
+}
+
+.canDetails__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9px;
+  background-color: white;
+  border: 2px solid #C4C4C4;
+  margin-top: -10px;
+  position: relative;
+  z-index: 3;
+}
+
+.canDetails__range::-ms-track {
+  appearance: none;
+  width: 98%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  position: relative;
+  border-top: 2px solid #C4C4C4;
+  height: 1px;
+  top: 10px;
+  margin: 0 1%;
+  cursor: pointer;
+}
+
+.canDetails__range::-webkit-slider-runnable-track {
+  position: relative;
+  -webkit-appearance: none;
+          appearance: none;
+  border-top: 2px solid #C4C4C4;
+  height: 1px;
+  top: 10px;
+  cursor: pointer;
+  width: 98%;
+  margin: 0 1%;
+}
+
+.canDetails__range::-moz-range-track {
+  position: relative;
+  -moz-appearance: none;
+       appearance: none;
+  border-top: 2px solid #C4C4C4;
+  height: 1px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.canDetails__rangeStep {
+  height: 8px;
+  border: 1px solid #C4C4C4;
+}
+
+.canDetails__rangeStep--large {
+  height: 14px;
+}
+
+.canDetails__steps {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  top: -3px;
+}
+
+.canDetails__faceIcon--red g path {
+  fill: #D23A3A;
+}
+
+.canDetails__faceIcon--yellow g path {
+  fill: #E6CF00;
+}
+
+.canDetails__faceIcon--green g path {
+  fill: #339933;
+}
+
 .canDetails__details {
   position: absolute;
   opacity: 0;
