@@ -1870,6 +1870,10 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.popUp--inactive {
+  display: none;
+}
+
 .popUp__content {
   background-color: #fefefe;
   -webkit-box-align: center;

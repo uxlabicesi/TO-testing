@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
 
     createPopUp = (information, root='.popUp') => {
         let popUpContainer = document.querySelector(root);
+        popUpContainer.classList.remove('popUp--inactive');
 
         let popUpTitle = information.title;
         let popUpText = information.text;
@@ -54,6 +55,30 @@ window.addEventListener('load', () => {
         popUpContent.appendChild(body);
         popUp.appendChild(popUpContent);
         popUpContainer.appendChild(popUp);
+
+        popUpContentClose.addEventListener('click',function(){
+            popUp.style.display = "none";
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+            popUpContainer.classList.add('popUp--inactive');
+        });
+    
+        bodyBtn.addEventListener('click',function(){
+            popUp.style.display = "none";
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        });
+        
+        popUp.onclick = function(event) {
+            if (event.target == popUp) {
+                popUp.style.display = "none";
+                body.style.position = "inherit";
+                body.style.height = "auto";
+                body.style.overflow = "visible";
+            }
+        }
     }
 
     // let sample = {
@@ -67,32 +92,6 @@ window.addEventListener('load', () => {
     /*
         Opens and closes the pop up modal by changing its style
      */
-    var popUp = document.querySelector('.popUp');
-    var close = document.querySelector('.popUp__contentClose');
-    var body = document.querySelector('.popUp__contentBody');
-    var btn = document.querySelector('.popUp__contentBodyBtn');
-
-    close.addEventListener('click',function(){
-        popUp.style.display = "none";
-        body.style.position = "inherit";
-        body.style.height = "auto";
-        body.style.overflow = "visible";
-    });
-
-    btn.addEventListener('click',function(){
-        popUp.style.display = "none";
-        body.style.position = "inherit";
-        body.style.height = "auto";
-        body.style.overflow = "visible";
-    });
     
-    popUp.onclick = function(event) {
-        if (event.target == popUp) {
-            popUp.style.display = "none";
-            body.style.position = "inherit";
-            body.style.height = "auto";
-            body.style.overflow = "visible";
-        }
-    }
 
 });
