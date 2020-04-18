@@ -1,0 +1,170 @@
+.pay{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &__title{
+        color: #294F75;
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 30px;
+        margin-left: 30px;
+    }
+
+    &__description{
+        margin-right: 20px;
+        color: #294F75;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    &__details{
+
+        width: 100%;
+        padding: 0px 150px;
+
+        & h2{
+            color: #294F75;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        & p {
+            color: #294F75;
+        }
+        
+        &Amount{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: 1px solid $color-gray;
+        }
+
+        &Subtotal{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: 1px solid $color-gray;
+            border-bottom: 1px solid $color-gray;
+            &Data{
+                display: flex;
+                flex-direction: row;
+
+                &Number{
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        &Total{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: #294F75;
+            font-size: $typo-h3;
+
+            &Data{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0px;
+        justify-content: center;
+
+        &Fill{
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            background: $color-blue;
+            border: 1px solid #D7D7D7;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin: 0px 20px;
+            cursor: pointer;
+            color: white;
+
+            &--nofill{
+                color: $color-blue;
+            }
+            
+            &Circle{
+                width: 12px;
+                height: 12px;
+                border-radius: 25px;
+                border: 2px solid white;
+                margin: 0px 10px;
+
+                &--nofill{
+                    border: 2px solid blue;
+                }
+            }
+
+            &Price{
+                display: flex;
+                flex-direction: row;
+                margin-right: 10px;
+
+                & h4 {
+                    font-size: $typo-xSmall;
+                    margin-left: 5px;
+                    font-weight: $typo-regular;
+                }
+                
+            }
+
+        }
+
+        &NoFill{
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            background: white;
+            border: 1px solid #D7D7D7;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin: 0px 20px;
+            cursor: pointer;
+            color: $color-blue;
+
+            &--fill{
+                color: white;
+            }
+
+
+            &Circle{
+                width: 12px;
+                height: 12px;
+                border-radius: 25px;
+                border: 2px solid $color-blue;
+                margin: 0px 10px;
+
+                &--fill{
+                    border: 2px solid white;
+                }
+            }
+
+            &Price{
+                display: flex;
+                flex-direction: row;
+                margin-right: 10px;
+
+                & h4 {
+                    font-size: $typo-xSmall;
+                    margin-left: 5px;
+                    font-weight: $typo-regular;
+                }
+
+            }
+
+            
+        }
+    }
+}

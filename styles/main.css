@@ -3359,6 +3359,236 @@ input[type=number] {
   width: 100%;
 }
 
+.pay {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.pay__title {
+  color: #294F75;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 30px;
+  margin-left: 30px;
+}
+
+.pay__description {
+  margin-right: 20px;
+  color: #294F75;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.pay__details {
+  width: 100%;
+  padding: 0px 150px;
+}
+
+.pay__details h2 {
+  color: #294F75;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pay__details p {
+  color: #294F75;
+}
+
+.pay__detailsAmount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #C4C4C4;
+}
+
+.pay__detailsSubtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.pay__detailsSubtotalData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pay__detailsSubtotalDataNumber {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.pay__detailsTotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #294F75;
+  font-size: 16px;
+}
+
+.pay__detailsTotalData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pay__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 30px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pay__buttonsFill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #294F75;
+  border: 1px solid #D7D7D7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.pay__buttonsFill--nofill {
+  color: #294F75;
+}
+
+.pay__buttonsFillCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin: 0px 10px;
+}
+
+.pay__buttonsFillCircle--nofill {
+  border: 2px solid blue;
+}
+
+.pay__buttonsFillPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 10px;
+}
+
+.pay__buttonsFillPrice h4 {
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.pay__buttonsNoFill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border: 1px solid #D7D7D7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0px 20px;
+  cursor: pointer;
+  color: #294F75;
+}
+
+.pay__buttonsNoFill--fill {
+  color: white;
+}
+
+.pay__buttonsNoFillCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 25px;
+  border: 2px solid #294F75;
+  margin: 0px 10px;
+}
+
+.pay__buttonsNoFillCircle--fill {
+  border: 2px solid white;
+}
+
+.pay__buttonsNoFillPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 10px;
+}
+
+.pay__buttonsNoFillPrice h4 {
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
 * {
   font-family: 'Open Sans';
   -webkit-box-sizing: border-box;
