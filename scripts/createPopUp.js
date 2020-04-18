@@ -14,7 +14,9 @@ window.addEventListener('load', () => {
         let popUpContainer = document.querySelector(root);
         let popUp = document.querySelector('.popUp');
 
+      
         popUpContainer.classList.remove('popUp--inactive');
+        
 
         let popUpTitle = information.title;
         let popUpText = information.text;
@@ -61,23 +63,27 @@ window.addEventListener('load', () => {
         popUpContent.appendChild(popUpContentClose);
         popUpContent.appendChild(body);
         popUp.appendChild(popUpContent);
-
+        
         popUpContentClose.addEventListener('click',function(){
             body.classList.add('popUp__contentBody--inactive');
             popUpContainer.classList.add('popUp--inactive');
+            popUp.removeChild(popUpContent);
         });
     
         bodyBtn.addEventListener('click',function(){
             body.classList.add('popUp__contentBody--inactive');
             popUpContainer.classList.add('popUp--inactive');
+            popUp.removeChild(popUpContent);
         });
         
         popUp.onclick = function(event) {
             if (event.target == popUp) {
                 body.classList.add('popUp__contentBody--inactive');
                 popUpContainer.classList.add('popUp--inactive');
+                popUp.removeChild(popUpContent);
             }
         }
+
     }
 
     /*
