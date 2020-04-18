@@ -44,6 +44,19 @@ window.addEventListener('load', () => {
             registerBtn.classList.add('btn--inactive');
         }
 
+        
+        if(isValid){
+            registerBtn.addEventListener('click', ()=>{
+                console.log('holis');
+                createPopUp({
+                    title: "Registro Exitoso",
+                    text: "Ahora podemos entregarte el mejor talento para tu organización.",
+                    title: "¡Quiero encontrar el mejor talento!"
+                });
+            });
+        }
+       
+
         isValid = true;
     }
 
@@ -79,4 +92,5 @@ window.addEventListener('load', () => {
             body.style.overflow = "visible";
         }
     }
+
 });
