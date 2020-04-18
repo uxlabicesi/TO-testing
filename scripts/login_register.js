@@ -21,13 +21,13 @@ window.addEventListener('load', () => {
     checkbox.addEventListener('change', checkValid);
 
     registerBtn.addEventListener('click', ()=>{
-        console.log('holis');
         checkValid();
         if(isValid) {
             createPopUp({
                 title: "Registro Exitoso",
                 text: "Ahora podemos entregarte el mejor talento para tu organización.",
-                title: "¡Quiero encontrar el mejor talento!"
+                btn: "¡Quiero encontrar el mejor talento!",
+                goTo: "./dashboard_main.html", 
             });
         }
         
