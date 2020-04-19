@@ -30,7 +30,6 @@ window.addEventListener('load', () => {
                 goTo: "./dashboard_main.html", 
             });
         }
-        
     });
 
     function checkValid(event) {
