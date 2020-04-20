@@ -150,6 +150,68 @@
 
 }
 
+.splashPage {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../resources/responsiveLoginBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -10vw;
+    padding: 40px 30px;
+
+    &__textContainer {
+        position: relative;
+        margin-top: 60%;
+
+        & h1 {
+            color: white;
+            font-size: $typo-h2;
+        }
+    }
+
+    &__logo {
+        width: 250px;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    &__bottom {
+        position: absolute;
+        bottom: 30px;
+        width: 80%;
+        width: calc(100% - 60px);
+    }
+
+    &__diamond {
+        position: absolute;
+        right: 0;
+
+        &Small {
+            position: relative;
+            height: 55px;
+            top: -60px;
+            right: -20px;
+        }
+
+        &Big {
+            height: 75px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    & h3 {
+        text-align: center;
+
+        a {
+            color: white;            
+        }
+    }
+}
+
 @media (max-width: $screen-large), (max-height: 530px), (orientation: portrait) {
     .banner {
         display: none;
@@ -160,5 +222,9 @@
     .login {
         min-height: 100vh;
     }
-}
 
+    .splashPage {
+        display: block;
+        position: fixed;
+    }
+}

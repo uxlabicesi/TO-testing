@@ -27,6 +27,11 @@
         background-color: $color-blue;
     }
 
+    &--white {
+        background-color: white;
+        color: $color-darkGray;
+    }
+
     &--rounded {
         width: 277px;
         height: 48px;

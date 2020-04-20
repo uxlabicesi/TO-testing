@@ -46,6 +46,11 @@ body {
   background-color: #294F75;
 }
 
+.btn--white {
+  background-color: white;
+  color: #494949;
+}
+
 .btn--rounded {
   width: 277px;
   height: 48px;
@@ -2125,6 +2130,68 @@ body {
   width: 100%;
 }
 
+.splashPage {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../resources/responsiveLoginBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -10vw;
+  padding: 40px 30px;
+}
+
+.splashPage__textContainer {
+  position: relative;
+  margin-top: 60%;
+}
+
+.splashPage__textContainer h1 {
+  color: white;
+  font-size: 22px;
+}
+
+.splashPage__logo {
+  width: 250px;
+  margin: 20px auto;
+  display: block;
+}
+
+.splashPage__bottom {
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+  width: calc(100% - 60px);
+}
+
+.splashPage__diamond {
+  position: absolute;
+  right: 0;
+}
+
+.splashPage__diamondSmall {
+  position: relative;
+  height: 55px;
+  top: -60px;
+  right: -20px;
+}
+
+.splashPage__diamondBig {
+  height: 75px;
+}
+
+.splashPage__btn {
+  width: 100%;
+}
+
+.splashPage h3 {
+  text-align: center;
+}
+
+.splashPage h3 a {
+  color: white;
+}
+
 @media (max-width: 992px), (max-height: 530px), (orientation: portrait) {
   .banner {
     display: none;
@@ -2134,6 +2201,10 @@ body {
 @media (max-width: 576px) {
   .login {
     min-height: 100vh;
+  }
+  .splashPage {
+    display: block;
+    position: fixed;
   }
 }
 
