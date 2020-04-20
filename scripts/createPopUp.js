@@ -12,14 +12,19 @@ window.addEventListener('load', () => {
 
     createPopUp = (information, root='.popUp') => {
         let popUpContainer = document.querySelector(root);
+        let popUp = document.querySelector('.popUp');
+
+      
         popUpContainer.classList.remove('popUp--inactive');
+        
 
         let popUpTitle = information.title;
         let popUpText = information.text;
         let popUpBtn = information.btn;
+        let goTo = information.goTo;
     
-        let popUp = document.createElement('div');
-        popUp.classList.add('popUp');
+        // let popUp = document.createElement('div');
+        // popUp.classList.add('popUp');
 
         let popUpContent = document.createElement('div');
         popUpContent.classList.add('popUp__content');
@@ -29,7 +34,7 @@ window.addEventListener('load', () => {
 
         let popUpContentCloseX = document.createElement('span');
         popUpContentCloseX.classList.add('popUp__contentCloseX');
-        popUpContentCloseX.innerHTML = 'x';
+        popUpContentCloseX.innerText = 'x';
 
         let body = document.createElement('div');
         body.classList.add('popUp__contentBody');
@@ -43,9 +48,13 @@ window.addEventListener('load', () => {
         bodyText.innerHTML = popUpText;
 
 
-        let bodyBtn = document.createElement('h2');
+        let bodyBtn = document.createElement('button');
         bodyBtn.classList.add('popUp__contentBodyBtn','btn','btn--large');
         bodyBtn.innerText = popUpBtn;
+        
+        bodyBtn.addEventListener('click', () =>{
+            window.location.href = goTo;
+        });
 
         body.appendChild(bodyTitle);
         body.appendChild(bodyText);
@@ -54,40 +63,28 @@ window.addEventListener('load', () => {
         popUpContent.appendChild(popUpContentClose);
         popUpContent.appendChild(body);
         popUp.appendChild(popUpContent);
-        popUpContainer.appendChild(popUp);
-
+        
         popUpContentClose.addEventListener('click',function(){
-            popUp.style.display = "none";
-            body.style.position = "inherit";
-            body.style.height = "auto";
-            body.style.overflow = "visible";
+            body.classList.add('popUp__contentBody--inactive');
             popUpContainer.classList.add('popUp--inactive');
+            popUp.removeChild(popUpContent);
         });
     
         bodyBtn.addEventListener('click',function(){
-            popUp.style.display = "none";
-            body.style.position = "inherit";
-            body.style.height = "auto";
-            body.style.overflow = "visible";
+            body.classList.add('popUp__contentBody--inactive');
+            popUpContainer.classList.add('popUp--inactive');
+            popUp.removeChild(popUpContent);
         });
         
         popUp.onclick = function(event) {
             if (event.target == popUp) {
-                popUp.style.display = "none";
-                body.style.position = "inherit";
-                body.style.height = "auto";
-                body.style.overflow = "visible";
+                body.classList.add('popUp__contentBody--inactive');
+                popUpContainer.classList.add('popUp--inactive');
+                popUp.removeChild(popUpContent);
             }
         }
+
     }
-
-    // let sample = {
-    //     "title": "Registro Exitoso",
-    //     "text": "Ahora podemos entregarte el mejor talento para tu organización.",
-    //     "title": "¡Quiero encontrar el mejor talento!"
-    // }
-
-    // createPopUp(sample);
 
     /*
         Opens and closes the pop up modal by changing its style
