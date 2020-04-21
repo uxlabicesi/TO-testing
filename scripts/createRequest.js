@@ -22,10 +22,13 @@ window.addEventListener('load', () => {
         draft: **booleano** indicando si se trata de un borrador, true indica que es borrador.
         finished: **booleano** indicando si se trata de una solicitud terminada, true indica que la solicitud finalizó 
         id: **string** identificar de la tarjeta
+        finishedDate: *string* día en que finalizó el servicio ( pensando para la categoría completed)
         }
      */
 
     createRequest = (information, root='.content__requests') => {
+
+
         let requestsContainer = document.querySelector(root);
 
         let jobTitle = information.job;
@@ -44,6 +47,7 @@ window.addEventListener('load', () => {
         let draft = information.draft;
         let finished = information.finished;
         let identificator = information.id;
+        let finishedDate = information.finishedDate;
 
         let request = document.createElement('div');
         request.classList.add('request');
@@ -66,15 +70,19 @@ window.addEventListener('load', () => {
         let requestTime = document.createElement('p');
         requestTime.classList.add('request__time');
         if (!draft) {
-            if (time <= 0) {
-                time = 0;
-                requestTime.classList.add('request__time--delayed');
-                requestTime.classList.remove('request__time--ontime');
-            } else {
-                requestTime.classList.remove('request__time--delayed');
-                requestTime.classList.add('request__time--ontime');
+            if(!finished){
+                if (time <= 0) {
+                    time = 0;
+                    requestTime.classList.add('request__time--delayed');
+                    requestTime.classList.remove('request__time--ontime');
+                } else {
+                    requestTime.classList.remove('request__time--delayed');
+                    requestTime.classList.add('request__time--ontime');
+                }
+                requestTime.innerHTML = 'Faltan ' + time + ' días';
+            }else{
+                requestTime.innerHTML = '(' + finishedDate + ')'; 
             }
-            requestTime.innerHTML = 'Faltan ' + time + ' días';
         } else {
             requestTime.innerHTML = 'Borrador';
             request.classList.add('request--draft');
@@ -176,34 +184,4 @@ window.addEventListener('load', () => {
         request.setAttribute("id-request",identificator) // included for selecting using atrribute 08/04/2020
         requestsContainer.appendChild(request);
     }
-// TODO REMOVE AFTER DEBUG
-    let sample = {
-        "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
-        "time": 1,
-        "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
-        "length": "Término fijo a un año",
-        "days": "Lunes a Viernes",
-        "date": "25/03/2020",
-        "payment": "12'500.000 COP",
-        "status": [2, 1],
-        "draft": false,
-        "finished": false,
-        "id": "sample_id"
-    }
-
-    let sample2 = {
-        "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
-        "time": 0,
-        "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
-        "length": "Término fijo a un año",
-        "days": "Lunes a Viernes",
-        "date": "25/03/2020",
-        "payment": "2'500.000 COP",
-        "status": [2, 1],
-        "draft": false,
-        "finished": false,
-        "id": "sample_id"
-    } 
-    createRequest(sample);
-    createRequest(sample2);
 });
