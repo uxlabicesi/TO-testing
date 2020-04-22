@@ -3404,6 +3404,15 @@ input[type=number] {
   margin-bottom: 30px;
 }
 
+.reqCreation__content {
+  width: 100%;
+  display: none;
+}
+
+.reqCreation__content--active {
+  display: block;
+}
+
 .reqCreation form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3539,6 +3548,10 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.reqCreation__footer h4 {
+  cursor: pointer;
 }
 
 .reqCreation__progress {

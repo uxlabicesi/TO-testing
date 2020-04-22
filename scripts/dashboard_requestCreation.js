@@ -4,6 +4,9 @@ window.addEventListener('load', () => {
     let cityCount = 0;
 
     addCity.addEventListener('click', () => {
+        const currentCityCount = cityCount;
+        cityCount++;
+
         const row = document.createElement('div');
         row.classList.add('reqCreation__row');
         form.insertBefore(row, addCity);
@@ -17,16 +20,16 @@ window.addEventListener('load', () => {
         selectContainer.appendChild(selectAdd);
 
         const label = document.createElement('label');
-        label.classList.add('select__label', 'select__label--register', 'select__label--reqCity'+cityCount);
+        label.classList.add('select__label', 'select__label--register', 'select__label--reqCity'+currentCityCount);
         label.innerHTML = 'CIUDAD';
         selectAdd.appendChild(label);
 
         const select = document.createElement('select');
-        select.classList.add('select2__selector--reqCity'+cityCount);
+        select.classList.add('select2__selector--reqCity'+currentCityCount);
         select.setAttribute('name', 'city');
         selectAdd.appendChild(select);
 
-        $('.select2__selector--reqCity'+cityCount).select2({
+        $('.select2__selector--reqCity'+currentCityCount).select2({
             tags: true,
             placeholder: "CIUDAD",
             theme: "talentos",
@@ -36,23 +39,23 @@ window.addEventListener('load', () => {
             },
             //debug: true,  // used for verbose console
         });
-/*
-        $('.select2__selector--reqCity'+cityCount).on('select2:open', function (e) {
-            document.querySelector('.select__label--reqCity'+cityCount).classList.remove(
+
+        $('.select2__selector--reqCity'+currentCityCount).on('select2:open', function (e) {
+            document.querySelector('.select__label--reqCity'+currentCityCount).classList.remove(
                 'select__label--register');
-            document.querySelector('.select__label--reqCity'+cityCount).classList.add('select__label--focused');
+            document.querySelector('.select__label--reqCity'+currentCityCount).classList.add('select__label--focused');
         });
     
-        $('.select2__selector--reqCity'+cityCount).on('select2:close', function (e) {
-            let value = $('.select2__selector--reqCity'+cityCount).select2('data')[0].id;
+        $('.select2__selector--reqCity'+currentCityCount).on('select2:close', function (e) {
+            let value = $('.select2__selector--reqCity'+currentCityCount).select2('data')[0].id;
             if(value === ''){
-                document.querySelector('.select__label--reqCity'+cityCount).classList.add('select__label--register');
-            document.querySelector('.select__label--reqCity'+cityCount).classList.remove(
+                document.querySelector('.select__label--reqCity'+currentCityCount).classList.add('select__label--register');
+            document.querySelector('.select__label--reqCity'+currentCityCount).classList.remove(
                 'select__label--focused');
             }
-        });*/
+        });
 
-        cityCount++;
+        
 
         for(var i = 0; i < 10; i++) {
             const option = document.createElement('option');
