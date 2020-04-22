@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
-    const form = document.querySelector('form');
-    const addFunction = document.querySelector('.btn--blue');
+    const form = document.querySelector('.reqCreation__content--skills form');
+    const addFunction = document.querySelector('.reqCreation__content--skills .btn--blue');
 
     addFunction.addEventListener('click',() => {
         const container = document.createElement('div');

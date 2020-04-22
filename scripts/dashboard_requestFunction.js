@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
-    const form = document.querySelector('form');
-    const addFunction = document.querySelector('.btn--blue');
-    let functionCount = document.querySelectorAll('.textInput').length - 1;
+    const form = document.querySelector('.reqCreation__content--function form');
+    const addFunction = document.querySelector('.reqCreation__content--function .btn--blue');
+    let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length - 1;
 
     addFunction.addEventListener('click',() => {
         const container = document.createElement('div');
