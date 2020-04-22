@@ -1,6 +1,7 @@
+// TODO REMOVE AFTER DEBUGGING
 
 window.addEventListener('load', () => {
-// TODO REMOVE AFTER DEBUGGING
+
 var sample = {
     title: 'Diseñador UX',
     status: [2, 1],

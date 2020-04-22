@@ -1,6 +1,47 @@
+
+/***
+ *  @param {} info both options require this same structure for json array
+ *  
+ * [{candidate1},{candidate2},{candidate3}, ...etc]
+ * 
+ * each candiate require this structure
+ * {
+    profilePic: '/resources/imgPerfil.jpg', // (string) link for image
+    name: 'Fabio Arias M', // (string) candidate name
+    job: 'Diseñador Gráfico', // (string) candiate main caree/job
+    telephone: ['+57 (300) 8200838','032 5552334'], // (string-array) list of phone numbers as strings 
+    email: 'fabio.arias@candidatos.com.co', // (string) candidate mail
+    id: 'id-custom-sample-1' // (string) id for each candidate
+    },
+ */
+
+
+/**
+ * @description this function updates the candidates info, this information will be used for prepare the event click for candidatesTabButton.
+ * @param {} info 
+ * 
+ * // TODO: insert complete structure for json
+ * Option 1 - update by using this function from another js file.
+ */
+let updateCandidatesInfo = (info) => {};
+
+/**
+ * @description this function can be used directly to add candidates info, or delegated the call to default way using updateCandidatesInfo()
+ * @param {} info 
+ * 
+ * // TODO: insert complete structure for json
+ * // Option 2 - re-write the trigger event.
+ */
 let candidates = (info) => {};
 
 window.addEventListener('load', () => {
+
+    let candidateInfo = {}
+
+    updateCandidatesInfo = (info) => {
+        candidateInfo = info;
+    }
+
     candidates = (info) => {
         if (info.length > 0) {
             const candidates = document.querySelector('.reqDetails__candidates');
@@ -77,8 +118,10 @@ window.addEventListener('load', () => {
     let candidatesTabButton = document.querySelector('.reqDetails__candidates__tabButton');
 
     candidatesTabButton.addEventListener('click', () => {
-       // insert here the data...  candidates(candidateSample);
-       // candidates(candidateSample);
+       // if you want to re-write all trigger... using directly the function candidates(), or use the function updateCandidatesInfo() for changing values of candidateInfo (variable)
+       
+       // (do-not remove, unless you will re-write trigger and use option 2) require for using the updateCandidatesInfo
+       candidates(candidateInfo);
     });
 
 

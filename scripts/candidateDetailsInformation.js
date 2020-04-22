@@ -1,3 +1,41 @@
+/**
+ * @description the function add infomation to candidate details
+ * @param {} info requires the following JSON structure:
+ * {
+ *  title: 'Diseñador UX', // 
+ *  status: [2, 1], //
+ *  remainingTime: 1, //
+ *  name: 'Fabio Arias', //
+ *  profilePic: './resources/imgPerfil.jpg', //
+ *  job: 'Diseñador de Medios Interactivos', //
+ *  origin: 'Ezenza', //
+ *  id: '1130613425', // 
+ *  tel: ['(300) 8200838', '032 5552334'],
+ *  age: 32,
+ *  city: 'Cali, Valle del Cauca',
+ *  exp: ['Experiencia Laboral 1', 'Experiencia Laboral 2', 'Experiencia Laboral 3'],
+ *  knowledge: ['Conocimiento 1', 'Conocimiento 2', 'Conocimiento 3'],
+ *  licenses: ['Licencias 1', 'Licencias 2', 'Licencias 3'],
+ *  references: [
+ *    {
+ *     title: 'Referencia personal 1',
+ *     name: 'Nombre',
+ *     position: 'Cargo',
+ *     tel: 'Teléfono'
+ *    },
+ *    {
+ *     title: 'Referencia personal 2',
+ *     name: 'Nombre',
+ *     position: 'Cargo',
+ *     tel: 'Teléfono'
+ *    }
+ *   ],
+ *   evaluation: [1,1,1], // added for second time interaction, represent initial or prev evaluation
+ *   }
+
+ */
+
+
 let addInformation = (info) => {};
 
 window.addEventListener('load', () => {
@@ -77,36 +115,62 @@ window.addEventListener('load', () => {
 
         name.innerHTML = info.name;
 
-        if(info.remainingTime === 1) {
-            remainingTime.innerHTML = 'Falta 1 día';
-        } else {
-            remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
+        // if(info.remainingTime === 1) {
+        //     remainingTime.innerHTML = 'Falta 1 día';
+        // } else {
+        //     remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
+        // }
+
+        // if(status[1] === 0) {
+        //     status.classList.add('status--yellow');
+        // } else {
+        //     status.classList.add('status--green');
+        // }
+
+        if(info.status[0] === -1) {
+            remainingTime.innerHTML = 'Borrador';
+            status.classList.add('status--gray');
+            //candidatesTabButton.classList.add('reqDetails__candidates__tabButton--hide');
+        }else{
+            //candidatesTabButton.classList.remove('reqDetails__candidates__tabButton--hide');
+            if(info.remainingTime === 1) {
+                remainingTime.innerHTML = 'Falta 1 día';
+            } else {
+                remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
+            }
+            if(status[1] === 0) {
+                status.classList.add('status--yellow');
+            } else {
+                status.classList.add('status--green');
+            }
         }
 
-        if(status[1] === 0) {
-            status.classList.add('status--yellow');
-        } else {
-            status.classList.add('status--green');
-        }
 
         switch(info.status[0]) {
+            case -1:
+                statusCurrent.innerHTML = 'Borrador';
+                break;
             case 0:
                 statusCurrent.innerHTML = 'Pendiente de pago';
                 break;
 
             case 1: 
+                statusCurrent.innerHTML = 'En verificación';
+            break;
+
+            case 2: 
                 statusCurrent.innerHTML = 'Iniciado';
                 break;
 
-            case 2: 
+            case 3: 
                 statusCurrent.innerHTML = 'En proceso de búsqueda';
                 break;
 
-            case 3: 
+            case 4: 
                 statusCurrent.innerHTML = 'En espera de selección';
                 break;
 
-            case 4: 
+            case 5: 
                 statusCurrent.innerHTML = 'Finalizó el proceso';
                 break;
         }

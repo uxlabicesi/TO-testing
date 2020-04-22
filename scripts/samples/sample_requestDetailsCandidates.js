@@ -46,6 +46,14 @@ var candidateSample = [{
 },
 ];
 
-candidates(candidateSample);
+/**
+ * For more information refers to requestDetailsCandidates.js, fors options documentation
+ */
+
+// using option 1, and calling directly 
+updateCandidatesInfo(candidateSample);
+
+// using option 2, and calling directly, this one require to define the trigger or asume the loading issues
+//candidates(candidateSample);
 
 });

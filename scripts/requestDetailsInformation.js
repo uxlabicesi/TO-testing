@@ -1,11 +1,5 @@
 
-// empty function will be updated after window load.
-let requestDetailedInformation = (info) => {};
-//let candidates = (info) => {};
-
-window.addEventListener('load', () => {
-
-    /**
+   /**
      * 
      * @param { } information 
      * 
@@ -41,6 +35,13 @@ window.addEventListener('load', () => {
         email: **String** con el correo electrónico del candidato,
     }
      */
+
+// empty function will be updated after window load.
+let requestDetailedInformation = (info) => {};
+
+
+window.addEventListener('load', () => {
+
     
     requestDetailedInformation = (info) => {
 
@@ -176,8 +177,6 @@ window.addEventListener('load', () => {
             });
         }
        
-
-
         title.innerHTML = info.name + ' (' + info.amount+')';
         name.innerHTML = info.name;
     }

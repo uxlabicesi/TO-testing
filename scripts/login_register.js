@@ -1,4 +1,34 @@
+/**
+ * the external function (updateDataForPopUp) can be called for updating the
+ * information data for popUp making, call it after the function createPopUp,
+ * if you want to create pop up directly and not based on updating values, 
+ * refers to createPopup.js using this option (you maybe will need to rewrite
+ * the trigger event) * 
+ * First parameter require the following structure:
+ * 
+ * * information object contains the following structure JSON:
+    * {
+    * title: text for main title
+    * text: description text
+    * btn: text for button
+    * goto: text url for button
+    * }
+ * 
+ * Second parameter is optional modify the root class for append the popUp.
+ */
+
+let updateDataForPopUp = (information, root='.popUp') => {};
+
 window.addEventListener('load', () => {
+
+    var informationPopUp = {
+     "title": "text for main title",
+     "text" : "description text",
+     "btn"  : "text for button",
+     "goto" : "text url for button"
+    }
+
+    var rootForPopUp = ".popUp";
 
     /*
         Checks if all inputs on the register form have value, and if the terms and conditions checkbox
@@ -23,14 +53,14 @@ window.addEventListener('load', () => {
     registerBtn.addEventListener('click', ()=>{
         checkValid();
         if(isValid) {
-            createPopUp({
-                title: "Registro Exitoso",
-                text: "Ahora podemos entregarte el mejor talento para tu organización.",
-                btn: "¡Quiero encontrar el mejor talento!",
-                goTo: "./dashboard_main.html", 
-            });
+            createPopUp(informationPopUp,rootForPopUp);
         }
     });
+
+    updateDataForPopUp = (information, root='.popUp') => {
+        informationPopUp = information;
+        rootForPopUp = root;
+    }
 
     function checkValid(event) {
 
