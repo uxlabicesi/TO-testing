@@ -3432,6 +3432,7 @@ input[type=number] {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin-bottom: 0;
 }
 
 .reqCreation h2 {
@@ -3585,13 +3586,26 @@ input[type=number] {
   width: 100%;
 }
 
-.pay {
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 100%;
-  margin-bottom: 30px;
+.pay__input {
+  width: 50%;
+  margin: 40px 25%;
+  margin-bottom: 20px;
+}
+
+.pay__input .label {
+  left: 25px;
+  top: 16px;
+}
+
+.pay__input .label--active {
+  -webkit-transform: translate(-25px, -225%);
+          transform: translate(-25px, -225%);
+  font-size: 16px;
+}
+
+.pay__btn {
+  margin: 0 auto;
+  display: block;
 }
 
 .pay__title {
@@ -3628,10 +3642,6 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3642,10 +3652,6 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3657,10 +3663,6 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .pay__detailsSubtotalDataNumber {
@@ -3668,14 +3670,30 @@ input[type=number] {
   margin-right: 5px;
 }
 
+.pay__detailsPromo {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.pay__detailsPromo--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pay__detailsPromoData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .pay__detailsTotal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3687,129 +3705,67 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .pay__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin: 30px 0px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.pay__buttonsFill {
+.pay__buttonsBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #294F75;
-  border: 1px solid #D7D7D7;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
   margin: 0px 20px;
   cursor: pointer;
+}
+
+.pay__buttonsBtn--fill {
+  background-color: #294F75;
+  border: 1px solid #FAFAFA;
   color: white;
 }
 
-.pay__buttonsFill--nofill {
-  color: #294F75;
-}
-
-.pay__buttonsFillCircle {
-  width: 12px;
-  height: 12px;
-  border-radius: 25px;
+.pay__buttonsBtn--fill .pay__buttonsCircle {
   border: 2px solid white;
-  margin: 0px 10px;
 }
 
-.pay__buttonsFillCircle--nofill {
-  border: 2px solid blue;
-}
-
-.pay__buttonsFillPrice {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-right: 10px;
-}
-
-.pay__buttonsFillPrice h4 {
-  font-size: 12px;
-  margin-left: 5px;
-  font-weight: 400;
-}
-
-.pay__buttonsNoFill {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: white;
-  border: 1px solid #D7D7D7;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 10px;
-  margin: 0px 20px;
-  cursor: pointer;
-  color: #294F75;
-}
-
-.pay__buttonsNoFill--fill {
-  color: white;
-}
-
-.pay__buttonsNoFillCircle {
-  width: 12px;
-  height: 12px;
-  border-radius: 25px;
+.pay__buttonsBtn--nofill {
+  background-color: white;
   border: 2px solid #294F75;
+  color: #294F75;
+}
+
+.pay__buttonsBtn--nofill .pay__buttonsCircle {
+  border: 2px solid #294F75;
+}
+
+.pay__buttonsCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 25px;
   margin: 0px 10px;
 }
 
-.pay__buttonsNoFillCircle--fill {
-  border: 2px solid white;
-}
-
-.pay__buttonsNoFillPrice {
+.pay__buttonsPrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin-right: 10px;
 }
 
-.pay__buttonsNoFillPrice h4 {
+.pay__buttonsPrice h4 {
   font-size: 12px;
   margin-left: 5px;
   font-weight: 400;

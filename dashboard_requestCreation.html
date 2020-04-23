@@ -328,11 +328,81 @@
                     </div>
                 </div>
 
+                <div class="pay reqCreation__content">
+                    <h2 class="pay__title">Pago</h2>
+                    <p class="pay__description">Usted va a realizar la compra del siguiente servicio. Recuerde que para iniciar el proceso de selección solo es necesario cancelar el 50%.</p>
+                    
+                    <div class="textInput__container textInput__container--marginless form-group pay__input">
+                        <label for="form_promoCode" class="label">Código promocional</label>
+                        <input type="text" class="textInput" id="form_promoCode" name="promoCode" required>
+                    </div>
+
+                    <button class="btn btn--small pay__btn">Aplicar</button>
+    
+                    <div class="pay__details">
+                        <h2>Detalles de pago</h2>
+    
+                        <div class="pay__detailsAmount">
+                            <p>Cantidad:</p>
+                            <p class="pay__detailsAmountNumber"></p>
+                        </div>
+    
+                        <div class="pay__detailsSubtotal">
+                            <p>Subtotal:</p>
+                            <div class="pay__detailsSubtotalData">
+                                <p>$</p>
+                                <p class="pay__detailsSubtotalDataNumber"></p>
+                                <p class="pay__detailsSubtotalDataNumberIva">+ IVA</p>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="pay__detailsPromo">
+                            <p>Código promocional:</p>
+                            <div class="pay__detailsPromoData">
+                                <p>$</p>
+                                <p>- <span class="pay__detailsPromoDataNumber"></span></p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="pay__detailsTotal">
+                            <h3>Total:</h3>
+                            <div class="pay__detailsTotalData">
+                                <h3>$</h3>
+                                <h3 class="pay__detailsTotalNumber"></h3>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="pay__buttons">
+                        <div class="pay__buttonsBtn pay__buttonsBtn--fill pay__buttonsBtn--half">
+                            <div class="pay__buttonsCircle"></div>
+                            <div class="pay__buttonsPrice">
+                                <h3>$</h3>
+                                <h3 class="pay__halfPriceBtn"></h3>
+                                <h4>(50%)</h4>
+                            </div>
+                        </div>
+    
+                        <div class="pay__buttonsBtn pay__buttonsBtn--nofill pay__buttonsBtn--full">
+                            <div class="pay__buttonsCircle"></div>
+                            <div class="pay__buttonsPrice">
+                                <h3>$</h3>
+                                <h3 class="pay__fullPriceBtn"></h3>
+                                <h4>(100%)</h4>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                
                 <div class="reqCreation__footer">
                     <h4 href="#" class="reqCreation__back">Anterior</h4>
                     
                     <div>
                         <div class="reqCreation__progress reqCreation__progress--current"></div>
+                        <div class="reqCreation__progress reqCreation__progress--incomplete"></div>
                         <div class="reqCreation__progress reqCreation__progress--incomplete"></div>
                         <div class="reqCreation__progress reqCreation__progress--incomplete"></div>
                         <div class="reqCreation__progress reqCreation__progress--incomplete"></div>
@@ -352,6 +422,12 @@
     <script src="./scripts/dashboard_requestFunction.js"></script>
     <script src="./scripts/dashboard_requestSkills.js"></script>
     <script src="./scripts/dashboard_requestCreationNavigation.js"></script>
+    <script src="./scripts/dashboard_requestPay.js"></script>
+    <script src="./scripts/dashboard_payInformation.js"></script>
+    <script src="./scripts/applyPromoCode.js"></script>
+
+    <script src="./scripts/samples/sample__applyPromo.js"></script>
+    <script src="./scripts/samples/sample_payInformation.js"></script>
     <!--<script src="./scripts/requestCreation_validator.js"></script>-->
     
     <!-- scripts for bootstrap validator-->

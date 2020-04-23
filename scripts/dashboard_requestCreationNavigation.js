@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     const content = document.querySelectorAll('.reqCreation__content');
 
     nextBtn.addEventListener('click', () => {
-        if(reqCreationState < 3) {
+        if(reqCreationState < content.length-1) {
             content[reqCreationState].classList.remove('reqCreation__content--active');
             content[reqCreationState+1].classList.add('reqCreation__content--active');
 

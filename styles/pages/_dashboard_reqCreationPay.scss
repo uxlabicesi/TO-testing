@@ -1,9 +1,25 @@
 .pay{
-    background: #FFFFFF;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 100%;
-    margin-bottom: 30px;
+
+    &__input {
+        width: 50%;
+        margin: 40px 25%;
+        margin-bottom: 20px;
+
+        & .label {
+            left: 25px;
+            top: 16px;
+
+            &--active {
+                transform: translate(-25px, -225%);
+                font-size: $typo-button;
+            }
+        }       
+    }
+
+    &__btn {
+        margin: 0 auto;
+        display: block;
+    }
 
     &__title{
         color: #294F75;
@@ -37,20 +53,20 @@
         
         &Amount{
             display: flex;
-            flex-direction: row;
+
             justify-content: space-between;
             border-top: 1px solid $color-gray;
         }
 
         &Subtotal{
             display: flex;
-            flex-direction: row;
+
             justify-content: space-between;
             border-top: 1px solid $color-gray;
             border-bottom: 1px solid $color-gray;
             &Data{
                 display: flex;
-                flex-direction: row;
+    
 
                 &Number{
                     margin-left: 5px;
@@ -59,111 +75,86 @@
             }
         }
 
+        &Promo {
+            display: none;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-gray;
+
+            &--active {
+                display: flex;
+            }
+
+            &Data {
+                display: flex;
+            }
+        }
+
         &Total{
             display: flex;
-            flex-direction: row;
+
             justify-content: space-between;
             color: #294F75;
             font-size: $typo-h3;
 
             &Data{
                 display: flex;
-                flex-direction: row;
+    
             }
         }
     }
 
-    &__buttons{
+    &__buttons {
         display: flex;
-        flex-direction: row;
         margin: 30px 0px;
         justify-content: center;
 
-        &Fill{
+        &Btn {
             display: flex;
-            flex-direction: row;
+
             align-items:center;
-            background: $color-blue;
-            border: 1px solid #D7D7D7;
             box-sizing: border-box;
             border-radius: 10px;
             margin: 0px 20px;
             cursor: pointer;
-            color: white;
 
-            &--nofill{
-                color: $color-blue;
-            }
-            
-            &Circle{
-                width: 12px;
-                height: 12px;
-                border-radius: 25px;
-                border: 2px solid white;
-                margin: 0px 10px;
-
-                &--nofill{
-                    border: 2px solid blue;
-                }
-            }
-
-            &Price{
-                display: flex;
-                flex-direction: row;
-                margin-right: 10px;
-
-                & h4 {
-                    font-size: $typo-xSmall;
-                    margin-left: 5px;
-                    font-weight: $typo-regular;
-                }
-                
-            }
-
-        }
-
-        &NoFill{
-            display: flex;
-            flex-direction: row;
-            align-items:center;
-            background: white;
-            border: 1px solid #D7D7D7;
-            box-sizing: border-box;
-            border-radius: 10px;
-            margin: 0px 20px;
-            cursor: pointer;
-            color: $color-blue;
-
-            &--fill{
+            &--fill {
+                background-color: $color-blue;
+                border: 1px solid $color-lightGray;
                 color: white;
-            }
 
-
-            &Circle{
-                width: 12px;
-                height: 12px;
-                border-radius: 25px;
-                border: 2px solid $color-blue;
-                margin: 0px 10px;
-
-                &--fill{
+                & .pay__buttonsCircle {
                     border: 2px solid white;
                 }
             }
 
-            &Price{
-                display: flex;
-                flex-direction: row;
-                margin-right: 10px;
+            &--nofill {
+                background-color: white;
+                border: 2px solid $color-blue;
+                color: $color-blue;
 
-                & h4 {
-                    font-size: $typo-xSmall;
-                    margin-left: 5px;
-                    font-weight: $typo-regular;
+                & .pay__buttonsCircle {
+                    border: 2px solid $color-blue;
                 }
-
             }
+        }
 
+        &Circle{
+            width: 12px;
+            height: 12px;
+            border-radius: 25px;
+            margin: 0px 10px;
+        }
+
+        &Price{
+            display: flex;
+
+            margin-right: 10px;
+
+            & h4 {
+                font-size: $typo-xSmall;
+                margin-left: 5px;
+                font-weight: $typo-regular;
+            }
             
         }
     }
