@@ -177,12 +177,12 @@ window.addEventListener('load', () => {
             });
         }
        
-        title.innerHTML = info.name + ' (' + info.amount+')';
+        title.innerHTML = MaysFirst(info.name.toLowerCase()) + ' (' + info.amount+')';
         name.innerHTML = MaysFirst(info.name.toLowerCase());
 
         // Función que recibe como parametro un string y lo convierte en minusculas con excepción de
         // la primera letra, es necesario agregarle al string que se quiera transformar la funcion de javascript
-        // toLowerCase() Ej: MaysFirst(string.toLowerCase());
+        // toLowerCase() Ej: MaysFirst(string.toLowerCase())
         function MaysFirst(string){
             return string.charAt(0).toUpperCase() + string.slice(1);
         }
