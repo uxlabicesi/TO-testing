@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+    <div class="popUp popUp--inactive"></div>
     <header class="mainheader">
         <div class="mainheader__menu">
             <img src="./resources/menuIcon.svg">
@@ -42,6 +42,7 @@
     </header>
     
     <div class="dashboardContent">
+        
         <section class="mainnav">
             <input class="textInput textInput--search" type="text" name="" placeholder="Buscar">
             <div class="mainnav__border"></div>
@@ -395,7 +396,7 @@
                                 </div>                                
                             </div>
 
-                            <button class="btn btn--large">Enviar calificación</button>
+                            <button class="btn btn--large btn__evaluation">Enviar calificación</button>
                         </form>
                     </div>
                     
@@ -409,12 +410,17 @@
             </div>
         </div>
     </div>
+
+
+
     
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/dashboard_reqDetails.js"></script>
     <script src="./scripts/candidateDetailsInformation.js"></script>
     <script src="./scripts/candidateDetailsRangeInteraction.js"></script>
+    <script src="./scripts/createPopUp.js"></script>
     <!-- TODO remove for deleted sample info -->
     <script src="./scripts/samples/sample_candidateDetailsInformation.js"></script>
+    <script src="./scripts/samples/sample_setCandidateEvaluation.js"></script>
 </body>
 </html>
