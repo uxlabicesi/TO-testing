@@ -1923,8 +1923,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 4;
-  padding: 50px 0px;
+  z-index: 10;
+  padding: 100px 0px;
   left: 0;
   top: 0;
   width: 100%;
