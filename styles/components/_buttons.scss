@@ -90,6 +90,18 @@
         font-weight: $typo-semibold;
     }
 
+    &--noFill--active{
+        width: 152px;
+        height: 54px;
+        border: 1px solid $color-green;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: none;
+        color: $color-green;
+        font-size: $typo-h3;
+        font-weight: $typo-semibold;
+    }
+
     &:focus {
        outline: none; 
     }
