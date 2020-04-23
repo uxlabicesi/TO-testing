@@ -75,29 +75,29 @@ window.addEventListener('load', () => {
 
         info.skills.forEach((e) => {
             let item = document.createElement('li');
-            item.innerHTML = e;
+            item.innerHTML = MaysFirst(e.toLowerCase());
             skills.appendChild(item);
         });
 
-        observations.innerHTML = info.observations;
+        observations.innerHTML = MaysFirst(info.observations.toLowerCase());
 
         knowledge.innerHTML = info.knowledge;
 
-        profession.innerHTML = info.profession;
+        profession.innerHTML = MaysFirst(info.profession.toLowerCase());
 
-        academicLevel.innerHTML = info.academicLevel;
+        academicLevel.innerHTML = MaysFirst(info.academicLevel.toLowerCase());
 
         info.functions.forEach((e) => {
             let item = document.createElement('li');
-            item.innerHTML = e;
+            item.innerHTML = MaysFirst(e.toLowerCase());
             functions.appendChild(item);
         });
 
         wage.innerHTML = info.wage;
 
-        hiring.innerHTML = info.hiring;
+        hiring.innerHTML = MaysFirst(info.hiring.toLowerCase());
 
-        time.innerHTML = info.time;
+        time.innerHTML = MaysFirst(info.time.toLowerCase());
 
         //city.innerHTML = info.city;
 
@@ -110,7 +110,7 @@ window.addEventListener('load', () => {
 
         });
 
-        positionLevel.innerHTML = info.positionLevel;
+        positionLevel.innerHTML = MaysFirst(info.positionLevel.toLowerCase());
 
         if(info.status[0] === -1) {
             remainingTime.innerHTML = 'Borrador';
@@ -177,8 +177,14 @@ window.addEventListener('load', () => {
             });
         }
        
-        title.innerHTML = info.name + ' (' + info.amount+')';
-        name.innerHTML = info.name;
-    }
+        title.innerHTML = MaysFirst(info.name.toLowerCase()) + ' (' + info.amount+')';
+        name.innerHTML = MaysFirst(info.name.toLowerCase());
 
+        // Función que recibe como parametro un string y lo convierte en minusculas con excepción de
+        // la primera letra, es necesario agregarle al string que se quiera transformar la funcion de javascript
+        // toLowerCase() Ej: MaysFirst(string.toLowerCase())
+        function MaysFirst(string){
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    }
 });
