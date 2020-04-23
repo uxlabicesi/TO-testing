@@ -16,32 +16,17 @@
     },
  */
 
-
-/**
- * @description this function updates the candidates info, this information will be used for prepare the event click for candidatesTabButton.
- * @param {} info 
- * 
- * // TODO: insert complete structure for json
- * Option 1 - update by using this function from another js file.
- */
-let updateCandidatesInfo = (info) => {};
-
 /**
  * @description this function can be used directly to add candidates info, or delegated the call to default way using updateCandidatesInfo()
  * @param {} info 
  * 
  * // TODO: insert complete structure for json
- * // Option 2 - re-write the trigger event.
+ * // Needs to re-write the trigger event.
  */
 let candidates = (info) => {};
 
 window.addEventListener('load', () => {
 
-    let candidateInfo = {}
-
-    updateCandidatesInfo = (info) => {
-        candidateInfo = info;
-    }
 
     candidates = (info) => {
         if (info.length > 0) {
@@ -53,7 +38,7 @@ window.addEventListener('load', () => {
                 let candidate = document.createElement('div');
                 candidate.classList.add('candidate');
                 candidate.setAttribute("id-candidate", info[aux].id) // included for selecting using atrribute 13/04/2020
-                candidate.classList.add("id-candidate-"+info[aux].id) // included for selecting using atrribute 13/04/2020
+                candidate.classList.add("id-candidate-"+info[aux].id) // included for selecting using atrribute when responsive
 
                 let profile = document.createElement('div');
                 profile.classList.add('candidate__profile');
