@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
         }
 
         const amountContainer = document.createElement('div');
-        amountContainer.classList.add('textInput__container', 'textInput--focused', 'textInput__container--reqCreation2col', 'form-group');
+        amountContainer.classList.add('textInput__container', 'textInput--focused', 'textInput__container--reqCreation2col', 'form-group', 'textInput__container--reqCreation2col--new');
         row.appendChild(amountContainer);
 
         const amountLabel = document.createElement('label');
@@ -92,7 +92,7 @@ window.addEventListener('load', () => {
 
         const plusBtn = document.createElement('button');
         plusBtn.classList.add('textInput__changeBtn', 'textInput__changeBtn--plus');
-        plusBtn.innerHTML = '-';
+        plusBtn.innerHTML = '+';
         plusBtn.addEventListener('click', changeValue);
         textInputNumberContainer.appendChild(plusBtn);
 

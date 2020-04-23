@@ -265,6 +265,10 @@ body {
   width: 47%;
 }
 
+.textInput__container--reqCreation2col--new {
+  width: 40%;
+}
+
 .textInput__container--reqCreation3col {
   width: 29%;
 }
@@ -3462,6 +3466,7 @@ input[type=number] {
   background-position: center;
   width: 40px;
   height: 40px;
+  margin-bottom: 9px;
 }
 
 .reqCreation__content {
