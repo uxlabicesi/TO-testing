@@ -214,8 +214,7 @@ window.addEventListener('load', () => {
         title.innerHTML = info.title;
 
         if(info.evaluation != null){
-            // TODO: solve function
-            /*buildRange(info.evaluation);*/
+            buildRange(info.evaluation);
         }
     }
 });  

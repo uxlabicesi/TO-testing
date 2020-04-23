@@ -31,7 +31,7 @@ var sample = {
             tel: 'Teléfono'
         }
     ],
-    evaluation: [1,1,1], // added for second time interaction, represent initial or prev evaluation
+    evaluation: [2,3,4], // added for second time interaction, represent initial or prev evaluation
     selected: false,
 }
 addInformation(sample);
