@@ -53,6 +53,7 @@ window.addEventListener('load', () => {
                 let candidate = document.createElement('div');
                 candidate.classList.add('candidate');
                 candidate.setAttribute("id-candidate", info[aux].id) // included for selecting using atrribute 13/04/2020
+                candidate.classList.add("id-candidate-"+info[aux].id) // included for selecting using atrribute 13/04/2020
 
                 let profile = document.createElement('div');
                 profile.classList.add('candidate__profile');
