@@ -16,6 +16,28 @@
         }
     }
 
+    &__selected {
+        color: $color-green;
+        text-decoration: none;
+        background-image: $bgImageCheckIcon;
+        background-repeat: no-repeat;
+        padding: 10px;
+        padding-left: 30px;
+        background-position-y: center;
+        font-weight: $typo-bold;
+        font-size: $typo-h4;
+
+        &:hover {
+            color: $color-green;
+        }
+        &--hide{
+            display: none;
+        }
+        &--show{   
+            display: initial;
+        }
+    }
+
     &__title {
         color: $color-blue;
         font-weight: $typo-semibold;

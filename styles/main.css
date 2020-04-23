@@ -919,6 +919,30 @@ body {
   color: #494949;
 }
 
+.reqDetails__selected {
+  color: #339933;
+  text-decoration: none;
+  background-image: url("../resources/checkIcon.svg");
+  background-repeat: no-repeat;
+  padding: 10px;
+  padding-left: 30px;
+  background-position-y: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.reqDetails__selected:hover {
+  color: #339933;
+}
+
+.reqDetails__selected--hide {
+  display: none;
+}
+
+.reqDetails__selected--show {
+  display: initial;
+}
+
 .reqDetails__title {
   color: #294F75;
   font-weight: 600;

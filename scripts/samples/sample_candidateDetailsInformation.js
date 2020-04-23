@@ -32,6 +32,7 @@ var sample = {
         }
     ],
     evaluation: [1,1,1], // added for second time interaction, represent initial or prev evaluation
+    selected: true,
 }
 addInformation(sample);
 });

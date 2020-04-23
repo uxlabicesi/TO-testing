@@ -31,6 +31,7 @@
  *    }
  *   ],
  *   evaluation: [1,1,1], // added for second time interaction, represent initial or prev evaluation
+ *   selected: true // boolean for seleccion, modify class for button and show the subtitle selected
  *   }
 
  */
@@ -58,7 +59,19 @@ window.addEventListener('load', () => {
         const knowledge = document.querySelector('.canDetails__infoSection--knowledge');
         const licenses = document.querySelector('.canDetails__infoSection--licenses');
         const references = document.querySelector('.canDetails__infoSection--references');
+        const selectionState = document.querySelector('.reqDetails__selected'); 
 
+        // control selection state
+        if(info.selected){
+            selectionState.classList.add('reqDetails__selected--show');
+            selectionState.classList.remove('reqDetails__selected--hide');
+            selectionState.innerHTML("Seleccionado");
+        }else{
+            selectionState.classList.remove('reqDetails__selected--show');
+            selectionState.classList.add('reqDetails__selected--hide');
+            selectionState.innerHTML("");
+        }
+        // add references
         info.references.forEach((e) => {
             var li = document.createElement('li');
             var refTitle = document.createElement('h4');
