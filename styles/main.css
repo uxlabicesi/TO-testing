@@ -1923,7 +1923,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
+  z-index: 4;
   padding: 50px 0px;
   left: 0;
   top: 0;
@@ -3451,6 +3451,17 @@ input[type=number] {
   border-radius: 10px;
   width: 100%;
   margin-bottom: 30px;
+}
+
+.reqCreation__btnDelete {
+  color: none;
+  background-color: transparent !important;
+  border: none;
+  background-image: url(../resources/deteleIcon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
 }
 
 .reqCreation__content {

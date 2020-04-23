@@ -55,8 +55,6 @@ window.addEventListener('load', () => {
             }
         });
 
-        
-
         for(var i = 0; i < 10; i++) {
             const option = document.createElement('option');
             if(i > 0) {
@@ -97,6 +95,15 @@ window.addEventListener('load', () => {
         plusBtn.innerHTML = '-';
         plusBtn.addEventListener('click', changeValue);
         textInputNumberContainer.appendChild(plusBtn);
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('reqCreation__btnDelete');
+        row.appendChild(deleteBtn);
+
+        deleteBtn.addEventListener('click', () => {
+            row.remove();
+        });
+
     });
 
     const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
