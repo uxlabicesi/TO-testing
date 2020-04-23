@@ -60,17 +60,26 @@ window.addEventListener('load', () => {
         const licenses = document.querySelector('.canDetails__infoSection--licenses');
         const references = document.querySelector('.canDetails__infoSection--references');
         const selectionState = document.querySelector('.reqDetails__selected'); 
+        const selectionStateButton = document.querySelector('.btn__selection'); 
 
         // control selection state
         if(info.selected){
+            // for badge top of page / 
             selectionState.classList.add('reqDetails__selected--show');
             selectionState.classList.remove('reqDetails__selected--hide');
-            selectionState.innerHTML("Seleccionado");
+            selectionState.innerHTML="Seleccionado";
+            // for change the button state
+            selectionStateButton.innerHTML="Eliminar selección";
+            selectionStateButton.classList.add('btn--medium--cancel')
         }else{
             selectionState.classList.remove('reqDetails__selected--show');
             selectionState.classList.add('reqDetails__selected--hide');
-            selectionState.innerHTML("");
+            selectionState.innerHTML="";
+
+            selectionStateButton.innerHTML="Seleccionar candidato";
+            selectionStateButton.classList.remove('btn--medium--cancel')
         }
+
         // add references
         info.references.forEach((e) => {
             var li = document.createElement('li');

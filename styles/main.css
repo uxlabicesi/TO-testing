@@ -67,6 +67,10 @@ body {
   text-shadow: 0.5px -0.5px 0px rgba(0, 0, 0, 0.25);
 }
 
+.btn--medium--cancel {
+  background-color: #D23A3A;
+}
+
 .btn--small {
   width: 152px;
   height: 54px;
