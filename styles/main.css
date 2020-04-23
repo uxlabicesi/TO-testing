@@ -1081,6 +1081,14 @@ body {
   display: block;
 }
 
+.reqDetails__pay {
+  padding: 0 40px !important;
+}
+
+.reqDetails__pay h3 {
+  text-align: start;
+}
+
 .status {
   position: relative;
   display: -webkit-box;

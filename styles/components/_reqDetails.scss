@@ -171,6 +171,14 @@
         opacity: 1;
         display: block;
     }
+
+    &__pay {
+        padding: 0 40px !important;
+
+        & h3 {
+            text-align: start;
+        }
+    }
 }
 
 .status {

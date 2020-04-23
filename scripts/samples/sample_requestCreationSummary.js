@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
 // TODO REMOVE AFTER DEBUG
 var sample = {
     name: 'Diseñador Web',
-    amount: '20',
     status: [0, 1], // -1, 0 para borradores
     remainingTime: 12,
     positionLevel: 'Técnico',
@@ -28,6 +27,10 @@ var sample = {
             'Evaluación de productos',
             'Documentación de procesos',
             'Facilitación de equipos de trabajo'],
+    amount: 2,
+    subtotal: 1000000,
+    discount: 30,
+    discountType: 0,
 }
-requestDetailedInformation(sample);
+requestCreationSummary(sample);
 });

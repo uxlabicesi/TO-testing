@@ -25,27 +25,26 @@
         observations: **String** with the observations,
         skills: **Array** with the required skills.
         requirements: **Array** with the job's requirements,
-        subtotal **Number**
+        subtotal: **Number**,
+        discount: **Number** ONLY include this property if there's a discount applied, represents the value of the discount
+            If it's a percentage based discount it must be a number between 0 and 100, else it could be any number.
+        discountType: **Number** This number represents the type of discount, 0 is a percentage based discount and
+            1 is a fixed discount
      */
 
 // empty function will be updated after window load.
-let requestDetailedInformation = (info) => {};
+let requestCreationSummary = (info) => {};
 
 
 window.addEventListener('load', () => {
 
     
-    requestDetailedInformation = (info) => {
+    requestCreationSummary = (info) => {
 
         const title = document.querySelector('.reqDetails__title');
         const name = document.querySelector('.name');
-        const status = document.querySelector('.status');
-        const statusCurrent = document.querySelector('.status__current');
-        const statusList = document.querySelectorAll('.status__listItem');
-        const remainingTime = document.querySelector('.reqDetails__remainingTime');
         const positionLevel = document.querySelector('.positionLevel');
         const city = document.querySelector('.city');
-        //const amount = document.querySelector('.city');
         const time = document.querySelector('.time');
         const hiring = document.querySelector('.hiring');
         const wage = document.querySelector('.wage');
@@ -55,15 +54,34 @@ window.addEventListener('load', () => {
         const knowledge = document.querySelector('.knowledge');
         const observations = document.querySelector('.observations');
         const skills = document.querySelector('.reqDetails__infoSection--skills');
+        const amount = document.querySelector('.pay__detailsAmountNumber');
+        const subtotal = document.querySelector('.pay__detailsSubtotalDataNumber');
+        const promo = document.querySelector('.pay__detailsPromoDataNumber');
+        const promoContainer = document.querySelector('.pay__detailsPromo');
+        const total = document.querySelector('.pay__detailsTotalNumber');
 
-        const candidatesTabButton = document.querySelector('.reqDetails__candidates__tabButton');
-        
+        amount.innerHTML = info.amount;
+        subtotal.innerHTML = info.subtotal.toLocaleString();
 
-        /*info.requirements.forEach((e) => {
-            let item = document.createElement('li');
-            item.innerHTML = e;
-            requirements.appendChild(item);
-        });*/
+        let totalValue;
+        if(info.discount) {
+            promoContainer.classList.add('pay__detailsPromo--active');
+
+            if(info.discountType == 0) {
+                const discountValue = info.subtotal * (info.discount/100);
+                promo.innerHTML = discountValue.toLocaleString();
+                const iva = (info.subtotal - discountValue) * 0.19;
+                totalValue = info.subtotal - discountValue + iva;
+            } else {
+                const iva = (info.subtotal - info.discount) * 0.19;
+                totalValue = info.subtotal - info.discount + iva;
+            }
+        } else {
+            const iva = info.subtotal * 0.19;
+            totalValue = (info.subtotal + iva).toLocaleString();
+        }
+
+        total.innerHTML = totalValue.toLocaleString();
 
         info.skills.forEach((e) => {
             let item = document.createElement('li');
@@ -103,73 +121,8 @@ window.addEventListener('load', () => {
         });
 
         positionLevel.innerHTML = MayusFirst(info.positionLevel);
-
-        if(info.status[0] === -1) {
-            remainingTime.innerHTML = 'Borrador';
-            status.classList.add('status--gray');
-            candidatesTabButton.classList.add('reqDetails__candidates__tabButton--hide');
-        }else{
-            candidatesTabButton.classList.remove('reqDetails__candidates__tabButton--hide');
-            if(info.remainingTime === 1) {
-                remainingTime.innerHTML = 'Falta 1 día';
-            } else {
-                remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
-            }
-            if(status[1] === 0) {
-                status.classList.add('status--yellow');
-            } else {
-                status.classList.add('status--green');
-            }
-        }
-
-        switch(info.status[0]) {
-            case -1:
-                statusCurrent.innerHTML = 'Borrador';
-                break;
-            case 0:
-                statusCurrent.innerHTML = 'Pendiente de pago';
-                break;
-
-            case 1: 
-                statusCurrent.innerHTML = 'En verificación';
-            break;
-
-            case 2: 
-                statusCurrent.innerHTML = 'Iniciado';
-                break;
-
-            case 3: 
-                statusCurrent.innerHTML = 'En proceso de búsqueda';
-                break;
-
-            case 4: 
-                statusCurrent.innerHTML = 'En espera de selección';
-                break;
-
-            case 5: 
-                statusCurrent.innerHTML = 'Finalizó el proceso';
-                break;
-        }
-
-        if(status[0] === -1) {
-            statusList.add('status--inactive')
-        }else{
-            statusList.forEach((e, index) => {
-                if(index < info.status[0]) {
-                    e.classList.add('status--completed');
-                } else if (index === info.status[0]) {
-                    if(info.status[1] === 0) {
-                        e.classList.add('status--yellow');
-                    } else {
-                        e.classList.add('status--green');
-                    }
-                } else {
-                    e.classList.add('status--inactive');
-                }
-            });
-        }
        
-        title.innerHTML = MayusFirst(info.name) + ' (' + info.amount+')';
+        title.innerHTML = MayusFirst(info.name);
         name.innerHTML = MayusFirst(info.name);
 
         // This function formats text so the first letter of a string is in upper case and the 
