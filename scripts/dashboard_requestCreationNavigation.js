@@ -5,6 +5,21 @@ window.addEventListener('load', () => {
     let reqCreationState = 0;
     const progressBar = document.querySelectorAll('.reqCreation__progress');
     const content = document.querySelectorAll('.reqCreation__content');
+    var inputContainer = document.querySelector('.textInput__container--reqCreation2col');
+    var prueba = document.getElementById("prueba");
+
+    console.log(inputContainer.classList.contains('small'));
+
+  
+
+    function validator () {
+        const helpblock = document.querySelector('.has-error');
+        if(prueba.classList.contains('.has-error')){
+            console.log('holis')
+        } else {
+            console.log('holisxx')
+        }
+    }
 
     if(localStorage.getItem('reqCreationState') != null) {
         reqCreationState = localStorage.getItem('reqCreationState');
@@ -13,6 +28,9 @@ window.addEventListener('load', () => {
     setNavigation(reqCreationState);
     
     nextBtn.addEventListener('click', () => {
+
+        validator();
+
         if(reqCreationState < content.length-1) {
             content[reqCreationState].classList.remove('reqCreation__content--active');
             content[reqCreationState+1].classList.add('reqCreation__content--active');

@@ -172,6 +172,10 @@
     font-size: $typo-h4;
     margin-left: 90px;
     top: 85%;
+
+    &--creation{
+        margin-left: 0px;
+    }
 }
 
 .form-group {

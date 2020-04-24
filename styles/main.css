@@ -2538,6 +2538,10 @@ body {
   top: 85%;
 }
 
+.help-block--creation {
+  margin-left: 0px;
+}
+
 .form-group {
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
@@ -3488,6 +3492,16 @@ input[type=number] {
   margin-bottom: 30px;
 }
 
+.reqCreation__hasError {
+  margin-bottom: 0px;
+}
+
+.reqCreation__hasError .help-block {
+  margin-left: 0px;
+  position: absolute;
+  margin-top: 10px;
+}
+
 .reqCreation__btnDelete {
   color: none;
   background-color: transparent !important;
@@ -3558,6 +3572,10 @@ input[type=number] {
       -ms-flex-align: end;
           align-items: flex-end;
   height: 90px;
+}
+
+.reqCreation__row--hasError {
+  margin-bottom: 10px;
 }
 
 .reqCreation__functions {

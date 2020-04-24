@@ -5,6 +5,16 @@
     width: 100%;
     margin-bottom: 30px;
 
+    &__hasError{
+        margin-bottom: 0px;
+
+        & .help-block{
+            margin-left: 0px;
+            position: absolute;
+            margin-top: 10px;
+        }
+    }
+
     &__btnDelete{
         color: none;
         background-color: transparent !important;
@@ -61,6 +71,11 @@
         justify-content: space-between;
         align-items: flex-end;
         height: 90px;
+
+        &--hasError{
+            margin-bottom: 10px;
+        }
+        
     }
 
     &__functions{
