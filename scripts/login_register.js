@@ -21,8 +21,6 @@
 
 window.addEventListener('load', () => {
 
-    
-
     /*
         Checks if all inputs on the register form have value, and if the terms and conditions checkbox
         has been checked, when these conditions are met, adds the class "btn--active" and removes
