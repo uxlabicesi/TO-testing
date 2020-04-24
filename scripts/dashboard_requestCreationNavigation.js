@@ -7,15 +7,15 @@ window.addEventListener('load', () => {
     const content = document.querySelectorAll('.reqCreation__content');
 
     if(localStorage.getItem('reqCreationState') != null) {
-        reqCreationState = localStorage.getItem('reqCreationState');
+        reqCreationState = parseInt(localStorage.getItem('reqCreationState'));
     }
 
     setNavigation(reqCreationState);
     
     nextBtn.addEventListener('click', () => {
-        if(reqCreationState < content.length-1) {
+        if(reqCreationState < content.length-2) {
             content[reqCreationState].classList.remove('reqCreation__content--active');
-            content[reqCreationState+1].classList.add('reqCreation__content--active');
+           content[reqCreationState+1].classList.add('reqCreation__content--active');
 
             progressBar[reqCreationState].classList.remove('reqCreation__progress--current');
             progressBar[reqCreationState].classList.add('reqCreation__progress--completed');

@@ -23,6 +23,8 @@ window.addEventListener('load', () => {
         functions: [
             'Diseño de interfaz de usuario',
             'Investigación de usuarios',
+            'Evaluación de usabilidad',
+            'Creación de conceptos',
         ]
     };
     
@@ -34,7 +36,22 @@ window.addEventListener('load', () => {
         const wageLabel = document.querySelector('.label--wage');
 
         info.functions.forEach((e, index) => {
-            
+            if(index > 2) {
+                createFunction();
+                const input = document.getElementById('form_function' + index);
+                const inputContainer = input.closest('div');
+
+                inputContainer.classList.add('textInput--focused');
+                inputContainer.querySelector('label').classList.add('label--active');
+                input.value = e;
+            } else {
+                const input = document.getElementById('form_function' + index);
+                const inputContainer = input.closest('div');
+
+                inputContainer.classList.add('textInput--focused');
+                inputContainer.querySelector('label').classList.add('label--active');
+                input.value = e;
+            }
         });
 
         info.cities.forEach((e, index) => {

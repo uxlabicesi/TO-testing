@@ -1,11 +1,13 @@
+let createFunction = () => {};
+
 window.addEventListener('load', () => {
     const form = document.querySelector('.reqCreation__content--function form');
     const addFunction = document.querySelector('.reqCreation__content--function .btn--blue');
-    let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length - 1;
+    let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
 
     addFunction.addEventListener('click', createFunction);
 
-    function createFunction() {
+    createFunction = () => {
         const container = document.createElement('div');
         container.classList.add('reqCreation__functionsContainer');
         form.appendChild(container)
