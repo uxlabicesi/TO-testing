@@ -94,7 +94,7 @@ $(document).ready(function () {
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
-            "height": "55px"
+            "min-height": "55px" // for multiples tags support responsive
         },
         //debug: true,  // used for verbose console
     });
@@ -234,8 +234,10 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--knowledge').on('select2:close', function (e) {
-        let value = $('.select2__selector--knowledge').select2('data')[0].id;
-        if(value === ''){
+;
+        //let value = $('.select2__selector--knowledge').select2('data')[0].id;
+        let value = $('.select2__selector--knowledge').select2('data').length;
+        if(value === 0){ // TODO : make same process for all multiple tags, if required
             document.querySelector('.select__label--knowledge').classList.add('select__label--register');
         document.querySelector('.select__label--knowledge').classList.remove(
             'select__label--focused', 'select__label--focusedreqCreation');

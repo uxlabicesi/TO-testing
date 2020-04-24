@@ -190,6 +190,8 @@
                         <button type="button" class="btn btn--large btn--blue btn--rounded">Agregar otra ciudad</button>
                     </form>
                 </div>
+
+                <!-- Second state -->
                 
                 <div class="reqCreation__content reqCreation__content--function">
                     <h2>Funciones</h2>
@@ -229,18 +231,21 @@
                         <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra función</button>
                     </div>
                 </div>
+
+                 <!-- Third state -->
                 
                 <div class="reqCreation__content reqCreation__content--requirements">
                     <h2>REQUISITOS</h2>
                     <p>Registra a continuación los requisitos solicitados.</p>
                     
                     <form class="reqForm" id="reqForm">
+                        <!-- start first row, academic level and career -->
                         <div class="reqCreation__row">
+                            <!-- first item, first row -->
                             <div class="select__container select__container--reqCreation2col">
                                 <div class="selectadd selectadd--reqCreation form-group">
                                     <label class="select__label select__label--register select__label--academicLevel">NIVEL ACADÉMICO</label>
-                                    <select class="select2__selector--academicLevel" multiple="multiple" name="academicLevel" required>
-                                        <!-- empty option is requiered for placeholder -->
+                                    <select class="select2__selector--academicLevel" name="academicLevel" required>
                                         <option></option>
                                         <option value="O0"></option>
                                         <option value="O1">Opción 1</option>
@@ -254,17 +259,20 @@
                                     </select>
                                 </div>
                             </div>
-                            
+                            <!-- second item, first row -->
                             <div class="textInput__container textInput__container--reqCreation2col form-group">
                                 <label for="form_profession" class="label label--reqCreation">PROFESIÓN</label>
                                 <input type="text" class="textInput" id="form_profession" name="job" required>
                             </div>
                         </div>
+                        <!-- end first row, academic level and career -->
+                        <!-- start second, technical knowledge -->
                         
                         <div class="reqCreation__row">
+
                             <div class="selectadd selectadd--reqCreation form-group select__container--reqCreation2col">
                                 <label class="select__label select__label--register select__label--knowledge">CONOCIMIENTOS</label>
-                                <select class="select2__selector--knowledge" name="knowledge" required>
+                                <select class="select2__selector--knowledge" name="knowledge" multiple="multiple" required>
                                     <!-- empty option is requiered for placeholder -->
                                     <option></option>
                                     <option value="O0"></option>
@@ -276,8 +284,10 @@
                                     <option value="O6">Opción 6</option>
                                     <option value="O7">Opción 7</option>
                                     <option value="O8">Opción 8</option>
+                                    <option value="O8">Opción 9</option>
                                 </select>
                             </div>
+
                         </div>
                         
                         <div class="reqCreation__row">
@@ -288,6 +298,8 @@
                         </div>
                     </form>
                 </div>
+
+                 <!-- Fourth state -->
 
                 <div class="reqCreation__content reqCreation__content--skills">
                     <h2>Competencias</h2>
@@ -429,6 +441,7 @@
     <!-- TODO remove for deleted sample info -->
     <script src="./scripts/samples/sample__applyPromo.js"></script>
     <script src="./scripts/samples/sample_payInformation.js"></script>
+    <!-- <script src="./scripts/samples/sample_gotoRequestCreationSum.js"></script> -->
     
     <!--<script src="./scripts/requestCreation_validator.js"></script>-->
     

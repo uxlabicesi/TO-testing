@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
 
+
 // TODO REMOVE AFTER DEBUG
 var sample = {
     name: 'Diseñador Web',

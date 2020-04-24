@@ -17,6 +17,8 @@ window.addEventListener('load', () => {
             progressBar[reqCreationState+1].classList.add('reqCreation__progress--current');
 
             reqCreationState++;
+        }else{
+            window.location.href = "./dashboard_requestCreationSum.html";
         }
     }); 
 

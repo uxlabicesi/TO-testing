@@ -750,14 +750,28 @@
 
 .select2-container--talentos .select2-selection--multiple {
   background-color: white;
+  /*border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  cursor: text;
+
+  outline: 0;
+  */
   border: 1px solid #aaa;
   border-radius: 4px;
-  cursor: text;
   outline: 0;
+  -webkit-box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), to(#eeeeee));
+  background-image: linear-gradient(to bottom, white 50%, #eeeeee 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
 }
 
 .select2-container--talentos .select2-selection--multiple:focus {
-  border: 1px solid #5897fb;
+  border: 1px solid #000;
 }
 
 .select2-container--talentos .select2-selection--multiple .select2-selection__rendered {

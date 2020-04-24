@@ -1,15 +1,32 @@
 .select2-selection--multiple {
   background-color: white;
 
-  border: 1px solid $border-color;
+  // OLD
+  /*border: 1px solid $border-color;
   border-radius: $border-radius;
 
   cursor: text;
 
   outline: 0;
+  */
+  
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  outline: 0;
+  // added by 
+  box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  //margin: 20px 0;
+  
+  background-color: #FFFFFF; 
+
+  @include gradient-vertical($selection-bg-top-color, $selection-bg-bottom-color, 50%, 100%);
+
 
   &:focus {
-    border: 1px solid $focus-border-color;
+    //border: 1px solid $focus-border-color;
+    border: 1px solid #000;
   }
 
   .select2-selection__rendered {

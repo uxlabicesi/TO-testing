@@ -66,10 +66,10 @@ window.addEventListener('load', () => {
 
         if (info.evaluated!=null&&info.evaluated) {
             candidateEvaluationBtn.innerHTML="Reevaluar candidato";
-            selectionStateButton.classList.remove('btn--inactive');
+            //selectionStateButton.classList.remove('btn--inactive');
         }else{
             candidateEvaluationBtn.innerHTML="Evaluar candidato";
-            selectionStateButton.classList.add('btn--inactive');
+            //selectionStateButton.classList.add('btn--inactive');
         }
 
         // control selection state
