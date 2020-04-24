@@ -19,7 +19,6 @@ window.addEventListener('load', () => {
     let rootForPopUp = ".popUp";
 
     candidateEvaluationBtn.addEventListener('click', (ev) => {
-        console.log("----------------------------------------");
         createPopUp(informationPopUp, rootForPopUp);
         candidateEvaluationBtn.innerHTML="Reevaluar candidato";
         ev.preventDefault();
