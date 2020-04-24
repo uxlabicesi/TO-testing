@@ -6,6 +6,12 @@ window.addEventListener('load', () => {
     const progressBar = document.querySelectorAll('.reqCreation__progress');
     const content = document.querySelectorAll('.reqCreation__content');
 
+    if(localStorage.getItem('reqCreationState') != null) {
+        reqCreationState = localStorage.getItem('reqCreationState');
+    }
+
+    setNavigation(reqCreationState);
+    
     nextBtn.addEventListener('click', () => {
         if(reqCreationState < content.length-1) {
             content[reqCreationState].classList.remove('reqCreation__content--active');
@@ -35,4 +41,18 @@ window.addEventListener('load', () => {
             reqCreationState--;
         }
     });
+
+    function setNavigation(index) {
+        content[index].classList.add('reqCreation__content--active');
+
+        progressBar.forEach((e, i) => {
+            if(i < index) {
+                e.classList.add('reqCreation__progress--completed');
+            } else if (i == index) {
+                e.classList.add('reqCreation__progress--current');
+            } else {
+                e.classList.add('reqCreation__progress--incomplete');
+            }
+        });
+    } 
 });
