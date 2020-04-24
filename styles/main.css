@@ -335,6 +335,15 @@ body {
   margin-bottom: 0;
 }
 
+.select2-selection__choice {
+  background-color: #294F75 !important;
+  color: white;
+}
+
+.select2-selection__choice span {
+  color: white !important;
+}
+
 .select {
   position: relative;
   -webkit-appearance: none;

@@ -108,6 +108,7 @@ window.addEventListener('load', () => {
 
     const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
 
+
     changeValueBtns.forEach((e) => {
         e.addEventListener('click', changeValue);
     });
