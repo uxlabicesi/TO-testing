@@ -16,6 +16,7 @@
  *  exp: ['Experiencia Laboral 1', 'Experiencia Laboral 2', 'Experiencia Laboral 3'],
  *  knowledge: ['Conocimiento 1', 'Conocimiento 2', 'Conocimiento 3'],
  *  licenses: ['Licencias 1', 'Licencias 2', 'Licencias 3'],
+ *  formation: ['Formación académica 1', 'Formación académica 2', 'Formación académica 3'],
  *  references: [
  *    {
  *     title: 'Referencia personal 1',
