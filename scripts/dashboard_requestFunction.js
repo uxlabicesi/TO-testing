@@ -3,7 +3,9 @@ window.addEventListener('load', () => {
     const addFunction = document.querySelector('.reqCreation__content--function .btn--blue');
     let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length - 1;
 
-    addFunction.addEventListener('click',() => {
+    addFunction.addEventListener('click', createFunction);
+
+    function createFunction() {
         const container = document.createElement('div');
         container.classList.add('reqCreation__functionsContainer');
         form.appendChild(container)
@@ -57,6 +59,6 @@ window.addEventListener('load', () => {
                 event.target.parentElement.classList.remove('textInput--focused');
             }
         });
-    });
+    }
 
 });

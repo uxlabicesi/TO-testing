@@ -1,11 +1,30 @@
+let createCitySelect = (cityCount) => {};
+
 window.addEventListener('load', () => {
     const form = document.querySelector('form');
     const addCity = document.querySelector('.btn--blue');
     let cityCount = 0;
 
-    addCity.addEventListener('click', () => {
-        const currentCityCount = cityCount;
-        cityCount++;
+    const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
+
+
+    changeValueBtns.forEach((e) => {
+        e.addEventListener('click', changeValue);
+    });
+
+    function changeValue(event) {
+        const plusBtn = event.target;
+        const numberInput = plusBtn.closest('.textInput--number').querySelector('.textInput');
+
+        if(plusBtn.classList.contains('textInput__changeBtn--minus')) {
+            if(numberInput.value > 1) numberInput.value--;
+        } else {
+            numberInput.value++;
+        }
+    }
+
+    createCitySelect = () => {
+        const currentCityCount = document.querySelectorAll('.select--reqCity').length-1;
 
         const row = document.createElement('div');
         row.classList.add('reqCreation__row');
@@ -25,7 +44,7 @@ window.addEventListener('load', () => {
         selectAdd.appendChild(label);
 
         const select = document.createElement('select');
-        select.classList.add('select2__selector--reqCity'+currentCityCount);
+        select.classList.add('select2__selector--reqCity'+currentCityCount, 'select--reqCity');
         select.setAttribute('name', 'city');
         selectAdd.appendChild(select);
 
@@ -58,7 +77,8 @@ window.addEventListener('load', () => {
         for(var i = 0; i < 10; i++) {
             const option = document.createElement('option');
             if(i > 0) {
-                option.setAttribute('value', i-1);
+            
+                option.setAttribute('value', 'O' + (i-1));
                 option.innerHTML = 'Opción ' + i;
             }
 
@@ -86,7 +106,7 @@ window.addEventListener('load', () => {
         textInputNumberContainer.appendChild(minusBtn);
 
         const textInputNumber = document.createElement('input');
-        textInputNumber.classList.add('textInput');
+        textInputNumber.classList.add('textInput', 'textInput--reqCity' + currentCityCount);
         textInputNumber.setAttribute('type', 'number');
         textInputNumber.value = '0';
         textInputNumberContainer.appendChild(textInputNumber);
@@ -106,23 +126,10 @@ window.addEventListener('load', () => {
             row.remove();
         });
 
-    });
-
-    const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
-
-
-    changeValueBtns.forEach((e) => {
-        e.addEventListener('click', changeValue);
-    });
-
-    function changeValue(event) {
-        const plusBtn = event.target;
-        const numberInput = plusBtn.closest('.textInput--number').querySelector('.textInput');
-
-        if(plusBtn.classList.contains('textInput__changeBtn--minus')) {
-            if(numberInput.value > 1) numberInput.value--;
-        } else {
-            numberInput.value++;
-        }
     }
+
+    addCity.addEventListener('click', () => {
+        createCitySelect(cityCount);
+        cityCount++;
+    });
 });

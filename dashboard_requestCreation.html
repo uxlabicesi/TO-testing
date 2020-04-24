@@ -97,14 +97,14 @@
                     <form class="reqForm" id="reqForm">
                         <div class="reqCreation__row">
                             <div class="textInput__container textInput__container--reqCreation2col form-group">
-                                <label for="form_position" class="label label--reqCreation">NOMBRE DEL CARGO</label>
+                                <label for="form_position" class="label label--reqCreation label--jobName">NOMBRE DEL CARGO</label>
                                 <input type="text" class="textInput" id="form_position" name="job" required>
                             </div>
                             
                             <div class="select__container select__container--reqCreation2col">
                                 <div class="selectadd selectadd--reqCreation form-group">
                                     <label class="select__label select__label--register select__label--level">NIVEL DEL CARGO</label>
-                                    <select class="select2__selector--level" name="city" required>
+                                    <select class="select2__selector--level" name="level" required>
                                         <!-- empty option is requiered for placeholder -->
                                         <option></option>
                                         <option value="O0"></option>
@@ -151,7 +151,7 @@
                             </div>
                             
                             <div class="textInput__container textInput__container--reqCreation3col form-group">
-                                <label for="form_wage" class="label label--reqCreation">SALARIO</label>
+                                <label for="form_wage" class="label label--reqCreation label--wage">SALARIO</label>
                                 <input type="text" class="textInput" id="form_wage" name="wage" required>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                             <div class="select__container select__container--reqCreation2col">
                                 <div class="selectadd selectadd--reqCreation form-group">
                                     <label class="select__label select__label--register select__label--reqCity">CIUDAD</label>
-                                    <select class="select2__selector--reqCity" name="city" required>
+                                    <select class="select2__selector--reqCity select--reqCity" name="city" required>
                                         <!-- empty option is requiered for placeholder -->
                                         <option></option>
                                         <option value="O0"></option>
@@ -180,7 +180,7 @@
                                 <label class="label label--active label--reqCreation">CANTIDAD</label>
                                 <div class="textInput--number">
                                     <button type="button" class="textInput__changeBtn textInput__changeBtn--minus">-</button>
-                                    <input type="number" value="1" class="textInput" name="" min="1" step="1" required>
+                                    <input type="number" value="1" class="textInput textInput--reqCity" name="" min="1" step="1" required>
                                     <button type="button" class="textInput__changeBtn textInput__changeBtn--plus">+</button>
                                 </div>
                             </div>
@@ -437,6 +437,7 @@
     <script src="./scripts/dashboard_requestPay.js"></script>
     <script src="./scripts/dashboard_payInformation.js"></script>
     <script src="./scripts/applyPromoCode.js"></script>
+    <script src="./scripts/requestCreationInformation.js"></script>
 
     <!-- TODO remove for deleted sample info -->
     <script src="./scripts/samples/sample__applyPromo.js"></script>
