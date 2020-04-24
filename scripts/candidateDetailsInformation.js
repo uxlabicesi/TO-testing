@@ -59,10 +59,12 @@ window.addEventListener('load', () => {
         const exp = document.querySelector('.canDetails__infoSection--exp');
         const knowledge = document.querySelector('.canDetails__infoSection--knowledge');
         const licenses = document.querySelector('.canDetails__infoSection--licenses');
+        const formation = document.querySelector('.canDetails__infoSection--academic');
         const references = document.querySelector('.canDetails__infoSection--references');
         const selectionState = document.querySelector('.reqDetails__selected'); 
         const selectionStateButton = document.querySelector('.btn__selection'); 
         const candidateEvaluationBtn = document.querySelector('.btn__evaluation');
+
 
         if (info.evaluated!=null&&info.evaluated) {
             candidateEvaluationBtn.innerHTML="Reevaluar candidato";
@@ -109,6 +111,12 @@ window.addEventListener('load', () => {
             li.appendChild(refPosition);
             li.appendChild(refTel);
             references.appendChild(li);
+        });
+
+        info.formation.forEach((e) => {
+            var li = document.createElement('li');
+            li.innerHTML = e;
+            formation.appendChild(li);
         });
 
         info.licenses.forEach((e) => {
