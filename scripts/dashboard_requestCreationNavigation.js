@@ -21,10 +21,10 @@ window.addEventListener('load', () => {
         if(!(isValid && inputPosition.classList.contains('has-success'))) {
                 isValid = false;
         }
-     
+        
         if(isValid) {
             nextBtn.classList.remove('btn--inactive');
-            nextBtn.classList.add('btn--active');
+            nextBtn.removeAttribute('disabled');
         } else {
             nextBtn.classList.add('btn--inactive');
         }       
