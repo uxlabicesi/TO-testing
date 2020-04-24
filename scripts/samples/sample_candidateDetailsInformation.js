@@ -1,5 +1,10 @@
 // TODO REMOVE AFTER DEBUGGING
 
+/***
+ * The following function add information to candidate details page(view), the main function addInformation ws expose at file: candidateDetailsInformation.js
+ * 
+ */
+
 window.addEventListener('load', () => {
 
 var sample = {
@@ -31,8 +36,9 @@ var sample = {
             tel: 'Teléfono'
         }
     ],
-    evaluation: [2,3,4], // added for second time interaction, represent initial or prev evaluation
+    evaluation: [6,1,4], // added for second time interaction, represent initial or prev evaluation
     selected: false,
+    evaluated: true,
 }
 addInformation(sample);
 });

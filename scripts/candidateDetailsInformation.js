@@ -31,7 +31,8 @@
  *    }
  *   ],
  *   evaluation: [1,1,1], // added for second time interaction, represent initial or prev evaluation
- *   selected: true // boolean for seleccion, modify class for button and show the subtitle selected
+ *   selected: true,// boolean for selection state, modify class for button and show the subtitle selected
+ *   evaluated: true, // boolean for evaluation
  *   }
 
  */
@@ -61,6 +62,13 @@ window.addEventListener('load', () => {
         const references = document.querySelector('.canDetails__infoSection--references');
         const selectionState = document.querySelector('.reqDetails__selected'); 
         const selectionStateButton = document.querySelector('.btn__selection'); 
+        const candidateEvaluationBtn = document.querySelector('.btn__evaluation');
+
+        if (info.evaluated!=null&&info.evaluated) {
+            candidateEvaluationBtn.innerHTML="Reevaluar candidato";
+        }else{
+            candidateEvaluationBtn.innerHTML="Evaluar candidato";
+        }
 
         // control selection state
         if(info.selected){
@@ -72,10 +80,11 @@ window.addEventListener('load', () => {
             selectionStateButton.innerHTML="Eliminar selección";
             selectionStateButton.classList.add('btn--medium--cancel')
         }else{
+             // for badge top of page / 
             selectionState.classList.remove('reqDetails__selected--show');
             selectionState.classList.add('reqDetails__selected--hide');
             selectionState.innerHTML="";
-
+            // for change the button state
             selectionStateButton.innerHTML="Seleccionar candidato";
             selectionStateButton.classList.remove('btn--medium--cancel')
         }
