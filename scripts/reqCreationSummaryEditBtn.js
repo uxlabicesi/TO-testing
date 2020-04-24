@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
             const value = event.target.dataset.reqcreationstate;
             console.log(value);
             localStorage.setItem('reqCreationState', value);
-            window.location.href = '/dashboard_requestCreation.html';
+            window.location.href = './dashboard_requestCreation.html';
         });
     });
 });
