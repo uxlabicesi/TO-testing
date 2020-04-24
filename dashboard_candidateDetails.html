@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+    <div class="popUp popUp--inactive"></div>
     <header class="mainheader">
         <div class="mainheader__menu">
             <img src="./resources/menuIcon.svg">
@@ -42,6 +42,7 @@
     </header>
     
     <div class="dashboardContent">
+        
         <section class="mainnav">
             <input class="textInput textInput--search" type="text" name="" placeholder="Buscar">
             <div class="mainnav__border"></div>
@@ -158,10 +159,10 @@
             <div class="canDetails__content">
                 
                 <div class="canDetails__contentHeader">
-                    <a href="./dashboard_requestDetails.html" class="reqDetails__back"></a>
-                    <img src="./resources/imgPerfil.jpg" class="canDetails__contentHeaderImg" alt="">
+                    <img src="./resources/imgPerfil.jpg" class="canDetails__contentHeaderImg" alt=""> 
                     <div class="canDetails__contentHeaderTitles">
-                        <h2 class="canDetails__contentHeaderTitlesTitle">Fabio Arias</h2>
+                        <div href="./dashboard_requestDetails.html" class="reqDetails__selected">seleccionado</div>
+                        <h2 class="canDetails__contentHeaderTitlesTitle">Fabio Arias  </h2>
                         <h3 class="canDetails__contentHeaderTitlesJob"> <strong class="canDetails__contentHeaderJobStrong">Diseñador de Medios Interactivos</strong> [Candidato / <span class="origin">Ezenza</span>]</h3>
                     </div>
                 </div>
@@ -264,7 +265,7 @@
                                     </svg>
                                 </div>
                                 
-                                <input type="range" min="0" max="6" step="1" class="canDetails__range" id="range_experience">
+                                <input type="range" min="0" max="6" step="1" class="canDetails__range" id="range_experience" value="3">
                                 
                                 <div class="canDetails__steps">
                                     <div class="canDetails__rangeStep canDetails__rangeStep--large canDetails__rangeStep--first"></div>
@@ -323,7 +324,7 @@
                                     </svg>
                                 </div>
                                 
-                                <input type="range" min="0" max="6" step="1" class="canDetails__range" id="range_skills">
+                                <input type="range" min="0" max="6" step="1" class="canDetails__range" id="range_skills" value="3">
                                 
                                 <div class="canDetails__steps">
                                     <div class="canDetails__rangeStep canDetails__rangeStep--large canDetails__rangeStep--first"></div>
@@ -382,7 +383,7 @@
                                     </svg>
                                 </div>
                                 
-                                <input type="range" min="0" max="6" step="1" class="canDetails__range" id="range_education">
+                                <input type="range" min="0" max="6" step="1" class="canDetails__range" id="range_education" value="3">
                                 
                                 <div class="canDetails__steps">
                                     <div class="canDetails__rangeStep canDetails__rangeStep--large canDetails__rangeStep--first"></div>
@@ -395,13 +396,13 @@
                                 </div>                                
                             </div>
 
-                            <button class="btn btn--large">Enviar calificación</button>
+                            <button class="btn btn--large btn__evaluation">Enviar calificación</button>
                         </form>
                     </div>
                     
                     <div class="canDetails__buttonsGroup">
-                        <button class="btn btn--medium">Seleccionar candidato</button>
-                        <button class="btn btn--medium btn--blue">Ver informe</button>
+                        <button class="btn btn--medium btn__selection">Seleccionar candidato</button>
+                        <button class="btn btn--medium btn--blue btn__report">Ver informe</button>
                     </div>
                     
                 </div>
@@ -409,12 +410,17 @@
             </div>
         </div>
     </div>
+
+
+
     
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/dashboard_reqDetails.js"></script>
     <script src="./scripts/candidateDetailsInformation.js"></script>
     <script src="./scripts/candidateDetailsRangeInteraction.js"></script>
+    <script src="./scripts/createPopUp.js"></script>
     <!-- TODO remove for deleted sample info -->
-    <!-- <script src="./scripts/samples/sample_candidateDetailsInformation.js"></script> -->
+    <script src="./scripts/samples/sample_candidateDetailsInformation.js"></script>
+    <script src="./scripts/samples/sample_setCandidateEvaluation.js"></script>
 </body>
 </html>

@@ -46,6 +46,9 @@
         border-radius: 10px;
         font-size: 16px;
         text-shadow: 0.5px -0.5px 0px rgba(0, 0, 0, 0.25);
+        &--cancel{
+            background-color: $color-red;
+        }
     }
 
     &--small {
@@ -86,6 +89,18 @@
         border-radius: 10px;
         background: none;
         color: $color-blue;
+        font-size: $typo-h3;
+        font-weight: $typo-semibold;
+    }
+
+    &--noFill--active{
+        width: 152px;
+        height: 54px;
+        border: 1px solid $color-green;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: none;
+        color: $color-green;
         font-size: $typo-h3;
         font-weight: $typo-semibold;
     }

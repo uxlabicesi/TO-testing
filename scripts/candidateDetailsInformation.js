@@ -2,15 +2,15 @@
  * @description the function add infomation to candidate details
  * @param {} info requires the following JSON structure:
  * {
- *  title: 'Diseñador UX', // 
- *  status: [2, 1], //
+ *  title: 'Diseñador UX', // Main title for candidate
+ *  status: [2, 1], // // status global, action
  *  remainingTime: 1, //
  *  name: 'Fabio Arias', //
  *  profilePic: './resources/imgPerfil.jpg', //
- *  job: 'Diseñador de Medios Interactivos', //
- *  origin: 'Ezenza', //
- *  id: '1130613425', // 
- *  tel: ['(300) 8200838', '032 5552334'],
+ *  job: 'Diseñador de Medios Interactivos', // main career
+ *  origin: 'Ezenza', // where was colected as candidate
+ *  id: '1130613425', // CC
+ *  tel: ['(300) 8200838', '032 5552334'], 
  *  age: 32,
  *  city: 'Cali, Valle del Cauca',
  *  exp: ['Experiencia Laboral 1', 'Experiencia Laboral 2', 'Experiencia Laboral 3'],
@@ -31,6 +31,7 @@
  *    }
  *   ],
  *   evaluation: [1,1,1], // added for second time interaction, represent initial or prev evaluation
+ *   selected: true // boolean for seleccion, modify class for button and show the subtitle selected
  *   }
 
  */
@@ -58,7 +59,28 @@ window.addEventListener('load', () => {
         const knowledge = document.querySelector('.canDetails__infoSection--knowledge');
         const licenses = document.querySelector('.canDetails__infoSection--licenses');
         const references = document.querySelector('.canDetails__infoSection--references');
+        const selectionState = document.querySelector('.reqDetails__selected'); 
+        const selectionStateButton = document.querySelector('.btn__selection'); 
 
+        // control selection state
+        if(info.selected){
+            // for badge top of page / 
+            selectionState.classList.add('reqDetails__selected--show');
+            selectionState.classList.remove('reqDetails__selected--hide');
+            selectionState.innerHTML="Seleccionado";
+            // for change the button state
+            selectionStateButton.innerHTML="Eliminar selección";
+            selectionStateButton.classList.add('btn--medium--cancel')
+        }else{
+            selectionState.classList.remove('reqDetails__selected--show');
+            selectionState.classList.add('reqDetails__selected--hide');
+            selectionState.innerHTML="";
+
+            selectionStateButton.innerHTML="Seleccionar candidato";
+            selectionStateButton.classList.remove('btn--medium--cancel')
+        }
+
+        // add references
         info.references.forEach((e) => {
             var li = document.createElement('li');
             var refTitle = document.createElement('h4');
@@ -192,8 +214,7 @@ window.addEventListener('load', () => {
         title.innerHTML = info.title;
 
         if(info.evaluation != null){
-            // TODO: solve function
-            /*buildRange(info.evaluation);*/
+            buildRange(info.evaluation);
         }
     }
 });  

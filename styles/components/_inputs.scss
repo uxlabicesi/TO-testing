@@ -104,6 +104,7 @@
         flex-direction: column;
         margin-top: 35px;
 
+
         &--marginless {
             margin: 0;
         }
@@ -116,6 +117,10 @@
 
             &2col {
                 width: 47%; 
+
+                &--new{
+                    width: 40%;
+                }
             }
 
             &3col {

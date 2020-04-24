@@ -22,7 +22,7 @@
 
         createPopUp = (information, root = '.popUp') => {
             let popUpContainer = document.querySelector(root);
-            let popUp = document.querySelector('.popUp');
+            let popUp = document.querySelector(root);
 
             popUpContainer.classList.remove('popUp--inactive');
 

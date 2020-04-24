@@ -11,36 +11,22 @@
     job: 'Diseñador Gráfico', // (string) candiate main caree/job
     telephone: ['+57 (300) 8200838','032 5552334'], // (string-array) list of phone numbers as strings 
     email: 'fabio.arias@candidatos.com.co', // (string) candidate mail
-    id: 'id-custom-sample-1' // (string) id for each candidate
+    id: 'id-custom-sample-1' // (string) id for each candidate,
+    selected: true // (boolean) if selected true
     },
  */
-
-
-/**
- * @description this function updates the candidates info, this information will be used for prepare the event click for candidatesTabButton.
- * @param {} info 
- * 
- * // TODO: insert complete structure for json
- * Option 1 - update by using this function from another js file.
- */
-let updateCandidatesInfo = (info) => {};
 
 /**
  * @description this function can be used directly to add candidates info, or delegated the call to default way using updateCandidatesInfo()
  * @param {} info 
  * 
  * // TODO: insert complete structure for json
- * // Option 2 - re-write the trigger event.
+ * // Needs to re-write the trigger event.
  */
 let candidates = (info) => {};
 
 window.addEventListener('load', () => {
 
-    let candidateInfo = {}
-
-    updateCandidatesInfo = (info) => {
-        candidateInfo = info;
-    }
 
     candidates = (info) => {
         if (info.length > 0) {
@@ -52,6 +38,7 @@ window.addEventListener('load', () => {
                 let candidate = document.createElement('div');
                 candidate.classList.add('candidate');
                 candidate.setAttribute("id-candidate", info[aux].id) // included for selecting using atrribute 13/04/2020
+                candidate.classList.add("id-candidate-"+info[aux].id) // included for selecting using atrribute when responsive
 
                 let profile = document.createElement('div');
                 profile.classList.add('candidate__profile');
@@ -101,8 +88,14 @@ window.addEventListener('load', () => {
                 candidate.appendChild(candidateInfo);
 
                 let btn = document.createElement('button');
-                btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
-                btn.innerHTML = 'Ver detalles';
+                if(!e.selected){
+                    btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
+                    btn.innerHTML = 'Ver detalles';
+                }else{
+                    btn.classList.add('btn', 'btn--noFill--active', 'candidate__btn');
+                    btn.innerHTML = 'Seleccionado';
+                }
+
                 btn.addEventListener('click', () => {
                     window.location.href = './dashboard_candidateDetails.html';
                 });
@@ -115,14 +108,24 @@ window.addEventListener('load', () => {
         }
     }
 
-    let candidatesTabButton = document.querySelector('.reqDetails__candidates__tabButton');
+    let buttonBarBottom = document.createElement('div');
+    buttonBarBottom.classList.add('canDetails__buttonsGroup');
 
-    candidatesTabButton.addEventListener('click', () => {
-       // if you want to re-write all trigger... using directly the function candidates(), or use the function updateCandidatesInfo() for changing values of candidateInfo (variable)
-       
-       // (do-not remove, unless you will re-write trigger and use option 2) require for using the updateCandidatesInfo
-       candidates(candidateInfo);
-    });
+    let buttonEvaluation = document.createElement('button');
+    buttonEvaluation.classList.add('btn');
+    buttonEvaluation.classList.add('btn--medium');
+    buttonEvaluation.classList.add('btn--blue');
+    buttonEvaluation.innerHTML = "Calificar servicio";
+
+    let buttonFinishProcess = document.createElement('button');
+    buttonFinishProcess.classList.add('btn');
+    buttonFinishProcess.classList.add('btn--medium');
+    buttonFinishProcess.innerHTML = "Finalizar proceso";
+
+    buttonBarBottom.appendChild(buttonEvaluation);
+    buttonBarBottom.appendChild(buttonFinishProcess);
+
+    document.querySelector('.reqDetails__content').appendChild(buttonBarBottom);
 
 
 });

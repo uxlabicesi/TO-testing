@@ -55,8 +55,6 @@ window.addEventListener('load', () => {
             }
         });
 
-        
-
         for(var i = 0; i < 10; i++) {
             const option = document.createElement('option');
             if(i > 0) {
@@ -68,7 +66,7 @@ window.addEventListener('load', () => {
         }
 
         const amountContainer = document.createElement('div');
-        amountContainer.classList.add('textInput__container', 'textInput--focused', 'textInput__container--reqCreation2col', 'form-group');
+        amountContainer.classList.add('textInput__container', 'textInput--focused', 'textInput__container--reqCreation2col', 'form-group', 'textInput__container--reqCreation2col--new');
         row.appendChild(amountContainer);
 
         const amountLabel = document.createElement('label');
@@ -94,9 +92,18 @@ window.addEventListener('load', () => {
 
         const plusBtn = document.createElement('button');
         plusBtn.classList.add('textInput__changeBtn', 'textInput__changeBtn--plus');
-        plusBtn.innerHTML = '-';
+        plusBtn.innerHTML = '+';
         plusBtn.addEventListener('click', changeValue);
         textInputNumberContainer.appendChild(plusBtn);
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('reqCreation__btnDelete');
+        row.appendChild(deleteBtn);
+
+        deleteBtn.addEventListener('click', () => {
+            row.remove();
+        });
+
     });
 
     const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');

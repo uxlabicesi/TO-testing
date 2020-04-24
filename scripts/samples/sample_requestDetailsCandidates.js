@@ -1,49 +1,104 @@
-window.addEventListener('load', () => {
-
 // TODO REMOVE AFTER DEBUG
 var candidateSample = [{
-    profilePic: '/resources/imgPerfil.jpg',
-    name: 'Fabio Arias M',
-    job: 'Diseñador Gráfico',
-    telephone: ['+57 (300) 8200838',
-        '032 5552334'
-    ],
-    email: 'fabio.arias@candidatos.com.co',
-    id: 'id-custom-sample-1'
-},
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-1',
+        selected: true,
+    },
 
-{
-    profilePic: '/resources/imgPerfil.jpg',
-    name: 'Fabio Arias M',
-    job: 'Diseñador Gráfico',
-    telephone: ['+57 (300) 8200838',
-        '032 5552334'
-    ],
-    email: 'fabio.arias@candidatos.com.co',
-    id: 'id-custom-sample-2'
-},
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-2',
+        selected: true,
+    },
 
-{
-    profilePic: '/resources/imgPerfil.jpg',
-    name: 'Fabio Arias M',
-    job: 'Diseñador Gráfico',
-    telephone: ['+57 (300) 8200838',
-        '032 5552334'
-    ],
-    email: 'fabio.arias@candidatos.com.co',
-    id: 'id-custom-sample-3'
-},
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-3'
+    },
 
-{
-    profilePic: '/resources/imgPerfil.jpg',
-    name: 'Fabio Arias M',
-    job: 'Diseñador Gráfico',
-    telephone: ['+57 (300) 8200838',
-        '032 5552334'
-    ],
-    email: 'fabio.arias@candidatos.com.co',
-    id: 'id-custom-sample-4'
-},
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-4'
+    },
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-5',
+        selected: true,
+    },
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-6',
+        selected: false,
+    },
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-7',
+        selected: false,
+    },
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-8',
+        selected: false,
+    },
+    {
+        profilePic: '/resources/imgPerfil.jpg',
+        name: 'Fabio Arias M',
+        job: 'Diseñador Gráfico',
+        telephone: ['+57 (300) 8200838',
+            '032 5552334'
+        ],
+        email: 'fabio.arias@candidatos.com.co',
+        id: 'id-custom-sample-9',
+        selected: false,
+    },
 ];
 
 /**
@@ -51,9 +106,14 @@ var candidateSample = [{
  */
 
 // using option 1, and calling directly 
-updateCandidatesInfo(candidateSample);
+// updateCandidatesInfo(candidateSample);
 
 // using option 2, and calling directly, this one require to define the trigger or asume the loading issues
-//candidates(candidateSample);
 
+let candidatesTabButton = document.querySelector('.reqDetails__candidates__tabButton');
+
+candidatesTabButton.addEventListener('click', () => {
+    // if you want to re-write all trigger... using directly the function candidates(), or use the function updateCandidatesInfo() for changing values of candidateInfo (variable)
+    // (do-not remove, unless you will re-write trigger and use option 2) require for using the updateCandidatesInfo
+    candidates(candidateSample);
 });
