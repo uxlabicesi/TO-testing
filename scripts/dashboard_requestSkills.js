@@ -1,8 +1,11 @@
+let createSkill = () => {};
+
 window.addEventListener('load', () => {
     const form = document.querySelector('.reqCreation__content--skills form');
     const addFunction = document.querySelector('.reqCreation__content--skills .btn--blue');
+    let skillCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
 
-    addFunction.addEventListener('click',() => {
+    createSkill = () => {
         const container = document.createElement('div');
         container.classList.add('reqCreation__functionsContainer');
         form.appendChild(container)
@@ -18,13 +21,15 @@ window.addEventListener('load', () => {
         const inputLabel = document.createElement('label');
         inputLabel.classList.add('label', 'label--reqCreation');
         inputLabel.innerHTML = 'Competencia';
-        inputLabel.htmlFor = 'function';
+        inputLabel.htmlFor = 'form_skill'+skillCount;
         containerInput.appendChild(inputLabel);
 
         const input = document.createElement('input');
         input.classList.add('textInput');
-        input.id = 'function';
+        input.id = 'form_skill'+skillCount;
         containerInput.appendChild(input);
+
+        skillCount++;
 
         const btnDelete = document.createElement('button');
         btnDelete.classList.add('reqCreation__functionsContainerBtnDelete');
@@ -54,6 +59,8 @@ window.addEventListener('load', () => {
                 event.target.parentElement.classList.remove('textInput--focused');
             }
         });
-    });
+    };
+
+    addFunction.addEventListener('click', createSkill);
 
 });
