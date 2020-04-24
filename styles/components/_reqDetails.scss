@@ -196,10 +196,22 @@
 
     &__pay {
         padding: 0 40px !important;
+        padding-right: 60px !important;
 
         & h3 {
             text-align: start;
         }
+    }
+
+    &__editBtn {
+        position: absolute;
+        right: 10px;
+        background-color: transparent;
+        background-image: url('../resources/penIcon.svg');
+        width: 24px;
+        height: 24px;
+        border: none;
+        cursor: pointer;
     }
 }
 
