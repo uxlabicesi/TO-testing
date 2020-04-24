@@ -20,7 +20,6 @@ window.addEventListener('load', () => {
          selectionState.classList.remove('reqDetails__selected--show');
          selectionState.classList.add('reqDetails__selected--hide');
          selectionState.innerHTML = "";
-         
       } else {
          createPopUp(informationPopUp, rootForPopUp);
          selectionStateButton.innerHTML = "Eliminar selección";

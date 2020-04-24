@@ -1,10 +1,16 @@
+/**
+ * the folling function shows the possible usage for candidate Evaluation Button inside the candidate details page.
+ * 
+ * the function uses the createPopUp function, you can go to ceratePopUp.js for more details
+ * 
+ */
+
+
 window.addEventListener('load', () => {
 
-
-    window.onclick = function(event) {}
-
     const candidateEvaluationBtn = document.querySelector('.btn__evaluation');
-    // use these for get the values... 
+    const selectionStateButton = document.querySelector('.btn__selection');
+    // use these for get the evaluation values
     const rangeInputExperience = document.getElementById('range_experience');
     const rangeInputSkills = document.getElementById('range_skills');
     const rangeInputEducation = document.getElementById('range_education');
@@ -21,6 +27,7 @@ window.addEventListener('load', () => {
     candidateEvaluationBtn.addEventListener('click', (ev) => {
         createPopUp(informationPopUp, rootForPopUp);
         candidateEvaluationBtn.innerHTML="Reevaluar candidato";
+        selectionStateButton.classList.remove('btn--inactive');
         ev.preventDefault();
     });
 

@@ -38,7 +38,7 @@ var sample = {
     ],
     evaluation: [6,1,4], // added for second time interaction, represent initial or prev evaluation
     selected: false,
-    evaluated: true,
+    evaluated: false,
 }
 addInformation(sample);
 });
