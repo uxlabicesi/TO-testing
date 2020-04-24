@@ -49,6 +49,16 @@
         &--cancel{
             background-color: $color-red;
         }
+        &--noFill{
+            border: 1px solid #294F75;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background: none;
+            color: $color-blue;
+            font-size: $typo-h3;
+            font-weight: $typo-semibold;
+            
+        }
     }
 
     &--small {
