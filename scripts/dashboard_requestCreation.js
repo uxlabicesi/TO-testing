@@ -81,6 +81,7 @@ window.addEventListener('load', () => {
         const minusBtn = document.createElement('button');
         minusBtn.classList.add('textInput__changeBtn', 'textInput__changeBtn--minus');
         minusBtn.innerHTML = '-';
+        minusBtn.setAttribute('type','button');
         minusBtn.addEventListener('click', changeValue);
         textInputNumberContainer.appendChild(minusBtn);
 
@@ -93,6 +94,7 @@ window.addEventListener('load', () => {
         const plusBtn = document.createElement('button');
         plusBtn.classList.add('textInput__changeBtn', 'textInput__changeBtn--plus');
         plusBtn.innerHTML = '+';
+        plusBtn.setAttribute('type','button');
         plusBtn.addEventListener('click', changeValue);
         textInputNumberContainer.appendChild(plusBtn);
 
