@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
 
     setNavigation(reqCreationState);
     nextBtn.addEventListener('click', () => {
-        if(reqCreationState < content.length-2) {
+        if(reqCreationState < content.length-1) {
                 content[reqCreationState].classList.remove('reqCreation__content--active');
                content[reqCreationState+1].classList.add('reqCreation__content--active');
     
