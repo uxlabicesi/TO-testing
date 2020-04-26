@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 
     addFunction.addEventListener('click', createFunction);
 
-    createFunction = () => {
+    function createFunction() {
         const container = document.createElement('div');
         container.classList.add('reqCreation__functionsContainer');
         form.appendChild(container)
