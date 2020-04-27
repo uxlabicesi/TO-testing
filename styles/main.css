@@ -3268,7 +3268,8 @@ input[type=number] {
 
 @media (max-width: 576px) {
   .content__card {
-    height: 70px;
+    height: auto;
+    padding: 10px;
   }
 }
 
