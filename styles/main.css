@@ -639,7 +639,6 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 100px;
   height: 33px;
   background: none;
   border: none;
@@ -649,6 +648,8 @@ body {
   background-position: right 0 top 60%, 0 0;
   background-size: 15px;
   margin-left: 20px;
+  padding-right: 50px;
+  white-space: wrap;
 }
 
 .content__requests {

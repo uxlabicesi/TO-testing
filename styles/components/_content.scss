@@ -81,7 +81,7 @@
 
     &__select {
         appearance: none;
-        width: 100px;
+        //width: 100px;
         height: 33px;
         background: none;
         border: none;
@@ -91,6 +91,8 @@
         background-position: right 0 top 60%, 0 0;  
         background-size: 15px;
         margin-left: 20px; 
+        padding-right: 50px;
+        white-space: wrap;
     }
 
     &__requests {
