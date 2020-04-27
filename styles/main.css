@@ -1001,6 +1001,7 @@ body {
   color: #294F75;
   font-size: 13px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .reqDetails__content {
