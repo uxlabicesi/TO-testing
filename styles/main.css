@@ -3704,6 +3704,56 @@ input[type=number] {
   width: 100%;
 }
 
+@media (max-width: 576px), (max-width: 992px) and (min-width: 769px) {
+  .reqCreation__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+  }
+  .reqCreation__row .select__container, .reqCreation__row .textInput__container {
+    margin: 0;
+    margin-top: 45px;
+  }
+  .reqCreation__row .has-error {
+    margin-bottom: 15px;
+  }
+  .reqCreation__row .selectadd {
+    margin: 0;
+  }
+  .reqCreation__row .selectadd--multiple {
+    margin-top: 45px;
+  }
+  .textInput__container--reqCreation1col {
+    width: 100%;
+  }
+  .textInput__container--reqCreation2col {
+    width: 100%;
+  }
+  .textInput__container--reqCreation3col {
+    width: 100%;
+  }
+  .select__container--reqCreation1col {
+    width: 100%;
+  }
+  .select__container--reqCreation2col {
+    width: 100%;
+  }
+  .select__container--reqCreation3col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 769px) {
+  .reqCreation__progress {
+    margin: 15px 8px;
+  }
+}
+
 .pay__input {
   width: 50%;
   margin: 40px 25%;

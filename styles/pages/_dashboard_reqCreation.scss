@@ -175,3 +175,70 @@
 .reqForm{
     width: 100%;
 }
+
+@media  (max-width: $screen-small) , (max-width: $screen-large) and (min-width: $screen-medium) {
+    .reqCreation {
+
+        &__row {
+            flex-direction: column;
+            height: fit-content;
+            margin: 0;
+    
+            & .select__container, .textInput__container {
+                margin: 0;
+                margin-top: 45px;
+            }
+
+            & .has-error {
+                margin-bottom: 15px;
+            }
+
+            & .selectadd {
+                margin: 0;
+
+                &--multiple {
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+
+    .textInput__container--reqCreation {
+
+        &1col {
+            width: 100%;
+        }
+
+        &2col {
+            width: 100%;
+        }
+
+        &3col {
+            width: 100%;
+        }
+    }
+
+    .select__container--reqCreation {
+
+        &1col {
+            width: 100%;
+        }
+
+        &2col {
+            width: 100%;
+        }
+
+        &3col {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $screen-medium) {
+    .reqCreation {
+
+        &__progress {
+            margin: 15px 8px;
+        }
+    }
+}
