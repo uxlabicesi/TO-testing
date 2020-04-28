@@ -22,6 +22,8 @@
         &Titles{
             display: flex;
             flex-direction: column;
+            width: 110px;
+            max-width: 110px;
     
             &Name{
                 color: $color-blue;
@@ -77,6 +79,12 @@
         width: 22%;
     }
 
+    &__btn--icon {
+        // hidedn by default on big screens
+        display: none;
+        margin: auto;
+    }
+
 }
 
 @media (max-width: $screen-large) {
@@ -86,6 +94,13 @@
 
         &__btn {
             display: none;
+        }
+
+        &__btn--icon {
+            display: initial;
+            margin: auto;
+            width: 22px;
+            height: 22px;
         }
     
         &__profile {

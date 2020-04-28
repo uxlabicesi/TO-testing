@@ -1393,6 +1393,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 110px;
+  max-width: 110px;
 }
 
 .candidate__profileTitlesName {
@@ -1450,6 +1452,11 @@ body {
   width: 22%;
 }
 
+.candidate__btn--icon {
+  display: none;
+  margin: auto;
+}
+
 @media (max-width: 992px) {
   .candidate {
     -webkit-box-orient: vertical;
@@ -1462,6 +1469,12 @@ body {
   }
   .candidate__btn {
     display: none;
+  }
+  .candidate__btn--icon {
+    display: initial;
+    margin: auto;
+    width: 22px;
+    height: 22px;
   }
   .candidate__profile {
     margin-top: 15px;

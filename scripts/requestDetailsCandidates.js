@@ -46,6 +46,7 @@ window.addEventListener('load', () => {
                 let profilePic = document.createElement('img');
                 profilePic.setAttribute('src', "." + e.profilePic);
                 profilePic.classList.add('candidate__profileImg');
+                
                 profile.appendChild(profilePic);
 
                 let profileTitles = document.createElement('div')
@@ -87,19 +88,34 @@ window.addEventListener('load', () => {
                 candidateInfo.appendChild(email);
                 candidate.appendChild(candidateInfo);
 
+                // new fragment for support responsive icon on selected candidates
+                let selectionIcon = document.createElement('img')
+                
+
                 let btn = document.createElement('button');
-                if(!e.selected){
+                if(!e.selected){ // non selected
                     btn.classList.add('btn', 'btn--noFill', 'candidate__btn');
                     btn.innerHTML = 'Ver detalles';
+                    // for responsive icon view
+                    selectionIcon.classList.add('candidate__btn--icon', 'candidate__btn--iconInactive');
+                    selectionIcon.setAttribute('src',"./resources/checkIcon.svg");
                 }else{
                     btn.classList.add('btn', 'btn--noFill--active', 'candidate__btn');
                     btn.innerHTML = 'Seleccionado';
+                    // for responsive icon view
+                    selectionIcon.classList.add('candidate__btn--icon', 'candidate__btn--iconActive');
+                    selectionIcon.setAttribute('src',"./resources/checkGreen.svg");
                 }
 
                 btn.addEventListener('click', () => {
                     window.location.href = './dashboard_candidateDetails.html';
                 });
+
+                // for big screen button view
                 candidate.appendChild(btn);
+                // for responsive icon view
+                candidate.appendChild(selectionIcon);
+                
 
                 candidates.appendChild(candidate);
 
@@ -108,6 +124,7 @@ window.addEventListener('load', () => {
         }
     }
 
+    // trhe following code fragment adds buttons for request evaluation and finish process
     let buttonBarBottom = document.createElement('div');
     buttonBarBottom.classList.add('canDetails__buttonsGroup');
 
