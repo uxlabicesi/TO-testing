@@ -144,6 +144,10 @@
         white-space: nowrap; 
         z-index: 2;
 
+        &--visible {
+            visibility: visible !important;
+        }
+
         &--register {
             margin-left: 26px;
             margin-top: 17px;

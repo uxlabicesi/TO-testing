@@ -198,7 +198,7 @@
                     <p>Registra a continuación las labores, actividades o responsabilidades que realiza el cargo. Por ejemplo: Dirigir procedimientos operativos, Realizar estadísticas de control.</p>
                     
                     <div class="reqCreation__functions">
-                        <form class="reqForm" id="reqForm">
+                        <form class="reqForm" id="reqFormSecondState">
                         
                             <div class="reqCreation__functionsContainer">
                                 <button class="reqCreation__functionsContainerBtnMove"></button>
@@ -238,7 +238,7 @@
                     <h2>REQUISITOS</h2>
                     <p>Registra a continuación los requisitos solicitados.</p>
                     
-                    <form class="reqForm" id="reqForm">
+                    <form class="reqForm" id="reqFormThirdState">
                         <!-- start first row, academic level and career -->
                         <div class="reqCreation__row">
                             <!-- first item, first row -->
@@ -260,9 +260,9 @@
                                 </div>
                             </div>
                             <!-- second item, first row -->
-                            <div class="textInput__container textInput__container--reqCreation2col form-group">
+                            <div class="textInput__container textInput__container--reqCreation2col">
                                 <label for="form_profession" class="label label--reqCreation label--profession">PROFESIÓN</label>
-                                <input type="text" class="textInput" id="form_profession" name="job" required>
+                                <input type="text" class="textInput" id="form_profession" name="job">
                             </div>
                         </div>
                         <!-- end first row, academic level and career -->
@@ -270,22 +270,21 @@
                         
                         <div class="reqCreation__row">
 
-                            <div class="selectadd selectadd--multiple selectadd--reqCreation form-group select__container--reqCreation2col">
-                                <label class="select__label select__label--register select__label--knowledge">CONOCIMIENTOS</label>
-                                <select class="select2__selector--knowledge" name="knowledge" multiple="multiple" required>
-                                    <!-- empty option is requiered for placeholder -->
-                                    <option></option>
-                                    <option value="O0"></option>
-                                    <option value="O1">Opción 1</option>
-                                    <option value="O2">Opción 2</option>
-                                    <option value="O3">Opción 3</option>
-                                    <option value="O4">Opción 4</option>
-                                    <option value="O5">Opción 5</option>
-                                    <option value="O6">Opción 6</option>
-                                    <option value="O7">Opción 7</option>
-                                    <option value="O8">Opción 8</option>
-                                    <option value="O8">Opción 9</option>
-                                </select>
+                            <div class="select__container select__container--reqCreation2col">
+                                <div class="selectadd selectadd--reqCreation form-group">
+                                    <label class="select__label select__label--visible select__label--register select__label--knowledge">CONOCIMIENTOS</label>
+                                    <select class="select2__selector--knowledge" name="knowledge" multiple="multiple" required>
+                                        <option value="O1">Opción 1</option>
+                                        <option value="O2">Opción 2</option>
+                                        <option value="O3">Opción 3</option>
+                                        <option value="O4">Opción 4</option>
+                                        <option value="O5">Opción 5</option>
+                                        <option value="O6">Opción 6</option>
+                                        <option value="O7">Opción 7</option>
+                                        <option value="O8">Opción 8</option>
+                                        <option value="O8">Opción 9</option>
+                                    </select>
+                                </div>
                             </div>
 
                         </div>
@@ -306,7 +305,7 @@
                     <p>Registra a continuación las competencias que considere adquirir. Recuerde que debe seleccionar mínimo 3 competencias.</p>
                     
                     <div class="reqCreation__functions">
-                        <form class="reqForm" id="reqForm">
+                        <form class="reqForm" id="reqFormFourthState">
                         
                             <div class="reqCreation__functionsContainer">
                                 <button class="reqCreation__functionsContainerBtnMove"></button>

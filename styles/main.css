@@ -473,6 +473,10 @@ body {
   z-index: 2;
 }
 
+.select__label--visible {
+  visibility: visible !important;
+}
+
 .select__label--register {
   margin-left: 26px;
   margin-top: 17px;
