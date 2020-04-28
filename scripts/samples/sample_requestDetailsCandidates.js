@@ -1,20 +1,20 @@
 // TODO REMOVE AFTER DEBUG
 var candidateSample = [{
         profilePic: '/resources/imgPerfil.jpg',
-        name: 'Fabio Arias M',
+        name: 'Fabio Arias Morales Martinez ',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
         ],
-        email: 'fabio.arias@candidatos.com.co',
+        email: 'fabio.arias.martinez@candidatos.com.co',
         id: 'id-custom-sample-1',
         selected: true,
     },
 
     {
         profilePic: '/resources/imgPerfil.jpg',
-        name: 'Fabio Arias M',
-        job: 'Diseñador Gráfico',
+        name: 'Fabio Andrés Arias Martinez',
+        job: 'Diseñador Gráfico especialista en mercadeo publicitario digital en redes sociales',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
         ],
@@ -25,8 +25,8 @@ var candidateSample = [{
 
     {
         profilePic: '/resources/imgPerfil.jpg',
-        name: 'Fabio Arias M',
-        job: 'Diseñador Gráfico',
+        name: 'Jose Fabio Arias Montealegue Villa',
+        job: 'Diseñador de la comunicación gráfica',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
         ],
@@ -37,7 +37,7 @@ var candidateSample = [{
     {
         profilePic: '/resources/imgPerfil.jpg',
         name: 'Fabio Arias M',
-        job: 'Diseñador Gráfico',
+        job: 'Arquitecto visual IU/UX',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
         ],
@@ -46,7 +46,7 @@ var candidateSample = [{
     },
     {
         profilePic: '/resources/imgPerfil.jpg',
-        name: 'Fabio Arias M',
+        name: 'Fabio Arias Moncalenao santarrosa',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
@@ -62,7 +62,7 @@ var candidateSample = [{
         telephone: ['+57 (300) 8200838',
             '032 5552334'
         ],
-        email: 'fabio.arias@candidatos.com.co',
+        email: 'fabio.arias@candidatoscalirecultamiento.com.co',
         id: 'id-custom-sample-6',
         selected: false,
     },
