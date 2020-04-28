@@ -25,7 +25,7 @@ var candidateSample = [{
 
     {
         profilePic: '/resources/imgPerfil.jpg',
-        name: 'Jose Fabio Arias Montealegue Villa',
+        name: 'Jose Fabio Arias Montealegue',
         job: 'Diseñador de la comunicación gráfica',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
@@ -46,7 +46,7 @@ var candidateSample = [{
     },
     {
         profilePic: '/resources/imgPerfil.jpg',
-        name: 'Fabio Arias Moncalenao santarrosa',
+        name: 'Fabio Arias Moncalenao Santarrosa',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
             '032 5552334'
