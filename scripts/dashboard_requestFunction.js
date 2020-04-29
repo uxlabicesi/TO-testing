@@ -23,8 +23,6 @@ window.addEventListener('load', () => {
         });
     }
 
-    addFunction.addEventListener('click', createFunction);
-
     createFunction = () => {
         let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
 
@@ -94,4 +92,5 @@ window.addEventListener('load', () => {
         }
     }
 
+    addFunction.addEventListener('click', createFunction);
 });

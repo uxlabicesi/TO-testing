@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
         },
     ];
 
-    document.querySelector('.btn--blueAdd').addEventListener('click', () => {
+    document.querySelector('.btn--blueAddCity').addEventListener('click', () => {
         createCitySelect(optionList);
     });
 });
