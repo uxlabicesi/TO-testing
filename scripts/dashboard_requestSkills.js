@@ -4,6 +4,23 @@ window.addEventListener('load', () => {
     const form = document.querySelector('.reqCreation__content--skills form');
     const addFunction = document.querySelector('.reqCreation__content--skills .btn--blue');
     let skillCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
+    let functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+    const deleteFunctions = document.querySelectorAll('.reqCreation__functionsContainerBtnDelete');
+
+    deleteFunctions.forEach((elem) =>{
+        elem.addEventListener('click', (event) =>{
+            skillCount--;
+            event.target.parentElement.remove();
+            functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+            updateIds();
+        });
+    });
+
+    function updateIds(){
+        functionInputs.forEach((elem,index)=>{
+            elem.id = 'form_function'+index;
+        });
+    }
 
     createSkill = () => {
         const container = document.createElement('div');
@@ -27,6 +44,7 @@ window.addEventListener('load', () => {
         const input = document.createElement('input');
         input.classList.add('textInput');
         input.id = 'form_skill'+skillCount;
+        functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
         containerInput.appendChild(input);
 
         skillCount++;
@@ -36,6 +54,11 @@ window.addEventListener('load', () => {
         container.appendChild(btnDelete);
 
         btnDelete.addEventListener('click', () => {
+            skillCount--;
+            if(skillCount < 5) {
+                addFunction.removeAttribute('disabled');
+                addFunction.classList.remove('btn--inactive');
+            }
             container.remove();
         });
 
@@ -59,6 +82,12 @@ window.addEventListener('load', () => {
                 event.target.parentElement.classList.remove('textInput--focused');
             }
         });
+
+        if(skillCount > 4){
+            addFunction.setAttribute('disabled','disabled');
+            addFunction.classList.add('btn--inactive');
+        }
+
     };
 
     addFunction.addEventListener('click', createSkill);
