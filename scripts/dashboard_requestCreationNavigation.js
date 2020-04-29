@@ -6,19 +6,22 @@ window.addEventListener('load', () => {
     const progressBar = document.querySelectorAll('.reqCreation__progress');
     const content = document.querySelectorAll('.reqCreation__content');
     const inputPosition = document.querySelector('.textInput__position');
+    const inputWage = document.querySelector('.textInput__wage');
     let isValid = true;
 
     /*
-        Checks if input position on the request creation form have value and and it has no error, 
+        Checks if inputs text on the request creation form have value and and they have no error, 
         when these conditions are met, adds the class "btn--active" and removes
         the class "btn--inactive" from the next button
      */
     inputPosition.addEventListener('change', checkValid);
     inputPosition.addEventListener('keyup', checkValid);// Added for NC8146
+    inputWage.addEventListener('change', checkValid);
+    inputWage.addEventListener('keyup', checkValid);// Added for NC8146
 
     function checkValid(event) {
 
-        if(!(isValid && inputPosition.classList.contains('has-success'))) {
+        if(!(isValid && inputPosition.classList.contains('has-success') && inputWage.classList.contains('has-success'))) {
                 isValid = false;
         }
         
