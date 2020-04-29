@@ -22,8 +22,8 @@
         &Titles{
             display: flex;
             flex-direction: column;
-            width: 110px;
-            max-width: 110px;
+            //width: 110px; // TODO: needs to be review
+            //max-width: 110px; // TODO: needs to be review
     
             &Name{
                 color: $color-blue;
