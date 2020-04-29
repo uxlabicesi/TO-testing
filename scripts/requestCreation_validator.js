@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
                             message: 'Este campo es obligatorio'
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z_ ]+$/,
+                            regexp: /^[ñÑa-zA-Z_ ]+$/,
                             message: 'Solo puede contener letras y guión bajo'
                         }
                     }

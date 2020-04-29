@@ -293,6 +293,18 @@
         &__progress {
             margin: 15px 8px;
         }
+
+        &__footer {
+            padding: 20px;
+        }
+    }
+}
+
+@media (max-width: $screen-small) {
+    .reqCreation {
+        &__footer {
+            padding: 10px;
+        }
     }
 }
 

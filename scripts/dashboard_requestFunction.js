@@ -3,7 +3,25 @@ let createFunction = () => {};
 window.addEventListener('load', () => {
     const form = document.querySelector('.reqCreation__content--function form');
     const addFunction = document.querySelector('.reqCreation__content--function .btn--blue');
+    let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
+    let functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+    const deleteFunctions = document.querySelectorAll('.reqCreation__functionsContainerBtnDelete');
     
+    
+    deleteFunctions.forEach((elem) =>{
+        elem.addEventListener('click', (event) =>{
+            functionCount--;
+            event.target.parentElement.remove();
+            functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+            updateIds();
+        });
+    });
+
+    function updateIds(){
+        functionInputs.forEach((elem,index)=>{
+            elem.id = 'form_function'+index;
+        });
+    }
 
     addFunction.addEventListener('click', createFunction);
 
@@ -31,6 +49,7 @@ window.addEventListener('load', () => {
         const input = document.createElement('input');
         input.classList.add('textInput');
         input.id = 'form_function'+functionCount;
+        functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
         containerInput.appendChild(input);
 
         functionCount++;
@@ -40,6 +59,11 @@ window.addEventListener('load', () => {
         container.appendChild(btnDelete);
 
         btnDelete.addEventListener('click', () => {
+            functionCount--;
+            if(functionCount < 5) {
+                addFunction.removeAttribute('disabled');
+                addFunction.classList.remove('btn--inactive');
+            }
             container.remove();
         });
 
@@ -63,6 +87,11 @@ window.addEventListener('load', () => {
                 event.target.parentElement.classList.remove('textInput--focused');
             }
         });
+
+        if(functionCount > 4){
+            addFunction.setAttribute('disabled','disabled');
+            addFunction.classList.add('btn--inactive');
+        }
     }
 
 });
