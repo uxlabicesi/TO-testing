@@ -90,7 +90,7 @@ $(document).ready(function () {
 
     $('.select2__selector--knowledge').select2({
         tags: true,
-        placeholder: "CONOCIMIENTOS",
+        placeholder: "",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
@@ -248,6 +248,11 @@ $(document).ready(function () {
         document.querySelector('.select__label--knowledge').classList.remove(
             'select__label--focused', 'select__label--focusedreqCreation');
         }
+    });
+
+    $('.select2__selector--knowledge').on('select2:opening select2:closing', function( event ) {
+        var $searchfield = $(this).parent().find('.select2-search__field');
+        $searchfield.prop('disabled', true);
     });
 });
 
