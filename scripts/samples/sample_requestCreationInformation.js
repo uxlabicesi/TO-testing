@@ -19,7 +19,7 @@
                 amount: 4,
             },
             {
-                city: 'O7',
+                city: 'O3',
                 amount: 2,
             }
         ],
@@ -42,6 +42,28 @@
             'Evaluación de usabilidad',
             'Creación de conceptos',
             'Sustentación de propuestas',
+        ],
+        cityList: [
+            {
+                value: 'O1',
+                text: 'Opción 1'
+            },
+            {
+                value: 'O2',
+                text: 'Opción 2'
+            },
+            {
+                value: 'O3',
+                text: 'Opción 3'
+            },
+            {
+                value: 'O4',
+                text: 'Opción 4'
+            },
+            {
+                value: 'O5',
+                text: 'Opción 5'
+            }
         ]
     };
 

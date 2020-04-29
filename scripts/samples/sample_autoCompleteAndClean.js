@@ -5,9 +5,9 @@ window.addEventListener('load', () => {
        ev.preventDefault();
     });
 
-    const cleanFormButton = document.querySelector('.btn--clean');
+    /*const cleanFormButton = document.querySelector('.btn--clean');
 
     cleanFormButton.addEventListener('click', (ev) => {
        ev.preventDefault();
-    });
+    });*/
 });

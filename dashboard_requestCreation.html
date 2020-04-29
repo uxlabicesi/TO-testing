@@ -119,394 +119,401 @@
                                     </select>
                                 </div>
                             </div> -->
-
                             
+                            <div class="reqCreation__autocomplete">
                                 <button class="btn btn--small btn--green btn--autocomplete">Auto completar</button>
                                 <!-- TODO : Change style to blue without damage the add city button -->
                                 <!-- <button class="btn btn--small btn--clean">Limpiar formulario</button> -->
-                                <span style="color: #294F75; margin-top: 10px; margin-left:20px;padding-left: 20px;padding-right: 20px; max-width: 300px;">
-                                ¿habías realizado un pedido similar?, podemos completar los datos por ti.</span>
-                            
-
+                                <p>¿habías realizado un pedido similar?, podemos completar los datos por ti.</p>
+                            </div>                           
+                                
+                                
                         </div>
-                        
-                        <div class="reqCreation__row">
-                            <div class="select__container select__container--reqCreation3col">
-                                <div class="selectadd selectadd--reqCreation form-group">
-                                    <label class="select__label select__label--register select__label--hiring">TIPO DE CONTRATACIÓN</label>
-                                    <select class="select2__selector--hiring" name="hiring" required>
-                                        <!-- empty option is requiered for placeholder -->
-                                        <option></option>
-                                        <option value="O0"></option>
-                                        <option value="O1">Término fijo</option>
-                                        <option value="O2">Indefinido</option>
-                                        <option value="O3">Prestación de servicios</option>
-                                    </select>
+                            
+                            <div class="reqCreation__row">
+                                <div class="select__container select__container--reqCreation3col">
+                                    <div class="selectadd selectadd--reqCreation form-group">
+                                        <label class="select__label select__label--register select__label--hiring">TIPO DE CONTRATACIÓN</label>
+                                        <select class="select2__selector--hiring" name="hiring" required>
+                                            <!-- empty option is requiered for placeholder -->
+                                            <option></option>
+                                            <option value="O0"></option>
+                                            <option value="O1">Término fijo</option>
+                                            <option value="O2">Indefinido</option>
+                                            <option value="O3">Prestación de servicios</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="select__container select__container--reqCreation3col">
+                                    <div class="selectadd selectadd--reqCreation form-group">
+                                        <label class="select__label select__label--register select__label--workingday">JORNADA</label>
+                                        <select class="select2__selector--workingday" name="workingday" required>
+                                            <!-- empty option is requiered for placeholder -->
+                                            <option></option>
+                                            <option value="O0"></option>
+                                            <option value="O1">Tiempo completo</option>
+                                            <option value="O2">Medio tiempo</option>
+                                            <option value="O3">Por horas</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="textInput__container textInput__container--reqCreation3col reqCreation__hasError textInput__wage form-group">
+                                    <label for="form_wage" class="label label--reqCreation label--wage">SALARIO</label>
+                                    <input type="text" class="textInput" id="form_wage" name="wage" required>
                                 </div>
                             </div>
                             
-                            <div class="select__container select__container--reqCreation3col">
-                                <div class="selectadd selectadd--reqCreation form-group">
-                                    <label class="select__label select__label--register select__label--workingday">JORNADA</label>
-                                    <select class="select2__selector--workingday" name="workingday" required>
-                                        <!-- empty option is requiered for placeholder -->
-                                        <option></option>
-                                        <option value="O0"></option>
-                                        <option value="O1">Tiempo completo</option>
-                                        <option value="O2">Medio tiempo</option>
-                                        <option value="O3">Por horas</option>
-                                    </select>
+                            <div class="reqCreation__row">
+                                <div class="select__container select__container--reqCreation2col">
+                                    <div class="selectadd selectadd--reqCreation form-group">
+                                        <label class="select__label select__label--register select__label--reqCity">CIUDAD</label>
+                                        <select class="select2__selector--reqCity select--reqCity" name="city" required>
+                                            <!-- empty option is requiered for placeholder -->
+                                            <option></option>
+                                            <option value="O0"></option>
+                                            <option value="O1">Opción 1</option>
+                                            <option value="O2">Opción 2</option>
+                                            <option value="O3">Opción 3</option>
+                                            <option value="O4">Opción 4</option>
+                                            <option value="O5">Opción 5</option>
+                                            <option value="O6">Opción 6</option>
+                                            <option value="O7">Opción 7</option>
+                                            <option value="O8">Opción 8</option>
+                                        </select>
+                                    </div>
                                 </div>
+                                
+                                <div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
+                                    <label class="label label--active label--reqCreation">CANTIDAD</label>
+                                    <div class="textInput--number">
+                                        <button type="button" class="textInput__changeBtn textInput__changeBtn--minus">-</button>
+                                        <input type="number" value="1" class="textInput textInput--reqCity" name="" min="1" step="1" required>
+                                        <button type="button" class="textInput__changeBtn textInput__changeBtn--plus">+</button>
+                                    </div>
+                                </div>
+                                
                             </div>
                             
-                            <div class="textInput__container textInput__container--reqCreation3col reqCreation__hasError textInput__wage form-group">
-                                <label for="form_wage" class="label label--reqCreation label--wage">SALARIO</label>
-                                <input type="text" class="textInput" id="form_wage" name="wage" required>
-                            </div>
-                        </div>
-                        
-                        <div class="reqCreation__row">
-                            <div class="select__container select__container--reqCreation2col">
-                                <div class="selectadd selectadd--reqCreation form-group">
-                                    <label class="select__label select__label--register select__label--reqCity">CIUDAD</label>
-                                    <select class="select2__selector--reqCity select--reqCity" name="city" required>
-                                        <!-- empty option is requiered for placeholder -->
-                                        <option></option>
-                                        <option value="O0"></option>
-                                        <option value="O1">Opción 1</option>
-                                        <option value="O2">Opción 2</option>
-                                        <option value="O3">Opción 3</option>
-                                        <option value="O4">Opción 4</option>
-                                        <option value="O5">Opción 5</option>
-                                        <option value="O6">Opción 6</option>
-                                        <option value="O7">Opción 7</option>
-                                        <option value="O8">Opción 8</option>
-                                    </select>
-                                </div>
+                            <div class="reqCreation__row reqCreation__row--last">
+                                <button type="button" class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra ciudad</button>
+                                <p class="reqCreation__clear">Limpiar formulario</p>
                             </div>
                             
-                            <div class="textInput__container textInput--focused textInput__container--reqCreation2col form-group">
-                                <label class="label label--active label--reqCreation">CANTIDAD</label>
-                                <div class="textInput--number">
-                                    <button type="button" class="textInput__changeBtn textInput__changeBtn--minus">-</button>
-                                    <input type="number" value="1" class="textInput textInput--reqCity" name="" min="1" step="1" required>
-                                    <button type="button" class="textInput__changeBtn textInput__changeBtn--plus">+</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                        <button type="button" class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra ciudad</button>
-                    </form>
-                </div>
-
-                <!-- Second state -->
-                
-                <div class="reqCreation__content reqCreation__content--function">
-                    <h2>Funciones</h2>
-                    <p>Registra a continuación las labores, actividades o responsabilidades que realiza el cargo. Por ejemplo: Dirigir procedimientos operativos, Realizar estadísticas de control.</p>
+                        </form>
+                    </div>
                     
-                    <div class="reqCreation__functions">
-                        <form class="reqForm" id="reqFormSecondState">
+                    <!-- Second state -->
+                    
+                    <div class="reqCreation__content reqCreation__content--function">
+                        <h2>Funciones</h2>
+                        <p>Registra a continuación las labores, actividades o responsabilidades que realiza el cargo. Por ejemplo: Dirigir procedimientos operativos, Realizar estadísticas de control.</p>
                         
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
-                                <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
-                                    <label for="form_function0" class="label label--reqCreation">Función</label>
-                                    <input type="text" class="textInput" id="form_function0">
+                        <div class="reqCreation__functions">
+                            <form class="reqForm" id="reqFormSecondState">
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
+                                    <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
+                                        <label for="form_function0" class="label label--reqCreation">Función</label>
+                                        <input type="text" class="textInput" id="form_function0">
+                                    </div>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
                                 </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-    
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
                                     <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
                                         <label for="form_function1" class="label label--reqCreation">Función</label>
                                         <input type="text" class="textInput" id="form_function1">
                                     </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-    
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                </div>
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
                                     <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
                                         <label for="form_function2" class="label label--reqCreation">Función</label>
                                         <input type="text" class="textInput" id="form_function2">
                                     </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                </div>
+                            </form>
+                            
+                            <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra función</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Third state -->
+                    
+                    <div class="reqCreation__content reqCreation__content--requirements">
+                        <h2>REQUISITOS</h2>
+                        <p>Registra a continuación los requisitos solicitados.</p>
+                        
+                        <form class="reqForm" id="reqFormThirdState">
+                            <!-- start first row, academic level and career -->
+                            <div class="reqCreation__row">
+                                <!-- first item, first row -->
+                                <div class="select__container select__container--reqCreation2col">
+                                    <div class="selectadd selectadd--reqCreation form-group">
+                                        <label class="select__label select__label--register select__label--academicLevel">NIVEL ACADÉMICO</label>
+                                        <select class="select2__selector--academicLevel" name="academicLevel" required>
+                                            <option></option>
+                                            <option value="O0"></option>
+                                            <option value="O1">Opción 1</option>
+                                            <option value="O2">Opción 2</option>
+                                            <option value="O3">Opción 3</option>
+                                            <option value="O4">Opción 4</option>
+                                            <option value="O5">Opción 5</option>
+                                            <option value="O6">Opción 6</option>
+                                            <option value="O7">Opción 7</option>
+                                            <option value="O8">Opción 8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- second item, first row -->
+                                <div class="textInput__container textInput__container--reqCreation2col form-group">
+                                    <label for="form_profession" class="label label--reqCreation label--profession">PROFESIÓN</label>
+                                    <input type="text" class="textInput" id="form_profession" name="job">
+                                </div>
+                            </div>
+                            <!-- end first row, academic level and career -->
+                            <!-- start second, technical knowledge -->
+                            
+                            <div class="reqCreation__row">
+                                
+                                <div class="select__container select__container--reqCreation2col">
+                                    <div class="selectadd selectadd--reqCreation form-group">
+                                        <label class="select__label select__label--visible select__label--register select__label--knowledge">CONOCIMIENTOS</label>
+                                        <select class="select2__selector--knowledge" name="knowledge" multiple="multiple" required>
+                                            <option value="O1">Opción 1</option>
+                                            <option value="O2">Opción 2</option>
+                                            <option value="O3">Opción 3</option>
+                                            <option value="O4">Opción 4</option>
+                                            <option value="O5">Opción 5</option>
+                                            <option value="O6">Opción 6</option>
+                                            <option value="O7">Opción 7</option>
+                                            <option value="O8">Opción 8</option>
+                                            <option value="O8">Opción 9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="reqCreation__row">
+                                <div class="textInput__container textInput__container--reqCreation1col form-group">
+                                    <label for="form_observations" class="label label--reqCreation label--observations">OBSERVACIONES</label>
+                                    <textarea class="textInput textInput--area" id="form_observations" name="observations"></textarea>
+                                </div>
                             </div>
                         </form>
-    
-                        <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra función</button>
                     </div>
-                </div>
-
-                 <!-- Third state -->
-                
-                <div class="reqCreation__content reqCreation__content--requirements">
-                    <h2>REQUISITOS</h2>
-                    <p>Registra a continuación los requisitos solicitados.</p>
                     
-                    <form class="reqForm" id="reqFormThirdState">
-                        <!-- start first row, academic level and career -->
-                        <div class="reqCreation__row">
-                            <!-- first item, first row -->
-                            <div class="select__container select__container--reqCreation2col">
-                                <div class="selectadd selectadd--reqCreation form-group">
-                                    <label class="select__label select__label--register select__label--academicLevel">NIVEL ACADÉMICO</label>
-                                    <select class="select2__selector--academicLevel" name="academicLevel" required>
-                                        <option></option>
-                                        <option value="O0"></option>
-                                        <option value="O1">Opción 1</option>
-                                        <option value="O2">Opción 2</option>
-                                        <option value="O3">Opción 3</option>
-                                        <option value="O4">Opción 4</option>
-                                        <option value="O5">Opción 5</option>
-                                        <option value="O6">Opción 6</option>
-                                        <option value="O7">Opción 7</option>
-                                        <option value="O8">Opción 8</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- second item, first row -->
-                            <div class="textInput__container textInput__container--reqCreation2col form-group">
-                                <label for="form_profession" class="label label--reqCreation label--profession">PROFESIÓN</label>
-                                <input type="text" class="textInput" id="form_profession" name="job">
-                            </div>
-                        </div>
-                        <!-- end first row, academic level and career -->
-                        <!-- start second, technical knowledge -->
-                        
-                        <div class="reqCreation__row">
-
-                            <div class="select__container select__container--reqCreation2col">
-                                <div class="selectadd selectadd--reqCreation form-group">
-                                    <label class="select__label select__label--visible select__label--register select__label--knowledge">CONOCIMIENTOS</label>
-                                    <select class="select2__selector--knowledge" name="knowledge" multiple="multiple" required>
-                                        <option value="O1">Opción 1</option>
-                                        <option value="O2">Opción 2</option>
-                                        <option value="O3">Opción 3</option>
-                                        <option value="O4">Opción 4</option>
-                                        <option value="O5">Opción 5</option>
-                                        <option value="O6">Opción 6</option>
-                                        <option value="O7">Opción 7</option>
-                                        <option value="O8">Opción 8</option>
-                                        <option value="O8">Opción 9</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                        <div class="reqCreation__row">
-                            <div class="textInput__container textInput__container--reqCreation1col form-group">
-                                <label for="form_observations" class="label label--reqCreation label--observations">OBSERVACIONES</label>
-                                <textarea class="textInput textInput--area" id="form_observations" name="observations"></textarea>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                 <!-- Fourth state -->
-
-                <div class="reqCreation__content reqCreation__content--skills">
-                    <h2>Competencias</h2>
-                    <p>Registra a continuación las competencias que considere adquirir. Recuerde que debe seleccionar mínimo 3 competencias.</p>
+                    <!-- Fourth state -->
                     
-                    <div class="reqCreation__functions">
-                        <form class="reqForm" id="reqFormFourthState">
+                    <div class="reqCreation__content reqCreation__content--skills">
+                        <h2>Competencias</h2>
+                        <p>Registra a continuación las competencias que considere adquirir. Recuerde que debe seleccionar mínimo 3 competencias.</p>
                         
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
-                                <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
-                                    <label for="form_skill0" class="label label--reqCreation">Competencia</label>
-                                    <input type="text" class="textInput" id="form_skill0">
+                        <div class="reqCreation__functions">
+                            <form class="reqForm" id="reqFormFourthState">
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
+                                    <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
+                                        <label for="form_skill0" class="label label--reqCreation">Competencia</label>
+                                        <input type="text" class="textInput" id="form_skill0">
+                                    </div>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
                                 </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-    
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
                                     <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
                                         <label for="form_skill1" class="label label--reqCreation">Competencia</label>
                                         <input type="text" class="textInput" id="form_skill1">
                                     </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-    
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                </div>
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
                                     <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
                                         <label for="form_skill2" class="label label--reqCreation">Competencia</label>
                                         <input type="text" class="textInput" id="form_skill2">
                                     </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-                        </form>
-    
-                        <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra competencia</button>
-                    </div>
-                </div>
-
-                <!-- NEW state -->
-                <!-- TODO: Complete state for job level selection -->
-
-                <!-- <div class="reqCreation__content reqCreation__content--joblevel">
-                    <h2>características de nivel de cargo </h2>
-                    <p>Registra a continuación las caracteristicas que requieren los candidatos que estás buscando.</p>
-                    
-                    <div class="reqCreation__functions">
-                        <form class="reqForm" id="reqFormFifthState">
-                        
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
-                                <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
-                                    <label for="form_skill0" class="label label--reqCreation">Competencia</label>
-                                    <input type="text" class="textInput" id="form_skill0">
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
                                 </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-    
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
+                            </form>
+                            
+                            <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra competencia</button>
+                        </div>
+                    </div>
+                    
+                    <!-- NEW state -->
+                    <!-- TODO: Complete state for job level selection -->
+                    
+                    <!-- <div class="reqCreation__content reqCreation__content--joblevel">
+                        <h2>características de nivel de cargo </h2>
+                        <p>Registra a continuación las caracteristicas que requieren los candidatos que estás buscando.</p>
+                        
+                        <div class="reqCreation__functions">
+                            <form class="reqForm" id="reqFormFifthState">
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
+                                    <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
+                                        <label for="form_skill0" class="label label--reqCreation">Competencia</label>
+                                        <input type="text" class="textInput" id="form_skill0">
+                                    </div>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                </div>
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
                                     <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
                                         <label for="form_skill1" class="label label--reqCreation">Competencia</label>
                                         <input type="text" class="textInput" id="form_skill1">
                                     </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-    
-                            <div class="reqCreation__functionsContainer">
-                                <button class="reqCreation__functionsContainerBtnMove"></button>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                </div>
+                                
+                                <div class="reqCreation__functionsContainer">
+                                    <button class="reqCreation__functionsContainerBtnMove"></button>
                                     <div class="textInput__container textInput__container--reqCreation2col textInput__container--reqFunctions form-group">
                                         <label for="form_skill2" class="label label--reqCreation">Competencia</label>
                                         <input type="text" class="textInput" id="form_skill2">
                                     </div>
-                                <button class="reqCreation__functionsContainerBtnDelete"></button>
-                            </div>
-                        </form>
-    
-                        <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra competencia</button>
-                    </div>
-                </div> -->
-
-                 <!-- Fifth state -->
-
-                <div class="pay reqCreation__content">
-                    <h2 class="pay__title">Pago</h2>
-                    <p class="pay__description">Usted va a realizar la compra del siguiente servicio. Una vez que realices tu pago comenzaremos a buscar el mejor talento para tu empresa.</p>
-                    
-                    <div class="textInput__container textInput__container--marginless form-group pay__input">
-                        <label for="form_promoCode" class="label">Código promocional</label>
-                        <input type="text" class="textInput" id="form_promoCode" name="promoCode" required>
-                    </div>
-
-                    <button class="btn btn--small pay__btn">Aplicar</button>
-    
-                    <div class="pay__details">
-                        <h2>Detalles de pago</h2>
-    
-                        <div class="pay__detailsAmount">
-                            <p>Cantidad:</p>
-                            <p class="pay__detailsAmountNumber"></p>
+                                    <button class="reqCreation__functionsContainerBtnDelete"></button>
+                                </div>
+                            </form>
+                            
+                            <button class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra competencia</button>
                         </div>
-    
-                        <div class="pay__detailsSubtotal">
-                            <p>Subtotal:</p>
-                            <div class="pay__detailsSubtotalData">
-                                <p>$</p>
-                                <p class="pay__detailsSubtotalDataNumber"></p>
-                                <p class="pay__detailsSubtotalDataNumberIva">+ IVA</p>
+                    </div> -->
+                    
+                    <!-- Fifth state -->
+                    
+                    <div class="pay reqCreation__content">
+                        <h2 class="pay__title">Pago</h2>
+                        <p class="pay__description">Usted va a realizar la compra del siguiente servicio. Una vez que realices tu pago comenzaremos a buscar el mejor talento para tu empresa.</p>
+                        
+                        <div class="textInput__container textInput__container--marginless form-group pay__input">
+                            <label for="form_promoCode" class="label">Código promocional</label>
+                            <input type="text" class="textInput" id="form_promoCode" name="promoCode" required>
+                        </div>
+                        
+                        <button class="btn btn--small pay__btn">Aplicar</button>
+                        
+                        <div class="pay__details">
+                            <h2>Detalles de pago</h2>
+                            
+                            <div class="pay__detailsAmount">
+                                <p>Cantidad:</p>
+                                <p class="pay__detailsAmountNumber"></p>
+                            </div>
+                            
+                            <div class="pay__detailsSubtotal">
+                                <p>Subtotal:</p>
+                                <div class="pay__detailsSubtotalData">
+                                    <p>$</p>
+                                    <p class="pay__detailsSubtotalDataNumber"></p>
+                                    <p class="pay__detailsSubtotalDataNumberIva">+ IVA</p>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="pay__detailsPromo">
+                                <p>Código promocional:</p>
+                                <div class="pay__detailsPromoData">
+                                    <p>$</p>
+                                    <p>- <span class="pay__detailsPromoDataNumber"></span></p>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="pay__detailsTotal">
+                                <h3>Total:</h3>
+                                <div class="pay__detailsTotalData">
+                                    <h3>$</h3>
+                                    <h3 class="pay__detailsTotalNumber"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pay__buttons">
+                            <div class="pay__buttonsBtn pay__buttonsBtn--fill pay__buttonsBtn--half">
+                                <div class="pay__buttonsCircle"></div>
+                                <div class="pay__buttonsPrice">
+                                    <h3>$</h3>
+                                    <h3 class="pay__halfPriceBtn"></h3>
+                                    <h4>(50%)</h4>
+                                </div>
+                            </div>
+                            
+                            <div class="pay__buttonsBtn pay__buttonsBtn--nofill pay__buttonsBtn--full">
+                                <div class="pay__buttonsCircle"></div>
+                                <div class="pay__buttonsPrice">
+                                    <h3>$</h3>
+                                    <h3 class="pay__fullPriceBtn"></h3>
+                                    <h4>(100%)</h4>
+                                </div>
                             </div>
                             
                         </div>
-    
-                        <div class="pay__detailsPromo">
-                            <p>Código promocional:</p>
-                            <div class="pay__detailsPromoData">
-                                <p>$</p>
-                                <p>- <span class="pay__detailsPromoDataNumber"></span></p>
-                            </div>
-                            
-                        </div>
-
-                        <div class="pay__detailsTotal">
-                            <h3>Total:</h3>
-                            <div class="pay__detailsTotalData">
-                                <h3>$</h3>
-                                <h3 class="pay__detailsTotalNumber"></h3>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="pay__buttons">
-                        <div class="pay__buttonsBtn pay__buttonsBtn--fill pay__buttonsBtn--half">
-                            <div class="pay__buttonsCircle"></div>
-                            <div class="pay__buttonsPrice">
-                                <h3>$</h3>
-                                <h3 class="pay__halfPriceBtn"></h3>
-                                <h4>(50%)</h4>
-                            </div>
-                        </div>
-    
-                        <div class="pay__buttonsBtn pay__buttonsBtn--nofill pay__buttonsBtn--full">
-                            <div class="pay__buttonsCircle"></div>
-                            <div class="pay__buttonsPrice">
-                                <h3>$</h3>
-                                <h3 class="pay__fullPriceBtn"></h3>
-                                <h4>(100%)</h4>
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
-                
-                <div class="reqCreation__footer">
-                    <h4 href="#" class="reqCreation__back">Anterior</h4>
-                    
-                    <div>
-                        <div class="reqCreation__progress"></div>
-                        <div class="reqCreation__progress"></div>
-                        <div class="reqCreation__progress"></div>
-                        <div class="reqCreation__progress"></div>
-                        <div class="reqCreation__progress"></div>
                     </div>
                     
-                    <button disabled="disabled" class="btn btn--small btn--inactive reqCreation__next">Siguiente ></button>
+                    <div class="reqCreation__footer">
+                        <h4 href="#" class="reqCreation__back">Anterior</h4>
+                        
+                        <div>
+                            <div class="reqCreation__progress"></div>
+                            <div class="reqCreation__progress"></div>
+                            <div class="reqCreation__progress"></div>
+                            <div class="reqCreation__progress"></div>
+                            <div class="reqCreation__progress"></div>
+                        </div>
+                        
+                        <button disabled="disabled" class="btn btn--small btn--inactive reqCreation__next">Siguiente ></button>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
-    
-    <script src="libs/select2-4.0.13/dist/js/select2.full.min.js"></script>
-    <script src="./scripts/dashboardNav_interaction.js"></script>
-    <script src="./scripts/inputText_Microinteraction.js"></script>
-    <script src="./scripts/select_interaction.js"></script>
-    <script src="./scripts/dashboard_requestCreation.js"></script>
-    <script src="./scripts/dashboard_requestFunction.js"></script>
-    <script src="./scripts/dashboard_requestSkills.js"></script>
-    <script src="./scripts/dashboard_requestCreationNavigation.js"></script>
-    <script src="./scripts/dashboard_requestPay.js"></script>
-    <script src="./scripts/dashboard_payInformation.js"></script>
-    <script src="./scripts/applyPromoCode.js"></script>
-    <script src="./scripts/requestCreationInformation.js"></script>
-
-    <!-- TODO remove for deleted sample info -->
-    <script src="./scripts/samples/sample__applyPromo.js"></script>
-    <script src="./scripts/samples/sample_payInformation.js"></script>
-    <!-- <script src="./scripts/samples/sample_gotoRequestCreationSum.js"></script> -->
-    <script src="./scripts/samples/sample_autoCompleteAndClean.js"></script>
-    
-    <script src="./scripts/requestCreation_validator.js"></script>
-    
-    <!-- scripts for bootstrap validator -->
-    <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>--> 
-    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
-    <script src="libs/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>
-
-    
-
-   
-
+            </section>
+        </div>
+        
+        <script src="libs/select2-4.0.13/dist/js/select2.full.min.js"></script>
+        <script src="./scripts/dashboardNav_interaction.js"></script>
+        <script src="./scripts/inputText_Microinteraction.js"></script>
+        <script src="./scripts/select_interaction.js"></script>
+        <script src="./scripts/dashboard_requestCreation.js"></script>
+        <script src="./scripts/dashboard_requestFunction.js"></script>
+        <script src="./scripts/dashboard_requestSkills.js"></script>
+        <script src="./scripts/dashboard_requestCreationNavigation.js"></script>
+        <script src="./scripts/dashboard_requestPay.js"></script>
+        <script src="./scripts/dashboard_payInformation.js"></script>
+        <script src="./scripts/applyPromoCode.js"></script>
+        <script src="./scripts/requestCreationInformation.js"></script>
+        
+        <!-- TODO remove for deleted sample info -->
+        <script src="./scripts/samples/sample__applyPromo.js"></script>
+        <script src="./scripts/samples/sample_payInformation.js"></script>
+        <script src="./scripts/samples/sample_requestCreationNav.js"></script>
+        <script src="./scripts/samples/sample_createCitySelect.js"></script>
+        <!-- <script src="./scripts/samples/sample_gotoRequestCreationSum.js"></script> -->
+        <script src="./scripts/samples/sample_autoCompleteAndClean.js"></script>
+        <script src="./scripts/samples/sample_requestCreationInformation.js"></script>
+        
+        <script src="./scripts/requestCreation_validator.js"></script>
+        
+        <!-- scripts for bootstrap validator -->
+        <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>--> 
+        <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+        <script src="libs/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>
+        
+        
+        
+        
+        
     </body>
     </html>

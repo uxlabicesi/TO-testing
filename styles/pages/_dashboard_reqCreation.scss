@@ -89,6 +89,16 @@
             margin-bottom: 10px;
         }
         
+        &--last {
+            position: relative;
+
+            & p {
+                margin: 0;
+                position: absolute;
+                bottom: 10px;
+                cursor: pointer;
+            }
+        }
     }
 
     &__functions{
@@ -183,6 +193,26 @@
         color: $color-blue;
         text-decoration: none;
     }
+
+    &__autocomplete {
+        position: relative;
+        display: flex;
+        width: 49%;
+
+        & button {
+            margin: 0 !important;
+            width: 50%;
+            max-width: 152px;
+        }
+
+        & p {
+            margin: 0 !important;
+            position: absolute;
+            min-width: 50%;
+            left: 166px;
+            bottom: 0;
+        }
+    }
 }
 
 .reqForm{
@@ -196,7 +226,7 @@
             flex-direction: column;
             height: fit-content;
             margin: 0;
-    
+
             & .select__container, .textInput__container {
                 margin: 0;
                 margin-top: 45px;
@@ -212,6 +242,16 @@
                 &--multiple {
                     margin-top: 45px;
                 }
+            }
+        }
+
+        &__autocomplete {
+            width: 100%;
+            margin-top: 15px;
+            
+            & p {
+                position: relative;
+                left: 10px;
             }
         }
     }
@@ -252,6 +292,20 @@
 
         &__progress {
             margin: 15px 8px;
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .reqCreation__row--last {
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+
+        & p {
+            position: relative;
+            bottom: 0;
+            margin-top: 15px;
         }
     }
 }

@@ -21,11 +21,16 @@
             knowledge: **String Array** with the VALUE of all the options the user selected in the knowledge select,
             observations: **String** with the observations the user made for this request,
             skills: **String Array** with the skills the user requested previously,
+            cityList: **Object Array** with the options for the city select. The structure of each object must be like the followiung:
+            {
+                value: With the value that the option will have,
+                text: **String** with the text that will be displayed on screen
+            }
      */
 
 // empty function will be updated after window load.
 let fillRequestCreation = (info) => {};
-
+ 
 window.addEventListener('load', () => {
     
     fillRequestCreation = (info) => {
@@ -98,7 +103,7 @@ window.addEventListener('load', () => {
 
         info.cities.forEach((e, index) => {
             if(index > 0) {
-                createCitySelect();
+                createCitySelect(info.cityList);
                 $('.select2__selector--reqCity' + (index - 1)).val(e.city);
                 $('.select2__selector--reqCity' + (index - 1)).trigger('change');
                 document.querySelector('.select__label--reqCity' + (index - 1)).classList.remove(
@@ -121,12 +126,12 @@ window.addEventListener('load', () => {
         wageLabel.classList.add('label--active');
         wageLabel.closest('div').classList.add('textInput--focused');
 
-        $('.select2__selector--level').val(info.jobLevel);
+        /*$('.select2__selector--level').val(info.jobLevel);
         $('.select2__selector--level').trigger('change');
         document.querySelector('.select__label--level').classList.remove(
             'select__label--register');
         document.querySelector('.select__label--level').classList.add('select__label--focused', 'select__label--focusedreqCreation');
-
+            */
         $('.select2__selector--hiring').val(info.jobHiring);
         $('.select2__selector--hiring').trigger('change');
         document.querySelector('.select__label--hiring').classList.remove(
@@ -142,5 +147,9 @@ window.addEventListener('load', () => {
         jobName.value = info.jobName;
         jobNameLabel.classList.add('label--active');
         jobNameLabel.closest('div').classList.add('textInput--focused');
+
+        const nextBtn = document.querySelector('.reqCreation__next');
+        nextBtn.classList.remove('btn--inactive');
+        nextBtn.removeAttribute('disabled');
     };
 });

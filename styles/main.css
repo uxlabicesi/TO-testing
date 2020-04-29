@@ -211,6 +211,7 @@ body {
 
 .textInput--area {
   padding-top: 14px;
+  resize: none;
 }
 
 .textInput--number {
@@ -3612,6 +3613,17 @@ input[type=number] {
   margin-bottom: 10px;
 }
 
+.reqCreation__row--last {
+  position: relative;
+}
+
+.reqCreation__row--last p {
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  cursor: pointer;
+}
+
 .reqCreation__functions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3730,6 +3742,28 @@ input[type=number] {
   text-decoration: none;
 }
 
+.reqCreation__autocomplete {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 49%;
+}
+
+.reqCreation__autocomplete button {
+  margin: 0 !important;
+  width: 50%;
+  max-width: 152px;
+}
+
+.reqCreation__autocomplete p {
+  margin: 0 !important;
+  position: absolute;
+  min-width: 50%;
+  left: 166px;
+  bottom: 0;
+}
+
 .reqForm {
   width: 100%;
 }
@@ -3758,6 +3792,14 @@ input[type=number] {
   .reqCreation__row .selectadd--multiple {
     margin-top: 45px;
   }
+  .reqCreation__autocomplete {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .reqCreation__autocomplete p {
+    position: relative;
+    left: 10px;
+  }
   .textInput__container--reqCreation1col {
     width: 100%;
   }
@@ -3781,6 +3823,26 @@ input[type=number] {
 @media (max-width: 769px) {
   .reqCreation__progress {
     margin: 15px 8px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .reqCreation__row--last {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .reqCreation__row--last p {
+    position: relative;
+    bottom: 0;
+    margin-top: 15px;
   }
 }
 

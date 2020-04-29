@@ -1,12 +1,14 @@
-let createCitySelect = (cityCount) => {};
-
+let createCitySelect = (cityList) => {};
+/**The function createCitySelect receives an Object array, in which every object must follow this structure:
+ * {
+ *  value: With the value the assigned for that city,
+ *  text: **String** with the text that will be displayed in the option
+ * }
+ */
 window.addEventListener('load', () => {
     const form = document.querySelector('form');
-    const addCity = document.querySelector('.btn--blue');
-    let cityCount = 0;
 
     const changeValueBtns = document.querySelectorAll('.textInput__changeBtn');
-
 
     changeValueBtns.forEach((e) => {
         e.addEventListener('click', changeValue);
@@ -23,9 +25,9 @@ window.addEventListener('load', () => {
         }
     }
 
-    createCitySelect = () => {
+    createCitySelect = (cityList) => {
         const currentCityCount = document.querySelectorAll('.select--reqCity').length-1;
-
+        const addCity = document.querySelector('.reqCreation__row--last');
         const row = document.createElement('div');
         row.classList.add('reqCreation__row');
         form.insertBefore(row, addCity);
@@ -74,16 +76,15 @@ window.addEventListener('load', () => {
             }
         });
 
-        for(var i = 0; i < 10; i++) {
-            const option = document.createElement('option');
-            if(i > 0) {
-            
-                option.setAttribute('value', 'O' + (i-1));
-                option.innerHTML = 'Opción ' + i;
-            }
+        const emptyOption = document.createElement('option');
+        select.appendChild(emptyOption);
 
+        cityList.forEach((e) => {
+            const option = document.createElement('option');
+            option.setAttribute('value', e.value);
+            option.innerText = e.text;
             select.appendChild(option);
-        }
+        });
 
         const amountContainer = document.createElement('div');
         amountContainer.classList.add('textInput__container', 'textInput--focused', 'textInput__container--reqCreation2col', 'form-group', 'textInput__container--reqCreation2col--new');
@@ -108,7 +109,7 @@ window.addEventListener('load', () => {
         const textInputNumber = document.createElement('input');
         textInputNumber.classList.add('textInput', 'textInput--reqCity' + currentCityCount);
         textInputNumber.setAttribute('type', 'number');
-        textInputNumber.value = '0';
+        textInputNumber.value = '1';
         textInputNumberContainer.appendChild(textInputNumber);
 
         const plusBtn = document.createElement('button');
@@ -125,11 +126,6 @@ window.addEventListener('load', () => {
         deleteBtn.addEventListener('click', () => {
             row.remove();
         });
-
+ 
     }
-
-    addCity.addEventListener('click', () => {
-        createCitySelect(cityCount);
-        cityCount++;
-    });
 });
