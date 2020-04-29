@@ -108,7 +108,7 @@ window.addEventListener('load', () => {
         const textInputNumber = document.createElement('input');
         textInputNumber.classList.add('textInput', 'textInput--reqCity' + currentCityCount);
         textInputNumber.setAttribute('type', 'number');
-        textInputNumber.value = '0';
+        textInputNumber.value = '1';
         textInputNumberContainer.appendChild(textInputNumber);
 
         const plusBtn = document.createElement('button');
