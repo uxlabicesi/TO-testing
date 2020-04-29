@@ -15,8 +15,10 @@ window.addEventListener('load', () => {
             event.target.parentElement.classList.add('textInput--focused');
 
             let label = event.target.parentElement.querySelector('label');
-            label.classList.remove('label--none');
-            label.classList.add('label--active');
+            if(label!=null){
+                label.classList.remove('label--none');
+                label.classList.add('label--active');
+            }
         });
 
         // Desactivates the microinteraction when the input loses focus, ONLY if the input is still empty

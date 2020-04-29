@@ -101,11 +101,11 @@
                                 <input type="text" class="textInput" id="form_position" name="job" required>
                             </div>
                             
-                            <div class="select__container select__container--reqCreation2col">
+                            <!-- <div class="select__container select__container--reqCreation2col">
                                 <div class="selectadd selectadd--reqCreation form-group">
                                     <label class="select__label select__label--register select__label--level">NIVEL DEL CARGO</label>
                                     <select class="select2__selector--level" name="level" required>
-                                        <!-- empty option is requiered for placeholder -->
+                                        
                                         <option></option>
                                         <option value="O0"></option>
                                         <option value="O1">Opción 1</option>
@@ -118,7 +118,13 @@
                                         <option value="O8">Opción 8</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> -->
+
+                            <button class="btn btn--small btn--green btn--autocomplete">Auto completar</button>
+                            <!-- TODO : Change style to blue without damage the add city button -->
+                            <button class="btn btn--small btn--clean">Limpiar formulario</button>
+                            
+
                         </div>
                         
                         <div class="reqCreation__row">
@@ -187,7 +193,7 @@
                             
                         </div>
                         
-                        <button type="button" class="btn btn--large btn--blue btn--rounded">Agregar otra ciudad</button>
+                        <button type="button" class="btn btn--large btn--blue btn--rounded btn--blueAdd">Agregar otra ciudad</button>
                     </form>
                 </div>
 
@@ -442,6 +448,7 @@
     <script src="./scripts/samples/sample__applyPromo.js"></script>
     <script src="./scripts/samples/sample_payInformation.js"></script>
     <!-- <script src="./scripts/samples/sample_gotoRequestCreationSum.js"></script> -->
+    <script src="./scripts/samples/sample_autoCompleteAndClean.js"></script>
     
     <script src="./scripts/requestCreation_validator.js"></script>
     
@@ -449,5 +456,10 @@
     <!-- <script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>--> 
     <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
     <script src="libs/bootstrapvalidator-0.5.2/dist/js/bootstrapValidator.min.js"></script>
+
+    
+
+   
+
     </body>
     </html>

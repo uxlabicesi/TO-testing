@@ -46,6 +46,10 @@ body {
   background-color: #294F75;
 }
 
+.btn--green {
+  background-color: #339933;
+}
+
 .btn--white {
   background-color: white;
   color: #494949;
@@ -3556,9 +3560,9 @@ input[type=number] {
 
 .reqCreation form .btn {
   margin: 30px auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
   -ms-grid-column-align: center;
       justify-self: center;
   margin-bottom: 0;

@@ -4,7 +4,6 @@
 
 window.addEventListener('load', () => {
     $(document).ready(function() {
-
         $('.reqForm').bootstrapValidator({ 
             fields: {
                 job: {
