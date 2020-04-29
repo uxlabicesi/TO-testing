@@ -6,7 +6,6 @@ window.addEventListener('load', () => {
     let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
     let functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
     const deleteFunctions = document.querySelectorAll('.reqCreation__functionsContainerBtnDelete');
-    const containerInput = document.querySelector('.reqCreation__functionsContainer');
     
     
     deleteFunctions.forEach((elem) =>{
@@ -21,8 +20,6 @@ window.addEventListener('load', () => {
     function updateIds(){
         functionInputs.forEach((elem,index)=>{
             elem.id = 'form_function'+index;
-            console.log(elem);
-            console.log(elem.id);
         });
     }
 
@@ -61,9 +58,9 @@ window.addEventListener('load', () => {
 
         btnDelete.addEventListener('click', () => {
             functionCount--;
-            console.log(functionCount);
-            if(functionCount < 4) {
+            if(functionCount < 5) {
                 addFunction.removeAttribute('disabled');
+                addFunction.classList.remove('btn--inactive');
             }
             container.remove();
         });
@@ -91,9 +88,8 @@ window.addEventListener('load', () => {
 
         if(functionCount > 4){
             addFunction.setAttribute('disabled','disabled');
+            addFunction.classList.add('btn--inactive');
         }
-        console.log(functionCount);
-
     }
 
 });
