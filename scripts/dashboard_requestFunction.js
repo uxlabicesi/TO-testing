@@ -4,6 +4,27 @@ window.addEventListener('load', () => {
     const form = document.querySelector('.reqCreation__content--function form');
     const addFunction = document.querySelector('.reqCreation__content--function .btn--blue');
     let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
+    let functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+    const deleteFunctions = document.querySelectorAll('.reqCreation__functionsContainerBtnDelete');
+    const containerInput = document.querySelector('.reqCreation__functionsContainer');
+    
+    
+    deleteFunctions.forEach((elem) =>{
+        elem.addEventListener('click', (event) =>{
+            functionCount--;
+            event.target.parentElement.remove();
+            functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+            updateIds();
+        });
+    });
+
+    function updateIds(){
+        functionInputs.forEach((elem,index)=>{
+            elem.id = 'form_function'+index;
+            console.log(elem);
+            console.log(elem.id);
+        });
+    }
 
     addFunction.addEventListener('click', createFunction);
 
@@ -29,6 +50,7 @@ window.addEventListener('load', () => {
         const input = document.createElement('input');
         input.classList.add('textInput');
         input.id = 'form_function'+functionCount;
+        functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
         containerInput.appendChild(input);
 
         functionCount++;
@@ -38,6 +60,11 @@ window.addEventListener('load', () => {
         container.appendChild(btnDelete);
 
         btnDelete.addEventListener('click', () => {
+            functionCount--;
+            console.log(functionCount);
+            if(functionCount < 4) {
+                addFunction.removeAttribute('disabled');
+            }
             container.remove();
         });
 
@@ -61,6 +88,12 @@ window.addEventListener('load', () => {
                 event.target.parentElement.classList.remove('textInput--focused');
             }
         });
+
+        if(functionCount > 4){
+            addFunction.setAttribute('disabled','disabled');
+        }
+        console.log(functionCount);
+
     }
 
 });
