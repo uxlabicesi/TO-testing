@@ -6,6 +6,9 @@
         The function receives an Object with the following structure:
         {
             jobName: **String** with the job's name,
+            responsability: **String** with the VALUE of the option previously selected by the user on the responsability select,
+            decitions: **String** with the VALUE of the option previously selected by the user on the decitions select,
+            incharge: **String** with the VALUE of the option previously selected by the user on the incharge select,
             jobLevel: **String** with the VALUE of the option previously selected by the user on the joblevel select,
             jobHiring: **String** with the VALUE of the option previously selected by the user on the jobhiring select,
             workingday: **String** with the VALUE of the option previously selected by the user on the workingday select,
@@ -133,12 +136,30 @@ window.addEventListener('load', () => {
         wageLabel.classList.add('label--active');
         wageLabel.closest('div').classList.add('textInput--focused');
 
-        /*$('.select2__selector--level').val(info.jobLevel);
+        $('.select2__selector--incharge').val(info.incharge);
+        $('.select2__selector--incharge').trigger('change');
+        document.querySelector('.select__label--incharge').classList.remove(
+            'select__label--register');
+        document.querySelector('.select__label--incharge').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+
+        $('.select2__selector--decition').val(info.decitions);
+        $('.select2__selector--decition').trigger('change');
+        document.querySelector('.select__label--decition').classList.remove(
+            'select__label--register');
+        document.querySelector('.select__label--decition').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+
+        $('.select2__selector--responsability').val(info.responsability);
+        $('.select2__selector--responsability').trigger('change');
+        document.querySelector('.select__label--responsability').classList.remove(
+            'select__label--register');
+        document.querySelector('.select__label--responsability').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+
+        $('.select2__selector--level').val(info.jobLevel);
         $('.select2__selector--level').trigger('change');
         document.querySelector('.select__label--level').classList.remove(
             'select__label--register');
         document.querySelector('.select__label--level').classList.add('select__label--focused', 'select__label--focusedreqCreation');
-            */
+            
         $('.select2__selector--hiring').val(info.jobHiring);
         $('.select2__selector--hiring').trigger('change');
         document.querySelector('.select__label--hiring').classList.remove(
