@@ -354,6 +354,10 @@ body {
   display: none !important;
 }
 
+.select2-container--disabled {
+  background-color: #FAFAFA;
+}
+
 .select2-selection__choice {
   background-color: #294F75 !important;
   color: white;
