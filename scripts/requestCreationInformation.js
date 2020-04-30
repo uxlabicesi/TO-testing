@@ -75,9 +75,6 @@ window.addEventListener('load', () => {
             'select__label--register');
         document.querySelector('.select__label--knowledge').classList.add('select__label--focused', 'select__label--focusedreqCreation');
 
-        profession.value = info.profession;
-        professionLabel.classList.add('label--active');
-        professionLabel.closest('div').classList.add('textInput--focused');
         // for update academicLevel With Option
         $('.select2__selector--academicLevel').val(info.academicLevel);
         $('.select2__selector--academicLevel').trigger('change');
