@@ -75,12 +75,19 @@ window.addEventListener('load', () => {
         profession.value = info.profession;
         professionLabel.classList.add('label--active');
         professionLabel.closest('div').classList.add('textInput--focused');
-
+        // for update academicLevel With Option
         $('.select2__selector--academicLevel').val(info.academicLevel);
         $('.select2__selector--academicLevel').trigger('change');
         document.querySelector('.select__label--academicLevel').classList.remove(
             'select__label--register');
         document.querySelector('.select__label--academicLevel').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+        
+        // for update profession With Option
+        $('.select2__selector--profession').val(info.profession);
+        $('.select2__selector--profession').trigger('change');
+        document.querySelector('.select__label--profession').classList.remove(
+            'select__label--register');
+        document.querySelector('.select__label--profession').classList.add('select__label--focused', 'select__label--focusedreqCreation');
 
         info.functions.forEach((e, index) => {
             if(index > 2) {

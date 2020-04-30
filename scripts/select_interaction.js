@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--city').select2({
-        tags: true,
+        //tags: true,
         placeholder: "¿En qué ciudad está su oficina principal?",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--reqCity').select2({
-        tags: true,
+        //tags: true,
         placeholder: "CIUDAD",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -34,7 +34,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--workingday').select2({
-        tags: true,
+        //tags: true,
         placeholder: "JORNADA",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -44,7 +44,7 @@ $(document).ready(function () {
         //debug: true,  // used for verbose console
     });
 
-    $('.select2__selector--workingday').select2({
+    /*$('.select2__selector--workingday').select2({
         tags: true,
         placeholder: "JORNADA",
         theme: "talentos",
@@ -53,7 +53,7 @@ $(document).ready(function () {
             "height": "55px"
         },
         //debug: true,  // used for verbose console
-    });
+    });*/
 
     $('.select2__selector--hiring').select2({
         tags: true,
@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--level').select2({
-        tags: true,
+        tags: true, // Verify if its needed
         placeholder: "NIVEL DEL CARGO",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -78,7 +78,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--academicLevel').select2({
-        tags: true,
+        //tags: true,
         placeholder: "NIVEL ACADÉMICO",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -87,6 +87,19 @@ $(document).ready(function () {
         },
         //debug: true,  // used for verbose console
     });
+
+    // added for support profession as a single selection
+    $('.select2__selector--profession').select2({
+        //tags: true,
+        placeholder: "PROFESIÓN",
+        theme: "talentos",
+        width: '100%', // need to override the changed default
+        containerCss: {
+            "height": "55px"
+        },
+        //debug: true,  // used for verbose console
+    });
+
 
     $('.select2__selector--knowledge').select2({
         tags: true,
@@ -224,6 +237,23 @@ $(document).ready(function () {
             'select__label--focused', 'select__label--focusedreqCreation');
         }
     });
+
+//-------------------------------------------------------------------------------------------------------
+// added for support label interaction in Profession
+$('.select2__selector--profession').on('select2:open', function (e) {
+    document.querySelector('.select__label--profession').classList.remove(
+        'select__label--register');
+    document.querySelector('.select__label--profession').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+});
+
+$('.select2__selector--profession').on('select2:close', function (e) {
+    let value = $('.select2__selector--profession').select2('data').length;
+    if(value === 0){
+        document.querySelector('.select__label--profession').classList.add('select__label--register');
+    document.querySelector('.select__label--profession').classList.remove(
+        'select__label--focused', 'select__label--focusedreqCreation');
+    }
+});
 
 //-------------------------------------------------------------------------------------------------------
 
