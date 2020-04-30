@@ -112,6 +112,39 @@ $(document).ready(function () {
         //debug: true,  // used for verbose console
     });
 
+    $('.select2__selector--responsability').select2({
+        tags: true,
+        placeholder: "NIVEL DE RESPONSABILIDAD",
+        theme: "talentos",
+        width: '100%', // need to override the changed default
+        containerCss: {
+            "min-height": "55px" // for multiples tags support responsive
+        },
+        //debug: true,  // used for verbose console
+    });
+
+    $('.select2__selector--decition').select2({
+        tags: true,
+        placeholder: "NIVEL DE TOMA DE DECISIONES",
+        theme: "talentos",
+        width: '100%', // need to override the changed default
+        containerCss: {
+            "min-height": "55px" // for multiples tags support responsive
+        },
+        //debug: true,  // used for verbose console
+    });
+
+    $('.select2__selector--incharge').select2({
+        tags: true,
+        placeholder: "TIENE PERSONAS A CARGO",
+        theme: "talentos",
+        width: '100%', // need to override the changed default
+        containerCss: {
+            "min-height": "55px" // for multiples tags support responsive
+        },
+        //debug: true,  // used for verbose console
+    });
+
     /*
         Next 2 functions were created for manage microinteraction,first one for control the open event 
         and add the class 'select__label--focused'; and remove the class 
@@ -251,6 +284,57 @@ $('.select2__selector--profession').on('select2:close', function (e) {
     if(value === 0){
         document.querySelector('.select__label--profession').classList.add('select__label--register');
     document.querySelector('.select__label--profession').classList.remove(
+        'select__label--focused', 'select__label--focusedreqCreation');
+    }
+});
+
+//-------------------------------------------------------------------------------------------------------
+
+$('.select2__selector--responsability').on('select2:open', function (e) {
+    document.querySelector('.select__label--responsability').classList.remove(
+        'select__label--register');
+    document.querySelector('.select__label--responsability').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+});
+
+$('.select2__selector--responsability').on('select2:close', function (e) {
+    let value = $('.select2__selector--responsability').select2('data')[0].id;
+    if(value === ''){
+        document.querySelector('.select__label--responsability').classList.add('select__label--register');
+    document.querySelector('.select__label--responsability').classList.remove(
+        'select__label--focused', 'select__label--focusedreqCreation');
+    }
+});
+
+//-------------------------------------------------------------------------------------------------------
+
+$('.select2__selector--decition').on('select2:open', function (e) {
+    document.querySelector('.select__label--decition').classList.remove(
+        'select__label--register');
+    document.querySelector('.select__label--decition').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+});
+
+$('.select2__selector--decition').on('select2:close', function (e) {
+    let value = $('.select2__selector--decition').select2('data')[0].id;
+    if(value === ''){
+        document.querySelector('.select__label--decition').classList.add('select__label--register');
+    document.querySelector('.select__label--decition').classList.remove(
+        'select__label--focused', 'select__label--focusedreqCreation');
+    }
+});
+
+//-------------------------------------------------------------------------------------------------------
+
+$('.select2__selector--incharge').on('select2:open', function (e) {
+    document.querySelector('.select__label--incharge').classList.remove(
+        'select__label--register');
+    document.querySelector('.select__label--incharge').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+});
+
+$('.select2__selector--incharge').on('select2:close', function (e) {
+    let value = $('.select2__selector--incharge').select2('data')[0].id;
+    if(value === ''){
+        document.querySelector('.select__label--incharge').classList.add('select__label--register');
+    document.querySelector('.select__label--incharge').classList.remove(
         'select__label--focused', 'select__label--focusedreqCreation');
     }
 });

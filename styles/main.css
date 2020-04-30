@@ -3769,11 +3769,21 @@ input[type=number] {
   bottom: 0;
 }
 
+.reqCreation--2col {
+  width: 47%;
+  margin: 0;
+}
+
 .reqForm {
   width: 100%;
 }
 
 @media (max-width: 576px), (max-width: 992px) and (min-width: 769px) {
+  .reqCreation--2col {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+  }
   .reqCreation__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
