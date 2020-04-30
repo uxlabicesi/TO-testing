@@ -74,8 +74,11 @@ $(document).ready(function () {
         containerCss: {
             "height": "55px"
         },
+
         //debug: true,  // used for verbose console
     });
+
+    $(".select2__selector--level").prop("disabled", true);
 
     $('.select2__selector--academicLevel').select2({
         //tags: true,
@@ -144,6 +147,8 @@ $(document).ready(function () {
         },
         //debug: true,  // used for verbose console
     });
+
+    
 
     /*
         Next 2 functions were created for manage microinteraction,first one for control the open event 
@@ -238,7 +243,7 @@ $(document).ready(function () {
 
 //-------------------------------------------------------------------------------------------------------
 
-    $('.select2__selector--level').on('select2:open', function (e) {
+    /*$('.select2__selector--level').on('select2:open', function (e) {
         document.querySelector('.select__label--level').classList.remove(
             'select__label--register');
         document.querySelector('.select__label--level').classList.add('select__label--focused', 'select__label--focusedreqCreation');
@@ -251,7 +256,7 @@ $(document).ready(function () {
         document.querySelector('.select__label--level').classList.remove(
             'select__label--focused', 'select__label--focusedreqCreation');
         }
-    });
+    });*/
 
     
 //-------------------------------------------------------------------------------------------------------
