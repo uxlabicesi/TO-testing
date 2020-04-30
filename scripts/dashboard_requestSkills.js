@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
 
     createSkill = () => {
         const container = document.createElement('div');
-        container.classList.add('reqCreation__functionsContainer');
+        container.classList.add('reqCreation__functionsContainer', 'reqCreation__functionsContainer--skill');
         form.appendChild(container)
 
         const btnMove = document.createElement('button');

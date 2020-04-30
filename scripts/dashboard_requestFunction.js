@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
         let functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
 
         const container = document.createElement('div');
-        container.classList.add('reqCreation__functionsContainer');
+        container.classList.add('reqCreation__functionsContainer', 'reqCreation__functionsContainer--function');
         form.appendChild(container)
 
         const btnMove = document.createElement('button');

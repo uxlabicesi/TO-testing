@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
         const currentCityCount = document.querySelectorAll('.select--reqCity').length-1;
         const addCity = document.querySelector('.reqCreation__row--last');
         const row = document.createElement('div');
-        row.classList.add('reqCreation__row');
+        row.classList.add('reqCreation__row', 'reqCreation__row--city');
         form.insertBefore(row, addCity);
 
         const selectContainer = document.createElement('div');
