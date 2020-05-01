@@ -1415,7 +1415,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 45%;
+  width: 50%;
 }
 
 .candidate__profileImg {
@@ -1457,7 +1457,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 10px;
-  width: 35%;
+  width: 45%;
 }
 
 .candidate__infoCel {
@@ -1500,6 +1500,15 @@ body {
 
 @media (max-width: 992px) {
   .candidate {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .candidate__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1507,6 +1516,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    width: 80%;
   }
   .candidate__btn {
     display: none;
@@ -1514,12 +1524,12 @@ body {
   .candidate__btn--icon {
     display: initial;
     margin: auto;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
   }
   .candidate__profile {
     margin-top: 15px;
-    width: 70%;
+    width: 100%;
   }
   .candidate__profileImg {
     width: 40px;
@@ -1533,7 +1543,7 @@ body {
   }
   .candidate__info {
     margin: 15px 55px;
-    width: 70%;
+    width: 100%;
   }
   .candidate__info h2, .candidate__info h3 {
     font-size: 12px;
@@ -1555,14 +1565,13 @@ body {
 
 @media (max-width: 576px) {
   .candidate {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .candidate__info {
-    margin-left: 55px;
-    margin-right: 55px;
+  .candidate__btn--icon {
+    margin-left: 35px;
   }
 }
 

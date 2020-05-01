@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 45%;
+        width: 50%;
     
         &Img{
             width: 70px;
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 10px;
-        width: 35%;
+        width: 45%;
 
         &Cel{
             font-size: 1em;
@@ -101,8 +101,14 @@
 
 @media (max-width: $screen-large) {
     .candidate {    
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+
+        &__container{
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+        }
 
         &__btn {
             display: none;
@@ -111,13 +117,13 @@
         &__btn--icon {
             display: initial;
             margin: auto;
-            width: 22px;
-            height: 22px;
+            width: 25px;
+            height: 25px;
         }
     
         &__profile {
             margin-top: 15px;
-            width: 70%;
+            width: 100%;
 
             &Img {
                 width: 40px;
@@ -137,7 +143,7 @@
 
         &__info {
             margin: 15px 55px;
-            width: 70%;
+            width: 100%;
 
             & h2, h3 {
                 font-size: $typo-xSmall;
@@ -162,11 +168,11 @@
 
 @media (max-width: $screen-small) {
     .candidate{
-        flex-direction: column;
-
-        &__info{
-            margin-left: 55px;
-            margin-right: 55px;
+        flex-direction: row;
+          
+        &__btn--icon {
+            margin-left: 35px;
         }
+    
     }
 }
