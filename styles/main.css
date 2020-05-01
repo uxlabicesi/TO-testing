@@ -1387,6 +1387,23 @@ body {
   font-size: 1.1vw;
 }
 
+.candidate__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .candidate__profile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1398,6 +1415,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 45%;
 }
 
 .candidate__profileImg {
@@ -1439,6 +1457,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 10px;
+  width: 35%;
 }
 
 .candidate__infoCel {
@@ -1453,6 +1472,7 @@ body {
   background-size: 20px;
   background-position: 0% 50%;
   padding-left: 30px;
+  word-break: break-all;
 }
 
 .candidate__infoEmail {
@@ -1466,10 +1486,11 @@ body {
   background-size: 20px;
   background-position: 0% 50%;
   padding-left: 30px;
+  word-break: break-all;
 }
 
 .candidate__btn {
-  width: 22%;
+  width: 20%;
 }
 
 .candidate__btn--icon {
@@ -1498,6 +1519,7 @@ body {
   }
   .candidate__profile {
     margin-top: 15px;
+    width: 70%;
   }
   .candidate__profileImg {
     width: 40px;
@@ -1511,6 +1533,7 @@ body {
   }
   .candidate__info {
     margin: 15px 55px;
+    width: 70%;
   }
   .candidate__info h2, .candidate__info h3 {
     font-size: 12px;
