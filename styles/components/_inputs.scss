@@ -54,9 +54,13 @@
     box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
     transition: all .2s ease-out;
 
+    &--openAutoComplete{
+        border: 1px solid $color-gray;
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+    }
+
     &--area {
-        //TODO solve problem with text area
-        //min-height: 160px;
         padding-top: 14px;
         resize: none;
     }

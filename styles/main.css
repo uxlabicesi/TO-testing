@@ -209,6 +209,12 @@ body {
   transition: all .2s ease-out;
 }
 
+.textInput--openAutoComplete {
+  border: 1px solid #C4C4C4;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+
 .textInput--area {
   padding-top: 14px;
   resize: none;
@@ -334,6 +340,62 @@ body {
   width: 235px;
   height: 39px;
   color: #B0B0B0;
+}
+
+/*
+    start classes for autocomplete component
+*/
+.autocomplete-suggestions {
+  border: 1px solid #494949;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  background-color: #FFFFFF;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  color: #494949;
+  width: 100%;
+  overflow-y: hidden;
+  padding: 10px;
+  display: block;
+  opacity: 1;
+  border-top: none;
+  top: -15px;
+}
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.autocomplete-no-suggestion {
+  padding: 2px 5px;
+}
+
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: 700;
+  color: #339933;
+}
+
+.autocomplete-group {
+  padding: 2px 5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  display: block;
+  border-bottom: 1px solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
 }
 
 .selectadd {
