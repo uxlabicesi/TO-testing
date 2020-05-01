@@ -1,3 +1,8 @@
+/**
+ * The following fragment starts the auto-complete lbrary, for morre information and library docs, go to:
+ * https://www.devbridge.com/sourcery/components/jquery-autocomplete/ 
+ */
+
 window.addEventListener('load', () => {
 /*jslint  browser: true, white: true, plusplus: true */
 /*global $, countries */
@@ -25,7 +30,7 @@ window.addEventListener('load', () => {
         });
 
         /**
-         * sample for local use 
+         * sample for local use
          */
 
         /*var nhlTeams = ['Anaheim Ducks', 'Atlanta Thrashers', 'Boston Bruins', 'Buffalo Sabres', 'Calgary Flames', 'Carolina Hurricanes', 'Chicago Blackhawks', 'Colorado Avalanche', 'Columbus Blue Jackets', 'Dallas Stars', 'Detroit Red Wings', 'Edmonton OIlers', 'Florida Panthers', 'Los Angeles Kings', 'Minnesota Wild', 'Montreal Canadiens', 'Nashville Predators', 'New Jersey Devils', 'New Rork Islanders', 'New York Rangers', 'Ottawa Senators', 'Philadelphia Flyers', 'Phoenix Coyotes', 'Pittsburgh Penguins', 'Saint Louis Blues', 'San Jose Sharks', 'Tampa Bay Lightning', 'Toronto Maple Leafs', 'Vancouver Canucks', 'Washington Capitals'];
