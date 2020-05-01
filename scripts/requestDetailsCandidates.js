@@ -75,10 +75,11 @@ window.addEventListener('load', () => {
                 cel.classList.add('candidate__infoCel');
                 if (e.telephone.length > 1) {
                     e.telephone.forEach((number, index) => {
-                        if (e.telephone.length === index - 1) {
+                        if (index === e.telephone.length - 1) {
                             cel.innerHTML += number;
                         } else {
                             cel.innerHTML += number + ' / ';
+
                         }
                     });
                 } else {
