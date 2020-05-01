@@ -1419,7 +1419,8 @@ body {
 }
 
 .candidate__profileImg {
-  width: 70px;
+  min-width: 70px;
+  max-width: 70px;
   height: 70px;
   border-radius: 40px;
   margin-right: 15px;
@@ -1532,8 +1533,8 @@ body {
     width: 100%;
   }
   .candidate__profileImg {
-    width: 40px;
-    height: 40px;
+    min-width: 30px;
+    min-height: 30px;
   }
   .candidate__profileTitlesName {
     font-size: 16px;
@@ -1572,6 +1573,16 @@ body {
   }
   .candidate__btn--icon {
     margin-left: 35px;
+  }
+  .candidate__profile {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .candidate__profileImg {
+    min-width: 50px;
+    min-height: 20px;
+    height: 50px;
+    max-width: 50px;
   }
 }
 

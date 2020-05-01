@@ -22,7 +22,8 @@
         width: 50%;
     
         &Img{
-            width: 70px;
+            min-width: 70px;
+            max-width: 70px;
             height: 70px;
             border-radius: 40px;
             margin-right: 15px;
@@ -126,8 +127,8 @@
             width: 100%;
 
             &Img {
-                width: 40px;
-                height: 40px;
+                min-width: 30px;
+                min-height: 30px;
             }
     
             &Titles {
@@ -169,10 +170,21 @@
 @media (max-width: $screen-small) {
     .candidate{
         flex-direction: row;
-          
+
         &__btn--icon {
             margin-left: 35px;
         }
-    
+
+        &__profile {
+            margin-top: 15px;
+            width: 100%;
+
+            &Img {
+                min-width: 50px;
+                min-height: 20px;
+                height: 50px;
+                max-width: 50px;
+            }
+        }
     }
 }
