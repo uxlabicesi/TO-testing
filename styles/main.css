@@ -272,6 +272,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 35px;
+  position: relative;
 }
 
 .textInput__container--marginless {
@@ -2407,7 +2408,24 @@ body {
   background-position: 15px center;
   background-size: 25px;
   padding-left: 50px;
+  padding-right: 50px;
   margin-bottom: 15px;
+}
+
+.login__passShow {
+  position: absolute;
+  width: 25px;
+  height: auto;
+  right: 0;
+  margin: 15px 15px;
+}
+
+.login__passShowConfirmation {
+  position: absolute;
+  width: 25px;
+  height: auto;
+  right: 0;
+  margin: 15px 15px;
 }
 
 .login__label {

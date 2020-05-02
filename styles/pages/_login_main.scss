@@ -139,7 +139,24 @@
         background-position: 15px center;
         background-size: 25px;
         padding-left: 50px;
+        padding-right: 50px;
         margin-bottom: 15px; 
+
+        &Show{
+            position: absolute;
+            width: 25px;
+            height: auto;
+            right: 0;
+            margin: 15px 15px;
+
+            &Confirmation{
+                position: absolute;
+                width: 25px;
+                height: auto;
+                right: 0;
+                margin: 15px 15px;
+            }
+        }
     }
 
     &__label {
