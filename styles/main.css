@@ -2187,6 +2187,14 @@ body {
   margin-top: 20px;
 }
 
+.popUp__contentBodyBack {
+  margin-top: 10px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #C4C4C4;
+  font-weight: 400;
+}
+
 @media (max-width: 992px) {
   .popUp {
     -webkit-box-orient: vertical;
