@@ -105,8 +105,12 @@ window.addEventListener('load', () => {
             var refName = document.createElement('p');
             var refPosition = document.createElement('p');
             var refTel = document.createElement('p');
-
-            refTitle.innerHTML = '<strong>' + e.title + '</strong>';
+            //modify for alineation, if title dont exist 'Referencia' is the new title
+            let titleAux = 'Referencia'
+            if( e.title!=='' && e.title!==null){
+                titleAux = e.title;
+            }
+            refTitle.innerHTML = '<strong>' + titleAux + '</strong>';
             refName.innerHTML = e.name;
             refPosition.innerHTML = e.position;
             refTel.innerHTML = e.tel;

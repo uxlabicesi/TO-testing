@@ -34,7 +34,8 @@ var sample = {
     formation: ['Formación académica 1', 'Formación académica 2', 'Formación académica 3'],
     references: [
         {
-            title: 'Referencia personal 1',
+            // empty for testing behavior when we dont have aný data
+            title: '',
             name: 'Nombre',
             position: 'Cargo',
             tel: 'Teléfono'
@@ -42,7 +43,7 @@ var sample = {
         {
             title: 'Referencia personal 2',
             name: 'Nombre',
-            position: 'Cargo',
+            position: '',
             tel: 'Teléfono'
         }
     ],
