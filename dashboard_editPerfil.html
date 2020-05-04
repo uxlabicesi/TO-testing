@@ -96,7 +96,7 @@
             </div>
 
         <div class="container register register--edit">
-            <div class="register__container">
+            <div class="register__container register__container--edit">
                 <div class="register__icon">
                     <img src="./resources/companyIcon.svg" alt="">
                     <h4 class="register__subtitle">DATOS DE LA EMPRESA</h4>
@@ -167,9 +167,9 @@
                 </div>
             </div>
 
-            <div class="register__divider"></div>
+            <div class="register__divider register__divider--edit"></div>
 
-            <div class="register__container">
+            <div class="register__container register__container--edit">
                 <div class="register__icon">
                     <img src="./resources/employeeIcon.svg" alt="">
                     <h4 class="register__subtitle">DATOS DEL CONTACTO</h4>
@@ -225,16 +225,21 @@
                                 data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
                                 autocomplete="new-password" required>
                             <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="resources/notShowPass.svg" alt="">
-                        </div>         
-        </div>
-        <div class="register__editPhoto">
-            <img src="./resources/upload.svg" alt="">
-            <p>Arrastra la imagen o</p>
-            <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
-            <input class="register__editPhotoInput" type="file" id="upload-photo">
-        </div>
-    </div>
+                        </div>
+                        <button class="btn btn--Xlarge btn--inactive register__button register__button--edit form-group" onclick="">G U A R D A R</button>
 
+                        <p class="register__text register__text--edit form-group"><a href="./dashboard_main.html">Salir del proceso :(</a></p>
+                    </form>         
+                </div>
+                <div class="register__editPhoto">
+                    <img src="./resources/upload.svg" alt="">
+                    <p>Arrastra la imagen o</p>
+                    <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
+                    <input class="register__editPhotoInput" type="file" id="upload-photo">
+                </div>
+            </div>
+            
+        </div>
     <!------------------------------------>
     <!--------- General Scripts ---------->
     <!------------------------------------>

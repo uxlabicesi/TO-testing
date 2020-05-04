@@ -14,6 +14,8 @@
     &--edit{
         margin-left: 0px;
         padding: 30px 0;
+        background-color: #ffff;
+        border-radius: 10px;
     }
 
     &__editPhoto{
@@ -59,6 +61,10 @@
     &__container {
         width: 100%;
         display: flex;
+
+        &--edit{
+            padding: 20px;
+        }
     }
     
     &__subtitle {
@@ -88,6 +94,10 @@
         margin: 0; //modified
         margin-bottom: 25px; //modified
         margin-top: 25px; //modified
+
+        &--edit{
+            width: 95%;
+        }
     }
     
     &__checkboxContainer {
@@ -109,6 +119,10 @@
         margin-top: 30px;
         width: calc(100% - 90px);
         font-size: $typo-largeButton;
+
+        &--edit{
+            margin-left: 40px;
+        }
     }
     
     &__text {
@@ -117,11 +131,20 @@
         margin-left: 20%;
         width: 70%;
         text-align: center;
-        
+
         & a {
             font-weight: $typo-semibold;
             color: $color-darkGray;
             text-decoration: none;
+        }
+
+        &--edit{
+            width: 100%;
+            margin-left: 0px;
+            
+            a{
+                text-decoration: underline;
+            }
         }
     }
     
