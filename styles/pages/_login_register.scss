@@ -292,7 +292,7 @@ input[type=number] { -moz-appearance:textfield; }
 
 @media (min-width: $screen-small) and (max-width: $screen-large) {
     .register {
-        
+
         &__button {
             font-size: $typo-button;
         }
@@ -310,6 +310,18 @@ input[type=number] { -moz-appearance:textfield; }
     }  
 }
 
+@media (max-width: $screen-medium){
+    .register{
+
+        &__editPhoto{
+            min-width: 160px;
+            padding: 25px 15px;
+            margin-right: 10px;
+        }
+        
+    }
+}
+
 
 @media (max-width: $screen-small) {
 
@@ -321,6 +333,14 @@ input[type=number] { -moz-appearance:textfield; }
         
         &__container {
             flex-direction: column;
+        }
+
+        
+        &__form{
+            
+            &--edit{
+                width: 100%;
+            }
         }
         
         &__form {

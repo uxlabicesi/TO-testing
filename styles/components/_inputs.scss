@@ -188,3 +188,17 @@
         color:  #B0B0B0;
     }
 }
+
+@media (max-width: $screen-small) {
+
+    .label{
+        font-size: 14px;
+    }
+
+    .textInput{
+
+        &--editPerfil{
+            margin-left: 0px !important;
+        }
+    }
+}
