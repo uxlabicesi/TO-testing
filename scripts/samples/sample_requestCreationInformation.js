@@ -34,7 +34,10 @@
         ],
         academicLevel: 'O8',
         profession: ['O1','O2'],
-        knowledge: 'O2',
+        knowledge: [
+            'O2',
+            'O6',
+        ],
         observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
         skills: [
             'Desarrollo de prototipos',
