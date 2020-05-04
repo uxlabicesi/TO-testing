@@ -67,6 +67,10 @@
     &--area {
         padding-top: 14px;
         resize: none;
+        width: 100%;
+        min-width: 100%;
+        min-height: 55px;
+        overflow: hidden; /* Hide scrollbars */
     }
 
     &--number {

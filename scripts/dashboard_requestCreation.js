@@ -129,3 +129,11 @@ window.addEventListener('load', () => {
  
     }
 });
+
+
+function auto_grow(element) {
+    // TODO complete this function
+    element.style.height = "55px";
+    let h = element.scrollHeight;
+    element.style.height = (h)+"px";
+}

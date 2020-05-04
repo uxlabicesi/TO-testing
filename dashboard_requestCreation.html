@@ -389,7 +389,7 @@
                     <div class="reqCreation__row">
                         <div class="textInput__container textInput__container--reqCreation1col form-group">
                             <label for="form_observations" class="label label--reqCreation label--observations">OBSERVACIONES</label>
-                            <textarea class="textInput textInput--area" id="form_observations" name="observations"></textarea>
+                            <textarea oninput="auto_grow(this)" onkeydown="auto_grow(this)" onchange="auto_grow(this)"  class="textInput textInput--area" id="form_observations" name="observations"></textarea>
                         </div>
                     </div>
                 </form>
