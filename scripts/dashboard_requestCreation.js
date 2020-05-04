@@ -133,7 +133,20 @@ window.addEventListener('load', () => {
 
 function auto_grow(element) {
     // TODO complete this function
-    element.style.height = "55px";
-    let h = element.scrollHeight;
-    element.style.height = (h)+"px";
+    element.style.height = "inherit";
+    // let h = element.scrollHeight;
+    // element.style.height = (h)+"px";
+
+    // Get the computed styles for the element
+	var computed = window.getComputedStyle(element);
+
+	// Calculate the height
+	var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+	             + parseInt(computed.getPropertyValue('padding-top'), 10)
+	             + element.scrollHeight
+	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+                 + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+                 
+    element.style.height = height + 'px';
+
 }

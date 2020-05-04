@@ -221,6 +221,7 @@ body {
 
 .textInput--area {
   padding-top: 14px;
+  height: auto;
   resize: none;
   width: 100%;
   min-width: 100%;
@@ -4014,6 +4015,10 @@ input[type=number] {
   position: absolute;
   bottom: 10px;
   cursor: pointer;
+}
+
+.reqCreation__row--textarea {
+  height: auto;
 }
 
 .reqCreation__functions {
