@@ -6,6 +6,10 @@
     margin-left: 285px;
     background-color: $color-lightGray;
 
+    &--edit{
+        width: 100%;
+    }
+
     & h1 {
         color: $color-blue;
     }

@@ -7,13 +7,23 @@
     border-bottom: 1px solid $color-gray;
     font-size: 1.1vw;
 
+    &__container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__profile{
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: 50%;
     
         &Img{
-            width: 70px;
+            min-width: 70px;
+            max-width: 70px;
             height: 70px;
             border-radius: 40px;
             margin-right: 15px;
@@ -46,6 +56,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 10px;
+        width: 45%;
 
         &Cel{
             font-size: 1em;
@@ -59,6 +70,7 @@
             background-size: 20px;
             background-position: 0% 50%;  
             padding-left: 30px;
+            word-break: break-all;
         }
 
         &Email{
@@ -72,11 +84,12 @@
             background-size: 20px;
             background-position: 0% 50%;  
             padding-left: 30px;
+            word-break: break-all;
         }
     }
 
     &__btn {
-        width: 22%;
+        width: 20%;
     }
 
     &__btn--icon {
@@ -89,8 +102,14 @@
 
 @media (max-width: $screen-large) {
     .candidate {    
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+
+        &__container{
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+        }
 
         &__btn {
             display: none;
@@ -99,16 +118,17 @@
         &__btn--icon {
             display: initial;
             margin: auto;
-            width: 22px;
-            height: 22px;
+            width: 25px;
+            height: 25px;
         }
     
         &__profile {
             margin-top: 15px;
+            width: 100%;
 
             &Img {
-                width: 40px;
-                height: 40px;
+                min-width: 30px;
+                min-height: 30px;
             }
     
             &Titles {
@@ -124,6 +144,7 @@
 
         &__info {
             margin: 15px 55px;
+            width: 100%;
 
             & h2, h3 {
                 font-size: $typo-xSmall;
@@ -148,11 +169,22 @@
 
 @media (max-width: $screen-small) {
     .candidate{
-        flex-direction: column;
+        flex-direction: row;
 
-        &__info{
-            margin-left: 55px;
-            margin-right: 55px;
+        &__btn--icon {
+            margin-left: 35px;
+        }
+
+        &__profile {
+            margin-top: 15px;
+            width: 100%;
+
+            &Img {
+                min-width: 50px;
+                min-height: 20px;
+                height: 50px;
+                max-width: 50px;
+            }
         }
     }
 }

@@ -139,7 +139,32 @@
         background-position: 15px center;
         background-size: 25px;
         padding-left: 50px;
+        padding-right: 50px;
         margin-bottom: 15px; 
+
+        &Show{
+            position: absolute;
+            width: 25px;
+            height: auto;
+            right: 0;
+            margin: 15px 15px;
+
+            &--edit{
+                right: 50px;
+            }
+
+            &Confirmation{
+                position: absolute;
+                width: 25px;
+                height: auto;
+                right: 0;
+                margin: 15px 15px;
+
+                &--edit{
+                    right: 50px;
+                }
+            }
+        }
     }
 
     &__label {
@@ -178,7 +203,7 @@
     
     &__bottom {
         position: absolute;
-        bottom: 30px;
+        bottom: 50px;
         width: 80%;
         width: calc(100% - 60px);
     }

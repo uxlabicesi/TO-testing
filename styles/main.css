@@ -209,6 +209,16 @@ body {
   transition: all .2s ease-out;
 }
 
+.textInput--editPerfil {
+  margin-left: 40px !important;
+}
+
+.textInput--openAutoComplete {
+  border: 1px solid #C4C4C4;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+
 .textInput--area {
   padding-top: 14px;
   resize: none;
@@ -266,6 +276,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 35px;
+  position: relative;
 }
 
 .textInput__container--marginless {
@@ -336,6 +347,62 @@ body {
   color: #B0B0B0;
 }
 
+/*
+    start classes for autocomplete component
+*/
+.autocomplete-suggestions {
+  border: 1px solid #494949;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  background-color: #FFFFFF;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  color: #494949;
+  width: 100%;
+  overflow-y: hidden;
+  padding: 10px;
+  display: block;
+  opacity: 1;
+  border-top: none;
+  top: -15px;
+}
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.autocomplete-no-suggestion {
+  padding: 2px 5px;
+}
+
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: 700;
+  color: #339933;
+}
+
+.autocomplete-group {
+  padding: 2px 5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  display: block;
+  border-bottom: 1px solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
 .selectadd {
   font-size: 16px;
   -webkit-transition: all .2s ease-out;
@@ -345,6 +412,11 @@ body {
   width: 100%;
 }
 
+.selectadd--edit {
+  margin-left: 40px;
+  width: calc(100% - 90px);
+}
+
 .selectadd--reqCreation {
   margin-left: 0;
   margin-bottom: 0;
@@ -352,6 +424,10 @@ body {
 
 .selectadd .help-block {
   display: none !important;
+}
+
+.select2-container--disabled {
+  background-color: #FAFAFA;
 }
 
 .select2-selection__choice {
@@ -563,6 +639,10 @@ body {
   padding: 0 40px;
   margin-left: 285px;
   background-color: #FAFAFA;
+}
+
+.content--edit {
+  width: 100%;
 }
 
 .content h1 {
@@ -1508,6 +1588,23 @@ body {
   font-size: 1.1vw;
 }
 
+.candidate__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .candidate__profile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1519,10 +1616,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 50%;
 }
 
 .candidate__profileImg {
-  width: 70px;
+  min-width: 70px;
+  max-width: 70px;
   height: 70px;
   border-radius: 40px;
   margin-right: 15px;
@@ -1560,6 +1659,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 10px;
+  width: 45%;
 }
 
 .candidate__infoCel {
@@ -1574,6 +1674,7 @@ body {
   background-size: 20px;
   background-position: 0% 50%;
   padding-left: 30px;
+  word-break: break-all;
 }
 
 .candidate__infoEmail {
@@ -1587,10 +1688,11 @@ body {
   background-size: 20px;
   background-position: 0% 50%;
   padding-left: 30px;
+  word-break: break-all;
 }
 
 .candidate__btn {
-  width: 22%;
+  width: 20%;
 }
 
 .candidate__btn--icon {
@@ -1600,6 +1702,15 @@ body {
 
 @media (max-width: 992px) {
   .candidate {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .candidate__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1607,6 +1718,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    width: 80%;
   }
   .candidate__btn {
     display: none;
@@ -1614,15 +1726,16 @@ body {
   .candidate__btn--icon {
     display: initial;
     margin: auto;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
   }
   .candidate__profile {
     margin-top: 15px;
+    width: 100%;
   }
   .candidate__profileImg {
-    width: 40px;
-    height: 40px;
+    min-width: 30px;
+    min-height: 30px;
   }
   .candidate__profileTitlesName {
     font-size: 16px;
@@ -1632,6 +1745,7 @@ body {
   }
   .candidate__info {
     margin: 15px 55px;
+    width: 100%;
   }
   .candidate__info h2, .candidate__info h3 {
     font-size: 12px;
@@ -1653,14 +1767,23 @@ body {
 
 @media (max-width: 576px) {
   .candidate {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .candidate__info {
-    margin-left: 55px;
-    margin-right: 55px;
+  .candidate__btn--icon {
+    margin-left: 35px;
+  }
+  .candidate__profile {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .candidate__profileImg {
+    min-width: 50px;
+    min-height: 20px;
+    height: 50px;
+    max-width: 50px;
   }
 }
 
@@ -2202,6 +2325,14 @@ body {
   margin-top: 20px;
 }
 
+.popUp__contentBodyBack {
+  margin-top: 10px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #C4C4C4;
+  font-weight: 400;
+}
+
 @media (max-width: 992px) {
   .popUp {
     -webkit-box-orient: vertical;
@@ -2423,7 +2554,32 @@ body {
   background-position: 15px center;
   background-size: 25px;
   padding-left: 50px;
+  padding-right: 50px;
   margin-bottom: 15px;
+}
+
+.login__passShow {
+  position: absolute;
+  width: 25px;
+  height: auto;
+  right: 0;
+  margin: 15px 15px;
+}
+
+.login__passShow--edit {
+  right: 50px;
+}
+
+.login__passShowConfirmation {
+  position: absolute;
+  width: 25px;
+  height: auto;
+  right: 0;
+  margin: 15px 15px;
+}
+
+.login__passShowConfirmation--edit {
+  right: 50px;
 }
 
 .login__label {
@@ -2461,7 +2617,7 @@ body {
 
 .splashPage__bottom {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   width: 80%;
   width: calc(100% - 60px);
 }
@@ -2531,6 +2687,48 @@ body {
   background-color: #FAFAFA;
 }
 
+.register--edit {
+  margin-left: 0px;
+  padding: 30px 0;
+}
+
+.register__editPhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background-color: #C4C4C4;
+  border-radius: 5%;
+  width: 20%;
+  padding: 40px 20px;
+  min-width: 180px;
+}
+
+.register__editPhoto p {
+  font-size: 0.8em;
+  color: #494949;
+  margin: 0px;
+  margin-top: 20px;
+}
+
+.register__editPhotoLabel {
+  font-size: 0.8em;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.register__editPhotoInput {
+  display: none;
+  position: absolute;
+}
+
 .register__title {
   font-size: 36px;
   width: 100%;
@@ -2562,6 +2760,10 @@ body {
   width: calc(100% - 90px);
   margin-bottom: 5px;
   margin-left: 90px;
+}
+
+.register__form--edit {
+  width: 60%;
 }
 
 .register__divider {
@@ -2616,6 +2818,10 @@ body {
   margin-left: 90px;
   left: 25px;
   top: 17px;
+}
+
+.register__label--edit {
+  margin-left: 40px;
 }
 
 .register__modal {

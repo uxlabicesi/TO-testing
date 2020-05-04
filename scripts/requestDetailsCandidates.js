@@ -49,6 +49,9 @@ window.addEventListener('load', () => {
                 
                 profile.appendChild(profilePic);
 
+                let divBig = document.createElement('div');
+                divBig.classList.add('candidate__container');
+
                 let profileTitles = document.createElement('div')
                 profileTitles.classList.add('candidate__profileTitles');
 
@@ -62,7 +65,8 @@ window.addEventListener('load', () => {
                 candidateJob.innerHTML = e.job;
                 profileTitles.appendChild(candidateJob);
                 profile.appendChild(profileTitles);
-                candidate.appendChild(profile);
+                divBig.appendChild(profile)
+                candidate.appendChild(divBig);
 
                 let candidateInfo = document.createElement('div');
                 candidateInfo.classList.add('candidate__info');
@@ -71,10 +75,11 @@ window.addEventListener('load', () => {
                 cel.classList.add('candidate__infoCel');
                 if (e.telephone.length > 1) {
                     e.telephone.forEach((number, index) => {
-                        if (e.telephone.length === index - 1) {
+                        if (index === e.telephone.length - 1) {
                             cel.innerHTML += number;
                         } else {
                             cel.innerHTML += number + ' / ';
+
                         }
                     });
                 } else {
@@ -86,7 +91,8 @@ window.addEventListener('load', () => {
                 email.classList.add('candidate__infoEmail');
                 email.innerHTML = e.email;
                 candidateInfo.appendChild(email);
-                candidate.appendChild(candidateInfo);
+                divBig.appendChild(candidateInfo)
+                candidate.appendChild(divBig);
 
                 // new fragment for support responsive icon on selected candidates
                 let selectionIcon = document.createElement('img')

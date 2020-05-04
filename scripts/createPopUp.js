@@ -7,7 +7,9 @@
      * title: text for main title
      * text: description text
      * btn: text for button
-     * goto: text url for button
+     * goTo: text url for button
+     * goBack: text for a option
+     * returnTo: text url for a option
      * }
      */
 
@@ -30,6 +32,8 @@
             let popUpText = information.text;
             let popUpBtn = information.btn;
             let goTo = information.goTo;
+            let goBack = information.goBack;
+            let returnTo = information.returnTo;
 
             // let popUp = document.createElement('div');
             // popUp.classList.add('popUp');
@@ -64,9 +68,18 @@
                 window.location.href = goTo;
             });
 
+            let bodyBack = document.createElement('a');
+            bodyBack.classList.add('popUp__contentBodyBack');
+            
+            if(goBack != undefined){
+                bodyBack.innerText = goBack;
+                bodyBack.setAttribute('href',returnTo);
+            }
+
             body.appendChild(bodyTitle);
             body.appendChild(bodyText);
             body.appendChild(bodyBtn);
+            body.appendChild(bodyBack);
             popUpContentClose.appendChild(popUpContentCloseX);
             popUpContent.appendChild(popUpContentClose);
             popUpContent.appendChild(body);

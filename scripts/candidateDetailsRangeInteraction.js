@@ -92,5 +92,54 @@ window.addEventListener('load', () => {
             }
     }
 
+    // the folling section was added to support click on faces and lines
+    // TODO: DRY-it
+   
+    let iconFacesForClick = document.querySelectorAll('.canDetails__faceIcon');
+    iconFacesForClick.forEach((face) => {
+        face.addEventListener('click', (event) => {
+            controlClickOnFaces(event);
+        });
+    });
 
+    function controlClickOnFaces(event){
+
+        const rangeInputExperience = document.getElementById('range_experience');
+        const rangeInputSkills = document.getElementById('range_skills');
+        const rangeInputEducation = document.getElementById('range_education');
+
+        if(event.target.classList.value.includes("topicA")){
+            if(event.target.classList.value.includes("low")){
+                rangeInputExperience.value = 0;
+            }else if(event.target.classList.value.includes("mid")){
+                rangeInputExperience.value = 3;
+            }else if(event.target.classList.value.includes("high")){
+                rangeInputExperience.value = 6;
+            }
+            updateVisualStateRange(rangeInputExperience);
+        }
+
+        if(event.target.classList.value.includes("topicB")){
+            if(event.target.classList.value.includes("low")){
+                rangeInputSkills.value = 0;
+            }else if(event.target.classList.value.includes("mid")){
+                rangeInputSkills.value = 3;
+            }else if(event.target.classList.value.includes("high")){
+                rangeInputSkills.value = 6;
+            }
+            updateVisualStateRange(rangeInputSkills);
+        }
+
+        if(event.target.classList.value.includes("topicC")){
+            if(event.target.classList.value.includes("low")){
+                rangeInputEducation.value = 0;
+            }else if(event.target.classList.value.includes("mid")){
+                rangeInputEducation.value = 3;
+            }else if(event.target.classList.value.includes("high")){
+                rangeInputEducation.value = 6;
+            }
+            updateVisualStateRange(rangeInputEducation);
+        }
+
+    }
 });
