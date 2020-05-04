@@ -78,6 +78,7 @@ $(document).ready(function () {
         //debug: true,  // used for verbose console
     });
 
+    // this line disable the selection option for direct level selection
     $(".select2__selector--level").prop("disabled", true);
 
     $('.select2__selector--academicLevel').select2({
@@ -94,7 +95,7 @@ $(document).ready(function () {
     // added for support profession as a single selection
     $('.select2__selector--profession').select2({
         //tags: true,
-        //placeholder: "PROFESIÓN",
+        placeholder: "",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
@@ -111,7 +112,8 @@ $(document).ready(function () {
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
-            "min-height": "55px" // for multiples tags support responsive
+            "height": "100%",
+            "min-height":"55px",
         },
         //debug: true,  // used for verbose console
     });
@@ -373,6 +375,13 @@ $('.select2__selector--incharge').on('select2:close', function (e) {
     $('.select2__selector--knowledge').on('select2:opening select2:closing', function( event ) {
         var $searchfield = $(this).parent().find('.select2-search__field');
         $searchfield.prop('disabled', true);
+        $searchfield.prop('visible', false);
+    });
+
+    $('.select2__selector--profession').on('select2:opening select2:closing', function( event ) {
+        var $searchfield = $(this).parent().find('.select2-search__field');
+        $searchfield.prop('disabled', true);
+        $searchfield.prop('visible', false);
     });
 });
 
