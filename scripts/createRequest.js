@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
         La función recibe un JSON con la siguiente estructura:
         {
         job: **String** con el nombre del cargo,
+        amount: **Número** con la cantidad de personas requeridas para el cargo,
         time: **Número** de días faltantes,
         cities: **Arreglo** con el nombre de las ciudades,
         length: **String** Duración del contrato, ej: 'Término fijo a un año',
@@ -50,8 +51,26 @@ window.addEventListener('load', () => {
         let finishedDate = information.finishedDate;
 
         let request = document.createElement('div');
+        let requestCardContainer = document.createElement('div');
+        let requestListContainer = document.createElement('div');
+        requestListContainer.classList.add('request__list', 'request--inactive');
+        requestCardContainer.classList.add('request__card');
         request.classList.add('request');
+
+        request.appendChild(requestCardContainer);
+        request.appendChild(requestListContainer);
+
         if (finished || draft) request.classList.add('request--gray');
+
+        let text = document.createElement('p');
+        if(information.amount > 1) {
+            text.innerHTML = '<span>' + jobTitle + ' (' + information.amount +')</span> en ' + city + ' · <strong>' + payment + '</strong>';
+        } else {
+            text.innerHTML = '<span>' + jobTitle + '</span> en ' + city + ' · <strong>' + payment + '</strong>';
+        }
+
+        text.classList.add('request__information');
+        requestListContainer.appendChild(text);
 
         let title = document.createElement('div');
         title.classList.add('request__title');
@@ -68,6 +87,8 @@ window.addEventListener('load', () => {
         }
 
         let requestTime = document.createElement('p');
+        let requestTimeList = document.createElement('p');
+
         requestTime.classList.add('request__time');
         if (!draft) {
             if(!finished){
@@ -75,13 +96,19 @@ window.addEventListener('load', () => {
                     time = 0;
                     requestTime.classList.add('request__time--delayed');
                     requestTime.classList.remove('request__time--ontime');
+                    requestTimeList.classList.add('request__time--delayed');
+                    requestTimeList.classList.remove('request__time--ontime');
                 } else {
                     requestTime.classList.remove('request__time--delayed');
                     requestTime.classList.add('request__time--ontime');
+                    requestTimeList.classList.remove('request__time--delayed');
+                    requestTimeList.classList.add('request__time--ontime');
                 }
                 requestTime.innerHTML = 'Faltan ' + time + ' días';
+                requestTimeList.innerHTML = 'Faltan ' + time + ' días';
             }else{
                 requestTime.innerHTML = '(' + finishedDate + ')'; 
+                requestTimeList.innerHTML = '(' + finishedDate + ')'; 
             }
         } else {
             requestTime.innerHTML = 'Borrador';
@@ -90,7 +117,7 @@ window.addEventListener('load', () => {
 
         title.appendChild(requestJobTitle);
         title.appendChild(requestTime);
-        request.appendChild(title);
+        requestCardContainer.appendChild(title);
 
         let requestInfo = document.createElement('div');
         requestInfo.classList.add('request__information');
@@ -111,19 +138,22 @@ window.addEventListener('load', () => {
         requestInfo.appendChild(requestLength);
         requestInfo.appendChild(requestDays);
         requestInfo.appendChild(requestDate);
-        request.appendChild(requestInfo);
+        requestCardContainer.appendChild(requestInfo);
 
         let requestPrice = document.createElement('h4');
         requestPrice.classList.add('request__price');
         requestPrice.innerHTML = payment;
 
-        request.appendChild(requestPrice);
+        requestCardContainer.appendChild(requestPrice);
 
         let requestStatusBar = document.createElement('div');
         requestStatusBar.classList.add('request__statusBar');
 
         let requestState = document.createElement('p');
         requestState.classList.add('request__state');
+
+        let requestStateList = document.createElement('p');
+        requestStateList.classList.add('request__state');
 
         for (let i = 0; i < 5; i++) {
             let statusBar = document.createElement('div');
@@ -137,30 +167,37 @@ window.addEventListener('load', () => {
                     if (status[1] === 0) {
                         statusBar.classList.add('request__status--yellow');
                         requestState.classList.add('request__state--yellow');
+                        requestStateList.classList.add('request__state--yellow');
                     } else {
                         statusBar.classList.add('request__status--green');
                         requestState.classList.add('request__state--green');
+                        requestStateList.classList.add('request__state--green');
                     }
 
                     switch (status[0]) {
                         case 0:
                             requestState.innerHTML = 'Pendiente de pago';
+                            requestStateList.innerHTML = 'Pendiente de pago';
                             break;
 
                         case 1:
                             requestState.innerHTML = 'Iniciado';
+                            requestStateList.innerHTML = 'Iniciado';
                             break;
 
                         case 2:
                             requestState.innerHTML = 'En proceso de búsqueda';
+                            requestStateList.innerHTML = 'En proceso de búsqueda';
                             break;
 
                         case 3:
                             requestState.innerHTML = 'En espera de selección';
+                            requestStateList.innerHTML = 'En espera de selección';
                             break;
 
                         case 4:
                             requestState.innerHTML = 'Finalizando el proceso';
+                            requestStateList.innerHTML = 'Finalizando el proceso';
                             break;
                     }
                 } else {
@@ -170,17 +207,24 @@ window.addEventListener('load', () => {
                 statusBar.classList.add('request__status--draft');
                 requestState.classList.add('request__state--draft');
                 requestState.innerHTML = 'Borrador';
+                requestStateList.classList.add('request__state--draft');
+                requestStateList.innerHTML = 'Borrador';
             } else if (finished) {
                 statusBar.classList.add('request__status--green');
                 requestState.classList.add('request__state--green');
                 requestState.innerHTML = 'Finalizado';
+                requestStateList.classList.add('request__state--green');
+                requestStateList.innerHTML = 'Finalizado';
             }
 
             requestStatusBar.appendChild(statusBar);
         }
 
-        request.appendChild(requestStatusBar);
-        request.appendChild(requestState);
+        requestCardContainer.appendChild(requestStatusBar);
+        requestCardContainer.appendChild(requestState);
+        requestTimeList.classList.add('request__time');
+        requestListContainer.appendChild(requestStateList);
+        requestListContainer.appendChild(requestTimeList);
         request.setAttribute("id-request",identificator) // included for selecting using atrribute 08/04/2020
         requestsContainer.appendChild(request);
     }
