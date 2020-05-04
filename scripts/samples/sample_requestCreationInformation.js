@@ -33,7 +33,7 @@
             'Creación de conceptos',
         ],
         academicLevel: 'O8',
-        profession: 'O7',
+        profession: ['O1','O2'],
         knowledge: [
             'O2',
             'O6',

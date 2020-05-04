@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
         {
         amount: **Number** A number representing the amount of candidates needed for the request.
         subtotal: **Number** A number representing the subtotal cost of the request
+        taxes: **Number** default value set on 0.19
         }
      */
 
@@ -22,8 +23,13 @@ window.addEventListener('load', () => {
         const total = document.querySelector('.pay__detailsTotalNumber');
         const totalBtn = document.querySelector('.pay__fullPriceBtn');
         const halfBtn = document.querySelector('.pay__halfPriceBtn');
+        let taxes = info.taxes;
+        if(taxes === '' || taxes === null){
+            taxes = 0.19;
+        }
         const subtotalValue = info.subtotal;
-        const iva = subtotalValue*0.19;
+
+        const iva = subtotalValue*taxes;
         const totalValue = subtotalValue + iva;
         const halfValue = totalValue/2;
 
