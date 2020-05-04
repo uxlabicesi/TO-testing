@@ -149,12 +149,20 @@
             right: 0;
             margin: 15px 15px;
 
+            &--edit{
+                right: 50px;
+            }
+
             &Confirmation{
                 position: absolute;
                 width: 25px;
                 height: auto;
                 right: 0;
                 margin: 15px 15px;
+
+                &--edit{
+                    right: 50px;
+                }
             }
         }
     }

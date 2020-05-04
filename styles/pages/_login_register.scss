@@ -10,6 +10,41 @@
     margin-left: 62vh / 100vh * 100vh;
     padding: 50px 7%;
     background-color: $color-lightGray;
+
+    &--edit{
+        margin-left: 0px;
+        padding: 30px 0;
+    }
+
+    &__editPhoto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        background-color: $color-gray;
+        border-radius: 5%;
+        width: 20%;
+        padding: 40px 20px;
+        min-width: 180px;
+
+        & p {
+            font-size: 0.8em;
+            color: $color-darkGray;
+            margin: 0px;
+            margin-top: 20px;
+        }
+
+        &Label{
+            font-size: 0.8em;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        &Input{
+            display: none;
+            position: absolute;
+        }
+    }
     
     &__title {
         font-size: $typo-h1;
@@ -39,6 +74,10 @@
             width: calc(100% - 90px);
             margin-bottom: 5px;
             margin-left: 90px;
+        }
+
+        &--edit{
+            width: 60%;
         }
     }
     
@@ -90,6 +129,10 @@
         margin-left: 90px;
         left: 25px;
         top: 17px;
+
+        &--edit{
+            margin-left: 40px;
+        }
     }
 
     &__modal{
