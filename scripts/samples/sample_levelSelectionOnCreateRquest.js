@@ -57,14 +57,16 @@ window.addEventListener('load', () => {
         setValueAndUpdateView(levelValue);
     }
 
+
+
     function setValueAndUpdateView(stringValue) {
-        let optionValue = 'O3';
+        let optionValue = '3';
         if (stringValue === 'Operativo') {
-            optionValue = 'O1';
+            optionValue = '2';
         } else if (stringValue === 'Tactico') {
-            optionValue = 'O2';
+            optionValue = '3';
         } else if (stringValue === 'Estrategico') {
-            optionValue = 'O3';
+            optionValue = '4';
         }
         $('.select2__selector--level').val(optionValue);
         $('.select2__selector--level').trigger('change');

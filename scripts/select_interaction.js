@@ -94,11 +94,12 @@ $(document).ready(function () {
     // added for support profession as a single selection
     $('.select2__selector--profession').select2({
         //tags: true,
-        placeholder: "PROFESIÓN",
+        //placeholder: "PROFESIÓN",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
-            "height": "55px"
+            "height": "100%",
+            "min-height":"55px",
         },
         //debug: true,  // used for verbose console
     });
@@ -116,7 +117,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--responsability').select2({
-        tags: true,
+        //tags: true,
         placeholder: "NIVEL DE RESPONSABILIDAD",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -127,7 +128,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--decition').select2({
-        tags: true,
+        //tags: true,
         placeholder: "NIVEL DE TOMA DE DECISIONES",
         theme: "talentos",
         width: '100%', // need to override the changed default
@@ -138,7 +139,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--incharge').select2({
-        tags: true,
+        //tags: true,
         placeholder: "TIENE PERSONAS A CARGO",
         theme: "talentos",
         width: '100%', // need to override the changed default

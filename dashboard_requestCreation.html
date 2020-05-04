@@ -262,10 +262,9 @@
                                         <label class="select__label select__label--register select__label--level">NIVEL DE CARGO</label>
                                         <select class="select2__selector--level" name="level" required>
                                             <!-- empty option is requiered for placeholder -->
-                                            <option></option>
-                                            <option value="O1">Operativo</option>
-                                            <option value="O2">Táctico</option>
-                                            <option value="O3">Liderazgo</option>
+                                            <option value="2">Operativo</option>
+                                            <option value="3">Táctico</option>
+                                            <option value="4">Estrategico</option>
                                         </select>
                                     </div>
                                 </div>
@@ -349,17 +348,14 @@
                         <!--  -->
                         <div class="select__container select__container--reqCreation2col">
                             <div class="selectadd selectadd--reqCreation form-group">
-                                <label class="select__label select__label--register select__label--profession label--profession">PROFESIÓN</label>
-                                <select id="form_profession" class="select2__selector--profession" name="profession" required>
-                                    <option value="O0" ></option>
-                                    <option value="O1">Opción 1</option>
-                                    <option value="O2">Opción 2</option>
-                                    <option value="O3">Opción 3</option>
-                                    <option value="O4">Opción 4</option>
-                                    <option value="O5">Opción 5</option>
-                                    <option value="O6">Opción 6</option>
-                                    <option value="O7">Opción 7</option>
-                                    <option value="O8">Opción 8</option>
+                                <label class="select__label select__label--register select__label--visible select__label--profession label--profession">PROFESIÓN</label>
+                                <select id="form_profession" class="select2__selector--profession" name="profession" multiple="multiple" required>
+                                    <option></option>
+                                    <option value="O1">Administrador de empresas</option>
+                                    <option value="O2">Economisma y Negociador internacional </option>
+                                    <option value="O3">Abogado</option>
+                                    <option value="O4">Diseñador de medios interactivos</option>
+                                    <option value="O5">Ingeniero en informatica y telecomunicaciones</option>
                                 </select>
                             </div>
                         </div>
