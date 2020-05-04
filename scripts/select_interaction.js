@@ -287,9 +287,17 @@ $('.select2__selector--profession').on('select2:open', function (e) {
     document.querySelector('.select__label--profession').classList.add('select__label--focused', 'select__label--focusedreqCreation');
 });
 
+$('.select__label--profession').on('click', function (e) {
+    $('.select2__selector--profession').select2('open');
+    document.querySelector('.select__label--profession').classList.remove(
+        'select__label--register');
+    document.querySelector('.select__label--profession').classList.add('select__label--focused', 'select__label--focusedreqCreation');
+});
+
 $('.select2__selector--profession').on('select2:close', function (e) {
+    //let value = $('.select2__selector--profession').select2('data')[0].id;
     let value = $('.select2__selector--profession').select2('data').length;
-    if(value === 0){
+    if(value === 0){ // TODO : make same process for all multiple tags, if required
         document.querySelector('.select__label--profession').classList.add('select__label--register');
     document.querySelector('.select__label--profession').classList.remove(
         'select__label--focused', 'select__label--focusedreqCreation');
@@ -355,7 +363,7 @@ $('.select2__selector--incharge').on('select2:close', function (e) {
         document.querySelector('.select__label--knowledge').classList.add('select__label--focused', 'select__label--focusedreqCreation');
     });
 
-    $('.select__label--visible').on('click', function (e) {
+    $('.select__label--knowledge').on('click', function (e) {
         $('.select2__selector--knowledge').select2('open');
         document.querySelector('.select__label--knowledge').classList.remove(
             'select__label--register');
