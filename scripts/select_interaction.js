@@ -371,7 +371,7 @@ $('.select2__selector--incharge').on('select2:close', function (e) {
             'select__label--focused', 'select__label--focusedreqCreation');
         }
     });
-
+/*
     $('.select2__selector--knowledge').on('select2:opening select2:closing', function( event ) {
         var $searchfield = $(this).parent().find('.select2-search__field');
         $searchfield.prop('disabled', true);
@@ -382,6 +382,6 @@ $('.select2__selector--incharge').on('select2:close', function (e) {
         var $searchfield = $(this).parent().find('.select2-search__field');
         $searchfield.prop('disabled', true);
         $searchfield.prop('visible', false);
-    });
+    });*/
 });
 
