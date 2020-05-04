@@ -21,7 +21,7 @@
             functions: **String Array** with the functions the user wrote previously,
             academicLevel: **String** with the VALUE of the option the user selected on the academicLevel select,
             profession: **String Array** with the profession the user asked for in the particular request,
-            knowledge: **String Array** with the VALUE of all the options the user selected in the knowledge select,
+            knowledge: **String** with the VALUE the option the user selected in the knowledge select,
             observations: **String** with the observations the user made for this request,
             skills: **String Array** with the skills the user requested previously,
             cityList: **Object Array** with the options for the city select. The structure of each object must be like the followiung:
