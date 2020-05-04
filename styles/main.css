@@ -583,6 +583,10 @@ body {
           align-items: center;
 }
 
+.content__containerFlex--noPadding {
+  padding: 0;
+}
+
 .content__title {
   font-size: 24px;
   color: #294F75;
@@ -656,6 +660,43 @@ body {
   width: 25px;
 }
 
+.content__orderbar {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  color: #C4C4C4;
+  font-size: 12px;
+}
+
+.content__orderbar--inactive {
+  display: none;
+}
+
+.content__orderbarBtn {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.content__orderbarBtn img {
+  width: 13px;
+  margin-left: 5px;
+}
+
+.content__orderbarBtn--first {
+  left: 0;
+}
+
+.content__orderbarBtn--second {
+  left: 55%;
+}
+
+.content__orderbarBtn--third {
+  right: 0;
+}
+
 .content__select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -671,6 +712,19 @@ body {
   margin-left: 20px;
   padding-right: 50px;
   white-space: wrap;
+  cursor: pointer;
+}
+
+.content__select:focus {
+  outline: none;
+}
+
+.content__select--inactive {
+  display: none;
+}
+
+.content__viewImg {
+  cursor: pointer;
 }
 
 .content__requests {
@@ -683,6 +737,13 @@ body {
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+}
+
+.content__requests--list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 769px) {
@@ -760,6 +821,19 @@ body {
   background-color: white;
   margin: 10px 20px 10px 0;
   padding: 15px 20px;
+}
+
+.request--list {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.request--inactive {
+  display: none;
 }
 
 .request--gray .request__title h2 {
@@ -879,6 +953,57 @@ body {
   background: none;
   margin-top: 5px;
   margin-bottom: 0;
+}
+
+.request__state--green {
+  color: #339933;
+}
+
+.request__state--yellow {
+  color: #E6CF00;
+}
+
+.request__state--draft {
+  color: #D23A3A;
+}
+
+.request__state--completed {
+  color: #294F75;
+}
+
+.request__list {
+  width: 100%;
+}
+
+.request__list .request__information {
+  margin: 0;
+  width: 50%;
+}
+
+.request__list .request__information span {
+  font-weight: 600;
+  color: #294F75;
+}
+
+.request__list .request__information strong {
+  color: #294F75;
+}
+
+.request__list .request__state {
+  position: absolute;
+  left: 55%;
+  top: 40%;
+  margin: 0;
+  font-size: 13px;
+}
+
+.request__list .request__time {
+  position: absolute;
+  top: 40%;
+  right: 55px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 @media (max-width: 576px) {

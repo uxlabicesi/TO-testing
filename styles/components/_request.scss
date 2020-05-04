@@ -10,6 +10,16 @@
     margin: 10px 20px 10px 0;
     padding: 15px 20px;
 
+    &--list {
+        width: 100%;
+        flex-direction: row;
+        position: relative;
+    }
+
+    &--inactive {
+        display: none;
+    }
+
     &--gray {
         & .request__title {
             & h2 {
@@ -127,6 +137,60 @@
         background: none;
         margin-top: 5px;
         margin-bottom: 0;
+
+        &--green {
+            color: $color-green;
+        }
+
+        &--yellow {
+            color: $color-gold;
+        }
+
+        &--draft {
+            color: $color-red;
+        }
+
+        &--completed {
+            color: $color-blue;
+        }
+    }
+
+    &__list {
+        width: 100%;
+
+        & .request {
+
+            &__information {
+                margin: 0;
+                width: 50%;
+
+                & span {
+                    font-weight: $typo-semibold;
+                    color: $color-blue;
+                }
+
+                & strong {
+                    color: $color-blue;
+                }
+            }
+
+            &__state {
+                position: absolute;
+                left: 55%;
+                top: 40%;
+                margin: 0;
+                font-size: $typo-h4;
+            }
+
+            &__time {
+                position: absolute;
+                top: 40%;
+                right: 55px;
+                margin: 0;
+                font-size: $typo-h4;
+                font-weight: $typo-bold;
+            }
+        }
     }
 }
 

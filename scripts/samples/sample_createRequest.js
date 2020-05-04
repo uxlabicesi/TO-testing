@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
 // TODO REMOVE AFTER DEBUG
 let sample = {
     "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
+    "amount": 20,
     "time": 1,
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
@@ -18,6 +19,7 @@ let sample = {
 
 let sample2 = {
     "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
+    "amount": 5,
     "time": 0,
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
