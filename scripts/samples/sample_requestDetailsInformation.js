@@ -30,6 +30,7 @@ var sample = {
             'Facilitación de equipos de trabajo'],
     isDraft: false, // optional, maybe needs to be removed
     isCompleted: false,
+    
 }
 
 requestDetailedInformation(sample);
