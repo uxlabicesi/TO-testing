@@ -20,7 +20,7 @@ var sample = {
                 'Creación de conceptos',
                 'Sustentación de propuestas'],
     academicLevel: 'Universitario',
-    profession: 'Diseñador',
+    profession: ['Diseñador','Ingeniero Multimedia','Diseñador de medios interactivos', 'Ingeniero en sistemas', "ingeniero informatico"],
     knowledge: 'UX, UI, Research, Lean, Agile',
     observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías ágiles.',
     skills: ['Desarrollo de prototipos',

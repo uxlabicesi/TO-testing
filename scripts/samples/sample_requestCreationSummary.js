@@ -6,7 +6,7 @@ var sample = {
     name: 'Diseñador Web',
     status: [0, 1], // -1, 0 para borradores
     remainingTime: 12,
-    positionLevel: 'Técnico',
+    positionLevel: 'Operativo',
     cities: ['Santiago de Cali - Valle del Cauca',
              'Popayán, Cauca',
              'Palmira, Valle del Cauca'],
@@ -20,7 +20,7 @@ var sample = {
                 'Creación de conceptos',
                 'Sustentación de propuestas'],
     academicLevel: 'Universitario',
-    profession: 'Diseñador',
+    profession: ['Diseñador','Ingeniero Multimedia','Diseñador de medios interactivos', 'Ingeniero en sistemas', "ingeniero informatico"],
     knowledge: 'UX, UI, Research, Lean, Agile',
     observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
     skills: ['Desarrollo de prototipos',
@@ -32,6 +32,7 @@ var sample = {
     subtotal: 1000000,
     discount: 30,
     discountType: 0,
+    selectedPay: 0,
 }
 requestCreationSummary(sample);
 });

@@ -19,11 +19,13 @@ window.addEventListener('load', () => {
         when these conditions are met, adds the class "btn--active" and removes
         the class "btn--inactive" from the next button
         */
-        inputPosition.addEventListener('change', checkValid);
+       nextBtn.removeAttribute('disabled');
+        // TODO: REMOVE
+        // will be remove next cleaning commit
+        /*inputPosition.addEventListener('change', checkValid);
         inputPosition.addEventListener('keyup', checkValid);// Added for NC8146
         inputWage.addEventListener('change', checkValid);
         inputWage.addEventListener('keyup', checkValid);// Added for NC8146
-        
         function checkValid() {
             
             if(!(isValid && inputPosition.classList.contains('has-success') && inputWage.classList.contains('has-success'))) {
@@ -38,7 +40,7 @@ window.addEventListener('load', () => {
             }       
             
             isValid = true;
-        }
+        }*/
         
         if(localStorage.getItem('reqCreationState') != null) {
             reqCreationState = parseInt(localStorage.getItem('reqCreationState'));

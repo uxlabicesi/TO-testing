@@ -19,7 +19,7 @@
         wage: **String** with the wage,
         functions: **Array** with the tasks for the job,
         academicLevel: **String** with the academic level,
-        profession: **String** with the profession,
+        profession: **String Array ** with the professions,
         knowledge: **String** with the required knowledge,
         observations: **String** with the observations,
         skills: **Array** with the required skills.
@@ -74,7 +74,23 @@ window.addEventListener("load", () => {
 
         knowledge.innerHTML = info.knowledge;
 
-        profession.innerHTML = MayusFirst(info.profession);
+        //profession.innerHTML = MayusFirst(info.profession);
+        // mod for multiples professions
+        let itemForProfessions = document.createElement('div');
+        itemForProfessions.classList.add('reqDetails__infoSection--cities');
+        let professionsAsString = "";
+        info.profession.forEach((e, index) => {
+            if(index < info.profession.length-1){
+                professionsAsString += MayusFirst(e) + ", ";
+            }else{
+                professionsAsString += MayusFirst(e) + ".";
+            }
+        });
+        itemForProfessions.innerHTML = professionsAsString;
+        profession.appendChild(itemForProfessions);
+
+
+
 
         academicLevel.innerHTML = MayusFirst(info.academicLevel);
 
