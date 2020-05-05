@@ -24,12 +24,13 @@ window.addEventListener('load', () => {
         const totalBtn = document.querySelector('.pay__fullPriceBtn');
         const halfBtn = document.querySelector('.pay__halfPriceBtn');
         let taxes = info.taxes;
-        if(taxes === '' || taxes === null){
-            taxes = 0.19;
+        if(taxes === '' || taxes === null || taxes === undefined){
+            taxes = Number(0.19);
         }
         const subtotalValue = info.subtotal;
-
+        console.log(taxes);
         const iva = subtotalValue*taxes;
+        console.log(iva);
         const totalValue = subtotalValue + iva;
         const halfValue = totalValue/2;
 
