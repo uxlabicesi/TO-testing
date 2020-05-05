@@ -1331,6 +1331,10 @@ body {
           flex: 1.3;
 }
 
+.reqDetails__contentSection--inactive {
+  color: #C4C4C4 !important;
+}
+
 .reqDetails__infoSection {
   -webkit-box-flex: 3;
       -ms-flex: 3;
