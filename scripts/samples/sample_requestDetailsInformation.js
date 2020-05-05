@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 var sample = {
     name: 'Diseñador Web',
     amount: '20',
-    status: [-1, 0], // -1, 0 para borradores
+    status: [4, 1], // -1, 0 para borradores
     remainingTime: 12,
     positionLevel: 'Técnico',
     cities: ['Santiago de Cali - Valle del Cauca',
@@ -31,5 +31,8 @@ var sample = {
     isDraft: false, // optional, maybe needs to be removed
     isCompleted: false,
 }
+
 requestDetailedInformation(sample);
+// this function need to be re-called each selection time
+setNumberOfSelectedCandidates(3,sample.amount);
 });
