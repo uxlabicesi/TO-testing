@@ -23,8 +23,15 @@
             profession: **String Array** with the profession the user asked for in the particular request,
             knowledge: **String** with the VALUE of all the options the user selected in the knowledge select,
             observations: **String** with the observations the user made for this request,
-            skills: **String Array** with the skills the user requested previously,
-            cityList: **Object Array** with the options for the city select. The structure of each object must be like the followiung:
+            skills: **String Array** with the value of the option for each skill selected by the user,
+            skillOptions: **Object Array** with all the options that each skill select has, only needs to be included when
+            the user selected more than 3 skills, but won't cause problem if it's included in that case too. The structure each object
+            must follow is this:
+            {
+                value: With the value that the option will have,
+                text: **String** with the text that will be displayed on screen
+            },
+            cityList: **Object Array** with the options for each city select. The structure of each object must be like the following:
             {
                 value: With the value that the option will have,
                 text: **String** with the text that will be displayed on screen
@@ -48,21 +55,14 @@ window.addEventListener('load', () => {
 
         info.skills.forEach((e, index) => {
             if(index > 2) {
-                createSkill();
-                const input = document.getElementById('form_skill' + index);
-                const inputContainer = input.closest('div');
-
-                inputContainer.classList.add('textInput--focused');
-                inputContainer.querySelector('label').classList.add('label--active');
-                input.value = e;
-            } else {
-                const input = document.getElementById('form_skill' + index);
-                const inputContainer = input.closest('div');
-
-                inputContainer.classList.add('textInput--focused');
-                inputContainer.querySelector('label').classList.add('label--active');
-                input.value = e;
+                createSkill(info.skillOptions);
             }
+
+            $('#form_skill'+index).val(e);
+            $('#form_skill'+index).trigger('change');
+            document.querySelector('#labelSkill'+index).classList.remove(
+                'select__label--register');
+            document.querySelector('#labelSkill'+index).classList.add('select__label--focused', 'select__label--focusedreqCreation');
         });
 
         observations.value = info.observations;

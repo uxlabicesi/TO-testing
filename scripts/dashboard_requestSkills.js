@@ -1,95 +1,96 @@
-let createSkill = () => {};
+let createSkill = (options) => {};
 
 window.addEventListener('load', () => {
-    const form = document.querySelector('.reqCreation__content--skills form');
-    const addFunction = document.querySelector('.reqCreation__content--skills .btn--blue');
-    let skillCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
-    let functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
-    const deleteFunctions = document.querySelectorAll('.reqCreation__functionsContainerBtnDelete');
+    
 
-    deleteFunctions.forEach((elem) =>{
+    /*deleteFunctions.forEach((elem) =>{
         elem.addEventListener('click', (event) =>{
             skillCount--;
             event.target.parentElement.remove();
             functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
             updateIds();
         });
-    });
+    });*/
 
-    function updateIds(){
-        functionInputs.forEach((elem,index)=>{
-            elem.id = 'form_function'+index;
-        });
-    }
+    createSkill = (options) => {
 
-    createSkill = () => {
-        const container = document.createElement('div');
-        container.classList.add('reqCreation__functionsContainer', 'reqCreation__functionsContainer--skill');
-        form.appendChild(container)
+        const skill = document.createElement('div');
+        const skillsContainer = document.getElementById('reqFormFourthState');
+        const deleteBtn = document.createElement('button');
+        const selectContainer = document.createElement('div');
+        const selectadd = document.createElement('div');
+        const label = document.createElement('label');
+        const select = document.createElement('select');
 
-        const btnMove = document.createElement('button');
-        btnMove.classList.add('reqCreation__functionsContainerBtnMove');
-        container.appendChild(btnMove);
+        skillsContainer.appendChild(skill);
+        skill.classList.add('reqCreation__functionsContainer', 'reqCreation__functionsContainer--skill');
+        skill.appendChild(selectContainer)
+        skill.appendChild(deleteBtn);
+        deleteBtn.classList.add('reqCreation__functionsContainerBtnDelete');
+        selectContainer.classList.add('elect__container', 'select__container--reqCreation2col');
+        selectContainer.appendChild(selectadd);
+        selectadd.classList.add('selectadd', 'selectadd--reqCreation', 'form-group');
+        selectadd.appendChild(label);
+        selectadd.appendChild(select);
+        label.classList.add('select__label', 'select__label--register', 'select__label--skill', 'label--skill');
+        label.innerHTML = 'COMPETENCIA';
+        select.classList.add('select2__selector--skill');
+        selectadd.setAttribute('name', 'skill');
 
-        const containerInput = document.createElement('div');
-        containerInput.classList.add('textInput__container', 'textInput__container--reqCreation2col', 'textInput__container--reqFunctions');
-        container.appendChild(containerInput);
-
-        const inputLabel = document.createElement('label');
-        inputLabel.classList.add('label', 'label--reqCreation');
-        inputLabel.innerHTML = 'Competencia';
-        inputLabel.htmlFor = 'form_skill'+skillCount;
-        containerInput.appendChild(inputLabel);
-
-        const input = document.createElement('input');
-        input.classList.add('textInput');
-        input.id = 'form_skill'+skillCount;
-        functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
-        containerInput.appendChild(input);
-
-        skillCount++;
-
-        const btnDelete = document.createElement('button');
-        btnDelete.classList.add('reqCreation__functionsContainerBtnDelete');
-        container.appendChild(btnDelete);
-
-        btnDelete.addEventListener('click', () => {
-            skillCount--;
-            if(skillCount < 5) {
-                addFunction.removeAttribute('disabled');
-                addFunction.classList.remove('btn--inactive');
-            }
-            container.remove();
+        const emptyOption = document.createElement('option');
+        select.appendChild(emptyOption);
+        options.forEach((e) => {
+            const option = document.createElement('option');
+            option.setAttribute('value', e.value);
+            option.innerHTML = e.text;
+            select.appendChild(option);
         });
 
+        function updateIds(selectList){
+            selectList.forEach((elem,index)=>{
+                elem.id = 'form_skill' + index;
+                elem.closest('div').querySelector('label').id = 'labelSkill' + index;
+                $('#form_skill'+index).select2({
+                    //tags: true,
+                    placeholder: "COMPETENCIA",
+                    theme: "talentos",
+                    width: '100%', // need to override the changed default
+                    containerCss: {
+                        "min-height": "55px" // for multiples tags support responsive
+                    },
+                });
+                    //debug: true,  // used for verbose console
 
-        // Activates the microinteraction when the new input create for the add button is focused
-        input.addEventListener('focus',(event)=>{
-            event.target.parentElement.classList.add('textInput--focused');
+                $('#form_skill'+index).on('select2:open', function (e) {
+                    document.querySelector('#labelSkill'+index).classList.remove(
+                        'select__label--register');
+                    document.querySelector('#labelSkill'+index).classList.add(
+                        'select__label--focused');
+                });
+            
+                $('#form_skill'+index).on('select2:close', function (e) {
+                    let value = $('#form_skill'+index).select2('data')[0].id;
+                    if(value === ''){
+                        document.querySelector('#labelSkill'+index).classList.add('select__label--register');
+                        document.querySelector('#labelSkill'+index).classList.remove(
+                        'select__label--focused');
+                    }
+                });
 
-            let label = event.target.parentElement.querySelector('label');
-            label.classList.remove('label--none');
-            label.classList.add('label--active');
+            });
+         }
+        
+
+        let selectList = document.querySelectorAll('.select2__selector--skill');
+        updateIds(selectList);
+
+        deleteBtn.addEventListener('click', () => {
+            event.target.parentElement.remove();
+            selectList = document.querySelectorAll('.select2__selector--skill');
+            updateIds(selectList);
         });
-
-        // Desactivates the microinteraction when the new inputcreate for the add button loses focus, ONLY if the input is still empty
-        input.addEventListener('blur', (event) => {
-
-            let label = event.target.parentElement.querySelector('label');
-
-            if(!input.value) {
-                label.classList.remove('label--active');
-                event.target.parentElement.classList.remove('textInput--focused');
-            }
-        });
-
-        if(skillCount > 4){
-            addFunction.setAttribute('disabled','disabled');
-            addFunction.classList.add('btn--inactive');
-        }
-
     };
 
-    addFunction.addEventListener('click', createSkill);
+    
 
 });

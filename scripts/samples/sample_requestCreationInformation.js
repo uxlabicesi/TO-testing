@@ -40,11 +40,36 @@
         ],
         observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
         skills: [
-            'Desarrollo de prototipos',
-            'Definición de insights',
-            'Evaluación de usabilidad',
-            'Creación de conceptos',
-            'Sustentación de propuestas',
+            'O2',
+            'O5',
+            'O1',
+            'O3',
+        ],
+        skillOptions: [
+            {
+                value: 'O1',
+                text: 'Opción 1'
+            },
+            {
+                value: 'O2',
+                text: 'Opción 2'
+            },
+            {
+                value: 'O3',
+                text: 'Opción 3'
+            },
+            {
+                value: 'O4',
+                text: 'Opción 4'
+            },
+            {
+                value: 'O5',
+                text: 'Opción 5'
+            },
+            {
+                value: 'O6',
+                text: 'Opción 6'
+            },
         ],
         cityList: [
             {
