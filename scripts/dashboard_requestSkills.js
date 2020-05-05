@@ -84,6 +84,11 @@ window.addEventListener('load', () => {
             
     
             selectList = document.querySelectorAll('.select2__selector--skill');
+            if(selectList.length == 5) {
+                const addSkill = document.querySelector('.reqCreation__content--skills .btn--blue');
+                addSkill.setAttribute('disabled','disabled');
+                addSkill.classList.add('btn--inactive');
+            }
             updateIds(selectList);
     
             deleteBtn.addEventListener('click', () => {
@@ -92,7 +97,10 @@ window.addEventListener('load', () => {
                     event.target.parentElement.remove();
                     selectList = document.querySelectorAll('.select2__selector--skill');
                     updateIds(selectList);
-                }                
+                }
+                const addSkill = document.querySelector('.reqCreation__content--skills .btn--blue');
+                addSkill.removeAttribute('disabled');
+                addSkill.classList.remove('btn--inactive');
             });
         }
         
