@@ -458,10 +458,6 @@ body {
   display: none;
 }
 
-.select2-search__field {
-  display: none;
-}
-
 .select {
   position: relative;
   -webkit-appearance: none;
