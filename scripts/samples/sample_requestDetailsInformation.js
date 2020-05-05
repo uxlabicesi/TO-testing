@@ -22,7 +22,7 @@ var sample = {
     academicLevel: 'Universitario',
     profession: 'Diseñador',
     knowledge: 'UX, UI, Research, Lean, Agile',
-    observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
+    observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías ágiles.',
     skills: ['Desarrollo de prototipos',
             'Definición de Insights',
             'Evaluación de productos',
