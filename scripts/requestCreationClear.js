@@ -63,6 +63,13 @@ window.addEventListener('load', () => {
         document.querySelector('#labelSkill'+index).classList.remove('select__label--focused', 'select__label--focusedreqCreation');
         });
 
+        // for remove skills
+        skillContainers.forEach((e, index) => {
+            if(index>2){
+                e.remove();
+            }
+        });
+
         jobName.value = '';
         jobNameLabel.classList.remove('label--active');
         jobNameLabel.closest('div').classList.remove('textInput--focused');
