@@ -96,23 +96,27 @@ window.addEventListener('load', () => {
             'select__label--register');
         document.querySelector('.select__label--profession').classList.add('select__label--focused', 'select__label--focusedreqCreation');
 
+        // reset functions before rebuild
+        const functionContainers = document.querySelectorAll('.reqCreation__functionsContainer--function');
+        functionContainers.forEach((e ) => {
+            e.remove();
+        });
+
         info.functions.forEach((e, index) => {
-            if(index > 2) {
+           // if(index > 2) {
                 createFunction();
                 const input = document.getElementById('form_function' + index);
                 const inputContainer = input.closest('div');
-
                 inputContainer.classList.add('textInput--focused');
                 inputContainer.querySelector('label').classList.add('label--active');
                 input.value = e;
-            } else {
+           /* } else {
                 const input = document.getElementById('form_function' + index);
                 const inputContainer = input.closest('div');
-
                 inputContainer.classList.add('textInput--focused');
                 inputContainer.querySelector('label').classList.add('label--active');
                 input.value = e;
-            }
+            }*/
         });
 
         info.cities.forEach((e, index) => {
