@@ -45,13 +45,12 @@ window.addEventListener('load', () => {
             e.querySelector('.textInput__container').classList.remove('textInput--focused');
         });
 
-        skillContainers.forEach((e) => {
-            const input = e.querySelector('input');
-            const label = e.querySelector('label');
-
-            input.value = '';
-            label.classList.remove('label--active');
-            e.querySelector('.textInput__container').classList.remove('textInput--focused');
+        skillContainers.forEach((e, index) => {
+            $('#form_skill'+index).val(null);
+        $('#form_skill'+index).trigger('change');
+        document.querySelector('#labelSkill'+index).classList.add(
+            'select__label--register');
+        document.querySelector('#labelSkill'+index).classList.remove('select__label--focused', 'select__label--focusedreqCreation');
         });
 
         jobName.value = '';
