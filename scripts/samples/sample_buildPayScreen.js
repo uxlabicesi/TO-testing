@@ -32,8 +32,18 @@ window.addEventListener('load', () => {
         requestTotal: 2500000
     });*/
 
-    buildPayScreen({
+    /*buildPayScreen({
         payStatus: "onSuccess",
+        //message: "mensaje opcional, se puede dejar vacio, nulo o undefined... si no se desea mostrar nada adicional"
+        requestJob: "Diseñador Web",
+        requestLevel: "Operativo",
+        requestAmount: 2,
+        requestsubtotal: 1800000,
+        requestTotal: 2500000
+    });*/
+
+    buildPayScreen({
+        payStatus: "onWait",
         //message: "mensaje opcional, se puede dejar vacio, nulo o undefined... si no se desea mostrar nada adicional"
         requestJob: "Diseñador Web",
         requestLevel: "Operativo",

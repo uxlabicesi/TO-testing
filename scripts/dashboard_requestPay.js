@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
             payResultContent.classList.remove('pay__details--hide');
             payResultGlobalTitle.innerHTML = "Resultado de su transacción";
             payResultGlobalDescription.innerHTML = "A continuación algunos los detalles de la transacción realizada";
-            // onError or on Success
+            // onError onSuccess or onWait
             if (info.payStatus === "onError") {
                 payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN FALLIDA'
                 payResultContentIcon.querySelector('img').setAttribute('src', "./resources/deteleIcon.svg");
@@ -73,6 +73,14 @@ window.addEventListener('load', () => {
                 payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN EXITOSA'
                 payResultContentIcon.querySelector('img').setAttribute('src', "./resources/checkGreen.svg");
                 payResultContentMessage.querySelector('p').innerHTML = '¡El proceso fue un éxito!' + '<br>' + 'Ahora estamos más cerca de encontrar el mejor talento para tu organización'
+                if (feedbackMessage !== "") {
+                    payResultContentMessage.querySelector('p').innerHTML = feedbackMessage;
+                }
+                actionButton.innerHTML = 'Volver al inicio';
+            } else if(info.payStatus === "onWait") {
+                payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN PENDIENTE'
+                payResultContentIcon.querySelector('img').setAttribute('src', "./resources/waitIcon.svg");
+                payResultContentMessage.querySelector('p').innerHTML = '¡El proceso se encuentra pendiente!' + '<br>' + 'Estaremos atentos a los mensajes de tu banco'
                 if (feedbackMessage !== "") {
                     payResultContentMessage.querySelector('p').innerHTML = feedbackMessage;
                 }
