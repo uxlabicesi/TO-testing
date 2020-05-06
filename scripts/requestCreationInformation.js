@@ -53,10 +53,17 @@ window.addEventListener('load', () => {
         const observations = document.querySelector('.textInput--area');
         const observationsLabel = document.querySelector('.label--observations');
 
+
+        const skillContainers = document.querySelectorAll('.reqCreation__functionsContainer--skill');
+        // for remove all skills before fill
+        skillContainers.forEach((e ) => {
+            e.remove();
+        });
+
         info.skills.forEach((e, index) => {
-            if(index > 2) {
+            //if(index > 2) {
                 createSkill(info.skillOptions);
-            }
+            //}
 
             $('#form_skill'+index).val(e);
             $('#form_skill'+index).trigger('change');

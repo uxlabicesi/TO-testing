@@ -44,6 +44,7 @@
             'O5',
             'O1',
             'O3',
+            'O4',
         ],
         skillOptions: [
             {
