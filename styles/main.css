@@ -4436,6 +4436,20 @@ input[type=number] {
   margin-right: 5px;
 }
 
+.pay__detailsTaxes {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.pay__detailsTaxesData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .pay__detailsPromo {
   display: none;
   -webkit-box-pack: justify;

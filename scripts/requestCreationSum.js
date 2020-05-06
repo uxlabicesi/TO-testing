@@ -31,7 +31,7 @@
 
         subtotalNoTaxes: **Number**,
         hasDiscount: **boolean** 
-        taxesValue: **Number**,
+        // taxesValue: **Number**, // 
         discountValue: **Number** 
         finalValue: ** number **
         
@@ -71,34 +71,21 @@ window.addEventListener('load', () => {
         const promoContainer = document.querySelector('.pay__detailsPromo');
         const total = document.querySelector('.pay__detailsTotalNumber');
 
-        amount.innerHTML = info.amount;
-        subtotal.innerHTML = info.subtotal.toLocaleString();
+        // const taxes = document.querySelector('.pay__detailsTaxesDataNumber');
 
         // flag for 50% or 100% --- Possible values 0: for "50%" / 1:"100%" 
-        // info.selectedPay
         let percentToPay = info.selectedPay === 0 ? 0.5 : 1.0;
-        /*
-        let totalValue;
-        if(info.discount) {
+
+        // --------------- pay information ---------------- //
+        amount.innerHTML = info.amount;
+        subtotal.innerHTML = info.subtotalNoTaxes.toLocaleString();
+        if(info.hasDiscount){
             promoContainer.classList.add('pay__detailsPromo--active');
-
-            if(info.discountType == 0) {
-                const discountValue = (info.subtotal*percentToPay) * (info.discount/100);
-                promo.innerHTML = discountValue.toLocaleString();
-                const iva = (info.subtotal - discountValue) * 0.19;
-                totalValue = info.subtotal - discountValue + iva;
-            } else {
-                const iva = (info.subtotal - info.discount) * 0.19;
-                totalValue = info.subtotal - info.discount + iva;
-            }
-        } else {
-            const iva = (info.subtotal*percentToPay) * 0.19;
-            totalValue = (info.subtotal + iva).toLocaleString();
-        }*/
-
-        promoContainer.classList.add('pay__detailsPromo--active');
-        promo.innerHTML = info.discountValue.toLocaleString();
+            promo.innerHTML = info.discountValue.toLocaleString();
+        }
+        //taxes.innerHTML = info.taxesValue.toLocaleString();
         total.innerHTML = info.finalValue.toLocaleString();
+        // ------------------------------------------------ //
 
         info.skills.forEach((e) => {
             let item = document.createElement('li');
@@ -163,3 +150,22 @@ window.addEventListener('load', () => {
         }
     }
 });
+
+        /*
+        let totalValue;
+        if(info.discount) {
+            promoContainer.classList.add('pay__detailsPromo--active');
+
+            if(info.discountType == 0) {
+                const discountValue = (info.subtotal*percentToPay) * (info.discount/100);
+                promo.innerHTML = discountValue.toLocaleString();
+                const iva = (info.subtotal - discountValue) * 0.19;
+                totalValue = info.subtotal - discountValue + iva;
+            } else {
+                const iva = (info.subtotal - info.discount) * 0.19;
+                totalValue = info.subtotal - info.discount + iva;
+            }
+        } else {
+            const iva = (info.subtotal*percentToPay) * 0.19;
+            totalValue = (info.subtotal + iva).toLocaleString();
+        }*/

@@ -31,14 +31,12 @@ var sample = {
     amount: 2,
 
     subtotalNoTaxes: 810000,
-    hasDiscount: 30,
-    taxesValue: 190000,
+    hasDiscount: true,
+    //taxesValue: 190000,//
     discountValue: 25000,
     finalValue:100000,
 
-    selectedPay: 0,
-
-    
+    selectedPay: 0,   
 }
 requestCreationSummary(sample);
 });

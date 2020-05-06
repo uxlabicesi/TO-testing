@@ -141,6 +141,16 @@
             }
         }
 
+        &Taxes {
+            display: none;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-gray;
+
+            &Data {
+                display: flex;
+            }
+        }
+
         &Promo {
             display: none;
             justify-content: space-between;
