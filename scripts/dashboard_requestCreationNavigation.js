@@ -44,8 +44,9 @@ window.addEventListener('load', () => {
         
         if(localStorage.getItem('reqCreationState') != null) {
             reqCreationState = parseInt(localStorage.getItem('reqCreationState'));
+            localStorage.setItem('reqCreationState', 0); // added for solve problem with state
         }
-        
+
         setNavigation(reqCreationState);
         nextBtn.addEventListener('click', () => {
             if(reqCreationState < content.length-1) {
