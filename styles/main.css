@@ -1174,6 +1174,19 @@ body {
   margin-right: 20px;
 }
 
+.reqDetails__selectionInfoContainer {
+  width: 100%;
+  text-align: right;
+}
+
+.reqDetails__selectionInfoItem {
+  color: #294F75;
+  font-weight: 700;
+  padding: 10px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .reqDetails__back {
   color: #C4C4C4;
   text-decoration: none;
@@ -1329,6 +1342,10 @@ body {
   -webkit-box-flex: 1.3;
       -ms-flex: 1.3;
           flex: 1.3;
+}
+
+.reqDetails__contentSection--inactive {
+  color: #C4C4C4 !important;
 }
 
 .reqDetails__infoSection {

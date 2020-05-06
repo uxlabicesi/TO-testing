@@ -128,27 +128,12 @@ window.addEventListener('load', () => {
                 aux++;
             });
         }
+
+
+
     }
 
-    // trhe following code fragment adds buttons for request evaluation and finish process
-    let buttonBarBottom = document.createElement('div');
-    buttonBarBottom.classList.add('canDetails__buttonsGroup');
-
-    let buttonEvaluation = document.createElement('button');
-    buttonEvaluation.classList.add('btn');
-    buttonEvaluation.classList.add('btn--medium');
-    buttonEvaluation.classList.add('btn--blue');
-    buttonEvaluation.innerHTML = "Calificar servicio";
-
-    let buttonFinishProcess = document.createElement('button');
-    buttonFinishProcess.classList.add('btn');
-    buttonFinishProcess.classList.add('btn--medium');
-    buttonFinishProcess.innerHTML = "Finalizar proceso";
-
-    buttonBarBottom.appendChild(buttonEvaluation);
-    buttonBarBottom.appendChild(buttonFinishProcess);
-
-    document.querySelector('.reqDetails__content').appendChild(buttonBarBottom);
+    
 
 
 });

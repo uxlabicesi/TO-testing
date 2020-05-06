@@ -20,7 +20,7 @@
         wage: **String** with the wage,
         functions: **Array** with the tasks for the job,
         academicLevel: **String** with the academic level,
-        profession: **String** with the profession,
+        profession: **String Array** with the professions,
         knowledge: **String** with the required knowledge,
         observations: **String** with the observations,
         skills: **Array** with the required skills.
@@ -30,6 +30,7 @@
             If it's a percentage based discount it must be a number between 0 and 100, else it could be any number.
         discountType: **Number** This number represents the type of discount, 0 is a percentage based discount and
             1 is a fixed discount
+        selectedPay: **Number** 0 or 1, 0 for 50%, and 1 for 100%.
      */
 
 // empty function will be updated after window load.
@@ -60,15 +61,21 @@ window.addEventListener('load', () => {
         const promoContainer = document.querySelector('.pay__detailsPromo');
         const total = document.querySelector('.pay__detailsTotalNumber');
 
+        
+
         amount.innerHTML = info.amount;
         subtotal.innerHTML = info.subtotal.toLocaleString();
+
+        // flag for 50% or 100% --- Possible values 0: for "50%" / 1:"100%" 
+        // info.selectedPay
+        let percentToPay = info.selectedPay === 0 ? 0.5 : 1.0;
 
         let totalValue;
         if(info.discount) {
             promoContainer.classList.add('pay__detailsPromo--active');
 
             if(info.discountType == 0) {
-                const discountValue = info.subtotal * (info.discount/100);
+                const discountValue = (info.subtotal*percentToPay) * (info.discount/100);
                 promo.innerHTML = discountValue.toLocaleString();
                 const iva = (info.subtotal - discountValue) * 0.19;
                 totalValue = info.subtotal - discountValue + iva;
@@ -77,7 +84,7 @@ window.addEventListener('load', () => {
                 totalValue = info.subtotal - info.discount + iva;
             }
         } else {
-            const iva = info.subtotal * 0.19;
+            const iva = (info.subtotal*percentToPay) * 0.19;
             totalValue = (info.subtotal + iva).toLocaleString();
         }
 
@@ -93,7 +100,21 @@ window.addEventListener('load', () => {
 
         knowledge.innerHTML = info.knowledge;
 
-        profession.innerHTML = MayusFirst(info.profession);
+        //profession.innerHTML = MayusFirst(info.profession);
+        // mod for multiples professions
+        let itemForProfessions = document.createElement('div');
+        itemForProfessions.classList.add('reqDetails__infoSection--cities');
+        let professionsAsString = "";
+        info.profession.forEach((e, index) => {
+            if(index < info.profession.length-1){
+                professionsAsString += MayusFirst(e) + ", ";
+            }else{
+                professionsAsString += MayusFirst(e) + ".";
+            }
+        });
+        itemForProfessions.innerHTML = professionsAsString;
+        profession.appendChild(itemForProfessions);
+
 
         academicLevel.innerHTML = MayusFirst(info.academicLevel);
 

@@ -1,6 +1,19 @@
 .reqDetails {
     margin-right: 20px;
 
+    &__selectionInfoContainer{
+        width: 100%;
+        text-align: right;
+    }
+
+    &__selectionInfoItem{
+       color: $color-blue;
+       font-weight: $typo-bold;
+       padding: 10px;
+       padding-top: 0;
+       margin-top: 0;
+    }
+
     &__back {
         color: $color-gray;
         text-decoration: none;
@@ -132,6 +145,10 @@
                 font-weight: $typo-bold;
                 text-align: end;
                 flex: 1.3;
+            }
+
+            &--inactive{
+                color: $color-gray !important;
             }
         }
     }

@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 var sample = {
     name: 'Diseñador Web',
     amount: '20',
-    status: [0, 1], // -1, 0 para borradores
+    status: [4, 1], // -1, 0 para borradores
     remainingTime: 12,
     positionLevel: 'Técnico',
     cities: ['Santiago de Cali - Valle del Cauca',
@@ -20,14 +20,20 @@ var sample = {
                 'Creación de conceptos',
                 'Sustentación de propuestas'],
     academicLevel: 'Universitario',
-    profession: 'Diseñador',
+    profession: ['Diseñador','Ingeniero Multimedia','Diseñador de medios interactivos', 'Ingeniero en sistemas', "ingeniero informatico"],
     knowledge: 'UX, UI, Research, Lean, Agile',
-    observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías agiles.',
+    observations: 'Estamos buscando una persona que trabaje muy bien en equipo y enfoque en metodologías ágiles.',
     skills: ['Desarrollo de prototipos',
             'Definición de Insights',
             'Evaluación de productos',
             'Documentación de procesos',
             'Facilitación de equipos de trabajo'],
+    isDraft: false, // optional, maybe needs to be removed
+    isCompleted: false,
+    
 }
+
 requestDetailedInformation(sample);
+// this function need to be re-called each selection time
+setNumberOfSelectedCandidates(3,sample.amount);
 });

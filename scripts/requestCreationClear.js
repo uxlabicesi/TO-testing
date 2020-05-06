@@ -5,8 +5,8 @@ window.addEventListener('load', () => {
     
     clearRequestCreation = () => {
         const nextBtn = document.querySelector('.reqCreation__next');
-        nextBtn.classList.add('btn--inactive');
-        nextBtn.setAttribute('disabled', true);
+        //nextBtn.classList.add('btn--inactive');
+        //nextBtn.setAttribute('disabled', true);
 
         const jobName = document.getElementById('form_position');
         const jobNameLabel = document.querySelector('.label--jobName');
@@ -17,6 +17,8 @@ window.addEventListener('load', () => {
         const functionContainers = document.querySelectorAll('.reqCreation__functionsContainer--function');
         const skillContainers = document.querySelectorAll('.reqCreation__functionsContainer--skill');
         const cityRows = document.querySelectorAll('.reqCreation__row--city');
+
+        
 
         cityRows.forEach((e, index) => {
             if(index > 0) {
@@ -36,6 +38,14 @@ window.addEventListener('load', () => {
             e.querySelector('input').value = 1;            
         });
 
+        
+        // for remove extra cities
+        cityRows.forEach((e, index) => {
+            if(index!==0){
+                e.remove();
+            }
+        });
+
         functionContainers.forEach((e) => {
             const input = e.querySelector('input');
             const label = e.querySelector('label');
@@ -45,6 +55,7 @@ window.addEventListener('load', () => {
             e.querySelector('.textInput__container').classList.remove('textInput--focused');
         });
 
+<<<<<<< HEAD
         skillContainers.forEach((e, index) => {
             $('#form_skill'+index).val(null);
         $('#form_skill'+index).trigger('change');
@@ -52,6 +63,20 @@ window.addEventListener('load', () => {
             'select__label--register');
         document.querySelector('#labelSkill'+index).classList.remove('select__label--focused', 'select__label--focusedreqCreation');
         });
+=======
+        // TODO clean and delete skills
+        $('.reqCreation__functionsContainer--skill').each(function() {
+            $( this ).value=null;
+            $( this ).trigger('change');
+            console.log( $( this ));
+          });
+
+        /*containersForSkills.forEach(() => {
+            document.querySelectorAll('.select__label--skill').classList.add(
+                'select__label--register');
+            document.querySelectorAll('.select__label--skill').classList.remove('select__label--focused', 'select__label--focusedreqCreation');
+        });*/
+>>>>>>> bcf5f65904eb80c17aeb5d0b8bc3f4909d103584
 
         jobName.value = '';
         jobNameLabel.classList.remove('label--active');

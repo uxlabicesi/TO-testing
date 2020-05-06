@@ -10,7 +10,7 @@
     let info = {
         jobName: 'Diseñador Web',
         responsability: 'O3',
-        decitions: 'O6',
+        decitions: 'O1',
         incharge: 'O2',
         jobLevel: 'O1',
         jobHiring: 'O2',

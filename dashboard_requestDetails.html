@@ -164,8 +164,16 @@
                     <div class="reqDetails__contentCategory reqDetails__request reqDetails__contentCategory--active">
                         <p>Solicitud</p>
                     </div>
+
+                    <div class="reqDetails__contentCategory reqDetails__request reqDetails__evaluation__tabButton">
+                        <p>Evaluación General</p>
+                    </div>
+                    <!-- reqDetails__contentCategory reqDetails__request  -->
+                    <div class="reqDetails__selectionInfoContainer">
+                        <p class="reqDetails__selectionInfoItem  reqDetails__selectedNumber">[0/20]</p>
+                    </div>
                 </div>
-                
+               
                 <div class="reqDetails__candidates">
                     <div class="noCandidate">
                         <img class="noCandidate__img" src="./resources/noCandidate.svg" alt="">
@@ -208,7 +216,7 @@
     
                         <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
                             <li><strong>Nivel académico:</strong> <span class="academicLevel"></span></li>
-                            <li><strong>Profesión:</strong> <span class="profession"></span></li>
+                            <li><strong>Profesión(es):</strong> <span class="profession"></span></li>
                             <li><strong>Conocimientos:</strong> <span class="knowledge"></span></li>
                             <li><strong>Observaciones:</strong> <span class="observations"></span></li>
                         </ul>
@@ -240,9 +248,12 @@
     <script src="./scripts/requestDetailsInformation.js"></script>
     <script src="./scripts/requestDetailsCandidates.js"></script>
 
+    
     <!-- TODO remove for deleted sample info -->
+    <script src="./scripts/samples/sample_requestDetailsInformation_selectionNumber.js"></script>
     <script src="./scripts/samples/sample_requestDetailsInformation.js"></script>
     <script src="./scripts/samples/sample_requestDetailsCandidates.js"></script>
+    
     
 
 
