@@ -257,8 +257,16 @@ window.addEventListener("load", () => {
                     buttonContinue.classList.add("btn");
                     buttonContinue.classList.add("btn--medium");
                     buttonContinue.classList.add("btn--green");
-                    buttonContinue.innerHTML = "Continuar creación";
+                    buttonContinue.innerHTML = "Completar solicitud";
                     buttonBarBottom.appendChild(buttonContinue);
+
+                    let buttonPay= document.createElement("button");
+                    buttonPay.classList.add("btn");
+                    buttonPay.classList.add("btn--medium");
+                    buttonPay.classList.add("btn--blue");
+                    buttonPay.innerHTML = "Pagar solicitud";
+                    buttonBarBottom.appendChild(buttonPay);
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
