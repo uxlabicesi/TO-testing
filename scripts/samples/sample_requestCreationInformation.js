@@ -31,6 +31,7 @@ window.addEventListener('load', () => {
             'Investigación de usuarios',
             'Evaluación de usabilidad',
             'Creación de conceptos',
+            'Creación de conceptos'
         ],
         academicLevel: 'O8',
         profession: ['O1', 'O2'],

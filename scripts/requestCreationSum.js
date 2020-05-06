@@ -42,6 +42,8 @@
         levelResponsability: **Number** // 0: Low, 1: mid: high
         levelDecision: **Number** // 0: Low, 1: mid: high
         peopleInCharge: true // 
+
+        //editionNode: ** boolean **
         
      */
 
