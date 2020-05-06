@@ -27,6 +27,10 @@
         subtotal **Number**,
         isDraft: **boolean**,
         isCompleted: **boolean**, // activate the use of 'reqDetails__contentSection--inactive' class
+        // the following were added for suppor new level selection system
+        levelResponsability: **Number** // 0: Low, 1: mid: high
+        levelDecision: **Number** // 0: Low, 1: mid: high
+        peopleInCharge: true // 
      */
 
 // empty function will be updated after window load.
@@ -57,6 +61,37 @@ window.addEventListener("load", () => {
         const evaluationTabButton = document.querySelector(".reqDetails__evaluation__tabButton");
 
 
+        // added for level
+
+        const responsability = document.querySelector(".responsability");
+        const decision = document.querySelector(".decision");
+        const incharge = document.querySelector(".incharge");
+
+        switch(info.levelResponsability){
+            case 0:
+                responsability.innerHTML = "Bajo";
+            break;
+            case 1:
+                responsability.innerHTML = "Medio";
+            break;
+            case 2:
+                responsability.innerHTML = "Alto";
+            break;
+        }
+
+        switch(info.levelDecision){
+            case 0:
+                decision.innerHTML = "Bajo";
+            break;
+            case 1:
+                decision.innerHTML = "Medio";
+            break;
+            case 2:
+                decision.innerHTML = "Alto";
+            break;
+        }
+
+        incharge.innerHTML = info.peopleInCharge==true?"Sí":"No";
 
         /*info.requirements.forEach((e) => {
                 let item = document.createElement('li');

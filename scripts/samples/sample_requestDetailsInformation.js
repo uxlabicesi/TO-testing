@@ -30,7 +30,9 @@ var sample = {
             'Facilitación de equipos de trabajo'],
     isDraft: false, // optional, maybe needs to be removed
     isCompleted: false,
-    
+    levelResponsability: 0, // 0 1 2 --> bajo medio alto
+    levelDecision: 0, // 0 1 2 
+    peopleInCharge: true,
 }
 
 requestDetailedInformation(sample);

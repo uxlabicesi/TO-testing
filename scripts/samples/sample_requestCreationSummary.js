@@ -37,6 +37,10 @@ var sample = {
     finalValue:100000,
 
     selectedPay: 0,   
+    levelResponsability: 0, // 0 1 2 --> bajo medio alto
+    levelDecision: 0, // 0 1 2  --> bajo medio alto 
+    peopleInCharge: true,
+
 }
 requestCreationSummary(sample);
 });

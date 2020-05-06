@@ -38,6 +38,11 @@
         // we dont know if this flag is required now... 
         selectedPay: **Number** 0 or 1, 0 for 50%, and 1 for 100%.
 
+         // the following were added for suppor new level selection system
+        levelResponsability: **Number** // 0: Low, 1: mid: high
+        levelDecision: **Number** // 0: Low, 1: mid: high
+        peopleInCharge: true // 
+        
      */
 
 
@@ -70,6 +75,39 @@ window.addEventListener('load', () => {
         const promo = document.querySelector('.pay__detailsPromoDataNumber');
         const promoContainer = document.querySelector('.pay__detailsPromo');
         const total = document.querySelector('.pay__detailsTotalNumber');
+
+        
+        // added for level
+
+        const responsability = document.querySelector(".responsability");
+        const decision = document.querySelector(".decision");
+        const incharge = document.querySelector(".incharge");
+
+        switch(info.levelResponsability){
+            case 0:
+                responsability.innerHTML = "Bajo";
+            break;
+            case 1:
+                responsability.innerHTML = "Medio";
+            break;
+            case 2:
+                responsability.innerHTML = "Alto";
+            break;
+        }
+
+        switch(info.levelDecision){
+            case 0:
+                decision.innerHTML = "Bajo";
+            break;
+            case 1:
+                decision.innerHTML = "Medio";
+            break;
+            case 2:
+                decision.innerHTML = "Alto";
+            break;
+        }
+
+        incharge.innerHTML = info.peopleInCharge==true?"Sí":"No";
 
         // const taxes = document.querySelector('.pay__detailsTaxesDataNumber');
 
