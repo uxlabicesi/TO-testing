@@ -12,15 +12,17 @@
 
 window.addEventListener('load', () => {
     
-    /*buildPayScreen({
+    buildPayScreen({
         payStatus: "onProcess",
         //message: "mensaje opcional, se puede dejar vacio, nulo o undefined... si no se desea mostrar nada adicional"
         requestJob: "Diseñador Web",
         requestLevel: "Operativo",
         requestAmount: 2,
         requestsubtotal: 1800000,
+        hasDiscount: true,
+        discountValue: 25000,
         requestTotal: 2500000
-    });*/
+    });
 
     /*buildPayScreen({
         payStatus: "onError",
@@ -29,6 +31,8 @@ window.addEventListener('load', () => {
         requestLevel: "Operativo",
         requestAmount: 2,
         requestsubtotal: 1800000,
+        hasDiscount: true,
+        discountValue: 25000,
         requestTotal: 2500000
     });*/
 
@@ -39,16 +43,20 @@ window.addEventListener('load', () => {
         requestLevel: "Operativo",
         requestAmount: 2,
         requestsubtotal: 1800000,
+        hasDiscount: true,
+        discountValue: 25000,
         requestTotal: 2500000
     });*/
 
-    buildPayScreen({
+    /*buildPayScreen({
         payStatus: "onWait",
         //message: "mensaje opcional, se puede dejar vacio, nulo o undefined... si no se desea mostrar nada adicional"
         requestJob: "Diseñador Web",
         requestLevel: "Operativo",
         requestAmount: 2,
         requestsubtotal: 1800000,
+        hasDiscount: true,
+        discountValue: 25000,
         requestTotal: 2500000
-    });
+    });*/
 });

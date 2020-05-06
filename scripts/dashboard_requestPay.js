@@ -38,6 +38,10 @@ window.addEventListener('load', () => {
         const payDetailsSubtotal = document.querySelector('.pay__detailsSubtotalDataNumber');
         const payDetailsTotalValue = document.querySelector('.pay__detailsTotalNumber');
 
+        //
+        const promo = document.querySelector('.pay__detailsPromoDataNumber');
+        const promoContainer = document.querySelector('.pay__detailsPromo');
+
         let feedbackMessage = "";
         if (info.message !== null && info.message !== undefined && info.message !== "") {
             feedbackMessage = info.message;
@@ -54,6 +58,12 @@ window.addEventListener('load', () => {
             payDetailsAmount.innerHTML = info.requestAmount;
             payDetailsSubtotal.innerHTML = info.requestsubtotal;
             payDetailsTotalValue.innerHTML = info.requestTotal;
+
+            if(info.hasDiscount){
+                promoContainer.classList.add('pay__detailsPromo--active');
+                promo.innerHTML = info.discountValue.toLocaleString();
+            }
+
 
         } else {
             payDetailsContent.classList.add('pay__details--hide');
