@@ -304,8 +304,8 @@ window.addEventListener("load", () => {
                     buttonPay.innerHTML = "Pagar solicitud";
                     buttonBarBottom.appendChild(buttonPay);
 
-                    buttonEvaluation.classList.add("pay-request");
-                    buttonFinishProcess.classList.add("continue-request");
+                    buttonPay.classList.add("pay-request");
+                    buttonContinue.classList.add("complete-request");
 
                     document
                         .querySelector(".reqDetails__content")
@@ -338,7 +338,7 @@ window.addEventListener("load", () => {
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
                     buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
-                    
+
                     buttonEvaluation.classList.add("score-request");
                     buttonFinishProcess.classList.add("complete-request");
 
