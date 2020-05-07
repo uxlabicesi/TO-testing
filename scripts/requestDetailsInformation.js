@@ -285,6 +285,8 @@ window.addEventListener("load", () => {
             buttonFinishProcess.classList.add("btn");
             buttonFinishProcess.classList.add("btn--medium");
 
+
+
             switch (status) {
                 case -1: // borrador
                     // the following code fragment adds button for continue creation process
@@ -302,6 +304,9 @@ window.addEventListener("load", () => {
                     buttonPay.innerHTML = "Pagar solicitud";
                     buttonBarBottom.appendChild(buttonPay);
 
+                    buttonEvaluation.classList.add("pay-request");
+                    buttonFinishProcess.classList.add("continue-request");
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
@@ -318,6 +323,10 @@ window.addEventListener("load", () => {
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
                     buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
+
+                    buttonEvaluation.classList.add("score-request");
+                    buttonFinishProcess.classList.add("complete-request");
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
@@ -329,6 +338,10 @@ window.addEventListener("load", () => {
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
                     buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
+                    
+                    buttonEvaluation.classList.add("score-request");
+                    buttonFinishProcess.classList.add("complete-request");
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
@@ -344,6 +357,9 @@ window.addEventListener("load", () => {
             buttonRepeatRequest.classList.add("btn--green");
             buttonRepeatRequest.innerHTML = "Solicitar de nuevo";
             buttonBarBottom.appendChild(buttonRepeatRequest);
+            // for create again same request
+            buttonRepeatRequest.classList.add("duplicate-request");
+
             document
                 .querySelector(".reqDetails__content")
                 .appendChild(buttonBarBottom);
