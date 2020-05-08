@@ -4601,6 +4601,27 @@ input[type=number] {
   }
 }
 
+@media (max-width: 576px) {
+  .registerEdit {
+    margin-top: 20px;
+  }
+  .registerEdit .help-block {
+    margin-left: 0px;
+  }
+  .selectadd--edit {
+    width: 100%;
+  }
+  .login__passShow--edit {
+    right: 0;
+  }
+  .login__passShowConfirmation--edit {
+    right: 0;
+  }
+  .register__form--edit {
+    width: 100%;
+  }
+}
+
 * {
   font-family: 'Open Sans';
   -webkit-box-sizing: border-box;

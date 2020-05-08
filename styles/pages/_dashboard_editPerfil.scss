@@ -30,3 +30,31 @@
     }
     
 }
+
+@media (max-width: $screen-small) {
+    .registerEdit{
+        margin-top: 20px;
+
+        .help-block{
+            margin-left: 0px;
+        }
+        
+    }
+
+    .selectadd--edit{
+        width: 100%;
+    }
+
+    .login__passShow--edit{
+        right: 0;
+    }
+
+    .login__passShowConfirmation--edit{
+        right: 0;
+    }
+
+    .register__form--edit{
+        width: 100%;
+    }
+    
+}
