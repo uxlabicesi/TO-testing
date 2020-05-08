@@ -3,7 +3,8 @@
     &__head{
         display: flex;
         flex-direction: row;
-        margin-top: 40px;
+        max-width: 640px;
+        justify-content: space-between;
 
         &Title{
             margin-top: 0px;
@@ -11,6 +12,7 @@
 
         &Perfil{
             margin-top: 15px;
+            color: $color-darkGray;
         }
     }
     
@@ -31,22 +33,10 @@
                 font-weight: $typo-bold;
                 margin: 10px 0px;
                 font-size: $typo-h4;
-                
-                &Contact{
-                    width: 100px;
-                    color: $color-blue;
-                    font-weight: $typo-bold;
-                    margin: 10px 0px;
-                    font-size: $typo-h4;
-                }
             }
             
             &Img{
                 width: 50px;
-
-                &Employee{
-                    width: 50px;
-                }
             }
             
         }
@@ -97,6 +87,108 @@
                     margin: 0px;
                     color: $color-darkGray;
                     font-weight: $typo-semibold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-large) {
+
+    .content {
+
+        &--profile {
+            margin-bottom: 30px;
+        }
+
+        &__head {
+            
+        }
+
+        &__infoCard {
+            flex-direction: column;
+            margin: 0 0 10px 0;
+
+            &Logo {
+                &Img {
+                    display: none;
+                }
+
+                &Title {
+                    width: auto;
+                }
+            }   
+
+            &Data {
+                margin-left: 0;
+                width: auto;
+
+                & h4 {
+                    font-size: 1.8vw;
+                }
+
+                & h3 {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-medium) {
+
+    .content {
+
+        &__head {
+            max-width: 540px;
+            position: relative;
+
+            & a {
+                position: absolute;
+                right: 0;
+                top: 55px;
+            }
+        }
+
+        &__infoCard {
+
+            &Logo {
+
+            }
+            
+            &Data {
+                max-width: 540px;
+
+                & h4 {
+                    font-size: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-small) {
+
+    .content {
+
+        &__infoCard {
+
+            &Data {
+
+                &Text {
+
+                    &Title {
+                        font-size: $typo-body;
+                    }
+
+                    &Explanation {
+                        font-size: $typo-xSmall !important;
+                    }
+                }
+
+                & h4 {
+                    font-size: $typo-xSmall;
+                    text-overflow: ellipsis;
                 }
             }
         }

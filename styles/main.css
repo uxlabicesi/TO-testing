@@ -3712,7 +3712,10 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 40px;
+  max-width: 640px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .content__headTitle {
@@ -3721,6 +3724,7 @@ input[type=number] {
 
 .content__headPerfil {
   margin-top: 15px;
+  color: #494949;
 }
 
 .content__infoCard {
@@ -3755,19 +3759,7 @@ input[type=number] {
   font-size: 13px;
 }
 
-.content__infoCardLogoTitleContact {
-  width: 100px;
-  color: #294F75;
-  font-weight: 700;
-  margin: 10px 0px;
-  font-size: 13px;
-}
-
 .content__infoCardLogoImg {
-  width: 50px;
-}
-
-.content__infoCardLogoImgEmployee {
   width: 50px;
 }
 
@@ -3834,6 +3826,66 @@ input[type=number] {
   margin: 0px;
   color: #494949;
   font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .content--profile {
+    margin-bottom: 30px;
+  }
+  .content__infoCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 10px 0;
+  }
+  .content__infoCardLogoImg {
+    display: none;
+  }
+  .content__infoCardLogoTitle {
+    width: auto;
+  }
+  .content__infoCardData {
+    margin-left: 0;
+    width: auto;
+  }
+  .content__infoCardData h4 {
+    font-size: 1.8vw;
+  }
+  .content__infoCardData h3 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 769px) {
+  .content__head {
+    max-width: 540px;
+    position: relative;
+  }
+  .content__head a {
+    position: absolute;
+    right: 0;
+    top: 55px;
+  }
+  .content__infoCardData {
+    max-width: 540px;
+  }
+  .content__infoCardData h4 {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .content__infoCardDataTextTitle {
+    font-size: 20px;
+  }
+  .content__infoCardDataTextExplanation {
+    font-size: 12px !important;
+  }
+  .content__infoCardData h4 {
+    font-size: 12px;
+    text-overflow: ellipsis;
+  }
 }
 
 .forgotPassword {
