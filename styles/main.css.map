@@ -23,7 +23,8 @@
         "pages/_dashboard_perfil.scss",
         "pages/_login_forgotPass.scss",
         "pages/_dashboard_reqCreation.scss",
-        "pages/_dashboard_reqCreationPay.scss"
+        "pages/_dashboard_reqCreationPay.scss",
+        "pages/_dashboard_editPerfil.scss"
     ],
     "names": [],
     "file": "main.css"

@@ -102,68 +102,70 @@
                     <h4 class="register__subtitle">DATOS DE LA EMPRESA</h4>
                 </div>
 
-                <div class="register__form register__form--edit bootstrapSelectForm" id="register__form register__form--edit">
-                    <form id="id_formFirstPart" class="registerForm" action="">
-                        <div class="textInput__container textInput__container--marginless form-group">
-                            <label for="form_companyName" class="label register__label label--register register__label--edit">¿Cómo se llama tu empresa?</label>
-                            <input type="text" class="textInput textInput--register textInput--editPerfil" id="form_companyName" name="company" autocomplete="organization">
-                        </div>
-
-                        <div class="textInput__container form-group">
-                            <label for="form_nit" class="label register__label label--register register__label--edit">¿Cuál es el NIT de tu
-                                empresa?</label>
-                            <input type="text" class="textInput textInput--register textInput--editPerfil" id="form_nit" name="nitNumber"
-                                required>
-                        </div>
-
-                        <div class="separator__vertical form-group" style="margin-top:15px"></div>
-
-                        <!-- start select container using select2 -->
-                        <div class="select__container">
-                            <div class="selectadd selectadd--edit form-group">
-                                <label class="select__label select__label--register select__label--sector">¿A qué sector
-                                    pertenece?</label>
-                                <select class="select2__selector--sector" name="sector" required>
-                                     <!-- empty option is requiered for placeholder -->
-                                     <option></option>
-                                     <option value="O0"></option>
-                                     <option value="O1">Opción 1</option>
-                                     <option value="O2">Opción 2</option>
-                                     <option value="O3">Opción 3</option>
-                                     <option value="O4">Opción 4</option>
-                                     <option value="O5">Opción 5</option>
-                                     <option value="O6">Opción 6</option>
-                                     <option value="O7">Opción 7</option>
-                                     <option value="O8">Opción 8</option>
-                                </select>
+                <div class="registerEdit">
+                    <div class="register__form register__form--edit bootstrapSelectForm" id="register__form register__form--edit">
+                        <form id="id_formFirstPart" class="registerForm" action="">
+                            <div class="textInput__container textInput__container--marginless form-group">
+                                <label for="form_companyName" class="label register__label label--register register__label--edit">¿Cómo se llama tu empresa?</label>
+                                <input type="text" class="textInput textInput--register textInput--editPerfil" id="form_companyName" name="company" autocomplete="organization">
                             </div>
-                        </div>
-                        <div class="select__container">
-                            <div class="form-group selectadd selectadd--edit">
-                                <label class="select__label select__label--register select__label--city">¿En qué ciudad
-                                    está su oficina principal?</label>
-                                <select class="select2__selector--city" name="city" required>
-                                    <!-- empty option is requiered for placeholder -->
-                                    <option></option>
-                                    <option value="O1">Opción 1</option>
-                                    <option value="O2">Opción 2</option>
-                                    <option value="O3">Opción 3</option>
-                                    <option value="O4">Opción 4</option>
-                                    <option value="O5">Opción 5</option>
-                                    <option value="O6">Opción 6</option>
-                                    <option value="O7">Opción 7</option>
-                                    <option value="O8">Opción 8</option>
-                                </select>
+    
+                            <div class="textInput__container form-group">
+                                <label for="form_nit" class="label register__label label--register register__label--edit">¿Cuál es el NIT de tu
+                                    empresa?</label>
+                                <input type="text" class="textInput textInput--register textInput--editPerfil" id="form_nit" name="nitNumber"
+                                    required>
                             </div>
-                        </div>
-                        <!-- end select container using select2 -->
-                    </form>
-                </div>
-                <div class="register__editPhoto">
-                    <img src="./resources/upload.svg" alt="">
-                    <p>Arrastra la imagen o</p>
-                    <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
-                    <input class="register__editPhotoInput" type="file" id="upload-photo">
+    
+                            <div class="separator__vertical form-group" style="margin-top:15px"></div>
+    
+                            <!-- start select container using select2 -->
+                            <div class="select__container">
+                                <div class="selectadd selectadd--edit form-group">
+                                    <label class="select__label select__label--register select__label--sector">¿A qué sector
+                                        pertenece?</label>
+                                    <select class="select2__selector--sector" name="sector" required>
+                                         <!-- empty option is requiered for placeholder -->
+                                         <option></option>
+                                         <option value="O0"></option>
+                                         <option value="O1">Opción 1</option>
+                                         <option value="O2">Opción 2</option>
+                                         <option value="O3">Opción 3</option>
+                                         <option value="O4">Opción 4</option>
+                                         <option value="O5">Opción 5</option>
+                                         <option value="O6">Opción 6</option>
+                                         <option value="O7">Opción 7</option>
+                                         <option value="O8">Opción 8</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select__container">
+                                <div class="form-group selectadd selectadd--edit">
+                                    <label class="select__label select__label--register select__label--city">¿En qué ciudad
+                                        está su oficina principal?</label>
+                                    <select class="select2__selector--city" name="city" required>
+                                        <!-- empty option is requiered for placeholder -->
+                                        <option></option>
+                                        <option value="O1">Opción 1</option>
+                                        <option value="O2">Opción 2</option>
+                                        <option value="O3">Opción 3</option>
+                                        <option value="O4">Opción 4</option>
+                                        <option value="O5">Opción 5</option>
+                                        <option value="O6">Opción 6</option>
+                                        <option value="O7">Opción 7</option>
+                                        <option value="O8">Opción 8</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- end select container using select2 -->
+                        </form>
+                    </div>
+                    <div class="register__editPhoto">
+                        <img src="./resources/upload.svg" alt="">
+                        <p>Arrastra la imagen o</p>
+                        <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
+                        <input class="register__editPhotoInput" type="file" id="upload-photo">
+                    </div>
                 </div>
             </div>
 
@@ -175,69 +177,70 @@
                     <h4 class="register__subtitle">DATOS DEL CONTACTO</h4>
                 </div>
 
-                
-                <div class="register__form register__form--edit" id="register__form register__form--edit">
-                    
-                    <div class="separator__vertical" style="margin-top:15px"></div>
-
-                    <form id="id_formSecondPart" class="registerForm" action="">
-                        <div class="textInput__container textInput__container--marginless form-group">
-                            <label for="form_username" class="label register__label label--register register__label--edit">¿Con quién vamos a conversar?</label>
-                            <input type="text" class="textInput textInput--register textInput--editPerfil" id="form_username" name="username" required>
+                <div class="registerSecondPart">
+                    <div class="registerEdit">
+                        <div class="register__form register__form--edit" id="register__form register__form--edit">
+                            <div class="separator__vertical" style="margin-top:15px"></div>
+                            <form id="id_formSecondPart" class="registerForm" action="">
+                                <div class="textInput__container textInput__container--marginless form-group">
+                                    <label for="form_username" class="label register__label label--register register__label--edit">¿Con quién vamos a conversar?</label>
+                                    <input type="text" class="textInput textInput--register textInput--editPerfil" id="form_username" name="username" required>
+                                </div>
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_number" class="label register__label label--register register__label--edit">¿A qué número te
+                                        podemos llamar?</label>
+                                    <input type="number" class="textInput textInput--register textInput--editPerfil" id="form_number" name="number"
+                                    equired autocomplete="tel">
+                                </div>
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_email" class="label register__label label--register control-label register__label--edit">¿Cuál es
+                                        tu correo?</label>
+                                    <input type="text" class="textInput textInput--register form-control textInput--editPerfil" id="form_email"
+                                        name="email" autocomplete="email" required>
+                                </div>
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_password" class="label register__label label--register register__label--edit">¿Cuál es tu
+                                        contraseña actual?</label>
+                                    <input type="password" class="textInput textInput--register password textInput--editPerfil"
+                                        data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
+                                        equired>
+                                    <img class="login__passShow login__passShow--edit" src="resources/notShowPass.svg" alt="">
+                                </div>
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_newPass" class="label register__label label--register register__label--edit">¿Cual es
+                                        tu nueva contraseña?</label>
+                                    <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
+                                        data-bv-identical="true" id="form_newPass" name="confirmPassword"
+                                        autocomplete="new-password" required>
+                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="resources/notShowPass.svg" alt="">
+                                </div> 
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_repeatPass" class="label register__label label--register register__label--edit">¿Puedes repetir
+                                        tu nueva contraseña?</label>
+                                    <input type="password" class="textInput textInput--register passwordConfirmationAgain textInput--editPerfil"
+                                        data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
+                                        autocomplete="new-password" required>
+                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit login__passShowConfirmationAgain" src="resources/notShowPass.svg" alt="">
+                                </div>
+                            </form>   
                         </div>
-
-                        <div class="textInput__container form-group">
-                            <label for="form_number" class="label register__label label--register register__label--edit">¿A qué número te
-                                podemos llamar?</label>
-                            <input type="number" class="textInput textInput--register textInput--editPerfil" id="form_number" name="number"
-                            equired autocomplete="tel">
+                        <div class="register__editPhoto register__editPhoto--secondPart">
+                            <img src="./resources/upload.svg" alt="">
+                            <p>Arrastra la imagen o</p>
+                            <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
+                            <input class="register__editPhotoInput" type="file" id="upload-photo">
                         </div>
-
-                        <div class="textInput__container form-group">
-                            <label for="form_email" class="label register__label label--register control-label register__label--edit">¿Cuál es
-                                tu correo?</label>
-                            <input type="text" class="textInput textInput--register form-control textInput--editPerfil" id="form_email"
-                                name="email" autocomplete="email" required>
-                        </div>
-
-                        <div class="textInput__container form-group">
-                            <label for="form_password" class="label register__label label--register register__label--edit">¿Cuál es tu
-                                contraseña actual?</label>
-                            <input type="password" class="textInput textInput--register password textInput--editPerfil"
-                                data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
-                                equired>
-                            <img class="login__passShow login__passShow--edit" src="resources/notShowPass.svg" alt="">
-                        </div>
-
-                        <div class="textInput__container form-group">
-                            <label for="form_newPass" class="label register__label label--register register__label--edit">¿Cual es
-                                tu nueva contraseña?</label>
-                            <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
-                                data-bv-identical="true" id="form_newPass" name="confirmPassword"
-                                autocomplete="new-password" required>
-                            <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="resources/notShowPass.svg" alt="">
-                        </div> 
-
-                        <div class="textInput__container form-group">
-                            <label for="form_repeatPass" class="label register__label label--register register__label--edit">¿Puedes repetir
-                                tu nueva contraseña?</label>
-                            <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
-                                data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
-                                autocomplete="new-password" required>
-                            <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="resources/notShowPass.svg" alt="">
-                        </div>
-                        <button class="btn btn--Xlarge btn--inactive register__button register__button--edit form-group" onclick="">G U A R D A R</button>
-
-                        <p class="register__text register__text--edit form-group"><a href="./dashboard_main.html">Salir del proceso :(</a></p>
-                    </form>         
-                </div>
-                <div class="register__editPhoto">
-                    <img src="./resources/upload.svg" alt="">
-                    <p>Arrastra la imagen o</p>
-                    <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
-                    <input class="register__editPhotoInput" type="file" id="upload-photo">
-                </div>
-            </div>
+                    </div>
+                    <button class="btn btn--Xlarge btn--inactive register__button register__button--edit form-group" onclick="">G U A R D A R</button>
+                    <p class="register__text register__text--edit form-group"><a href="./dashboard_main.html">Salir del proceso :(</a></p>
+                </div>    
+            </div>  
+        </div>
             
         </div>
     <!------------------------------------>

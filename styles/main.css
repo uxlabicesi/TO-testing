@@ -2737,12 +2737,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  height: 50%;
   background-color: #C4C4C4;
   border-radius: 5%;
   width: 20%;
   padding: 40px 20px;
   min-width: 180px;
+}
+
+.register__editPhoto--secondPart {
+  height: 33%;
+  margin-top: 15px;
 }
 
 .register__editPhoto p {
@@ -2801,7 +2806,7 @@ body {
 }
 
 .register__form--edit {
-  width: 60%;
+  width: 100%;
 }
 
 .register__divider {
@@ -4601,6 +4606,72 @@ input[type=number] {
   font-size: 12px;
   margin-left: 5px;
   font-weight: 400;
+}
+
+.registerEdit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.registerEdit .help-block {
+  margin-left: 40px;
+}
+
+.registerSecondPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.registerSecondPart .help-block {
+  margin-left: 40px;
+}
+
+@media (max-width: 992px) {
+  .registerEdit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .register__form--edit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .registerEdit {
+    margin-top: 20px;
+  }
+  .registerEdit .help-block {
+    margin-left: 0px;
+  }
+  .selectadd--edit {
+    width: 100%;
+  }
+  .login__passShow--edit {
+    right: 0;
+  }
+  .login__passShowConfirmation--edit {
+    right: 0;
+  }
+  .register__form--edit {
+    width: 100%;
+  }
 }
 
 * {
