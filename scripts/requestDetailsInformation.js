@@ -285,8 +285,6 @@ window.addEventListener("load", () => {
             buttonFinishProcess.classList.add("btn");
             buttonFinishProcess.classList.add("btn--medium");
 
-
-
             switch (status) {
                 case -1: // borrador
                     // the following code fragment adds button for continue creation process
@@ -312,6 +310,15 @@ window.addEventListener("load", () => {
                         .appendChild(buttonBarBottom);
                     break;
                 case 0: // pendiente de pago
+                let buttonPay= document.createElement("button");
+                buttonPay.classList.add("btn");
+                buttonPay.classList.add("btn--medium");
+                buttonPay.classList.add("btn--blue");
+                buttonPay.innerHTML = "Pagar solicitud";
+                buttonBarBottom.appendChild(buttonPay);
+
+                buttonPay.classList.add("pay-request");
+                break;
                 case 1: // en verificación
                 case 2: // iniciado
                 case 3: // en proceso de búsqueda
@@ -324,7 +331,7 @@ window.addEventListener("load", () => {
                     buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
 
-                    buttonEvaluation.classList.add("score-request");
+                    //buttonEvaluation.classList.add("score-request");
                     buttonFinishProcess.classList.add("complete-request");
 
                     document
@@ -336,7 +343,7 @@ window.addEventListener("load", () => {
                     buttonEvaluation.classList.add("btn--blue");
                     buttonEvaluation.innerHTML = "Calificar servicio";
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
-                    buttonBarBottom.appendChild(buttonEvaluation);
+                    //buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
 
                     buttonEvaluation.classList.add("score-request");
