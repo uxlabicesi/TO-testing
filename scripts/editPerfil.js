@@ -14,6 +14,8 @@ window.addEventListener('load', () => {
     let showPass = document.querySelector('.login__passShow');
     let showPassConfirmation = document.querySelector('.login__passShowConfirmation');
     let showPassConfirmationAgain = document.querySelector('.login__passShowConfirmationAgain');
+    let registerEditBtn = document.querySelector('.register__button--edit');
+
     const mq = window.matchMedia( "(max-width: 576px)" );
 
     showPass.addEventListener('click', () =>{
@@ -123,7 +125,14 @@ window.addEventListener('load', () => {
             if(!(isValid && select.value)) {
                 isValid = false;
             }
-        });      
+        }); 
+
+        if(isValid) {
+            registerEditBtn.classList.remove('btn--inactive');
+        } else {
+            registerEditBtn.classList.add('btn--inactive');
+        }       
+     
 
         isValid = true;
     }

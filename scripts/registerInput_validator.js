@@ -19,7 +19,8 @@ window.addEventListener('load', () => {
                             message: 'El nombre de usuario debe tener entre 6 y 30 caracteres de largo'
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z0-9_ ]+$/,
+                            // regexp: /^[a-zA-Z0-9_ ]+$/,
+                            regexp: /^[a-zA-ZÀ-ÿ0-9_ \u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ0-9_ \u00f1\u00d1]*)*[a-zA-ZÀ-ÿ0-9_ \u00f1\u00d1]+$/,
                             message: 'El nombre de usuario solo puede usar números, alfabético y guión bajo'
                         }
                     }
