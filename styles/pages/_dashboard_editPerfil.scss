@@ -17,6 +17,14 @@
     }
 }
 
+.register__button--edit{
+    width: calc(100% - 270px);
+}
+
+.register__text--edit{
+    width: calc(100% - 180px);
+}
+
 @media (max-width: $screen-large) {
     .registerEdit{
         display: flex;
@@ -28,6 +36,16 @@
     .register__form--edit{
         width: 100%;
     }
+
+    .register__button--edit{
+        width: calc(100% - 90px);
+    }
+
+    .register__text--edit{
+        width: calc(100%);
+    }
+    
+    
     
 }
 
@@ -56,5 +74,11 @@
     .register__form--edit{
         width: 100%;
     }
+
+    .register__button--edit{
+        width: calc(100%);
+    }
+    
+    
     
 }

@@ -4640,6 +4640,14 @@ input[type=number] {
   margin-left: 40px;
 }
 
+.register__button--edit {
+  width: calc(100% - 270px);
+}
+
+.register__text--edit {
+  width: calc(100% - 180px);
+}
+
 @media (max-width: 992px) {
   .registerEdit {
     display: -webkit-box;
@@ -4656,6 +4664,12 @@ input[type=number] {
   }
   .register__form--edit {
     width: 100%;
+  }
+  .register__button--edit {
+    width: calc(100% - 90px);
+  }
+  .register__text--edit {
+    width: calc(100%);
   }
 }
 
@@ -4677,6 +4691,9 @@ input[type=number] {
   }
   .register__form--edit {
     width: 100%;
+  }
+  .register__button--edit {
+    width: calc(100%);
   }
 }
 
