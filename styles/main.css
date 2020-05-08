@@ -2691,6 +2691,7 @@ body {
 @media (max-width: 576px) {
   .login {
     min-height: 100vh;
+    padding: 60px 25px;
   }
   .splashPage {
     display: block;
