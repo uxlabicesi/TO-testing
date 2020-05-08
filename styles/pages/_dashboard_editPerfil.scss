@@ -1,0 +1,32 @@
+.registerEdit{
+    display: flex;
+    width: 100%;
+
+    .help-block{
+        margin-left: 40px;
+    }
+}
+
+.registerSecondPart{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .help-block{
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: $screen-large) {
+    .registerEdit{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .register__form--edit{
+        width: 100%;
+    }
+    
+}
