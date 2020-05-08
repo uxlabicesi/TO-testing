@@ -98,12 +98,12 @@
                     <h4 class="content__infoCardLogoTitle">DATOS DE LA EMPRESA</h4>
                 </div>
                 <div class="content__infoCardData">
-                    <img class="content__infoCardDataImg" src="./resources/companyLogo.svg" alt="">
+                    <img id="companyImg" class="content__infoCardDataImg" src="" alt="">
                     <div class="content__infoCardDataText">
-                        <h2 class="content__infoCardDataTextTitle">Colgate</h2>
-                        <h3 class="content__infoCardDataTextExplanation">Servicios de tecnología</h2>
-                        <h4 class="content__infoCardDataTextNit">NIT 800.137.960-7</h2>
-                        <h4 class="content__infoCardDataTextAdresse">Av. 5N # 23AN – 35</h2>
+                        <h2 id="companyName" class="content__infoCardDataTextTitle"></h2>
+                        <h3 id="sector" class="content__infoCardDataTextExplanation"></h2>
+                        <h4 id="nit" class="content__infoCardDataTextNit"></h2>
+                        <h4 id="address" class="content__infoCardDataTextAdresse"></h2>
                     </div>
                 </div>
             </div>
@@ -114,17 +114,22 @@
                     <h4 class="content__infoCardLogoTitleContact">DATOS DEL CONTACTO</h4>
                 </div>
                 <div class="content__infoCardData">
-                    <img class="content__infoCardDataImg" src="./resources/perfil_img.png" alt="">
+                    <img id="profileImg" class="content__infoCardDataImg" src="" alt="">
                     <div class="content__infoCardDataText">
-                        <h2 class="content__infoCardDataTextTitle">Andrés Trujillo</h2>
-                        <h3 class="content__infoCardDataTextExplanation">Analista de selección</h2>
-                        <h4 class="content__infoCardDataTextNit">+57 (300) 820 0838</h2>
-                        <h4 class="content__infoCardDataTextAdresse">andres.trujillo@mimarca.com.co</h2>
+                        <h2 id="username" class="content__infoCardDataTextTitle"></h2>
+                        <h3 id="job" class="content__infoCardDataTextExplanation"></h2>
+                        <h4 id="phoneNumber" class="content__infoCardDataTextNit"></h2>
+                        <h4 id="email" class="content__infoCardDataTextAdresse"></h2>
                     </div>
                 </div>
             </div>
         </div>
         
-        <script src="../scripts/dashboardNav_interaction.js"></script>
-    </body>
+        <!-- Custom scripts -->
+        <script src="./scripts/dashboardNav_interaction.js"></script>
+        <script src="./scripts/profileInformation.js"></script>
+
+        <!-- Sample scripts -->
+        <script src="./scripts/samples/sample_profileInformation.js"></script>
+    </body> 
     </html>
