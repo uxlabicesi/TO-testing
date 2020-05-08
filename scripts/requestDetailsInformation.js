@@ -321,6 +321,11 @@ window.addEventListener("load", () => {
                 buttonBarBottom.appendChild(buttonPay);
 
                 buttonPay.classList.add("pay-request");
+
+                document
+                        .querySelector(".reqDetails__content")
+                        .appendChild(buttonBarBottom);
+                    break;
                 break;
                 case 1: // en verificación
                 case 2: // iniciado
