@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
 var sample = {
     name: 'Diseñador Web',
     amount: '20',
-    status: [4, 1], // -1, 0 para borradores
+    status: [5, 0], // -1, 0 para borradores
     remainingTime: 12,
     positionLevel: 'Técnico',
     cities: ['Santiago de Cali - Valle del Cauca',
@@ -30,7 +30,9 @@ var sample = {
             'Facilitación de equipos de trabajo'],
     isDraft: false, // optional, maybe needs to be removed
     isCompleted: false,
-    
+    levelResponsability: 0, // 0 1 2 --> bajo medio alto
+    levelDecision: 0, // 0 1 2 
+    peopleInCharge: true,
 }
 
 requestDetailedInformation(sample);

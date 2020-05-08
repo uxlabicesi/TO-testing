@@ -5,7 +5,8 @@
  * 
  */
 
- window.addEventListener('load', () => {
+window.addEventListener('load', () => {
+
 
     let info = {
         jobName: 'Diseñador Web',
@@ -16,8 +17,7 @@
         jobHiring: 'O2',
         workingday: 'O1',
         wage: 1000000,
-        cities: [
-            {
+        cities: [{
                 city: 'O5',
                 amount: 4,
             },
@@ -31,9 +31,10 @@
             'Investigación de usuarios',
             'Evaluación de usabilidad',
             'Creación de conceptos',
+            'Creación de conceptos'
         ],
         academicLevel: 'O8',
-        profession: ['O1','O2'],
+        profession: ['O1', 'O2'],
         knowledge: [
             'O2',
             'O6',
@@ -44,9 +45,9 @@
             'O5',
             'O1',
             'O3',
+            'O4',
         ],
-        skillOptions: [
-            {
+        skillOptions: [{
                 value: 'O1',
                 text: 'Opción 1'
             },
@@ -71,8 +72,7 @@
                 text: 'Opción 6'
             },
         ],
-        cityList: [
-            {
+        cityList: [{
                 value: 'O1',
                 text: 'Opción 1'
             },
@@ -96,4 +96,4 @@
     };
 
     fillRequestCreation(info);
- });
+});

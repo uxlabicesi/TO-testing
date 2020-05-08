@@ -55,6 +55,11 @@ window.addEventListener('load', () => {
             e.querySelector('.textInput__container').classList.remove('textInput--focused');
         });
 
+        // for remove skills
+        functionContainers.forEach((e) => {
+            e.remove();
+        });
+
         skillContainers.forEach((e, index) => {
             $('#form_skill'+index).val(null);
         $('#form_skill'+index).trigger('change');
@@ -62,6 +67,22 @@ window.addEventListener('load', () => {
             'select__label--register');
         document.querySelector('#labelSkill'+index).classList.remove('select__label--focused', 'select__label--focusedreqCreation');
         });
+
+        // added to control the button
+        const addFunction = document.querySelector('.reqCreation__content--function .btn--blue');
+        addFunction.removeAttribute('disabled');
+        addFunction.classList.remove('btn--inactive');
+
+        // for remove skills
+        skillContainers.forEach((e, index) => {
+            if(index>2){
+                e.remove();
+            }
+        });
+
+        const addSkill = document.querySelector('.reqCreation__content--skills .btn--blue');
+        addSkill.removeAttribute('disabled');
+        addSkill.classList.remove('btn--inactive');
 
         jobName.value = '';
         jobNameLabel.classList.remove('label--active');

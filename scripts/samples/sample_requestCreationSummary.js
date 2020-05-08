@@ -29,10 +29,18 @@ var sample = {
             'Documentación de procesos',
             'Facilitación de equipos de trabajo'],
     amount: 2,
-    subtotal: 1000000,
-    discount: 30,
-    discountType: 0,
-    selectedPay: 0,
+
+    subtotalNoTaxes: 810000,
+    hasDiscount: true,
+    //taxesValue: 190000,//
+    discountValue: 25000,
+    finalValue:100000,
+
+    selectedPay: 0,   
+    levelResponsability: 0, // 0 1 2 --> bajo medio alto
+    levelDecision: 0, // 0 1 2  --> bajo medio alto 
+    peopleInCharge: true,
+
 }
 requestCreationSummary(sample);
 });

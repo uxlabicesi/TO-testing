@@ -27,6 +27,10 @@
         subtotal **Number**,
         isDraft: **boolean**,
         isCompleted: **boolean**, // activate the use of 'reqDetails__contentSection--inactive' class
+        // the following were added for suppor new level selection system
+        levelResponsability: **Number** // 0: Low, 1: mid: high
+        levelDecision: **Number** // 0: Low, 1: mid: high
+        peopleInCharge: true // 
      */
 
 // empty function will be updated after window load.
@@ -57,6 +61,37 @@ window.addEventListener("load", () => {
         const evaluationTabButton = document.querySelector(".reqDetails__evaluation__tabButton");
 
 
+        // added for level
+
+        const responsability = document.querySelector(".responsability");
+        const decision = document.querySelector(".decision");
+        const incharge = document.querySelector(".incharge");
+
+        switch(info.levelResponsability){
+            case 0:
+                responsability.innerHTML = "Bajo";
+            break;
+            case 1:
+                responsability.innerHTML = "Medio";
+            break;
+            case 2:
+                responsability.innerHTML = "Alto";
+            break;
+        }
+
+        switch(info.levelDecision){
+            case 0:
+                decision.innerHTML = "Bajo";
+            break;
+            case 1:
+                decision.innerHTML = "Medio";
+            break;
+            case 2:
+                decision.innerHTML = "Alto";
+            break;
+        }
+
+        incharge.innerHTML = info.peopleInCharge==true?"Sí":"No";
 
         /*info.requirements.forEach((e) => {
                 let item = document.createElement('li');
@@ -250,6 +285,8 @@ window.addEventListener("load", () => {
             buttonFinishProcess.classList.add("btn");
             buttonFinishProcess.classList.add("btn--medium");
 
+
+
             switch (status) {
                 case -1: // borrador
                     // the following code fragment adds button for continue creation process
@@ -257,8 +294,19 @@ window.addEventListener("load", () => {
                     buttonContinue.classList.add("btn");
                     buttonContinue.classList.add("btn--medium");
                     buttonContinue.classList.add("btn--green");
-                    buttonContinue.innerHTML = "Continuar creación";
+                    buttonContinue.innerHTML = "Completar solicitud";
                     buttonBarBottom.appendChild(buttonContinue);
+
+                    let buttonPay= document.createElement("button");
+                    buttonPay.classList.add("btn");
+                    buttonPay.classList.add("btn--medium");
+                    buttonPay.classList.add("btn--blue");
+                    buttonPay.innerHTML = "Pagar solicitud";
+                    buttonBarBottom.appendChild(buttonPay);
+
+                    buttonPay.classList.add("pay-request");
+                    buttonContinue.classList.add("complete-request");
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
@@ -275,6 +323,10 @@ window.addEventListener("load", () => {
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
                     buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
+
+                    buttonEvaluation.classList.add("score-request");
+                    buttonFinishProcess.classList.add("complete-request");
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
@@ -286,6 +338,10 @@ window.addEventListener("load", () => {
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
                     buttonBarBottom.appendChild(buttonEvaluation);
                     buttonBarBottom.appendChild(buttonFinishProcess);
+
+                    buttonEvaluation.classList.add("score-request");
+                    buttonFinishProcess.classList.add("complete-request");
+
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
@@ -301,6 +357,9 @@ window.addEventListener("load", () => {
             buttonRepeatRequest.classList.add("btn--green");
             buttonRepeatRequest.innerHTML = "Solicitar de nuevo";
             buttonBarBottom.appendChild(buttonRepeatRequest);
+            // for create again same request
+            buttonRepeatRequest.classList.add("duplicate-request");
+
             document
                 .querySelector(".reqDetails__content")
                 .appendChild(buttonBarBottom);

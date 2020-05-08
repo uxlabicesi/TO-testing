@@ -25,13 +25,30 @@
         observations: **String** with the observations,
         skills: **Array** with the required skills.
         requirements: **Array** with the job's requirements,
-        subtotal: **Number**,
-        discount: **Number** ONLY include this property if there's a discount applied, represents the value of the discount
-            If it's a percentage based discount it must be a number between 0 and 100, else it could be any number.
-        discountType: **Number** This number represents the type of discount, 0 is a percentage based discount and
-            1 is a fixed discount
+
+        // The following values where based on mail received on 05/05/2020    
+        //subtotalSinIva, tieneDescuento, valorDescuento, valorIva, valorPagar
+
+        subtotalNoTaxes: **Number**,
+        hasDiscount: **boolean** 
+        // taxesValue: **Number**, // 
+        discountValue: **Number** 
+        finalValue: ** number **
+        
+        // we dont know if this flag is required now... 
         selectedPay: **Number** 0 or 1, 0 for 50%, and 1 for 100%.
+
+         // the following were added for suppor new level selection system
+        levelResponsability: **Number** // 0: Low, 1: mid: high
+        levelDecision: **Number** // 0: Low, 1: mid: high
+        peopleInCharge: true // 
+
+        //editionNode: ** boolean **
+        
      */
+
+
+    
 
 // empty function will be updated after window load.
 let requestCreationSummary = (info) => {};
@@ -62,33 +79,53 @@ window.addEventListener('load', () => {
         const total = document.querySelector('.pay__detailsTotalNumber');
 
         
+        // added for level
 
-        amount.innerHTML = info.amount;
-        subtotal.innerHTML = info.subtotal.toLocaleString();
+        const responsability = document.querySelector(".responsability");
+        const decision = document.querySelector(".decision");
+        const incharge = document.querySelector(".incharge");
 
-        // flag for 50% or 100% --- Possible values 0: for "50%" / 1:"100%" 
-        // info.selectedPay
-        let percentToPay = info.selectedPay === 0 ? 0.5 : 1.0;
-
-        let totalValue;
-        if(info.discount) {
-            promoContainer.classList.add('pay__detailsPromo--active');
-
-            if(info.discountType == 0) {
-                const discountValue = (info.subtotal*percentToPay) * (info.discount/100);
-                promo.innerHTML = discountValue.toLocaleString();
-                const iva = (info.subtotal - discountValue) * 0.19;
-                totalValue = info.subtotal - discountValue + iva;
-            } else {
-                const iva = (info.subtotal - info.discount) * 0.19;
-                totalValue = info.subtotal - info.discount + iva;
-            }
-        } else {
-            const iva = (info.subtotal*percentToPay) * 0.19;
-            totalValue = (info.subtotal + iva).toLocaleString();
+        switch(info.levelResponsability){
+            case 0:
+                responsability.innerHTML = "Bajo";
+            break;
+            case 1:
+                responsability.innerHTML = "Medio";
+            break;
+            case 2:
+                responsability.innerHTML = "Alto";
+            break;
         }
 
-        total.innerHTML = totalValue.toLocaleString();
+        switch(info.levelDecision){
+            case 0:
+                decision.innerHTML = "Bajo";
+            break;
+            case 1:
+                decision.innerHTML = "Medio";
+            break;
+            case 2:
+                decision.innerHTML = "Alto";
+            break;
+        }
+
+        incharge.innerHTML = info.peopleInCharge==true?"Sí":"No";
+
+        // const taxes = document.querySelector('.pay__detailsTaxesDataNumber');
+
+        // flag for 50% or 100% --- Possible values 0: for "50%" / 1:"100%" 
+        let percentToPay = info.selectedPay === 0 ? 0.5 : 1.0;
+
+        // --------------- pay information ---------------- //
+        amount.innerHTML = info.amount;
+        subtotal.innerHTML = info.subtotalNoTaxes.toLocaleString();
+        if(info.hasDiscount){
+            promoContainer.classList.add('pay__detailsPromo--active');
+            promo.innerHTML = info.discountValue.toLocaleString();
+        }
+        //taxes.innerHTML = info.taxesValue.toLocaleString();
+        total.innerHTML = info.finalValue.toLocaleString();
+        // ------------------------------------------------ //
 
         info.skills.forEach((e) => {
             let item = document.createElement('li');
@@ -153,3 +190,22 @@ window.addEventListener('load', () => {
         }
     }
 });
+
+        /*
+        let totalValue;
+        if(info.discount) {
+            promoContainer.classList.add('pay__detailsPromo--active');
+
+            if(info.discountType == 0) {
+                const discountValue = (info.subtotal*percentToPay) * (info.discount/100);
+                promo.innerHTML = discountValue.toLocaleString();
+                const iva = (info.subtotal - discountValue) * 0.19;
+                totalValue = info.subtotal - discountValue + iva;
+            } else {
+                const iva = (info.subtotal - info.discount) * 0.19;
+                totalValue = info.subtotal - info.discount + iva;
+            }
+        } else {
+            const iva = (info.subtotal*percentToPay) * 0.19;
+            totalValue = (info.subtotal + iva).toLocaleString();
+        }*/

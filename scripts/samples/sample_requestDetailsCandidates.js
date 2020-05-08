@@ -1,6 +1,6 @@
 // TODO REMOVE AFTER DEBUG
 var candidateSample = [{
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias Morales Martinez ',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
@@ -12,7 +12,7 @@ var candidateSample = [{
     },
 
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Andrés Arias Martinez',
         job: 'Diseñador Gráfico especialista en mercadeo publicitario digital en redes sociales',
         telephone: ['+57 (300) 8200838',
@@ -24,7 +24,7 @@ var candidateSample = [{
     },
 
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Jose Fabio Arias Montealegue',
         job: 'Diseñador de la comunicación gráfica',
         telephone: ['+57 (300) 8200838',
@@ -35,7 +35,7 @@ var candidateSample = [{
     },
 
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias M',
         job: 'Arquitecto visual IU/UX',
         telephone: ['+57 (300) 8200838',
@@ -45,7 +45,7 @@ var candidateSample = [{
         id: 'id-custom-sample-4'
     },
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias Moncalenao Santarrosa',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
@@ -56,7 +56,7 @@ var candidateSample = [{
         selected: true,
     },
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias M',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
@@ -67,7 +67,7 @@ var candidateSample = [{
         selected: false,
     },
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias M',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
@@ -78,7 +78,7 @@ var candidateSample = [{
         selected: false,
     },
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias M',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',
@@ -89,7 +89,7 @@ var candidateSample = [{
         selected: false,
     },
     {
-        profilePic: '/resources/imgPerfil.jpg',
+        profilePic: './resources/imgPerfil.jpg',
         name: 'Fabio Arias M',
         job: 'Diseñador Gráfico',
         telephone: ['+57 (300) 8200838',

@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
                 profile.classList.add('candidate__profile');
 
                 let profilePic = document.createElement('img');
-                profilePic.setAttribute('src', "." + e.profilePic);
+                profilePic.setAttribute('src', e.profilePic);
                 profilePic.classList.add('candidate__profileImg');
                 
                 profile.appendChild(profilePic);
