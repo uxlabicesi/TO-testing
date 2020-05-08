@@ -336,6 +336,14 @@ input[type=number] { -moz-appearance:textfield; }
     
     .register {
         
+        &__icon {
+            margin-bottom: 10px;
+
+            &--company {
+                margin-bottom: 25px;
+            }
+        }
+
         &__container {
             flex-direction: column;
         }

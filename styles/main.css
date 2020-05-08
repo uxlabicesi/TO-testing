@@ -3034,6 +3034,12 @@ input[type=number] {
   .help-block {
     margin-left: 0px;
   }
+  .register__icon {
+    margin-bottom: 10px;
+  }
+  .register__icon--company {
+    margin-bottom: 25px;
+  }
   .register__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
