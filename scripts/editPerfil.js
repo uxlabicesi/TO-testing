@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
     let isValid = true;
     let showPass = document.querySelector('.login__passShow');
     let showPassConfirmation = document.querySelector('.login__passShowConfirmation');
+    let showPassConfirmationAgain = document.querySelector('.login__passShowConfirmationAgain');
     const mq = window.matchMedia( "(max-width: 576px)" );
 
     showPass.addEventListener('click', () =>{
@@ -41,6 +42,19 @@ window.addEventListener('load', () => {
         }
     });
 
+    showPassConfirmationAgain.addEventListener('click', () =>{
+        if (mq.matches) {
+            let pass = document.querySelector('.passwordConfirmationAgain');
+            showPassConfirmationAgain.setAttribute("src", "./resources/showPass.svg");
+            if(pass.type == "password"){
+                pass.type = "text";
+            }else{
+                showPassConfirmationAgain.setAttribute("src", "./resources/notShowPass.svg");
+                pass.type = "password";
+            }
+        }
+    });
+
     showPass.addEventListener('mouseenter', () =>{
         let pass = document.querySelector('.password');
         showPass.setAttribute("src", "./resources/showPass.svg");
@@ -57,6 +71,14 @@ window.addEventListener('load', () => {
         }
     });
 
+    showPassConfirmationAgain.addEventListener('mouseenter', () =>{
+        let passConfirmation = document.querySelector('.passwordConfirmationAgain');
+        showPassConfirmationAgain.setAttribute("src", "./resources/showPass.svg");
+        if(passConfirmation.type == "password"){
+            passConfirmation.type = "text";
+        }
+    });
+
     showPass.addEventListener('mouseleave', () =>{
         let pass = document.querySelector('.password');
         showPass.setAttribute("src", "./resources/notShowPass.svg");
@@ -68,6 +90,14 @@ window.addEventListener('load', () => {
     showPassConfirmation.addEventListener('mouseleave', () =>{
         let passConfirmation = document.querySelector('.passwordConfirmation');
         showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
+        if(passConfirmation.type == "text"){
+            passConfirmation.type = "password";
+        }
+    });
+
+    showPassConfirmationAgain.addEventListener('mouseleave', () =>{
+        let passConfirmation = document.querySelector('.passwordConfirmationAgain');
+        showPassConfirmationAgain.setAttribute("src", "./resources/notShowPass.svg");
         if(passConfirmation.type == "text"){
             passConfirmation.type = "password";
         }
