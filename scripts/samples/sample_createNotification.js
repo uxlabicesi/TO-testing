@@ -41,7 +41,7 @@ let notifSample5 = {
     "isNew": false,
     "id": "sample_id",
 }
-let notifSample4 = {
+let notifSample6 = {
     "job": "Abogado laboral",
     "cities": ["Palmira, Valle del Cauca"],
     "status": [2, 1],
@@ -54,5 +54,7 @@ createNotification(notifSample1,'.content','./resources/checkIcon.svg');
 createNotification(notifSample2,'.content','./resources/checkIcon.svg');
 createNotification(notifSample3,'.content','./resources/checkIcon.svg');
 createNotification(notifSample4,'.content','./resources/checkIcon.svg');
+createNotification(notifSample5,'.content','./resources/checkIcon.svg');
+createNotification(notifSample6,'.content','./resources/checkIcon.svg');
 
 });
