@@ -18,6 +18,12 @@
  * Second parameter is optional modify the root class for append the popUp.
  */
 
+ /***
+  * This function was created for add parameters for images.
+  * 
+  */
+
+let startloginRegister = (srcShowPassIcon = "./resources/showPass.svg", srcNoShowPassIcon = "./resources/notShowPass.svg") => {}
 
 window.addEventListener('load', () => {
 
@@ -26,6 +32,10 @@ window.addEventListener('load', () => {
         has been checked, when these conditions are met, adds the class "btn--active" and removes
         the class "btn--inactive" from the register button
      */
+    startloginRegister = (srcShowPassIcon = "./resources/showPass.svg", srcNoShowPassIcon = "./resources/notShowPass.svg") => {
+
+    
+
     const registerBtn = document.querySelector('.register__button');
     const textInputs = document.querySelectorAll('.textInput__container');
     const selectList = document.querySelectorAll('.select__value');
@@ -38,11 +48,11 @@ window.addEventListener('load', () => {
     showPass.addEventListener('click', () =>{
         if (mq.matches) {
             let pass = document.querySelector('.password');
-            showPass.setAttribute("src", "./resources/showPass.svg");
+            showPass.setAttribute("src", srcShowPassIcon);
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPass.setAttribute("src", "./resources/notShowPass.svg");
+                showPass.setAttribute("src", srcNoShowPassIcon);
                 pass.type = "password";
             }
         }
@@ -51,11 +61,11 @@ window.addEventListener('load', () => {
     showPassConfirmation.addEventListener('click', () =>{
         if (mq.matches) {
             let pass = document.querySelector('.passwordConfirmation');
-            showPassConfirmation.setAttribute("src", "./resources/showPass.svg");
+            showPassConfirmation.setAttribute("src", srcShowPassIcon);
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
+                showPassConfirmation.setAttribute("src", srcNoShowPassIcon);
                 pass.type = "password";
             }
         }
@@ -63,7 +73,7 @@ window.addEventListener('load', () => {
 
     showPass.addEventListener('mouseenter', () =>{
         let pass = document.querySelector('.password');
-        showPass.setAttribute("src", "./resources/showPass.svg");
+        showPass.setAttribute("src", srcShowPassIcon);
         if(pass.type == "password"){
             pass.type = "text";
         }
@@ -71,7 +81,7 @@ window.addEventListener('load', () => {
 
     showPassConfirmation.addEventListener('mouseenter', () =>{
         let passConfirmation = document.querySelector('.passwordConfirmation');
-        showPassConfirmation.setAttribute("src", "./resources/showPass.svg");
+        showPassConfirmation.setAttribute("src", srcShowPassIcon);
         if(passConfirmation.type == "password"){
             passConfirmation.type = "text";
         }
@@ -79,7 +89,7 @@ window.addEventListener('load', () => {
 
     showPass.addEventListener('mouseleave', () =>{
         let pass = document.querySelector('.password');
-        showPass.setAttribute("src", "./resources/notShowPass.svg");
+        showPass.setAttribute("src", srcNoShowPassIcon);
         if(pass.type == "text"){
             pass.type = "password";
         }
@@ -87,7 +97,7 @@ window.addEventListener('load', () => {
 
     showPassConfirmation.addEventListener('mouseleave', () =>{
         let passConfirmation = document.querySelector('.passwordConfirmation');
-        showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
+        showPassConfirmation.setAttribute("src", srcNoShowPassIcon);
         if(passConfirmation.type == "text"){
             passConfirmation.type = "password";
         }
@@ -129,6 +139,8 @@ window.addEventListener('load', () => {
 
         isValid = true;
     }
+
+}
 
     /*
         Opens and closes the terms and conditions modal by changing its style

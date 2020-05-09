@@ -27,4 +27,8 @@ window.addEventListener('load', () => {
         //}
     });
 
+    // replace for start the login images and functions.
+    startloginRegister("./resources/showPass.svg", "./resources/notShowPass.svg");
+
+
 });
