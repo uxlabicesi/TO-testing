@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./resources/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
 </head>
-<body>
+<body> 
     
     <header class="mainheader">
         <div class="mainheader__menu">
@@ -88,7 +88,7 @@
                 <h1 class="content__title content__title--noMargin">Completados</h1>
 
                 <div class="content__order">
-                    <img src="./resources/orderList.svg" alt="">
+                    <img src="./resources/orderList.svg" class="content__viewImg">
 
                     <select name="" id="" class="content__select">
                         <option value="">Ordenar por</option>
@@ -96,6 +96,23 @@
                         <option value="">Opción 2</option>
                         <option value="">Opción 3</option>
                     </select>
+                </div>
+            </div>
+
+            <div class="content__orderbar content__orderbar--inactive">
+                <div class="content__orderbarBtn content__orderbarBtn--first">
+                    <p>SOLICITUD</p>
+                    <img src="./resources/arrowDownIcon.svg" alt="">
+                </div>
+
+                <div class="content__orderbarBtn content__orderbarBtn--second">
+                    <p>ESTADO</p>
+                    <img src="./resources/arrowDownIcon.svg" alt="">
+                </div>
+
+                <div class="content__orderbarBtn content__orderbarBtn--third">
+                    <p>FECHA</p>
+                    <img src="./resources/arrowDownIcon.svg" alt="">
                 </div>
             </div>
             
@@ -110,5 +127,8 @@
 
     <!-- TODO remove for deleted sample info -->
     <script src="./scripts/samples/sample_createRequest_completed.js"></script>
+    <script src="./scripts/samples/sample_sortRequestCompleted.js"></script>
+
+    <script src="./scripts/requestCardView.js"></script>
 </body>
 </html>

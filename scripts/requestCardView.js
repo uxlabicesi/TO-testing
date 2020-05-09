@@ -1,14 +1,17 @@
+let changeRequestView = () => {};
+
 window.addEventListener('load', () => {
     const changeBtn = document.querySelector('.content__viewImg');
-    const orderSelect = document.querySelector('.content__select');
-    const orderBar = document.querySelector('.content__orderbar');
-    const requestContainer = document.querySelector('.content__requests');
-    const containerFlex = document.querySelector('.content__containerFlex');
-    const requestsList = document.querySelectorAll('.request');
-    let changeBtnImage = 0;
-
-
-    changeBtn.addEventListener('click', () => {
+    let changeBtnImage = 0;    
+    
+    changeRequestView = () => {
+        const orderSelect = document.querySelector('.content__select');
+        const orderBar = document.querySelector('.content__orderbar');
+        const requestContainer = document.querySelector('.content__requests');
+        const containerFlex = document.querySelector('.content__containerFlex');
+        const requestsList = document.querySelectorAll('.request');
+        
+        
         if(changeBtnImage == 0) {
             requestContainer.classList.add('content__requests--list');
             containerFlex.classList.add('content__containerFlex--noPadding');
@@ -42,5 +45,7 @@ window.addEventListener('load', () => {
 
             changeBtnImage = 0;
         }
-    });
+    }
+
+    changeBtn.addEventListener('click', changeRequestView);
 });
