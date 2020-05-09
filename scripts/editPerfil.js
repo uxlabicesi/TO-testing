@@ -127,11 +127,11 @@ window.addEventListener('load', () => {
             }
         }); 
 
-        if(isValid) {
-            registerEditBtn.classList.remove('btn--inactive');
-        } else {
-            registerEditBtn.classList.add('btn--inactive');
-        }       
+        // if(isValid) {
+        //     registerEditBtn.classList.remove('btn--inactive');
+        // } else {
+        //     registerEditBtn.classList.add('btn--inactive');
+        // }       
      
 
         isValid = true;

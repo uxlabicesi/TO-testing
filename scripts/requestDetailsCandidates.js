@@ -22,13 +22,16 @@
  * 
  * // TODO: insert complete structure for json
  * // Needs to re-write the trigger event.
+ * 
+ * 
+ * second and third parameters were create for images for selected or unseleted in responsive mode.
  */
-let candidates = (info) => {};
+let candidates = (info, srcUnselectedIcon = "./resources/checkIcon.svg", srcSelectedIcon = "./resources/checkGreen.svg") => {};
 
 window.addEventListener('load', () => {
 
 
-    candidates = (info) => {
+    candidates = (info, srcUnselectedIcon = "./resources/checkIcon.svg", srcSelectedIcon = "./resources/checkGreen.svg") => {
         if (info.length > 0) {
             const candidates = document.querySelector('.reqDetails__candidates');
 
@@ -104,18 +107,18 @@ window.addEventListener('load', () => {
                     btn.innerHTML = 'Ver detalles';
                     // for responsive icon view
                     selectionIcon.classList.add('candidate__btn--icon', 'candidate__btn--iconInactive');
-                    selectionIcon.setAttribute('src',"./resources/checkIcon.svg");
+                    selectionIcon.setAttribute('src', srcUnselectedIcon);
                 }else{
                     btn.classList.add('btn', 'btn--noFill--active', 'candidate__btn');
                     btn.innerHTML = 'Seleccionado';
                     // for responsive icon view
                     selectionIcon.classList.add('candidate__btn--icon', 'candidate__btn--iconActive');
-                    selectionIcon.setAttribute('src',"./resources/checkGreen.svg");
+                    selectionIcon.setAttribute('src', srcSelectedIcon);
                 }
 
-                btn.addEventListener('click', () => {
+                /*btn.addEventListener('click', () => {
                     window.location.href = './dashboard_candidateDetails.html';
-                });
+                });*/
 
                 // for big screen button view
                 candidate.appendChild(btn);

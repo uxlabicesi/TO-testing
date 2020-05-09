@@ -14,14 +14,20 @@
  * requestTotal: ** Number ** final value.
  * }
  * 
+ * 
+ * 3 aditional parameters were added for image routing.
+ * 
+ * Second for success, third for pending and fourth for fail transaction. 
+ * 
  * */
 
-let buildPayScreen = (info) => {};
+
+let buildPayScreen = (info, srcImgSuccess = "./resources/checkGreen.svg", srcImgPending="./resources/waitIcon.svg", srcImgFail = "./resources/deteleIcon.svg") => {};
 
 
 window.addEventListener('load', () => {
 
-    buildPayScreen = (info) => {
+    buildPayScreen = (info, srcImgSuccess = "./resources/checkGreen.svg", srcImgPending="./resources/waitIcon.svg", srcImgFail = "./resources/deteleIcon.svg") => {
 
         const payDetailsContent = document.querySelector('.pay__details');
         const payResultContent = document.querySelector('.pay__result');
@@ -73,7 +79,7 @@ window.addEventListener('load', () => {
             // onError onSuccess or onWait
             if (info.payStatus === "onError") {
                 payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN FALLIDA'
-                payResultContentIcon.querySelector('img').setAttribute('src', "./resources/deteleIcon.svg");
+                payResultContentIcon.querySelector('img').setAttribute('src', srcImgFail);
                 payResultContentMessage.querySelector('p').innerHTML = 'Tuvimos un problema en el proceso' + '<br>' + '¿Qué tal si lo volvemos a intentar?'
                 if (feedbackMessage !== "") {
                     payResultContentMessage.querySelector('p').innerHTML = feedbackMessage;
@@ -81,7 +87,7 @@ window.addEventListener('load', () => {
                 actionButton.innerHTML = 'Reintentar pago';
             } else if (info.payStatus === "onSuccess") {
                 payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN EXITOSA'
-                payResultContentIcon.querySelector('img').setAttribute('src', "./resources/checkGreen.svg");
+                payResultContentIcon.querySelector('img').setAttribute('src', srcImgSuccess);
                 payResultContentMessage.querySelector('p').innerHTML = '¡El proceso fue un éxito!' + '<br>' + 'Ahora estamos más cerca de encontrar el mejor talento para tu organización'
                 if (feedbackMessage !== "") {
                     payResultContentMessage.querySelector('p').innerHTML = feedbackMessage;
@@ -89,7 +95,7 @@ window.addEventListener('load', () => {
                 actionButton.innerHTML = 'Volver al inicio';
             } else if(info.payStatus === "onWait") {
                 payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN PENDIENTE'
-                payResultContentIcon.querySelector('img').setAttribute('src', "./resources/waitIcon.svg");
+                payResultContentIcon.querySelector('img').setAttribute('src', srcImgPending);
                 payResultContentMessage.querySelector('p').innerHTML = '¡El proceso se encuentra pendiente!' + '<br>' + 'Estaremos atentos a los mensajes de tu banco'
                 if (feedbackMessage !== "") {
                     payResultContentMessage.querySelector('p').innerHTML = feedbackMessage;

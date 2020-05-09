@@ -209,6 +209,7 @@ window.addEventListener('load', () => {
                 requestState.innerHTML = 'Borrador';
                 requestStateList.classList.add('request__state--draft');
                 requestStateList.innerHTML = 'Borrador';
+                
             } else if (finished) {
                 statusBar.classList.add('request__status--green');
                 requestState.classList.add('request__state--green');
