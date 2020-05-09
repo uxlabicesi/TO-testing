@@ -33,9 +33,26 @@ let notifSample4 = {
     "isNew": false,
     "id": "sample_id",
 }
+let notifSample5 = {
+    "job": "Abogado comercial",
+    "cities": ["Santiago de Cali, Valle del Cauca"],
+    "status": [2, 1],
+    "date": "25/03/2020",
+    "isNew": false,
+    "id": "sample_id",
+}
+let notifSample4 = {
+    "job": "Abogado laboral",
+    "cities": ["Palmira, Valle del Cauca"],
+    "status": [2, 1],
+    "date": "25/03/2020",
+    "isNew": false,
+    "id": "sample_id",
+}
 
-createNotification(notifSample1);
-createNotification(notifSample2);
-createNotification(notifSample3);
-createNotification(notifSample4);
+createNotification(notifSample1,'.content','./resources/checkIcon.svg');
+createNotification(notifSample2,'.content','./resources/checkIcon.svg');
+createNotification(notifSample3,'.content','./resources/checkIcon.svg');
+createNotification(notifSample4,'.content','./resources/checkIcon.svg');
+
 });

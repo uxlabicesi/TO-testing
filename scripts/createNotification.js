@@ -1,5 +1,5 @@
 // empty function will be updated after window load.
-let createNotification = (information, root = '.content') => {};
+let createNotification = (information, root = '.content', srcNotifIcon = "./resources/checkIcon.svg") => {};
 
 window.addEventListener('load', () => {
 
@@ -11,13 +11,13 @@ window.addEventListener('load', () => {
      *  La función recibe un JSON con la siguiente estructura:
      *  "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
      *  "cities": ["Santiago de Cali, Valle del Cauca"],
-     *  "status": [2, 1],
+     *  "status": [2, 1], // mismo nivel de estados para las solicitudes
      *  "date": "25/03/2020",
      *  "isNew": false,
      *  "id": "sample_id",
      */
 
-    createNotification = (information, root = '.content') => {
+    createNotification = (information, root = '.content', srcNotifIcon = "./resources/checkIcon.svg") => {
 
 
         let notificationContainer = document.querySelector(root);
@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
         message.innerHTML = "Tu solicitud de " + "<strong>"+job+"</strong> en <strong>" + cities + "</strong> está en " + "<strong>" + statusDescriptor + "</strong>"
 
         let iconSupport = document.createElement('img');
-        iconSupport.src = "./resources/checkIcon.svg";
+        iconSupport.src = srcNotifIcon;
 
         notificationContainer.appendChild(notification);
         notification.setAttribute("id-request", identificator) 
