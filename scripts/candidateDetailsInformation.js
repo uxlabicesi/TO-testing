@@ -87,7 +87,7 @@ window.addEventListener('load', () => {
             selectionState.innerHTML="Seleccionado";
             // for change the button state
             selectionStateButton.innerHTML="Eliminar selección";
-            selectionStateButton.classList.add('btn--medium--cancel')
+            selectionStateButton.classList.add('btn--medium--cancel');
         }else{
              // for badge top of page / 
             selectionState.classList.remove('reqDetails__selected--show');

@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
    const selectionStateButton = document.querySelector('.btn__selection');
    const selectionState = document.querySelector('.reqDetails__selected');
    const candidateEvaluationBtn = document.querySelector('.btn__evaluation');
+   const selectionDeleteBtn = document.querySelector('.btn--medium--cancel');
 
    let informationPopUp = {
       title: "Candidato seleccionado",
@@ -16,15 +17,29 @@ window.addEventListener('load', () => {
       text: "Debes calificar al candidato antes de poder seleccionarlo",
       btn: "Calificar",
       goTo: "",
-  };
+   };
+
+   let informationPopUpDeleteCandidate = {
+      title: "Atención",
+      text: "Estás a punto de eliminar la selección de este candidato",
+      btn: "Eliminar y seleccionar otro candidato",
+      goTo: "",
+      goBack: "Mantener la selección de este candidato",
+   };
 
    let rootForPopUp = ".popUp";
 
+   
+
    selectionStateButton.addEventListener('click', (ev) => {
+
+      if(selectionStateButton.classList.contains('btn--medium--cancel')){
+         createPopUp(informationPopUpDeleteCandidate, rootForPopUp);
+      }
 
       if(!candidateEvaluationBtn.classList.contains('btn__evaluation--select')){
          createPopUp(informationPopUpEvaluationRequired, rootForPopUp);
-      }  else {
+      }  else if(!selectionStateButton.classList.contains('btn--medium--cancel')){
          createPopUp(informationPopUp, rootForPopUp);
          selectionStateButton.innerHTML = "Eliminar selección";
          selectionStateButton.classList.add('btn--medium--cancel')
@@ -43,5 +58,8 @@ window.addEventListener('load', () => {
       // } 
       ev.preventDefault();
    });
+
+   
+  
 
 });
