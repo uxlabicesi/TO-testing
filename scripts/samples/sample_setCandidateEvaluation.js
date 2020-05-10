@@ -27,6 +27,7 @@ window.addEventListener('load', () => {
     candidateEvaluationBtn.addEventListener('click', (ev) => {
         createPopUp(informationPopUp, rootForPopUp);
         candidateEvaluationBtn.innerHTML="Reevaluar candidato";
+        candidateEvaluationBtn.classList.add('btn__evaluation--select');
         //selectionStateButton.classList.remove('btn--inactive');
         ev.preventDefault();
     });

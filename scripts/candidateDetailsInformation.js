@@ -70,12 +70,12 @@ window.addEventListener('load', () => {
         const selectionStateButton = document.querySelector('.btn__selection'); 
         const candidateEvaluationBtn = document.querySelector('.btn__evaluation');
 
-
         if (info.evaluated!=null&&info.evaluated) {
             candidateEvaluationBtn.innerHTML="Reevaluar candidato";
             //selectionStateButton.classList.remove('btn--inactive');
         }else{
             candidateEvaluationBtn.innerHTML="Evaluar candidato";
+            candidateEvaluationBtn.classList.remove('btn__evaluation--select');
             //selectionStateButton.classList.add('btn--inactive');
         }
 
