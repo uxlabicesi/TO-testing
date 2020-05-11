@@ -12,5 +12,13 @@ window.addEventListener('load', () => {
     payInformation({
         amount: 2,
         subtotal: 1000000,
+
+         // new version
+         subtotalNoTaxes: 1000000,
+         hasDiscount: true, 
+         taxesValue: 179550,
+         discountValue: 55000,
+         finalValue: 1124000,
+ 
     });
 });

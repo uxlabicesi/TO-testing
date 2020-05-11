@@ -31,7 +31,7 @@
 
         subtotalNoTaxes: **Number**,
         hasDiscount: **boolean** 
-        // taxesValue: **Number**, // 
+        taxesValue: **Number**, // 
         discountValue: **Number** 
         finalValue: ** number **
         
@@ -111,7 +111,7 @@ window.addEventListener('load', () => {
 
         incharge.innerHTML = info.peopleInCharge==true?"Sí":"No";
 
-        // const taxes = document.querySelector('.pay__detailsTaxesDataNumber');
+        const taxes = document.querySelector('.pay__detailsTaxesDataNumber');
 
         // flag for 50% or 100% --- Possible values 0: for "50%" / 1:"100%" 
         let percentToPay = info.selectedPay === 0 ? 0.5 : 1.0;
@@ -123,7 +123,7 @@ window.addEventListener('load', () => {
             promoContainer.classList.add('pay__detailsPromo--active');
             promo.innerHTML = info.discountValue.toLocaleString();
         }
-        //taxes.innerHTML = info.taxesValue.toLocaleString();
+        taxes.innerHTML = info.taxesValue.toLocaleString();
         total.innerHTML = info.finalValue.toLocaleString();
         // ------------------------------------------------ //
 
