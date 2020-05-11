@@ -53,8 +53,8 @@ window.addEventListener('load', () => {
         if(requestContainer.classList.contains('content__requests--list')) {
             console.log(requestContainer);
             //Called twice to update the new, sorted, requests to the list view
-            changeRequestView();
-            changeRequestView();
+            requestCardView('./resources/orderCard.svg', './resources/orderList.svg');
+            requestCardView('./resources/orderCard.svg', './resources/orderList.svg');
         }
     }
     
