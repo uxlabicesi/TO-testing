@@ -155,7 +155,7 @@ window.addEventListener('load', () => {
         let requestStateList = document.createElement('p');
         requestStateList.classList.add('request__state');
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             let statusBar = document.createElement('div');
             statusBar.classList.add('request__status');
 
@@ -175,31 +175,69 @@ window.addEventListener('load', () => {
                     }
 
                     switch (status[0]) {
+                        case -1:
+                            requestState.innerHTML = "Borrador";
+                            requestStateList.innerHTML = 'Borrador';
+                            break;
                         case 0:
-                            requestState.innerHTML = 'Pendiente de pago';
+                            requestState.innerHTML = "Pendiente de pago";
                             requestStateList.innerHTML = 'Pendiente de pago';
                             break;
-
+            
                         case 1:
-                            requestState.innerHTML = 'Iniciado';
+                            requestState.innerHTML = "En verificación";
+                            requestStateList.innerHTML = 'En verificación';
+                            break;
+            
+                        case 2:
+                            requestState.innerHTML = "Iniciado";
                             requestStateList.innerHTML = 'Iniciado';
                             break;
-
-                        case 2:
-                            requestState.innerHTML = 'En proceso de búsqueda';
+            
+                        case 3:
+                            requestState.innerHTML = "En proceso de búsqueda";
                             requestStateList.innerHTML = 'En proceso de búsqueda';
                             break;
-
-                        case 3:
-                            requestState.innerHTML = 'En espera de selección';
+            
+                        case 4:
+                            requestState.innerHTML = "En espera de selección";
                             requestStateList.innerHTML = 'En espera de selección';
                             break;
-
-                        case 4:
-                            requestState.innerHTML = 'Finalizando el proceso';
+            
+                        case 5:
+                            requestState.innerHTML = "Finalizó el proceso";
                             requestStateList.innerHTML = 'Finalizando el proceso';
                             break;
                     }
+
+                    // switch (status[0]) {
+                    //     case 0:
+                    //         requestState.innerHTML = 'Pendiente de pago';
+                    //         requestStateList.innerHTML = 'Pendiente de pago';
+                    //         break;
+
+                    //     case 1:
+                    //         requestState.innerHTML = 'Iniciado';
+                    //         requestStateList.innerHTML = 'Iniciado';
+                    //         break;
+
+                    //     case 2:
+                    //         requestState.innerHTML = 'En proceso de búsqueda';
+                    //         requestStateList.innerHTML = 'En proceso de búsqueda';
+                    //         break;
+
+                    //     case 3:
+                    //         requestState.innerHTML = 'En espera de selección';
+                    //         requestStateList.innerHTML = 'En espera de selección';
+                    //         break;
+
+                    //     case 4:
+                    //         requestState.innerHTML = 'Finalizando el proceso';
+                    //         requestStateList.innerHTML = 'Finalizando el proceso';
+                    //         break;
+                    // }
+
+
                 } else {
                     statusBar.classList.add('request__status--inactive');
                 }
