@@ -142,12 +142,18 @@
         }
 
         &Taxes {
-            display: none;
+            display: flex;
+
             justify-content: space-between;
             border-bottom: 1px solid $color-gray;
-
-            &Data {
+            &Data{
                 display: flex;
+    
+
+                &Number{
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
             }
         }
 

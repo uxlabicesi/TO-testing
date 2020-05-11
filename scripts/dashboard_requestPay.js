@@ -12,6 +12,8 @@
  * requestAmount: ** Number **  amount of people
  * requestsubtotal: ** Number ** subtotal, without txes
  * requestTotal: ** Number ** final value.
+ * 
+ * requestTaxes: ** Number ** taxes for request
  * }
  * 
  * 
@@ -44,6 +46,8 @@ window.addEventListener('load', () => {
         const payDetailsSubtotal = document.querySelector('.pay__detailsSubtotalDataNumber');
         const payDetailsTotalValue = document.querySelector('.pay__detailsTotalNumber');
 
+        const payDetailsTaxes = document.querySelector('.pay__detailsTaxesDataNumber');
+
         //
         const promo = document.querySelector('.pay__detailsPromoDataNumber');
         const promoContainer = document.querySelector('.pay__detailsPromo');
@@ -57,13 +61,15 @@ window.addEventListener('load', () => {
             // when its coming from request creation, edition o trying to completed the process
             payDetailsContent.classList.remove('pay__details--hide');
             payResultContent.classList.add('pay__details--hide');
-            payResultGlobalTitle.innerHTML = "Pagar un servicio";
+            payResultGlobalTitle.innerHTML = "PAGAR EL SERVICIO";
             payResultGlobalDescription.innerHTML = "Usted va a realizar la compra del siguiente servicio.";
 
             payDetailsRequest.innerHTML = info.requestJob + " (" + info.requestLevel + ")";
             payDetailsAmount.innerHTML = info.requestAmount;
             payDetailsSubtotal.innerHTML = info.requestsubtotal;
             payDetailsTotalValue.innerHTML = info.requestTotal;
+
+            payDetailsTaxes.innerHTML = info.requestTaxes;
 
             if(info.hasDiscount){
                 promoContainer.classList.add('pay__detailsPromo--active');
@@ -74,7 +80,7 @@ window.addEventListener('load', () => {
         } else {
             payDetailsContent.classList.add('pay__details--hide');
             payResultContent.classList.remove('pay__details--hide');
-            payResultGlobalTitle.innerHTML = "Resultado de su transacción";
+            payResultGlobalTitle.innerHTML = "RESULTADO DE SU TRANSACCIÓN";
             payResultGlobalDescription.innerHTML = "A continuación algunos los detalles de la transacción realizada";
             // onError onSuccess or onWait
             if (info.payStatus === "onError") {

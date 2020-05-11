@@ -21,10 +21,11 @@ window.addEventListener('load', () => {
         requestsubtotal: 1800000,
         hasDiscount: true,
         discountValue: 25000,
-        requestTotal: 2500000
+        requestTotal: 2500000,
+        requestTaxes: 190000
     });
 
-    /*buildPayScreen({
+   /* buildPayScreen({
         payStatus: "onError",
         //message: "mensaje opcional, se puede dejar vacio, nulo o undefined... si no se desea mostrar nada adicional"
         requestJob: "Diseñador Web",
@@ -33,7 +34,8 @@ window.addEventListener('load', () => {
         requestsubtotal: 1800000,
         hasDiscount: true,
         discountValue: 25000,
-        requestTotal: 2500000
+        requestTotal: 2500000,
+        requestTaxes: 190000
     });*/
 
     /*buildPayScreen({
@@ -45,7 +47,8 @@ window.addEventListener('load', () => {
         requestsubtotal: 1800000,
         hasDiscount: true,
         discountValue: 25000,
-        requestTotal: 2500000
+        requestTotal: 2500000,
+        requestTaxes: 190000
     });*/
 
     /*buildPayScreen({
@@ -57,6 +60,7 @@ window.addEventListener('load', () => {
         requestsubtotal: 1800000,
         hasDiscount: true,
         discountValue: 25000,
-        requestTotal: 2500000
+        requestTotal: 2500000,
+        requestTaxes: 190000
     });*/
 });
