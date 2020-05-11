@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $('.select2__selector--reqCity').select2({
         //tags: true,
-        placeholder: "CIUDAD",
+        placeholder: "CIUDAD (*)",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
     $('.select2__selector--responsability').select2({
         //tags: true,
-        placeholder: "NIVEL DE RESPONSABILIDAD",
+        placeholder: "NIVEL DE RESPONSABILIDAD (*)",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
@@ -131,7 +131,7 @@ $(document).ready(function () {
 
     $('.select2__selector--decition').select2({
         //tags: true,
-        placeholder: "NIVEL DE TOMA DE DECISIONES",
+        placeholder: "NIVEL DE TOMA DE DECISIONES (*)",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
@@ -142,7 +142,7 @@ $(document).ready(function () {
 
     $('.select2__selector--incharge').select2({
         //tags: true,
-        placeholder: "TIENE PERSONAS A CARGO",
+        placeholder: "TIENE PERSONAS A CARGO (*)",
         theme: "talentos",
         width: '100%', // need to override the changed default
         containerCss: {
@@ -202,7 +202,7 @@ $(document).ready(function () {
     });
 
     $('.select2__selector--reqCity').on('select2:close', function (e) {
-        let value = $('.select2__selector--reqCity').select2('data')[0].id;
+        let value = $('.select2__selector--reqCity').select2('data')[0];
         if(value === ''){
             document.querySelector('.select__label--reqCity').classList.add('select__label--register');
         document.querySelector('.select__label--reqCity').classList.remove(
