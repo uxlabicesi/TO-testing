@@ -26,6 +26,15 @@
                 color: $color-darkGray;
             }
         }
+
+        
+        & span {
+            color: $color-darkGray !important;
+        }
+
+        & strong {
+            color: $color-darkGray !important;
+        }
         
         & .request__information p, .request__price, .request__state {
             color: $color-gray;

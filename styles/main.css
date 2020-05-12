@@ -936,6 +936,14 @@ body {
   color: #494949;
 }
 
+.request--gray span {
+  color: #494949 !important;
+}
+
+.request--gray strong {
+  color: #494949 !important;
+}
+
 .request--gray .request__information p, .request--gray .request__price, .request--gray .request__state {
   color: #C4C4C4;
 }
