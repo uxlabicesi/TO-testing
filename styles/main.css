@@ -442,6 +442,10 @@ body {
   display: none !important;
 }
 
+.selectadd--notArrow .select2-selection__arrow {
+  display: none;
+}
+
 .select2-container--disabled {
   background-color: #FAFAFA;
 }

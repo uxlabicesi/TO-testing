@@ -86,6 +86,13 @@
     & .help-block {
         display: none !important;
     }
+
+    &--notArrow{
+
+        .select2-selection__arrow{
+            display: none;
+        }
+    }
 }
 
 // TODO modify for disabled state on selection
