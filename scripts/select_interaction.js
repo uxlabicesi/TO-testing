@@ -4,6 +4,7 @@ $(document).ready(function () {
     $('.select2__selector--sector').select2({
         placeholder: "¿A qué sector pertenece?",
         theme: "talentos",
+        tags: true,
         width: '100%', // need to override the changed default
         containerCss: {
             "height": "55px"
@@ -328,7 +329,7 @@ $('.select2__selector--decition').on('select2:open', function (e) {
         'select__label--register');
     document.querySelector('.select__label--decition').classList.add('select__label--focused', 'select__label--focusedreqCreation');
 });
-
+ 
 $('.select2__selector--decition').on('select2:close', function (e) {
     let value = $('.select2__selector--decition').select2('data')[0].id;
     if(value === ''){
