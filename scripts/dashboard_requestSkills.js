@@ -101,9 +101,13 @@ window.addEventListener('load', () => {
                 const addSkill = document.querySelector('.reqCreation__content--skills .btn--blue');
                 addSkill.removeAttribute('disabled');
                 addSkill.classList.remove('btn--inactive');
+
+                //This code makes it so when a select is deleted, the option it had selected is not disabled on the remaining selects
+                avoidSkillRepetition();
             });
         }
         
+       
     };
 
     

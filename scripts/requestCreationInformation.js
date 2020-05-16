@@ -71,6 +71,7 @@ window.addEventListener('load', () => {
                 'select__label--register');
             document.querySelector('#labelSkill'+index).classList.add('select__label--focused', 'select__label--focusedreqCreation');
         });
+        $('.select2__selector--skill').on('change', avoidSkillRepetition);
 
         observations.value = info.observations;
         observationsLabel.classList.add('label--active');

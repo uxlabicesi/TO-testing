@@ -43,10 +43,17 @@ window.addEventListener('load', () => {
 
     addSkill.addEventListener('click', () => {
         createSkill(options);
+
+        //Make sure that newly created skill selects also have the appropiate behavior on repeated options
+        avoidSkillRepetition();
+        $('.select2__selector--skill').on('change', avoidSkillRepetition);
     });
 
     //This code creates the 3 default selects of the request creation process
     createSkill(options);
     createSkill(options);
     createSkill(options);
+
+    //This code adds the behavior that makes selected options disable on other selects to the first select skills created
+    $('.select2__selector--skill').on('change', avoidSkillRepetition);
 });
