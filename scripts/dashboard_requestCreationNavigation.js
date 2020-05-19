@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
         when these conditions are met, adds the class "btn--active" and removes
         the class "btn--inactive" from the next button
         */
-       nextBtn.removeAttribute('disabled');
+        //nextBtn.removeAttribute('disabled');
         // TODO: REMOVE
         // will be remove next cleaning commit
         /*inputPosition.addEventListener('change', checkValid);
