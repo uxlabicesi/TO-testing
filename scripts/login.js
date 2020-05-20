@@ -25,11 +25,13 @@ window.addEventListener('load', () => {
         });
 
         showPass.addEventListener('mouseleave', () =>{
-            let pass = document.querySelector('.login__pass');
-            showPass.setAttribute("src", srcNoShowPassIcon);
-            if(pass.type == "text"){
-                pass.type = "password";
-            }
+            setTimeout(() => {
+                let pass = document.querySelector('.login__pass');
+                showPass.setAttribute("src", srcNoShowPassIcon);
+                if(pass.type == "text"){
+                    pass.type = "password";
+                }
+            }, 5000);
         });
 
         registerButton.addEventListener('click', () => {
