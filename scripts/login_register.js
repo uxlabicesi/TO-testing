@@ -116,7 +116,25 @@ window.addEventListener('load', () => {
     textInputs.forEach((textInput) => {
         textInput.addEventListener('change', checkValid);
         textInput.addEventListener('keyup', checkValid);// Added for NC8146
+        /////
+        // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
+        if(textInput.value !== ""){
+            textInput.parentElement.classList.add('textInput--focused');
+            let label = textInput.parentElement.querySelector('label');
+            if(label!=null){
+                label.classList.remove('label--none');
+                label.classList.add('label--active');
+            }
+        }else{
+            let label = textInput.parentElement.querySelector('label');
+            if(!textInput.value && label!=null) {
+                label.classList.remove('label--active');
+                textInput.parentElement.classList.remove('textInput--focused');
+            }
+        }
     });
+
+    
 
     checkbox.addEventListener('change', checkValid);
 
