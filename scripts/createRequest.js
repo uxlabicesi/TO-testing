@@ -231,7 +231,7 @@ window.addEventListener('load', () => {
             requestStatusBar.appendChild(statusBar);
         }
 
-        if(status[0] === 0){
+        if(status[0] === 0 && !draft && !finished){
             let divs = requestStatusBar.querySelectorAll('div');
             divs.forEach((e, index) => {
                 if(index === 0){

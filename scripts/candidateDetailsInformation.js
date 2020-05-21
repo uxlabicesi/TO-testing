@@ -89,8 +89,10 @@ window.addEventListener('load', () => {
             selectionStateButton.innerHTML="Eliminar selección";
             if(info.status[0]!== 0 && info.status[0]!== 5){
                 selectionStateButton.classList.add('btn--medium--cancel');
+                selectionStateButton.disabled = false;
             }else{
                 selectionStateButton.classList.add('btn--inactive');
+                selectionStateButton.disabled = true;
             }
         }else{
              // for badge top of page / 
@@ -101,8 +103,10 @@ window.addEventListener('load', () => {
             selectionStateButton.innerHTML="Seleccionar candidato";
             if(info.status[0]!== 0 && info.status[0]!== 5){
                 selectionStateButton.classList.remove('btn--medium--cancel')
+                selectionStateButton.disabled = false;
             }else{
                 selectionStateButton.classList.add('btn--inactive');
+                selectionStateButton.disabled = true;
             }
         }
 
