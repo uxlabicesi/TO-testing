@@ -35,6 +35,8 @@
             let goBack = information.goBack;
             let returnTo = information.returnTo;
 
+           
+            //
             // let popUp = document.createElement('div');
             // popUp.classList.add('popUp');
 
@@ -64,8 +66,12 @@
             bodyBtn.classList.add('popUp__contentBodyBtn', 'btn', 'btn--large');
             bodyBtn.innerText = popUpBtn;
 
-            bodyBtn.addEventListener('click', () => {
-                window.location.href = goTo;
+            bodyBtn.addEventListener('click', (ev) => {
+                if(goTo!==''){
+                    window.location.href = goTo;
+                }else{
+                    ev.preventDefault();
+                }
             });
 
             let bodyBack = document.createElement('a');
@@ -78,7 +84,9 @@
 
             body.appendChild(bodyTitle);
             body.appendChild(bodyText);
-            body.appendChild(bodyBtn);
+            if(goTo!==''||goTo!==null||goTo!==undefined){
+                body.appendChild(bodyBtn);
+            }
             body.appendChild(bodyBack);
             popUpContentClose.appendChild(popUpContentCloseX);
             popUpContent.appendChild(popUpContentClose);
@@ -103,6 +111,14 @@
                     popUpContainer.classList.add('popUp--inactive');
                     popUp.removeChild(popUpContent);
                 }
+            }
+
+
+            // for wtspp
+            if(information.wtsppLink !== null && information.wtsppLink !== ''){
+                const linkToWA = document.querySelector('.link__wtsp');
+                linkToWA.href = information.wtsppLink;
+                linkToWA.target = '_blank';
             }
 
         }

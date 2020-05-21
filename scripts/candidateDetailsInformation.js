@@ -87,7 +87,11 @@ window.addEventListener('load', () => {
             selectionState.innerHTML="Seleccionado";
             // for change the button state
             selectionStateButton.innerHTML="Eliminar selección";
-            selectionStateButton.classList.add('btn--medium--cancel');
+            if(info.status[0]!== 0 && info.status[0]!== 5){
+                selectionStateButton.classList.add('btn--medium--cancel');
+            }else{
+                selectionStateButton.classList.add('btn--inactive');
+            }
         }else{
              // for badge top of page / 
             selectionState.classList.remove('reqDetails__selected--show');
@@ -95,7 +99,11 @@ window.addEventListener('load', () => {
             selectionState.innerHTML="";
             // for change the button state
             selectionStateButton.innerHTML="Seleccionar candidato";
-            selectionStateButton.classList.remove('btn--medium--cancel')
+            if(info.status[0]!== 0 && info.status[0]!== 5){
+                selectionStateButton.classList.remove('btn--medium--cancel')
+            }else{
+                selectionStateButton.classList.add('btn--inactive');
+            }
         }
 
         // add references

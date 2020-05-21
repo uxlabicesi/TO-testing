@@ -210,34 +210,6 @@ window.addEventListener('load', () => {
                             break;
                     }
 
-                    // switch (status[0]) {
-                    //     case 0:
-                    //         requestState.innerHTML = 'Pendiente de pago';
-                    //         requestStateList.innerHTML = 'Pendiente de pago';
-                    //         break;
-
-                    //     case 1:
-                    //         requestState.innerHTML = 'Iniciado';
-                    //         requestStateList.innerHTML = 'Iniciado';
-                    //         break;
-
-                    //     case 2:
-                    //         requestState.innerHTML = 'En proceso de búsqueda';
-                    //         requestStateList.innerHTML = 'En proceso de búsqueda';
-                    //         break;
-
-                    //     case 3:
-                    //         requestState.innerHTML = 'En espera de selección';
-                    //         requestStateList.innerHTML = 'En espera de selección';
-                    //         break;
-
-                    //     case 4:
-                    //         requestState.innerHTML = 'Finalizando el proceso';
-                    //         requestStateList.innerHTML = 'Finalizando el proceso';
-                    //         break;
-                    // }
-
-
                 } else {
                     statusBar.classList.add('request__status--inactive');
                 }
@@ -257,6 +229,23 @@ window.addEventListener('load', () => {
             }
 
             requestStatusBar.appendChild(statusBar);
+        }
+
+        if(status[0] === 0){
+            let divs = requestStatusBar.querySelectorAll('div');
+            divs.forEach((e, index) => {
+                if(index === 0){
+                    e.classList.remove('request__status--inactive');
+                    e.classList.add('request__status--yellow');
+                    requestState.classList.add('request__state--yellow');
+                    //requestStateList.classList.add('request__state--yellow');
+                }else{
+                    e.classList.remove('request__status--inactive');
+                    e.classList.add('request__status--green');
+                    requestState.classList.add('request__state--green');
+                    requestStateList.classList.add('request__state--green');
+                }
+            });
         }
 
         requestCardContainer.appendChild(requestStatusBar);

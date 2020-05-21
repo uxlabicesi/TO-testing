@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 
 var sample = {
     title: 'Diseñador UX',
-    status: [2, 1],
+    status: [5, 1],
     remainingTime: 1,
     name: 'Fabio Arias',
     profilePic: './resources/imgPerfil.jpg',
@@ -48,7 +48,7 @@ var sample = {
         }
     ],
     evaluation: [6,1,4], // added for second time interaction, represent initial or prev evaluation
-    selected: false,
+    selected: true,
     evaluated: false,
 }
 // candidateDetailsInformation.js
