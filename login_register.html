@@ -43,7 +43,8 @@
                     <form id="id_formFirstPart" class="registerForm" action="">
                         <div class="textInput__container textInput__container--marginless form-group">
                             <label for="form_companyName" class="label register__label label--register">¿Cómo se llama tu empresa?</label>
-                            <input type="text" class="textInput textInput--register" id="form_companyName" name="company" autocomplete="organization">
+                            <input type="text" class="textInput textInput--register" id="form_companyName" name="company" >
+                            <!-- autocomplete="organization" -->
                         </div>
 
                         <div class="textInput__container form-group">
@@ -122,22 +123,25 @@
                             <label for="form_number" class="label register__label label--register">¿A qué número te
                                 podemos llamar?</label>
                             <input type="number" class="textInput textInput--register" id="form_number" name="number"
-                            equired autocomplete="tel">
+                            equired >
+                            <!-- autocomplete="tel" -->
                         </div>
 
                         <div class="textInput__container form-group">
                             <label for="form_email" class="label register__label label--register control-label">¿Cuál es
                                 tu correo?</label>
                             <input type="text" class="textInput textInput--register form-control" id="form_email"
-                                name="email" autocomplete="email" required>
+                                name="email"  required>
+                                <!-- autocomplete="email" -->
                         </div>
 
                         <div class="textInput__container form-group">
                             <label for="form_password" class="label register__label label--register">¿Cuál es tu
                                 contraseña?</label>
                             <input type="password" class="textInput textInput--register password"
-                                data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
+                                data-bv-identical="true" id="form_password" name="password" 
                                 equired>
+                                <!-- autocomplete="new-password" -->
                             <img class="login__passShow" src="./resources/notShowPass.svg" alt="">
                         </div>
 
@@ -146,7 +150,8 @@
                                 tu contraseña?</label>
                             <input type="password" class="textInput textInput--register passwordConfirmation"
                                 data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
-                                autocomplete="new-password" required>
+                                 required> 
+                                 <!-- autocomplete="new-password" -->
                             <img class="login__passShowConfirmation" src="./resources/notShowPass.svg" alt="">
                         </div>
 
