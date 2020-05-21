@@ -55,10 +55,13 @@ window.addEventListener('load', () => {
             e.querySelector('.textInput__container').classList.remove('textInput--focused');
         });
 
-        // for remove skills
-        functionContainers.forEach((e) => {
-            e.remove();
+        // for remove functions
+        functionContainers.forEach((e, index) => {
+            if(index>0){
+                e.remove();
+            }
         });
+
 
         skillContainers.forEach((e, index) => {
             $('#form_skill'+index).val(null);
