@@ -103,6 +103,8 @@ window.addEventListener('load', () => {
             e.remove();
         });
 
+        //createFunction();
+
         info.functions.forEach((e, index) => {
            // if(index > 2) {
                 createFunction();
