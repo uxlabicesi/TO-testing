@@ -34,8 +34,10 @@ window.addEventListener('load', () => {
             'Creación de conceptos'
         ],
         academicLevel: 'O8',
-        profession: ['O1', 'O2'],
+        profession: ['','O1', 'O2'],
         knowledge: [
+            '',
+            'O1',
             'O2',
             'O6',
         ],
