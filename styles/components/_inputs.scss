@@ -195,6 +195,21 @@
     }
 }
 
+@keyframes onAutoFillStart { from {/**/} to {/**/}}
+@keyframes onAutoFillCancel {  from {/**/}  to {/**/}}
+
+input:-webkit-autofill {
+    // Expose a hook for JavaScript when autofill is shown
+    // JavaScript can capture 'animationstart' events
+    animation-name: onAutoFillStart;
+}
+
+input:not(:-webkit-autofill) {
+    // Expose a hook for JS onAutoFillCancel
+    // JavaScript can capture 'animationstart' events
+    animation-name: onAutoFillCancel;
+}
+
 @media (max-width: $screen-small) {
 
     .label{

@@ -354,6 +354,52 @@ body {
   color: #B0B0B0;
 }
 
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@-webkit-keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: onAutoFillStart;
+          animation-name: onAutoFillStart;
+}
+
+input:not(:-webkit-autofill) {
+  -webkit-animation-name: onAutoFillCancel;
+          animation-name: onAutoFillCancel;
+}
+
 @media (max-width: 576px) {
   .label {
     font-size: 14px;
