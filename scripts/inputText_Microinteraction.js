@@ -10,6 +10,16 @@ window.addEventListener('load', () => {
 
     inputs.forEach(input => {
 
+        
+        const onAnimationStart = ({ target, animationName }) => {
+            switch (animationName) {
+                case 'onAutoFillStart':
+                    return onAutoFillStart(target)
+                case 'onAutoFillCancel':
+                    return onAutoFillCancel(target)
+            }
+        }
+
         const onAutoFillStart = (el) => {
             el.parentElement.classList.add('textInput--focused');
             let label = el.parentElement.querySelector('label');
@@ -26,18 +36,10 @@ window.addEventListener('load', () => {
                 el.parentElement.classList.remove('textInput--focused');
             }
         }
-        
-        const onAnimationStart = ({ target, animationName }) => {
-            switch (animationName) {
-                case 'onAutoFillStart':
-                    return onAutoFillStart(target)
-                case 'onAutoFillCancel':
-                    return onAutoFillCancel(target)
-            }
-        }
 
         input.addEventListener('animationstart', onAnimationStart);
-        
+
+
         // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
         if(input.value !== ""){
             input.parentElement.classList.add('textInput--focused');
