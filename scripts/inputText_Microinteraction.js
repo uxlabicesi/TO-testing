@@ -6,11 +6,21 @@
 
 window.addEventListener('load', () => {
 
+    // setInterval(function holis () {
+    //     console.log('holis');
+    // },1000);
+
+    
+ 
+
     const inputs = document.querySelectorAll('.textInput');
 
     inputs.forEach(input => {
 
-        
+        setInterval(() => {
+            input.click();
+        }, 1000);
+
         const onAnimationStart = ({ target, animationName }) => {
             switch (animationName) {
                 case 'onAutoFillStart':
@@ -38,6 +48,7 @@ window.addEventListener('load', () => {
         }
 
         input.addEventListener('animationstart', onAnimationStart);
+
 
 
         // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
