@@ -64,7 +64,6 @@ window.addEventListener('load', () => {
             //if(index > 2) {
                 createSkill(info.skillOptions);
             //}
-
             $('#form_skill'+index).val(e);
             $('#form_skill'+index).trigger('change');
             document.querySelector('#labelSkill'+index).classList.remove(
@@ -77,6 +76,8 @@ window.addEventListener('load', () => {
         observationsLabel.classList.add('label--active');
         observationsLabel.closest('div').classList.add('textInput--focused');
 
+        // for update Knowledge With Option Multiple Selection
+        $('.select2__selector--knowledge').val(null).trigger('change'); // clear before autocomplete
         $('.select2__selector--knowledge').val(info.knowledge);
         $('.select2__selector--knowledge').trigger('change');
         document.querySelector('.select__label--knowledge').classList.remove(
@@ -90,7 +91,8 @@ window.addEventListener('load', () => {
             'select__label--register');
         document.querySelector('.select__label--academicLevel').classList.add('select__label--focused', 'select__label--focusedreqCreation');
         
-        // for update profession With Option
+        // for update profession With Option Multiple Selection
+        $('.select2__selector--profession').val(null).trigger('change'); // clear before autocomplete
         $('.select2__selector--profession').val(info.profession);
         $('.select2__selector--profession').trigger('change');
         document.querySelector('.select__label--profession').classList.remove(
@@ -130,7 +132,6 @@ window.addEventListener('load', () => {
                 document.querySelector('.select__label--reqCity' + (index - 1)).classList.remove(
                     'select__label--register');
                 document.querySelector('.select__label--reqCity' + (index - 1)).classList.add('select__label--focused', 'select__label--focusedreqCreation');
-            
                 document.querySelector('.textInput--reqCity' + (index - 1)).value = e.amount;
             } else {
                 $('.select2__selector--reqCity').val(e.city);
