@@ -11,15 +11,33 @@ window.addEventListener('load', () => {
     // },1000);
 
     
- 
+   
 
     const inputs = document.querySelectorAll('.textInput');
 
     inputs.forEach(input => {
 
-        setInterval(() => {
-            input.click();
+        setTimeout(() => {
+            input.click(holis());
         }, 1000);
+
+        function holis(){
+            if(input.value !== ""){
+                let label = input.parentElement.querySelector('label');
+                if(!input.value && label!=null) {
+                    label.classList.remove('label--active');
+                    input.parentElement.classList.remove('textInput--focused');
+                }
+            }else{
+                input.parentElement.classList.add('textInput--focused');
+                let label = input.parentElement.querySelector('label');
+                if(label!=null){
+                    label.classList.remove('label--none');
+                    label.classList.add('label--active');
+                }
+            }
+            console.log(',,,,')
+        }
 
         const onAnimationStart = ({ target, animationName }) => {
             switch (animationName) {
@@ -52,20 +70,7 @@ window.addEventListener('load', () => {
 
 
         // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
-        if(input.value !== ""){
-            input.parentElement.classList.add('textInput--focused');
-            let label = input.parentElement.querySelector('label');
-            if(label!=null){
-                label.classList.remove('label--none');
-                label.classList.add('label--active');
-            }
-        }else{
-            let label = input.parentElement.querySelector('label');
-            if(!input.value && label!=null) {
-                label.classList.remove('label--active');
-                input.parentElement.classList.remove('textInput--focused');
-            }
-        }
+        
 
 
         // Activates the microinteraction when the input is focused
