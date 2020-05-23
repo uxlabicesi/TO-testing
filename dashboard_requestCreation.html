@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    
+    <div class="popUp popUp--inactive"></div>
     <header class="mainheader">
         <div class="mainheader__menu">
             <img src="./resources/menuIcon.svg">
@@ -328,7 +328,6 @@
                             <div class="selectadd selectadd--reqCreation form-group">
                                 <label class="select__label select__label--register select__label--academicLevel">NIVEL ACADÉMICO</label>
                                 <select class="select2__selector--academicLevel" name="academicLevel" required>
-                                    <option></option>
                                     <option value="O1">Opción 1</option>
                                     <option value="O2">Opción 2</option>
                                     <option value="O3">Opción 3</option>
@@ -568,7 +567,7 @@
                     <div class="reqCreation__progress"></div>
                 </div>
                 
-                <button disabled="disabled" class="btn btn--small btn--inactive reqCreation__next">Siguiente ></button>
+                <button class="btn btn--small reqCreation__next">Siguiente ></button>
             </div>
         </div>
     </section>
@@ -599,7 +598,7 @@
 <script src="./scripts/samples/sample_createSkill.js"></script>
 <script src="./scripts/samples/sample_levelSelectionOnCreateRquest.js"></script>
 <!-- This sample only functions correctly if it is placed anywhere after all the skills have been created -->
-<!--script src="./scripts/samples/sample_requestCreationInformation.js"></script-->
+<script src="./scripts/samples/sample_requestCreationInformation.js"></script>
 
 
 
@@ -617,7 +616,8 @@
 <!-- <script type="text/javascript" src="libs/jQuery-Autocomplete-1.4.10/scripts/countries.js"></script> -->
 <!-- <script type="text/javascript" src="libs/jQuery-Autocomplete-1.4.10/scripts/demo.js"></script> -->
 <script src="./scripts/samples/sample_autocompleteNameInputCreationRequest.js"></script>
-
+<script src="./scripts/createPopUp.js"></script>
+<script src="./scripts/samples/sample_openHelpPoUp.js"></script>
 
 
 </body>

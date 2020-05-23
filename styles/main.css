@@ -146,6 +146,52 @@ body {
   outline: none;
 }
 
+@-webkit-keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@keyframes onAutoFillStart {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@-webkit-keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+@keyframes onAutoFillCancel {
+  from {
+    /**/
+  }
+  to {
+    /**/
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: onAutoFillStart;
+          animation-name: onAutoFillStart;
+}
+
+input:not(:-webkit-autofill) {
+  -webkit-animation-name: onAutoFillCancel;
+          animation-name: onAutoFillCancel;
+}
+
 .label {
   position: absolute;
   -webkit-transition: all .2s ease-out;

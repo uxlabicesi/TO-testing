@@ -52,8 +52,10 @@ window.addEventListener('load', () => {
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPass.setAttribute("src", srcNoShowPassIcon);
-                pass.type = "password";
+                setTimeout(() => {
+                    showPass.setAttribute("src", srcNoShowPassIcon);
+                    pass.type = "password";
+                }, 5000);
             }
         }
     });
@@ -65,8 +67,10 @@ window.addEventListener('load', () => {
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPassConfirmation.setAttribute("src", srcNoShowPassIcon);
-                pass.type = "password";
+                setTimeout(() => {
+                    showPassConfirmation.setAttribute("src", srcNoShowPassIcon);
+                    pass.type = "password";  
+                }, 5000);
             }
         }
     });
@@ -88,19 +92,23 @@ window.addEventListener('load', () => {
     });
 
     showPass.addEventListener('mouseleave', () =>{
-        let pass = document.querySelector('.password');
-        showPass.setAttribute("src", srcNoShowPassIcon);
-        if(pass.type == "text"){
-            pass.type = "password";
-        }
+        setTimeout(() =>{
+            let pass = document.querySelector('.password');
+            showPass.setAttribute("src", srcNoShowPassIcon);
+            if(pass.type == "text"){
+                pass.type = "password";
+            }
+        }, 5000)
     });
 
     showPassConfirmation.addEventListener('mouseleave', () =>{
-        let passConfirmation = document.querySelector('.passwordConfirmation');
-        showPassConfirmation.setAttribute("src", srcNoShowPassIcon);
-        if(passConfirmation.type == "text"){
-            passConfirmation.type = "password";
-        }
+        setTimeout(() => {
+            let passConfirmation = document.querySelector('.passwordConfirmation');
+            showPassConfirmation.setAttribute("src", srcNoShowPassIcon);
+            if(passConfirmation.type == "text"){
+                passConfirmation.type = "password";
+            }  
+        }, 5000);
     });
 
     document.addEventListener('click', checkValid);
@@ -108,7 +116,25 @@ window.addEventListener('load', () => {
     textInputs.forEach((textInput) => {
         textInput.addEventListener('change', checkValid);
         textInput.addEventListener('keyup', checkValid);// Added for NC8146
+        /////
+        // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
+        if(textInput.value !== ""){
+            textInput.parentElement.classList.add('textInput--focused');
+            let label = textInput.parentElement.querySelector('label');
+            if(label!=null){
+                label.classList.remove('label--none');
+                label.classList.add('label--active');
+            }
+        }else{
+            let label = textInput.parentElement.querySelector('label');
+            if(!textInput.value && label!=null) {
+                label.classList.remove('label--active');
+                textInput.parentElement.classList.remove('textInput--focused');
+            }
+        }
     });
+
+    
 
     checkbox.addEventListener('change', checkValid);
 

@@ -55,10 +55,13 @@ window.addEventListener('load', () => {
             e.querySelector('.textInput__container').classList.remove('textInput--focused');
         });
 
-        // for remove skills
-        functionContainers.forEach((e) => {
-            e.remove();
+        // for remove functions
+        functionContainers.forEach((e, index) => {
+            if(index>0){
+                e.remove();
+            }
         });
+
 
         skillContainers.forEach((e, index) => {
             $('#form_skill'+index).val(null);
@@ -108,8 +111,7 @@ window.addEventListener('load', () => {
             'select__label--register');
         document.querySelector('.select__label--academicLevel').classList.remove('select__label--focused', 'select__label--focusedreqCreation');
    
-        $('.select2__selector--profession').val(null);
-        $('.select2__selector--profession').trigger('change');
+        $('.select2__selector--profession').val(null).trigger('change');
         document.querySelector('.select__label--profession').classList.add(
             'select__label--register');
         document.querySelector('.select__label--profession').classList.remove('select__label--focused', 'select__label--focusedreqCreation');

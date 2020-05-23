@@ -22,7 +22,8 @@ window.addEventListener('load', () => {
         hasDiscount: true,
         discountValue: 25000,
         requestTotal: 2500000,
-        requestTaxes: 190000
+        requestTaxes: 190000,
+        type:"initial" // initial, last or full
     });
 
    /* buildPayScreen({
@@ -35,7 +36,8 @@ window.addEventListener('load', () => {
         hasDiscount: true,
         discountValue: 25000,
         requestTotal: 2500000,
-        requestTaxes: 190000
+        requestTaxes: 190000,
+        type:"first" // initial, last or full
     });*/
 
     /*buildPayScreen({
@@ -48,7 +50,8 @@ window.addEventListener('load', () => {
         hasDiscount: true,
         discountValue: 25000,
         requestTotal: 2500000,
-        requestTaxes: 190000
+        requestTaxes: 190000,
+        type:"first" // initial, last or full
     });*/
 
     /*buildPayScreen({
@@ -61,6 +64,7 @@ window.addEventListener('load', () => {
         hasDiscount: true,
         discountValue: 25000,
         requestTotal: 2500000,
-        requestTaxes: 190000
+        requestTaxes: 190000,
+        type:"first" // initial, last or full
     });*/
 });

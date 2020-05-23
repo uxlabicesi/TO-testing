@@ -123,8 +123,9 @@ window.addEventListener('load', () => {
         deleteBtn.classList.add('reqCreation__btnDelete');
         row.appendChild(deleteBtn);
 
-        deleteBtn.addEventListener('click', () => {
+        deleteBtn.addEventListener('click', (event) => {
             row.remove();
+            event.preventDefault();
         });
  
     }

@@ -6,26 +6,90 @@
 
 window.addEventListener('load', () => {
 
+    // setInterval(function holis () {
+    //     console.log('holis');
+    // },1000);
+
+   
+
     const inputs = document.querySelectorAll('.textInput');
 
     inputs.forEach(input => {
 
-        
-        // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
-        if(input.value !== ""){
-            input.parentElement.classList.add('textInput--focused');
-            let label = input.parentElement.querySelector('label');
+
+        function verifyLabel(){
+            if(input.value !== ""){
+                let label = input.parentElement.querySelector('label');
+                if(!input.value && label!=null) {
+                    label.classList.remove('label--active');
+                    input.parentElement.classList.remove('textInput--focused');
+                }
+            }else{
+                input.parentElement.classList.add('textInput--focused');
+                let label = input.parentElement.querySelector('label');
+                if(label!=null){
+                    label.classList.remove('label--none');
+                    label.classList.add('label--active');
+                }
+            } 
+        }
+   
+        setTimeout(() => {
+            input.click(controlLabel());
+        }, 500);
+
+        function controlLabel(){
+            if(input.value !== ""){
+                input.parentElement.classList.add('textInput--focused');
+                let label = input.parentElement.querySelector('label');
+                if(label!=null){
+                    label.classList.remove('label--none');
+                    label.classList.add('label--active');
+                }
+            }else{
+                let label = input.parentElement.querySelector('label');
+                if(!input.value && label!=null) {
+                    label.classList.remove('label--active');
+                    input.parentElement.classList.remove('textInput--focused');
+                }
+            }
+            setTimeout(() => {
+                verifyLabel();
+            }, 500);
+        }
+
+        const onAnimationStart = ({ target, animationName }) => {
+            switch (animationName) {
+                case 'onAutoFillStart':
+                    return onAutoFillStart(target)
+                case 'onAutoFillCancel':
+                    return onAutoFillCancel(target)
+            }
+        }
+
+        const onAutoFillStart = (el) => {
+            el.parentElement.classList.add('textInput--focused');
+            let label = el.parentElement.querySelector('label');
             if(label!=null){
                 label.classList.remove('label--none');
                 label.classList.add('label--active');
             }
-        }else{
-            let label = input.parentElement.querySelector('label');
-            if(!input.value && label!=null) {
+        }
+
+        const onAutoFillCancel = (el) => {
+            let label = el.parentElement.querySelector('label');
+            if(!el.value && label!=null) {
                 label.classList.remove('label--active');
-                input.parentElement.classList.remove('textInput--focused');
+                el.parentElement.classList.remove('textInput--focused');
             }
         }
+
+        input.addEventListener('animationstart', onAnimationStart);
+
+
+
+        // the following fragment fix the autocomplete problem, starts manually the feedback event when the inputs is not empty
+        
 
 
         // Activates the microinteraction when the input is focused

@@ -57,6 +57,19 @@ window.addEventListener('load', () => {
             feedbackMessage = info.message;
         }
 
+        const submessageForType = document.querySelector('.pay__type__description');
+        switch(info.type){
+            case 'first':
+                submessageForType.innerHTML="Este pago corresponde al <strong>50% inicial</strong> del valor del servicio";
+                break;
+            case 'last': 
+                submessageForType.innerHTML="Este pago corresponde al <strong>50% final</strong> del valor del servicio";
+                break;
+            case 'full':
+                submessageForType.innerHTML="Este pago corresponde al <strong>100%</strong> del valor del servicio";
+                break;
+        }
+
         if (info.payStatus === "onProcess") {
             // when its coming from request creation, edition o trying to completed the process
             payDetailsContent.classList.remove('pay__details--hide');

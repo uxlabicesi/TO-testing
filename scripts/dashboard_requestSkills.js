@@ -29,6 +29,7 @@ window.addEventListener('load', () => {
             skill.appendChild(selectContainer)
             skill.appendChild(deleteBtn);
             deleteBtn.classList.add('reqCreation__functionsContainerBtnDelete');
+            deleteBtn.setAttribute('type','button');
             selectContainer.classList.add('select__container', 'select__container--reqCreation2col');
             selectContainer.appendChild(selectadd);
             selectadd.classList.add('selectadd', 'selectadd--reqCreation', 'form-group');

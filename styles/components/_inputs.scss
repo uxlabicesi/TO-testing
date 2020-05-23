@@ -1,3 +1,19 @@
+
+@keyframes onAutoFillStart { from {/**/} to {/**/}}
+@keyframes onAutoFillCancel {  from {/**/}  to {/**/}}
+
+input:-webkit-autofill {
+    // Expose a hook for JavaScript when autofill is shown
+    // JavaScript can capture 'animationstart' events
+    animation-name: onAutoFillStart;
+}
+
+input:not(:-webkit-autofill) {
+    // Expose a hook for JS onAutoFillCancel
+    // JavaScript can capture 'animationstart' events
+    animation-name: onAutoFillCancel;
+}
+
 .label {
     position: absolute;
     transition: all .2s ease-out;
@@ -58,6 +74,7 @@
         margin-left: 40px !important;
     }
 
+    
     &--openAutoComplete{
         border: 1px solid $color-gray;
         border-radius: 10px 10px 0 0;
@@ -194,6 +211,7 @@
         color:  #B0B0B0;
     }
 }
+
 
 @media (max-width: $screen-small) {
 

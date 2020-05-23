@@ -12,10 +12,37 @@ window.addEventListener('load', () => {
       goTo: "",
    };
 
+   
+   let informationPopUpLastCandidate50 = {
+      candidate: "Juan David Pelaez", // name
+      job:"Diseñador de Medios Interactivos", // job name
+      nextstate: 5, // 5 para pendiente de pago || 0 para finalizó el proceso
+      title: "Candidato seleccionado",
+      text: "Seleccionaste a tu último candidato",  // optional if state, job and candidate was entered
+      btn: "Finalizar selección e ir a pagar",
+      goTo: "#", // cambiar estado e ir al pago
+      goBack: "Seleccionar e ir a verificar candidatos", // ir a los candidatos
+      returnTo:"#",//text url for a option,
+   };
+
+   let informationPopUpLastCandidate100 = {
+      candidate: "Juan David Pelaez", // name
+      job:"Diseñador de Medios Interactivos", // job name
+      nextstate: 0, // 5 para pendiente de pago || 0 para finalizó el proceso
+      title: "Candidato seleccionado",
+      text: "Seleccionaste a tu último candidato", // optional if state, job and candidate was entered
+      btn: "Seleccionar y finalizar el proceso",
+      goTo: "", // cambiar estado e ir a solicitudes completadas
+      goBack: "Seleccionar e ir a verificar candidatos", // test for second option
+      returnTo: "#", // ir a los candidatos
+    
+   };
+
+
    let informationPopUpEvaluationRequired = {
-      title: "Aún falta un paso",
-      text: "Debes calificar al candidato antes de poder seleccionarlo",
-      btn: "Calificar",
+      title: "Aún nos falta un paso",
+      text: "Recuerda evaluar el candidato antes de seleccionarlo",
+      btn: "Evaluar",
       goTo: "",
    };
 
@@ -29,7 +56,7 @@ window.addEventListener('load', () => {
 
    let rootForPopUp = ".popUp";
 
-   
+   //createPopUp(informationPopUpLastCandidate100, rootForPopUp);
 
    selectionStateButton.addEventListener('click', (ev) => {
 

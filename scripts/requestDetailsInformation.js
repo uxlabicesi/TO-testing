@@ -336,7 +336,7 @@ window.addEventListener("load", () => {
                     buttonEvaluation.innerHTML = "Calificar servicio";
                     buttonFinishProcess.classList.add("btn--inactive");
                     buttonFinishProcess.innerHTML = "Finalizar proceso";
-                    buttonBarBottom.appendChild(buttonEvaluation);
+                    //buttonBarBottom.appendChild(buttonEvaluation); // TODO include in next sprint
                     buttonBarBottom.appendChild(buttonFinishProcess);
 
                     //buttonEvaluation.classList.add("score-request");

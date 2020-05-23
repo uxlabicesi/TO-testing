@@ -25,8 +25,10 @@ window.addEventListener('load', () => {
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPass.setAttribute("src", "./resources/notShowPass.svg");
-                pass.type = "password";
+                setTimeout(() => {
+                    showPass.setAttribute("src", "./resources/notShowPass.svg");
+                    pass.type = "password";
+                }, 5000);
             }
         }
     });
@@ -38,8 +40,10 @@ window.addEventListener('load', () => {
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
-                pass.type = "password";
+                setTimeout(() => {
+                    showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
+                    pass.type = "password";
+                }, 5000);
             }
         }
     });
@@ -51,8 +55,10 @@ window.addEventListener('load', () => {
             if(pass.type == "password"){
                 pass.type = "text";
             }else{
-                showPassConfirmationAgain.setAttribute("src", "./resources/notShowPass.svg");
-                pass.type = "password";
+                setTimeout(() => {
+                    showPassConfirmationAgain.setAttribute("src", "./resources/notShowPass.svg");
+                    pass.type = "password";
+                }, 5000);
             }
         }
     });
@@ -82,27 +88,33 @@ window.addEventListener('load', () => {
     });
 
     showPass.addEventListener('mouseleave', () =>{
-        let pass = document.querySelector('.password');
-        showPass.setAttribute("src", "./resources/notShowPass.svg");
-        if(pass.type == "text"){
-            pass.type = "password";
-        }
+        setTimeout(() => {
+            let pass = document.querySelector('.password');
+            showPass.setAttribute("src", "./resources/notShowPass.svg");
+            if(pass.type == "text"){
+                pass.type = "password";
+            }
+        }, 5000);
     });
 
     showPassConfirmation.addEventListener('mouseleave', () =>{
-        let passConfirmation = document.querySelector('.passwordConfirmation');
-        showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
-        if(passConfirmation.type == "text"){
-            passConfirmation.type = "password";
-        }
+        setTimeout(() => {
+            let passConfirmation = document.querySelector('.passwordConfirmation');
+            showPassConfirmation.setAttribute("src", "./resources/notShowPass.svg");
+            if(passConfirmation.type == "text"){
+                passConfirmation.type = "password";
+            }
+        }, 5000);
     });
 
     showPassConfirmationAgain.addEventListener('mouseleave', () =>{
-        let passConfirmation = document.querySelector('.passwordConfirmationAgain');
-        showPassConfirmationAgain.setAttribute("src", "./resources/notShowPass.svg");
-        if(passConfirmation.type == "text"){
-            passConfirmation.type = "password";
-        }
+        setTimeout(() => {
+            let passConfirmation = document.querySelector('.passwordConfirmationAgain');
+            showPassConfirmationAgain.setAttribute("src", "./resources/notShowPass.svg");
+            if(passConfirmation.type == "text"){
+                passConfirmation.type = "password";
+            }
+        }, 5000);
     });
 
     document.addEventListener('click', checkValid);

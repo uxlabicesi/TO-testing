@@ -29,14 +29,15 @@ window.addEventListener('load', () => {
         let isNew = information.isNew;
         let identificator = information.id;
 
+        let baseInfo = information.text;
+
+
+
         if (cities.length > 1) {
             cities = 'varias ciudades';
         } else {
             cities = information.cities[0];
         }
-
-
-
 
         let notification = document.createElement('div');
         notification.classList.add('content__card');
@@ -71,6 +72,10 @@ window.addEventListener('load', () => {
         let message = document.createElement('p');
         message.classList.add("card__employment")
         message.innerHTML = "Tu solicitud de " + "<strong>"+job+"</strong> en <strong>" + cities + "</strong> está en " + "<strong>" + statusDescriptor + "</strong>"
+
+        if(baseInfo!== null && baseInfo !== "" && baseInfo!== undefined ){
+            message.innerHTML = baseInfo;
+        }
 
         let iconSupport = document.createElement('img');
         iconSupport.src = srcNotifIcon;

@@ -56,13 +56,21 @@ window.addEventListener('load', () => {
         btnDelete.classList.add('reqCreation__functionsContainerBtnDelete');
         container.appendChild(btnDelete);
 
+        // const selectList = document.querySelectorAll('.textInput__container--reqFunctions');
+        // console.log('holis'+selectList.length);
+
         btnDelete.addEventListener('click', () => {
-            functionCount--;
+            functionCount = document.querySelectorAll('.reqCreation__content--function .textInput').length;
             if(functionCount < 5) {
                 addFunction.removeAttribute('disabled');
                 addFunction.classList.remove('btn--inactive');
             }
-            container.remove();
+            if(functionCount > 1 ){
+                functionCount--;
+                container.remove();
+                functionInputs = document.querySelectorAll('.reqCreation__content--function .textInput');
+                updateIds();
+            }
         });
 
 
