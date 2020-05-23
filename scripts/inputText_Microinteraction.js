@@ -10,18 +10,36 @@ window.addEventListener('load', () => {
     //     console.log('holis');
     // },1000);
 
-    
    
 
     const inputs = document.querySelectorAll('.textInput');
 
     inputs.forEach(input => {
 
+
+        function verifyLabel(){
+            if(input.value !== ""){
+                let label = input.parentElement.querySelector('label');
+                if(!input.value && label!=null) {
+                    label.classList.remove('label--active');
+                    input.parentElement.classList.remove('textInput--focused');
+                }
+            }else{
+                input.parentElement.classList.add('textInput--focused');
+                let label = input.parentElement.querySelector('label');
+                if(label!=null){
+                    label.classList.remove('label--none');
+                    label.classList.add('label--active');
+                }
+            } 
+        }
+   
         setTimeout(() => {
-            input.click(holis());
+            input.click(controlLabel());
         }, 500);
 
-        function holis(){
+        function controlLabel(){
+            
             if(input.value !== ""){
                 let label = input.parentElement.querySelector('label');
                 if(!input.value && label!=null) {
@@ -36,7 +54,9 @@ window.addEventListener('load', () => {
                     label.classList.add('label--active');
                 }
             }
-            console.log(',,,,')
+            setTimeout(() => {
+                verifyLabel();
+            }, 500);
         }
 
         const onAnimationStart = ({ target, animationName }) => {
