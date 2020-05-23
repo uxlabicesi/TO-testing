@@ -1,3 +1,14 @@
+html{
+    min-height: 100%;
+}
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FAFAFA;
+}
+
 .contentTO{
     display: flex;
     width: 100%;
@@ -18,7 +29,7 @@
     position: relative;
 
     &__icon{
-        width: 15%;
+        width: 14%;
         display: flex;
         flex-direction: row;
         position: absolute;
@@ -43,14 +54,14 @@
         margin-left: 70px;
 
         & h1{
-            font-size: $typo-h3;
-            color: $color-darkGray;
+            font-size: 16px;
+            color: #494949;
             margin: 0px;
             margin-bottom: 10px;
         }
 
         & p{
-            font-size: $typo-h4;
+            font-size: 13px;
             color: #69757b;
             margin: 0px;
         }
@@ -78,7 +89,7 @@
     
 }
 
-@media (max-width: $screen-large) {
+@media (max-width: 992px) {
     .banner{
         width: 70%;
 
@@ -88,7 +99,7 @@
     }
 }
 
-@media (max-width: $screen-medium) {
+@media (max-width: 769px) {
     .banner{
         width: 90%;
 
@@ -119,7 +130,7 @@
     }
 }
 
-@media (max-width: $screen-small) {
+@media (max-width: 576px) {
     .banner{
         width: 90%;
         flex-direction: column;
@@ -152,4 +163,10 @@
             }
         }
     }
+}
+
+
+* {
+    font-family: 'Open Sans';
+    box-sizing: border-box;
 }
