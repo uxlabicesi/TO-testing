@@ -11,6 +11,7 @@
      * goBack: text for a option
      * returnTo: text url for a option
      * }
+     * 
      */
 
     // empty function will be updated after window load.
@@ -35,6 +36,33 @@
             let goBack = information.goBack;
             let returnTo = information.returnTo;
 
+
+            let candidate = information.candidate;
+            let job = information.job;
+            let nextstate = information.nextstate;
+
+            if( candidate !== null && candidate !== undefined && candidate !== '' ){
+                if( job !== null && job !== undefined && job !== '' ){
+                    popUpText = "Seleccionaste a <strong>" + candidate.toString() + "</strong> para el cargo <strong>" + job.toString() + "</strong>";
+
+                    if(nextstate === 0){
+                        popUpText = popUpText + "<br><br>Finalizaste tu proceso de selección, estás cerca de tener el mejor talento." 
+                    }else{
+                        popUpText = popUpText + "<br><br>Tu proceso está a punto de finalizar" 
+                    }
+
+                }
+            }
+
+      /*candidate: "Juan David Pelaez", // name
+      job:"Diseñador de Medios Interactivos", // job name
+      nextstate: 0, // 5 para pendiente de pago || 0 para finalizó el proceso
+      title: "Candidato seleccionado",
+      text: "Seleccionaste a tu último candidato",
+      btn: "Completar selección y finalizar el proceso",
+      goTo: "", // cambiar estado e ir a solicitudes completadas
+      goBack: "Seleccionar e ir a verificar candidatos", // test for second option
+      returnTo: "#", // ir a los candidatos*/
            
             //
             // let popUp = document.createElement('div');
@@ -114,8 +142,8 @@
             }
 
 
-            // for wtspp
-            if(information.wtsppLink !== null && information.wtsppLink !== ''){
+            // for wtspp on help
+            if(information.wtsppLink !== null && information.wtsppLink !== undefined  && information.wtsppLink !== ''){
                 const linkToWA = document.querySelector('.link__wtsp');
                 linkToWA.href = information.wtsppLink;
                 linkToWA.target = '_blank';
