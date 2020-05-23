@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
 
         setTimeout(() => {
             input.click(holis());
-        }, 1000);
+        }, 500);
 
         function holis(){
             if(input.value !== ""){
