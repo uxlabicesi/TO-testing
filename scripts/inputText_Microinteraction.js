@@ -39,19 +39,18 @@ window.addEventListener('load', () => {
         }, 500);
 
         function controlLabel(){
-            
             if(input.value !== ""){
-                let label = input.parentElement.querySelector('label');
-                if(!input.value && label!=null) {
-                    label.classList.remove('label--active');
-                    input.parentElement.classList.remove('textInput--focused');
-                }
-            }else{
                 input.parentElement.classList.add('textInput--focused');
                 let label = input.parentElement.querySelector('label');
                 if(label!=null){
                     label.classList.remove('label--none');
                     label.classList.add('label--active');
+                }
+            }else{
+                let label = input.parentElement.querySelector('label');
+                if(!input.value && label!=null) {
+                    label.classList.remove('label--active');
+                    input.parentElement.classList.remove('textInput--focused');
                 }
             }
             setTimeout(() => {
