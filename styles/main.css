@@ -2218,6 +2218,10 @@ input:not(:-webkit-autofill) {
   top: -3px;
 }
 
+.canDetails__faceIcon {
+  cursor: pointer;
+}
+
 .canDetails__faceIcon--red g path {
   fill: #D23A3A;
 }
