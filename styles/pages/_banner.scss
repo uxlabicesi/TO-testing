@@ -1,0 +1,155 @@
+.contentTO{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    margin-top: 20px;
+    border: #294f75 solid 2px;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+
+    &__icon{
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        margin-left: 10px;
+
+        &Two{
+            margin-left: -45px;
+            margin-top: 30px;
+        }
+
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+    &__info{
+        width: 50%;
+        margin-left: 70px;
+
+        & h1{
+            font-size: $typo-h3;
+            color: $color-darkGray;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+        & p{
+            font-size: $typo-h4;
+            color: #69757b;
+            margin: 0px;
+        }
+    }
+
+    &__to{
+        width: 25%;
+
+        &Btn{
+            border-radius: 3px;
+            padding: 10px 16px;
+            background-color: #294f75;
+            border-color: #25476a !important;
+            color: #fff;
+            font-size: 14px;
+            line-height: 1.44;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    
+}
+
+@media (max-width: $screen-large) {
+    .banner{
+        width: 70%;
+
+        &__icon{
+            width: 17%;
+        }
+    }
+}
+
+@media (max-width: $screen-medium) {
+    .banner{
+        width: 90%;
+
+        &__info{
+            width: 60%;
+
+            & h1{
+                font-size: 13px;
+            }
+
+            & p {
+                font-size: 12px;
+            }
+        }
+
+        &__icon{
+            width: 17%;
+        }
+
+    
+        &__to{
+            width: 22%;
+
+            &Btn{
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-small) {
+    .banner{
+        width: 90%;
+        flex-direction: column;
+        min-width: 250px;
+
+        &__info{
+            width: 70%;
+            margin-left: 0;
+
+            & h1{
+                font-size: 0.7em;
+            }
+
+            & p {
+                font-size: 0.6em;
+            }
+        }
+
+        &__icon{
+            width: 18%;
+            bottom: -20px;
+        }
+
+        &__to{
+            width: 70%;
+
+            &Btn{
+                font-size: 0.5em;
+                margin-top: 20px;
+            }
+        }
+    }
+}
