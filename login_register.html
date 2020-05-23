@@ -43,14 +43,14 @@
                     <form id="id_formFirstPart" class="registerForm" action="">
                         <div class="textInput__container textInput__container--marginless form-group">
                             <label for="form_companyName" class="label register__label label--register">¿Cómo se llama tu empresa?</label>
-                            <input type="text" class="textInput textInput--register" id="form_companyName" name="company" >
-                            <!-- autocomplete="organization" -->
+                            <input type="text" class="textInput textInput--register" id="form_companyName" name="company" autocomplete="organization">
+                            <!--  -->
                         </div>
 
                         <div class="textInput__container form-group">
                             <label for="form_nit" class="label register__label label--register">¿Cuál es el NIT de tu
                                 empresa?</label>
-                            <input type="text" class="textInput textInput--register" id="form_nit" name="nitNumber"
+                            <input type="text" class="textInput textInput--register" id="form_nit" name="nitNumber"  autocomplete="disabled" 
                                 required>
                         </div>
 
@@ -116,22 +116,22 @@
                     <form id="id_formSecondPart" class="registerForm" action="">
                         <div class="textInput__container textInput__container--marginless form-group">
                             <label for="form_username" class="label register__label label--register">¿Con quién vamos a conversar?</label>
-                            <input type="text" class="textInput textInput--register" id="form_username" name="username" autocomplete = "disabled" required>
+                            <input type="text" class="textInput textInput--register" id="form_username" name="username" autocomplete="name" required>
                         </div>
 
                         <div class="textInput__container form-group">
                             <label for="form_number" class="label register__label label--register">¿A qué número te
                                 podemos llamar?</label>
-                            <input type="number" class="textInput textInput--register" id="form_number" name="number"
+                            <input type="number" class="textInput textInput--register" id="form_number" name="number" autocomplete="tel"
                             equired >
-                            <!-- autocomplete="tel" -->
+                            <!--  -->
                         </div>
 
                         <div class="textInput__container form-group">
                             <label for="form_email" class="label register__label label--register control-label">¿Cuál es
                                 tu correo?</label>
                             <input type="text" class="textInput textInput--register form-control" id="form_email"
-                                name="email"  autocomplete = "disabled" required>
+                                name="email"  autocomplete = "email" required>
                                 <!-- autocomplete="email" -->
                         </div>
 
