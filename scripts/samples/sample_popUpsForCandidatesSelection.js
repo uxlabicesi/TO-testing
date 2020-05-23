@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
 
    let rootForPopUp = ".popUp";
 
-   createPopUp(informationPopUpLastCandidate100, rootForPopUp);
+   //createPopUp(informationPopUpLastCandidate100, rootForPopUp);
 
    selectionStateButton.addEventListener('click', (ev) => {
 
