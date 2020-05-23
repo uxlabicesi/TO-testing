@@ -187,9 +187,10 @@
             border-color: transparent;
             color: transparent;
             position: relative;
-            border-top: 2px solid $color-gray;
-            height: 1px;
-            top: 10px;
+            background-color: $color-gray;
+            height: 10px;
+            top: 18px;
+            box-shadow: inset 0px -8px 0px #F4F6F8;
             cursor: pointer;
             margin-right: .5%;
         }
@@ -197,9 +198,10 @@
         &::-webkit-slider-runnable-track {
             position: relative;
             appearance: none;
-            border-top: 2px solid $color-gray;
-            height: 1px;
-            top: 10px;
+            background-color: $color-gray;
+            height: 10px;
+            top: 18px;
+            box-shadow: inset 0px -8px 0px #F4F6F8;
             cursor: pointer;
             width: 99.5%;
             margin-right: .5%;
@@ -208,9 +210,10 @@
         &::-moz-range-track {
             position: relative;
             appearance: none;
-            border-top: 2px solid $color-gray;
-            height: 1px;
-            top: 10px;
+            background-color: $color-gray;
+            height: 10px;
+            top: 18px;
+            box-shadow: inset 0px -8px 0px #F4F6F8;
             cursor: pointer;
             width: 99.5%;
             margin-right: .5%;
@@ -232,6 +235,7 @@
     }
 
     &__steps {
+        pointer-events: none;
         position: relative;
         display: flex;
         justify-content: space-between;
