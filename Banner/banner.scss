@@ -16,7 +16,7 @@ body{
     align-items: center;
 }
 
-.banner{
+.bannerTO{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -90,7 +90,7 @@ body{
 }
 
 @media (max-width: 992px) {
-    .banner{
+    .bannerTO{
         width: 70%;
 
         &__icon{
@@ -100,7 +100,7 @@ body{
 }
 
 @media (max-width: 769px) {
-    .banner{
+    .bannerTO{
         width: 90%;
 
         &__info{
@@ -131,7 +131,7 @@ body{
 }
 
 @media (max-width: 576px) {
-    .banner{
+    .bannerTO{
         width: 90%;
         flex-direction: column;
         min-width: 250px;
