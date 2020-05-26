@@ -247,7 +247,10 @@ window.addEventListener('load', () => {
                 }
             });
         }
-
+        if(status[0] === 1 && !draft && !finished){
+            requestTime.innerHTML = 'En verificación';
+            requestTimeList.innerHTML = 'En verificación';
+        }
         requestCardContainer.appendChild(requestStatusBar);
         requestCardContainer.appendChild(requestState);
         requestTimeList.classList.add('request__time');
