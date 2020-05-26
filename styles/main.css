@@ -4425,7 +4425,7 @@ input[type=number] {
 
 .pay__result {
   width: 100%;
-  padding: 0px 2em;
+  padding: 1.5em 2em;
 }
 
 .pay__result h2 {
