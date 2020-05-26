@@ -4420,7 +4420,6 @@ input[type=number] {
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .pay__result {
@@ -4633,7 +4632,8 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 30px 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
