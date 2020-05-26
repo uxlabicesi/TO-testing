@@ -6,7 +6,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #FAFAFA;
+    background-color: #CCC;
 }
 
 .contentTO{
@@ -27,6 +27,7 @@ body{
     border-radius: 6px;
     padding: 15px;
     position: relative;
+    background-color: #FAFAFA;
 
     &__icon{
         width: 14%;
