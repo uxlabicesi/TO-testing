@@ -967,6 +967,7 @@ input:not(:-webkit-autofill) {
   background-color: white;
   margin: 10px 20px 10px 0;
   padding: 15px 20px;
+  cursor: pointer;
 }
 
 .request--list {
@@ -3728,6 +3729,7 @@ input[type=number] {
 }
 
 .content__card {
+  cursor: pointer;
   width: 100%;
   height: auto;
   padding: 5px;
