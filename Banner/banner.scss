@@ -21,27 +21,25 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 60%;
+    width: 70%;
     margin-top: 20px;
     border: #294f75 solid 2px;
     border-radius: 6px;
     padding: 15px;
-    position: relative;
     background-color: #FAFAFA;
 
-    &__icon{
-        width: 14%;
+    &__container{
         display: flex;
         flex-direction: row;
-        position: absolute;
-        left: 0;
-        bottom: -30px;
-        margin-left: 10px;
+        width: 70%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
-        &Two{
-            margin-left: -45px;
-            margin-top: 30px;
-        }
+    &__icon{
+        width: 10%;
+        display: flex;
+        flex-direction: row;
 
         & img{
             width: 100%;
@@ -51,18 +49,18 @@ body{
 
 
     &__info{
-        width: 50%;
-        margin-left: 70px;
+        width: 80%;
+        text-align: center;
 
         & h1{
-            font-size: 16px;
+            font-size: 18px;
             color: #494949;
             margin: 0px;
             margin-bottom: 10px;
         }
 
         & p{
-            font-size: 13px;
+            font-size: 14px;
             color: #69757b;
             margin: 0px;
         }
@@ -85,6 +83,10 @@ body{
             width: 100%;
             height: 100%;
         }
+
+        & a {
+            display: none;
+        }
     }
     
     
@@ -92,10 +94,14 @@ body{
 
 @media (max-width: 992px) {
     .bannerTO{
-        width: 70%;
+        width: 80%;
 
         &__icon{
-            width: 17%;
+            width: 11%;
+        }
+
+        &__to{
+            width: 28%;
         }
     }
 }
@@ -104,28 +110,27 @@ body{
     .bannerTO{
         width: 90%;
 
+        &__icon{
+            width: 12%;
+        }
+
         &__info{
-            width: 60%;
+            width: 70%;
 
             & h1{
-                font-size: 13px;
+                font-size: 14px;
             }
 
             & p {
                 font-size: 12px;
             }
         }
-
-        &__icon{
-            width: 17%;
-        }
-
     
         &__to{
-            width: 22%;
+            width: 30%;
 
             &Btn{
-                font-size: 11px;
+                font-size: 12px;
             }
         }
     }
@@ -137,29 +142,36 @@ body{
         flex-direction: column;
         min-width: 250px;
 
+        &__container{
+            width: 90%;
+            justify-content: space-between;
+        }
+
         &__info{
-            width: 70%;
+            width: 75%;
             margin-left: 0;
 
             & h1{
-                font-size: 0.7em;
+                font-size: 18px;
+                margin-bottom: 0;
             }
 
             & p {
-                font-size: 0.6em;
+                display: none;
+                font-size: 11px;
             }
         }
 
         &__icon{
-            width: 18%;
-            bottom: -20px;
+            width: 12%;
+            min-width: 40px;
         }
 
         &__to{
-            width: 70%;
+            width: 90%;
 
             &Btn{
-                font-size: 0.5em;
+                font-size: 13px;
                 margin-top: 20px;
             }
         }
