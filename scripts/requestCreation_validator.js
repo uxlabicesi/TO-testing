@@ -17,6 +17,14 @@ window.addEventListener('load', () => {
                         }
                     }
                 },
+                observations:{
+                    validators: {
+                        stringLength: {
+                            max: 500,
+                            message: 'no se pueden exceder los 500 caracteres'
+                        }
+                    }
+                },
             }
         });
     });

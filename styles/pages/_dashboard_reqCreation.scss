@@ -21,6 +21,14 @@
     &__hasError{
         margin-bottom: 0px;
 
+        &--textInput{
+            & .help-block{
+                margin-left: 0px;
+                position: relative;
+                margin-top: 10px;
+            }
+        }
+
         & .help-block{
             margin-left: 0px;
             position: absolute;

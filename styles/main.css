@@ -2693,7 +2693,7 @@ input:not(:-webkit-autofill) {
   display: none;
   width: 100vw;
   height: 100vh;
-  background-image: url("../resources/responsiveLoginBg.png");
+  background-image: url("../resources/responsiveLoginBg_minified.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -10vw;
@@ -4073,6 +4073,12 @@ input[type=number] {
 
 .reqCreation__hasError {
   margin-bottom: 0px;
+}
+
+.reqCreation__hasError--textInput .help-block {
+  margin-left: 0px;
+  position: relative;
+  margin-top: 10px;
 }
 
 .reqCreation__hasError .help-block {
