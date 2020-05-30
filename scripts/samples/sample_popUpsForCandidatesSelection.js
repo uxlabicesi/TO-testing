@@ -23,6 +23,8 @@ window.addEventListener('load', () => {
       goTo: "#", // cambiar estado e ir al pago
       goBack: "Seleccionar e ir a verificar candidatos", // ir a los candidatos
       returnTo:"#",//text url for a option,
+      functionGoto: sampleFunctionGo,
+      functionGoBack: sampleFunctionGoBack,
    };
 
    let informationPopUpLastCandidate100 = {
@@ -35,7 +37,8 @@ window.addEventListener('load', () => {
       goTo: "", // cambiar estado e ir a solicitudes completadas
       goBack: "Seleccionar e ir a verificar candidatos", // test for second option
       returnTo: "#", // ir a los candidatos
-    
+      functionGoto: sampleFunctionGo,
+      functionGoBack: sampleFunctionGoBack,
    };
 
 
@@ -56,7 +59,14 @@ window.addEventListener('load', () => {
 
    let rootForPopUp = ".popUp";
 
-   //createPopUp(informationPopUpLastCandidate100, rootForPopUp);
+   function sampleFunctionGo(){
+      console.log("Calling function go!");
+   }
+   function sampleFunctionGoBack(){
+      console.log("Calling function back!");
+   }
+
+   createPopUp(informationPopUpLastCandidate100, rootForPopUp);
 
    selectionStateButton.addEventListener('click', (ev) => {
 

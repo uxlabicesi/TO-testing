@@ -35,16 +35,21 @@
             let goTo = information.goTo;
             let goBack = information.goBack;
             let returnTo = information.returnTo;
-
-
             let candidate = information.candidate;
             let job = information.job;
             let nextstate = information.nextstate;
 
+
+
+            let functionGo = information.functionGoto;
+            let functionBack = information.functionGoBack;
+    
+
+    
+
             if( candidate !== null && candidate !== undefined && candidate !== '' ){
                 if( job !== null && job !== undefined && job !== '' ){
                     popUpText = "Seleccionaste a <strong>" + candidate.toString() + "</strong> para el cargo <strong>" + job.toString() + "</strong>";
-
                     if(nextstate === 0){
                         popUpText = popUpText + "<br><br>Finalizaste tu proceso de selección, estás cerca de tener el mejor talento." 
                     }else{
@@ -96,11 +101,20 @@
 
             bodyBtn.addEventListener('click', (ev) => {
                 if(goTo!==''){
+                    ev.preventDefault();
                     window.location.href = goTo;
+                }else if(goTo!=='' && information.functionGoto !== null && information.functionGoto !== undefined){
+                    ev.preventDefault();
+                    functionGo();
+                    window.location.href = goTo;
+                }else if(information.functionGoto !== null && information.functionGoto !== undefined){
+                    functionGo();
+                    ev.preventDefault();
                 }else{
                     ev.preventDefault();
                 }
             });
+
 
             let bodyBack = document.createElement('a');
             bodyBack.classList.add('popUp__contentBodyBack');
@@ -109,6 +123,24 @@
                 bodyBack.innerText = goBack;
                 bodyBack.setAttribute('href',returnTo);
             }
+
+
+            bodyBack.addEventListener('click', (ev) => {
+                if(goBack!==''){
+                    ev.preventDefault();
+                    window.location.href = goBack;
+                }else if(goBack!=='' && information.functionGoBack !== null && information.functionGoBack !== undefined){
+                    ev.preventDefault();
+                    functionBack();
+                    window.location.href = goBack;
+                }else if(information.functionGoBack !== null && information.functionGoBack !== undefined){
+                    ev.preventDefault();
+                    functionBack();
+                }else{
+                    ev.preventDefault();
+                }
+            });
+
 
             body.appendChild(bodyTitle);
             body.appendChild(bodyText);
