@@ -65,4 +65,19 @@
     }
 
 
+    &__container{
+        &--hasError{
+            & .help-block{
+                position: absolute;
+                color: #D23A3A; 
+                font-size: 13px;
+                margin-left: 0px;
+                position: relative;
+                margin-top: 5px;
+                top: 0;
+            }
+        }
+    }
+
+
 }
