@@ -116,28 +116,26 @@
             });
 
 
-            let bodyBack = document.createElement('a');
+            let bodyBack = document.createElement('span');
             bodyBack.classList.add('popUp__contentBodyBack');
             
             if(goBack != undefined){
                 bodyBack.innerText = goBack;
-                bodyBack.setAttribute('href',returnTo);
+                //bodyBack.setAttribute('href',returnTo);
             }
 
 
             bodyBack.addEventListener('click', (ev) => {
+                ev.preventDefault();
                 if(goBack!==''){
-                    ev.preventDefault();
-                    window.location.href = goBack;
-                }else if(goBack!=='' && information.functionGoBack !== null && information.functionGoBack !== undefined){
-                    ev.preventDefault();
+                    window.location.href = returnTo;
+                }
+                if(goBack!=='' && information.functionGoBack !== null && information.functionGoBack !== undefined){
                     functionBack();
-                    window.location.href = goBack;
-                }else if(information.functionGoBack !== null && information.functionGoBack !== undefined){
-                    ev.preventDefault();
+                    window.location.href = returnTo;
+                }
+                if(information.functionGoBack !== null && information.functionGoBack !== undefined){
                     functionBack();
-                }else{
-                    ev.preventDefault();
                 }
             });
 
