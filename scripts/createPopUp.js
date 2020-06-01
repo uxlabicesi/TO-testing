@@ -120,6 +120,7 @@
 
 
             let bodyBack = document.createElement('span');
+            bodyBack.style.cursor = "pointer";
             bodyBack.classList.add('popUp__contentBodyBack');
             
             if(goBack != undefined){
