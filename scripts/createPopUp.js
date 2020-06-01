@@ -127,16 +127,16 @@
 
             bodyBack.addEventListener('click', (ev) => {
                 ev.preventDefault();
-                if(goBack!==''){
-                    window.location.href = returnTo;
-                }
+
                 if(goBack!=='' && information.functionGoBack !== null && information.functionGoBack !== undefined){
                     functionBack();
                     window.location.href = returnTo;
-                }
-                if(information.functionGoBack !== null && information.functionGoBack !== undefined){
+                } else if(information.functionGoBack !== null && information.functionGoBack !== undefined){
                     functionBack();
+                } else if(goBack!==''){
+                    window.location.href = returnTo;
                 }
+                
             });
 
 
