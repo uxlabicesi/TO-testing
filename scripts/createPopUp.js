@@ -158,11 +158,7 @@
             popUpContent.appendChild(body);
             popUp.appendChild(popUpContent);
 
-            function closePopUp() {
-                body.classList.add('popUp__contentBody--inactive');
-                popUpContainer.classList.add('popUp--inactive');
-                popUp.removeChild(popUpContent);
-            }
+        
 
             popUpContentClose.addEventListener('click', function () {
                 body.classList.add('popUp__contentBody--inactive');
@@ -173,13 +169,25 @@
             bodyBtn.addEventListener('click', function () {
                 body.classList.add('popUp__contentBody--inactive');
                 popUpContainer.classList.add('popUp--inactive');
+                if(popUpContent!=null && popUp.hasChildNodes()){
                 popUp.removeChild(popUpContent);
+                }
             });
 
             popUp.onclick = function (event) {
                 if (event.target == popUp) {
                     body.classList.add('popUp__contentBody--inactive');
                     popUpContainer.classList.add('popUp--inactive');
+                    if(popUpContent!=null && popUp.hasChildNodes()){
+                    popUp.removeChild(popUpContent);
+                }
+                }
+            }
+
+            function closePopUp() {
+                body.classList.add('popUp__contentBody--inactive');
+                popUpContainer.classList.add('popUp--inactive');
+                if(popUpContent!=null && popUp.hasChildNodes()){
                     popUp.removeChild(popUpContent);
                 }
             }
