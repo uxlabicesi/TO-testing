@@ -107,11 +107,14 @@
                     ev.preventDefault();
                     functionGo();
                     window.location.href = goTo;
+                    closePopUp();
                 }else if(information.functionGoto !== null && information.functionGoto !== undefined){
                     functionGo();
                     ev.preventDefault();
+                    closePopUp();
                 }else{
                     ev.preventDefault();
+                    closePopUp();
                 }
             });
 
@@ -130,11 +133,14 @@
 
                 if(goBack!=='' && information.functionGoBack !== null && information.functionGoBack !== undefined){
                     functionBack();
+                    closePopUp();
                     window.location.href = returnTo;
                 } else if(information.functionGoBack !== null && information.functionGoBack !== undefined){
                     functionBack();
+                    closePopUp();
                 } else if(goBack!==''){
                     window.location.href = returnTo;
+                    closePopUp();
                 }
                 
             });
@@ -150,6 +156,12 @@
             popUpContent.appendChild(popUpContentClose);
             popUpContent.appendChild(body);
             popUp.appendChild(popUpContent);
+
+            function closePopUp() {
+                body.classList.add('popUp__contentBody--inactive');
+                popUpContainer.classList.add('popUp--inactive');
+                popUp.removeChild(popUpContent);
+            }
 
             popUpContentClose.addEventListener('click', function () {
                 body.classList.add('popUp__contentBody--inactive');
