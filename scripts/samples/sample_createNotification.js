@@ -42,12 +42,10 @@ let notifSample5 = {
     "id": "sample_id",
 }
 let notifSample6 = {
-    "job": "Abogado laboral",
-    "cities": ["Palmira, Valle del Cauca"],
-    "status": [2, 1],
     "date": "25/03/2020",
-    "isNew": false,
+    "isNew": true,
     "id": "sample_id",
+    "text": "Tu solicitud <strong>(nombre del cargo)</strong> para <strong>(ciudad/varias ciudades)</strong> fue creada de manera exitosa."
 }
 
 createNotification(notifSample1,'.content','./resources/checkIcon.svg');
