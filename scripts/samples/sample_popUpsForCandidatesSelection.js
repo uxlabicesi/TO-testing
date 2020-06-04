@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
       job:"", // job name
       nextstate: 5, // 5 para pendiente de pago || 0 para finalizó el proceso
       title: "¡Atención!",
-      text: "Estás por finalizar el proceso, ¿Quieres ir a pagar?", // optional if state, job and candidate was entered
+      text: "Estás por finalizar el proceso,<br> ¿Quieres ir a pagar?", // optional if state, job and candidate was entered
       btn: "Sí, finalizar e ir a pagar",
       goTo: "", // cambiar estado e ir a solicitudes completadas
       goBack: "No, aún no estoy listo", // test for second option
@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
       job:"", // job name
       nextstate: 5, // 5 para pendiente de pago || 0 para finalizó el proceso
       title: "¡Atención!",
-      text: "Ya tienes tus candidatos, ¿Quieres finalizar el proceso?", // optional if state, job and candidate was entered
+      text: "Ya tienes tus candidatos,<br> ¿Quieres finalizar el proceso?", // optional if state, job and candidate was entered
       btn: "Sí, ya he terminado",
       goTo: "", // cambiar estado e ir a solicitudes completadas
       goBack: "No, aún no estoy listo", // test for second option
