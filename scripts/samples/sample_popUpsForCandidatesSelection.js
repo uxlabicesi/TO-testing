@@ -42,6 +42,35 @@ window.addEventListener('load', () => {
    };
 
 
+   let informationPopUpFinishProcessGoToPay = {
+      candidate: "", // name
+      job:"", // job name
+      nextstate: 5, // 5 para pendiente de pago || 0 para finalizó el proceso
+      title: "¡Atención!",
+      text: "Estás por finalizar el proceso, ¿Quieres ir a pagar?", // optional if state, job and candidate was entered
+      btn: "Sí, finalizar e ir a pagar",
+      goTo: "", // cambiar estado e ir a solicitudes completadas
+      goBack: "No, aún no estoy listo", // test for second option
+      returnTo: "#", // ir a los candidatos
+      functionGoto: sampleFunctionGo,
+      functionGoBack: sampleFunctionGoBack,
+   };
+
+   let informationPopUpFinishProcess = {
+      candidate: "", // name
+      job:"", // job name
+      nextstate: 5, // 5 para pendiente de pago || 0 para finalizó el proceso
+      title: "¡Atención!",
+      text: "Ya tienes tus candidatos, ¿Quieres finalizar el proceso?", // optional if state, job and candidate was entered
+      btn: "Sí, ya he terminado",
+      goTo: "", // cambiar estado e ir a solicitudes completadas
+      goBack: "No, aún no estoy listo", // test for second option
+      returnTo: "#", // ir a los candidatos
+      functionGoto: sampleFunctionGo,
+      functionGoBack: sampleFunctionGoBack,
+   };
+
+
    let informationPopUpEvaluationRequired = {
       title: "Aún nos falta un paso",
       text: "Recuerda evaluar el candidato antes de seleccionarlo",
@@ -66,7 +95,7 @@ window.addEventListener('load', () => {
       console.log("Calling function back!");
    }
 
-   createPopUp(informationPopUpLastCandidate100, rootForPopUp);
+   createPopUp(informationPopUpFinishProcess, rootForPopUp);
 
    selectionStateButton.addEventListener('click', (ev) => {
 
