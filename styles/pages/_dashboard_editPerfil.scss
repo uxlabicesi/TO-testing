@@ -17,11 +17,25 @@
     }
 }
 
+.registerThirdPart{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .help-block{
+        margin-left: 40px;
+    }
+}
+
 .register__button--edit{
     width: calc(100% - 270px);
 }
 
 .register__text--edit{
+    width: calc(100% - 180px);
+}
+
+.registerEdit--third{
     width: calc(100% - 180px);
 }
 

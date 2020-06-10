@@ -103,6 +103,10 @@
         &--edit{
             width: 95%;
         }
+
+        &--editPerfil{
+            width: calc(100% - 90px);
+        }
     }
     
     &__checkboxContainer {

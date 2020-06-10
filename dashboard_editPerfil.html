@@ -200,33 +200,6 @@
                                     <input type="text" class="textInput textInput--register form-control textInput--editPerfil" id="form_email"
                                         name="email" autocomplete="email" required>
                                 </div>
-        
-                                <div class="textInput__container form-group">
-                                    <label for="form_password" class="label register__label label--register register__label--edit">¿Cuál es tu
-                                        contraseña actual?</label>
-                                    <input type="password" class="textInput textInput--register password textInput--editPerfil"
-                                        data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
-                                        equired>
-                                    <img class="login__passShow login__passShow--edit" src="resources/notShowPass.svg" alt="">
-                                </div>
-        
-                                <div class="textInput__container form-group">
-                                    <label for="form_newPass" class="label register__label label--register register__label--edit">¿Cual es
-                                        tu nueva contraseña?</label>
-                                    <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
-                                        data-bv-identical="true" id="form_newPass" name="confirmPassword"
-                                        autocomplete="new-password" required>
-                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="resources/notShowPass.svg" alt="">
-                                </div> 
-        
-                                <div class="textInput__container form-group">
-                                    <label for="form_repeatPass" class="label register__label label--register register__label--edit">¿Puedes repetir
-                                        tu nueva contraseña?</label>
-                                    <input type="password" class="textInput textInput--register passwordConfirmationAgain textInput--editPerfil"
-                                        data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
-                                        autocomplete="new-password" required>
-                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit login__passShowConfirmationAgain" src="resources/notShowPass.svg" alt="">
-                                </div>
                             </form>   
                         </div>
                         <div class="register__editPhoto register__editPhoto--secondPart">
@@ -235,11 +208,55 @@
                             <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
                             <input class="register__editPhotoInput" type="file" id="upload-photo">
                         </div>
+                    </div> 
+                </div> 
+            </div> 
+            
+            <div class="register__divider register__divider--edit"></div>
+
+            <div class="register__container register__container--edit">
+                <div class="register__icon">
+                    <img src="./resources/employeeIcon.svg" alt="">
+                    <h4 class="register__subtitle">DATOS DEL CONTACTO</h4>
+                </div>
+                <div class="registerThirdPart">
+                    <div class="registerEdit registerEdit--third">
+                        <div class="register__form register__form--edit" id="register__form register__form--edit">
+                            <div class="separator__vertical" style="margin-top:15px"></div>
+                            <form id="id_formSecondPart" class="registerForm" action="">
+                                <div class="textInput__container form-group">
+                                    <label for="form_password" class="label register__label label--register register__label--edit">¿Cuál es tu
+                                        contraseña actual?</label>
+                                    <input type="password" class="textInput textInput--register password textInput--editPerfil"
+                                        data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
+                                        equired>
+                                    <img class="login__passShow login__passShow--edit" src="./resources/notShowPass.svg" alt="">
+                                </div>
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_newPass" class="label register__label label--register register__label--edit">¿Cual es
+                                        tu nueva contraseña?</label>
+                                    <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
+                                        data-bv-identical="true" id="form_newPass" name="confirmPassword"
+                                        autocomplete="new-password" required>
+                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="./resources/notShowPass.svg" alt="">
+                                </div> 
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_repeatPass" class="label register__label label--register register__label--edit">¿Puedes repetir
+                                        tu nueva contraseña?</label>
+                                    <input type="password" class="textInput textInput--register passwordConfirmationAgain textInput--editPerfil"
+                                        data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
+                                        autocomplete="new-password" required>
+                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit login__passShowConfirmationAgain" src="./resources/notShowPass.svg" alt="">
+                                </div>
+                            </form>   
+                        </div>
                     </div>
                     <button class="btn btn--Xlarge register__button register__button--edit form-group" onclick="">G U A R D A R</button>
                     <p class="register__text register__text--edit form-group"><a href="./dashboard_main.html">Salir del proceso :(</a></p>
-                </div>    
-            </div>  
+                </div>
+            </div>
         </div>
             
         </div>

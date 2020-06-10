@@ -2892,6 +2892,10 @@ input:not(:-webkit-autofill) {
   width: 95%;
 }
 
+.register__divider--editPerfil {
+  width: calc(100% - 90px);
+}
+
 .register__checkboxContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4735,11 +4739,30 @@ input[type=number] {
   margin-left: 40px;
 }
 
+.registerThirdPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.registerThirdPart .help-block {
+  margin-left: 40px;
+}
+
 .register__button--edit {
   width: calc(100% - 270px);
 }
 
 .register__text--edit {
+  width: calc(100% - 180px);
+}
+
+.registerEdit--third {
   width: calc(100% - 180px);
 }
 
