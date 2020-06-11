@@ -15,15 +15,53 @@
         display: none;
     }
 
+    &__cropImg {
+        display: flex;
+        
+        & .croppie-container {
+            flex: 1;
+        }
+
+        & .cr {
+            &-boundary {
+                height: 150px !important;
+                width: 150px !important;
+            }
+
+            &-slider-wrap {
+                width: 150px !important;
+            }
+        }
+    }
+
+    &__description {
+        flex: 2;
+        min-height: 150px;
+
+        & label {
+            padding: 10px 35px;
+        }
+    }
+
+    &__saveImg {
+        position: absolute;
+        right: 35px;
+        bottom: 35px;
+    }
 
     &__content{
         background-color: #fefefe;
-        
+        position: relative;
         border: 1px solid lightgray;
         border-radius: 10px;
         width: auto;
         height: auto;
         padding: 25px;
+
+        &--flex {
+            display: flex;
+            flex-direction: column;
+        }
 
         &Close{
             color: $color-gray;
@@ -32,6 +70,12 @@
             font-weight: bold;
             margin-right: -15px;
             margin-top: -25px;
+
+            &--absolute {
+                position: absolute;
+                right: 30px;
+                width: 20px;
+            }
         }
 
         &Close:hover{

@@ -13,6 +13,7 @@
      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <!-- own styles -->
       <link rel="stylesheet" href="./styles/main.css">
+      <link rel="stylesheet" href="./libs/Croppie-2.6.4/croppie.css" />
 </head>
 <body>
     <div class="popUp popUp--inactive"></div>
@@ -163,8 +164,7 @@
                     <div class="register__editPhoto">
                         <img src="./resources/upload.svg" alt="">
                         <p>Arrastra la imagen o</p>
-                        <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
-                        <input class="register__editPhotoInput" type="file" id="upload-photo">
+                        <span class="register__editPhotoLabel" id="companyImgChange">selecciona un archivo</span>
                     </div>
                 </div>
             </div>
@@ -200,33 +200,6 @@
                                     <input type="text" class="textInput textInput--register form-control textInput--editPerfil" id="form_email"
                                         name="email" autocomplete="email" required>
                                 </div>
-        
-                                <div class="textInput__container form-group">
-                                    <label for="form_password" class="label register__label label--register register__label--edit">¿Cuál es tu
-                                        contraseña actual?</label>
-                                    <input type="password" class="textInput textInput--register password textInput--editPerfil"
-                                        data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
-                                        equired>
-                                    <img class="login__passShow login__passShow--edit" src="resources/notShowPass.svg" alt="">
-                                </div>
-        
-                                <div class="textInput__container form-group">
-                                    <label for="form_newPass" class="label register__label label--register register__label--edit">¿Cual es
-                                        tu nueva contraseña?</label>
-                                    <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
-                                        data-bv-identical="true" id="form_newPass" name="confirmPassword"
-                                        autocomplete="new-password" required>
-                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="resources/notShowPass.svg" alt="">
-                                </div> 
-        
-                                <div class="textInput__container form-group">
-                                    <label for="form_repeatPass" class="label register__label label--register register__label--edit">¿Puedes repetir
-                                        tu nueva contraseña?</label>
-                                    <input type="password" class="textInput textInput--register passwordConfirmationAgain textInput--editPerfil"
-                                        data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
-                                        autocomplete="new-password" required>
-                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit login__passShowConfirmationAgain" src="resources/notShowPass.svg" alt="">
-                                </div>
                             </form>   
                         </div>
                         <div class="register__editPhoto register__editPhoto--secondPart">
@@ -235,14 +208,106 @@
                             <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
                             <input class="register__editPhotoInput" type="file" id="upload-photo">
                         </div>
+                    </div> 
+                </div> 
+            </div> 
+            
+            <div class="register__divider register__divider--edit"></div>
+
+            <div class="register__container register__container--edit">
+                <div class="register__icon register__icon--thirdPart">
+                    <img src="./resources/lock.png" alt="">
+                    <h4 class="register__subtitle">DATOS DEL CONTACTO</h4>
+                </div>
+                <div class="registerThirdPart">
+                    <p>Si quieres cambiar tu contraseña, puedes llenar los siguientes campos.</p>
+                    <div class="registerEdit registerEdit--third">
+                        <div class="register__form register__form--edit" id="register__form register__form--edit">
+                            <div class="separator__vertical" style="margin-top:15px"></div>
+                            <form id="id_formSecondPart" class="registerForm" action="">
+                                <div class="textInput__container form-group">
+                                    <label for="form_password" class="label register__label label--register register__label--edit">¿Cuál es tu
+                                        contraseña actual?</label>
+                                    <input type="password" class="textInput textInput--register password textInput--editPerfil"
+                                        data-bv-identical="true" id="form_password" name="password" autocomplete="new-password"
+                                        equired>
+                                    <img class="login__passShow login__passShow--edit" src="./resources/notShowPass.svg" alt="">
+                                </div>
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_newPass" class="label register__label label--register register__label--edit">¿Cual es
+                                        tu nueva contraseña?</label>
+                                    <input type="password" class="textInput textInput--register passwordConfirmation textInput--editPerfil"
+                                        data-bv-identical="true" id="form_newPass" name="confirmPassword"
+                                        autocomplete="new-password" required>
+                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit" src="./resources/notShowPass.svg" alt="">
+                                </div> 
+        
+                                <div class="textInput__container form-group">
+                                    <label for="form_repeatPass" class="label register__label label--register register__label--edit">¿Puedes repetir
+                                        tu nueva contraseña?</label>
+                                    <input type="password" class="textInput textInput--register passwordConfirmationAgain textInput--editPerfil"
+                                        data-bv-identical="true" id="form_repeatPass" name="confirmPassword"
+                                        autocomplete="new-password" required>
+                                    <img class="login__passShowConfirmation login__passShowConfirmation--edit login__passShowConfirmationAgain" src="./resources/notShowPass.svg" alt="">
+                                </div>
+                            </form>   
+                        </div>
+                        <div class="register__editPhoto register__editPhoto--secondPart">
+                            <img src="./resources/upload.svg" alt="">
+                            <p>Arrastra la imagen o</p>
+                            <span class="register__editPhotoLabel" id="userImgChange">selecciona un archivo</span>
+                        </div>
                     </div>
                     <button class="btn btn--Xlarge register__button register__button--edit form-group" onclick="">G U A R D A R</button>
                     <p class="register__text register__text--edit form-group"><a href="./dashboard_main.html">Salir del proceso :(</a></p>
-                </div>    
-            </div>  
+                </div>
+            </div>
         </div>
-            
+          
+        <div class="popUp popUp--inactive" id="companyImgModal">
+            <div class="popUp__content popUp__content--flex">
+                <div class="popUp__contentClose popUp__contentClose--absolute">
+                    <span class="popUp__contentCloseX">x</span>
+                </div>
+                <h2 class="popUp__contentBodyTitle">Actualizar foto de perfil</h2>
+                <div class="popUp__cropImg">
+                    <div id="croppieCompany"></div>
+                    <div class="popUp__description">
+                        <label class="btn btn--small" for="upload-company">Cargar Imagen</label>
+                        <input class="register__editPhotoInput" type="file" id="upload-company" accept="image/*"> 
+
+                        <p>La imagen debe tener como mínimo las siguientes dimensiones: Alto: 150px, Ancho: 150px</p>
+                    </div>   
+                </div>
+
+                <button id="companyImgBtn" type="button" class="btn btn--medium popUp__saveImg">Guardar</button>
+            </div>
         </div>
+
+        <div class="popUp popUp--inactive" id="userImgModal">
+            <div class="popUp__content popUp__content--flex">
+                <div class="popUp__contentClose popUp__contentClose--absolute">
+                    <span class="popUp__contentCloseX">x</span>
+                </div>
+                <h2 class="popUp__contentBodyTitle">Actualizar foto de perfil</h2>
+                <div class="popUp__cropImg">
+                    <div id="croppieUser"></div>
+
+                    <div class="popUp__description">
+                        <label class="btn btn--small" for="upload-user">Cargar Imagen</label>
+                        <input class="register__editPhotoInput" type="file" id="upload-user" accept="image/*"> 
+
+                        <p>La imagen debe tener como mínimo las siguientes dimensiones: Alto: 150px, Ancho: 150px</p>
+                    </div>   
+                </div>
+
+                <button id="userImgBtn" type="button" class="btn btn--medium popUp__saveImg">Guardar</button>
+            </div>
+        </div>
+
+    </div>
+    
     <!------------------------------------>
     <!--------- General Scripts ---------->
     <!------------------------------------>
@@ -260,6 +325,9 @@
     <!-- scripts for toaster more info at : https://codeseven.github.io/toastr/ -->
     <script src="libs/toastr-2.1.4-7/toastr.js"></script>
 
+    <!-- scripts for croppie more info at : https://foliotek.github.io/Croppie/ -->
+    <script src="./libs/Croppie-2.6.4/croppie.js"></script>
+
      <!-- custom scripts -->
      <script src="./scripts/inputText_Microinteraction.js"></script>
      <!-- <script src="./scripts/registerInput_validator.js"></script> -->
@@ -268,12 +336,11 @@
      <script src="./scripts/select_interaction.js"></script>
     <script src="./scripts/dashboardNav_interaction.js"></script>
     <script src="./scripts/editProfileInformation.js"></script>
+    <script src="./scripts/createProfileImageModal.js"></script>
 
     <!-- Sample scripts -->
     <script src="./scripts/samples/sample_editProfileInformation.js"></script>
-
-
-    <script src="./scripts/createPopUp.js"></script>
+    <script src="./scripts/samples/sample_createProfileImageModal.js"></script>
     <script src="./scripts/samples/sample_openHelpPoUp.js"></script>
 </body>
 </html>

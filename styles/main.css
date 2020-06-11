@@ -2355,13 +2355,62 @@ input:not(:-webkit-autofill) {
   display: none;
 }
 
+.popUp__cropImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popUp__cropImg .croppie-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.popUp__cropImg .cr-boundary {
+  height: 150px !important;
+  width: 150px !important;
+}
+
+.popUp__cropImg .cr-slider-wrap {
+  width: 150px !important;
+}
+
+.popUp__description {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  min-height: 150px;
+}
+
+.popUp__description label {
+  padding: 10px 35px;
+}
+
+.popUp__saveImg {
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+}
+
 .popUp__content {
   background-color: #fefefe;
+  position: relative;
   border: 1px solid lightgray;
   border-radius: 10px;
   width: auto;
   height: auto;
   padding: 25px;
+}
+
+.popUp__content--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .popUp__contentClose {
@@ -2371,6 +2420,12 @@ input:not(:-webkit-autofill) {
   font-weight: bold;
   margin-right: -15px;
   margin-top: -25px;
+}
+
+.popUp__contentClose--absolute {
+  position: absolute;
+  right: 30px;
+  width: 20px;
 }
 
 .popUp__contentClose:hover {
@@ -2890,6 +2945,10 @@ input:not(:-webkit-autofill) {
 
 .register__divider--edit {
   width: 95%;
+}
+
+.register__divider--editPerfil {
+  width: calc(100% - 90px);
 }
 
 .register__checkboxContainer {
@@ -4720,6 +4779,14 @@ input[type=number] {
   margin-left: 40px;
 }
 
+.register__icon--thirdPart {
+  width: 9%;
+}
+
+.register__icon--thirdPart img {
+  width: 59px;
+}
+
 .registerSecondPart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4735,11 +4802,35 @@ input[type=number] {
   margin-left: 40px;
 }
 
+.registerThirdPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.registerThirdPart p {
+  width: calc(100% - 180px);
+  margin-left: 40px;
+}
+
+.registerThirdPart .help-block {
+  margin-left: 40px;
+}
+
 .register__button--edit {
   width: calc(100% - 270px);
 }
 
 .register__text--edit {
+  width: calc(100% - 180px);
+}
+
+.registerEdit--third {
   width: calc(100% - 180px);
 }
 
@@ -4789,6 +4880,10 @@ input[type=number] {
   }
   .register__button--edit {
     width: calc(100%);
+  }
+  .registerThirdPart p {
+    width: 100%;
+    margin: 0;
   }
 }
 
