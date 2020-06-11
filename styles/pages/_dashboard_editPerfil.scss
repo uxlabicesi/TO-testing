@@ -7,10 +7,33 @@
     }
 }
 
+.register__icon--thirdPart {
+    width: 9%;
+
+    & img{
+        width: 59px;
+    }
+}
+
 .registerSecondPart{
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    .help-block{
+        margin-left: 40px;
+    }
+}
+
+.registerThirdPart{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    & p {
+        width: calc(100% - 180px);
+        margin-left: 40px;
+    }
 
     .help-block{
         margin-left: 40px;
@@ -25,7 +48,9 @@
     width: calc(100% - 180px);
 }
 
-
+.registerEdit--third{
+    width: calc(100% - 180px);
+}
 
 @media (max-width: $screen-large) {
     .registerEdit{
@@ -79,6 +104,14 @@
 
     .register__button--edit{
         width: calc(100%);
+    }
+
+    .registerThirdPart{
+
+        & p{
+            width: 100%;
+            margin: 0;
+        }
     }
     
     

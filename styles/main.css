@@ -2947,6 +2947,10 @@ input:not(:-webkit-autofill) {
   width: 95%;
 }
 
+.register__divider--editPerfil {
+  width: calc(100% - 90px);
+}
+
 .register__checkboxContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4775,6 +4779,14 @@ input[type=number] {
   margin-left: 40px;
 }
 
+.register__icon--thirdPart {
+  width: 9%;
+}
+
+.register__icon--thirdPart img {
+  width: 59px;
+}
+
 .registerSecondPart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4790,11 +4802,35 @@ input[type=number] {
   margin-left: 40px;
 }
 
+.registerThirdPart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.registerThirdPart p {
+  width: calc(100% - 180px);
+  margin-left: 40px;
+}
+
+.registerThirdPart .help-block {
+  margin-left: 40px;
+}
+
 .register__button--edit {
   width: calc(100% - 270px);
 }
 
 .register__text--edit {
+  width: calc(100% - 180px);
+}
+
+.registerEdit--third {
   width: calc(100% - 180px);
 }
 
@@ -4844,6 +4880,10 @@ input[type=number] {
   }
   .register__button--edit {
     width: calc(100%);
+  }
+  .registerThirdPart p {
+    width: 100%;
+    margin: 0;
   }
 }
 
