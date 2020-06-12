@@ -34,7 +34,7 @@ var sample = {
     hasDiscount: true,
     taxesValue: 190000,
     discountValue: 25000,
-    finalValue:100000,
+    finalValue:999999,
 
     selectedPay: 0,   // 0 for 50% or 1 for 100%
     levelResponsability: 0, // 0 1 2 --> bajo medio alto

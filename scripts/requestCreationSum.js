@@ -121,7 +121,7 @@ window.addEventListener('load', () => {
 
         if(percentToPay === 0.5){
             percentToPayTitle.innerHTML = "(50%)"
-            percentToPayNumber.innerHTML  =  (info.finalValue/2).toLocaleString();
+            percentToPayNumber.innerHTML  =  (Math.ceil(info.finalValue/2)).toLocaleString();
         }else{
             percentToPayTitle.innerHTML = "(100%)"
             percentToPayNumber.innerHTML  = info.finalValue.toLocaleString();

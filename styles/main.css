@@ -3902,6 +3902,7 @@ input[type=number] {
 
 .content__infoCardLogoImg {
   width: 50px;
+  border-radius: 20px;
 }
 
 .content__infoCardData {
@@ -3927,6 +3928,7 @@ input[type=number] {
 .content__infoCardDataImg {
   width: 110px;
   height: auto;
+  border-radius: 20px;
 }
 
 .content__infoCardDataText {

@@ -45,6 +45,7 @@ window.addEventListener('load', () => {
         const userImgModal = document.getElementById('userImgModal');
         const userModalClose = userImgModal.querySelector('.popUp__contentClose');
     
+        if( userImgChange!== null )
         userImgChange.addEventListener('click', () => {
             userImgModal.classList.remove('popUp--inactive');
             if(!user) changeImage(imgUser, 'croppieUser');
