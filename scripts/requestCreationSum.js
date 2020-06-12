@@ -116,6 +116,18 @@ window.addEventListener('load', () => {
         // flag for 50% or 100% --- Possible values 0: for "50%" / 1:"100%" 
         let percentToPay = info.selectedPay === 0 ? 0.5 : 1.0;
 
+        const percentToPayTitle = document.querySelector('.pay__percentToPaySelection');
+        const percentToPayNumber = document.querySelector('.pay__detailsPercentToPayNumber');
+
+        if(percentToPay === 0.5){
+            percentToPayTitle.innerHTML = "(50%)"
+            percentToPayNumber.innerHTML  =  (info.finalValue/2).toLocaleString();
+        }else{
+            percentToPayTitle.innerHTML = "(100%)"
+            percentToPayNumber.innerHTML  = info.finalValue.toLocaleString();
+        }
+
+
         // --------------- pay information ---------------- //
         amount.innerHTML = info.amount;
         subtotal.innerHTML = info.subtotalNoTaxes.toLocaleString();

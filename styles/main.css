@@ -4703,6 +4703,10 @@ input[type=number] {
   display: flex;
 }
 
+.pay__detailsTotalSelection {
+  border-top: 1px solid #C4C4C4;
+}
+
 .pay__buttons {
   display: -webkit-box;
   display: -ms-flexbox;

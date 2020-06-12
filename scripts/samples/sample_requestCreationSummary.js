@@ -36,7 +36,7 @@ var sample = {
     discountValue: 25000,
     finalValue:100000,
 
-    selectedPay: 0,   
+    selectedPay: 0,   // 0 for 50% or 1 for 100%
     levelResponsability: 0, // 0 1 2 --> bajo medio alto
     levelDecision: 0, // 0 1 2  --> bajo medio alto 
     peopleInCharge: true,
