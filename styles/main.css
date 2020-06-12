@@ -2852,6 +2852,7 @@ input:not(:-webkit-autofill) {
 }
 
 .register__editPhoto {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4832,6 +4833,16 @@ input[type=number] {
 
 .registerEdit--third {
   width: calc(100% - 180px);
+}
+
+.croppie-container {
+  position: absolute;
+  top: 0;
+  border-radius: 5%;
+}
+
+.cr-boundary {
+  border-radius: 5%;
 }
 
 @media (max-width: 992px) {

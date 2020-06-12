@@ -52,6 +52,16 @@
     width: calc(100% - 180px);
 }
 
+.croppie-container {
+    position: absolute;    
+    top: 0;
+    border-radius: 5%;
+}
+
+.cr-boundary {
+    border-radius: 5%;
+}
+
 @media (max-width: $screen-large) {
     .registerEdit{
         display: flex;

@@ -163,8 +163,10 @@
                     </div>
                     <div class="register__editPhoto">
                         <img src="./resources/upload.svg" alt="">
-                        <p>Arrastra la imagen o</p>
-                        <span class="register__editPhotoLabel" id="companyImgChange">selecciona un archivo</span>
+                            <p>Arrastra la imagen o</p>
+                            <label class="register__editPhotoLabel" for="upload-company">selecciona un archivo</label>
+                            <input class="register__editPhotoInput" type="file" id="upload-company">
+                            <div id="croppieCompany"></div>
                     </div>
                 </div>
             </div>
@@ -205,8 +207,9 @@
                         <div class="register__editPhoto register__editPhoto--secondPart">
                             <img src="./resources/upload.svg" alt="">
                             <p>Arrastra la imagen o</p>
-                            <label class="register__editPhotoLabel" for="upload-photo">selecciona un archivo</label>
-                            <input class="register__editPhotoInput" type="file" id="upload-photo">
+                            <label class="register__editPhotoLabel" for="upload-user">selecciona un archivo</label>
+                            <input class="register__editPhotoInput" type="file" id="upload-user">
+                            <div id="croppieUser"></div>
                         </div>
                     </div> 
                 </div> 
@@ -253,59 +256,13 @@
                                 </div>
                             </form>   
                         </div>
-                        <div class="register__editPhoto register__editPhoto--secondPart">
-                            <img src="./resources/upload.svg" alt="">
-                            <p>Arrastra la imagen o</p>
-                            <span class="register__editPhotoLabel" id="userImgChange">selecciona un archivo</span>
-                        </div>
+                        
                     </div>
                     <button class="btn btn--Xlarge register__button register__button--edit form-group" onclick="">G U A R D A R</button>
                     <p class="register__text register__text--edit form-group"><a href="./dashboard_main.html">Salir del proceso :(</a></p>
                 </div>
             </div>
         </div>
-          
-        <div class="popUp popUp--inactive" id="companyImgModal">
-            <div class="popUp__content popUp__content--flex">
-                <div class="popUp__contentClose popUp__contentClose--absolute">
-                    <span class="popUp__contentCloseX">x</span>
-                </div>
-                <h2 class="popUp__contentBodyTitle">Actualizar foto de perfil</h2>
-                <div class="popUp__cropImg">
-                    <div id="croppieCompany"></div>
-                    <div class="popUp__description">
-                        <label class="btn btn--small" for="upload-company">Cargar Imagen</label>
-                        <input class="register__editPhotoInput" type="file" id="upload-company" accept="image/*"> 
-
-                        <p>La imagen debe tener como mínimo las siguientes dimensiones: Alto: 150px, Ancho: 150px</p>
-                    </div>   
-                </div>
-
-                <button id="companyImgBtn" type="button" class="btn btn--medium popUp__saveImg">Guardar</button>
-            </div>
-        </div>
-
-        <div class="popUp popUp--inactive" id="userImgModal">
-            <div class="popUp__content popUp__content--flex">
-                <div class="popUp__contentClose popUp__contentClose--absolute">
-                    <span class="popUp__contentCloseX">x</span>
-                </div>
-                <h2 class="popUp__contentBodyTitle">Actualizar foto de perfil</h2>
-                <div class="popUp__cropImg">
-                    <div id="croppieUser"></div>
-
-                    <div class="popUp__description">
-                        <label class="btn btn--small" for="upload-user">Cargar Imagen</label>
-                        <input class="register__editPhotoInput" type="file" id="upload-user" accept="image/*"> 
-
-                        <p>La imagen debe tener como mínimo las siguientes dimensiones: Alto: 150px, Ancho: 150px</p>
-                    </div>   
-                </div>
-
-                <button id="userImgBtn" type="button" class="btn btn--medium popUp__saveImg">Guardar</button>
-            </div>
-        </div>
-
     </div>
     
     <!------------------------------------>
