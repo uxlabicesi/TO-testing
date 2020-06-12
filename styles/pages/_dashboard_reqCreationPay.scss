@@ -182,6 +182,9 @@
                 display: flex;
     
             }
+            &Selection{
+                border-top: 1px solid $color-gray;
+            }
         }
     }
 

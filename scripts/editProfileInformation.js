@@ -13,6 +13,9 @@ window.addEventListener('load', () => {
         const numberContainer = number.closest('div');
         const email = document.getElementById('form_email');
         const emailContainer = email.closest('div')
+        const address = document.getElementById('form_address');
+        const addressContainer = address.closest('div')
+
 
         companyName.value = info.companyName;
         companyNameContainer.querySelector('label').classList.add('label--active');
@@ -33,6 +36,10 @@ window.addEventListener('load', () => {
         email.value = info.email;
         emailContainer.querySelector('label').classList.add('label--active');
         emailContainer.classList.add('textInput--focused');
+
+        address.value = info.address;
+        addressContainer.querySelector('label').classList.add('label--active');
+        addressContainer.classList.add('textInput--focused');
 
         $('.select2__selector--sector').val(info.sector);
         $('.select2__selector--sector').trigger('change');

@@ -117,6 +117,9 @@
     }
 
     .registerThirdPart{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
         & p{
             width: 100%;
