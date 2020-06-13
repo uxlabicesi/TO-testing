@@ -24,12 +24,12 @@
  * */
 
 
-let buildPayScreen = (info, srcImgSuccess = "./resources/checkGreen.svg", srcImgPending="./resources/waitIcon.svg", srcImgFail = "./resources/deteleIcon.svg") => {};
+let buildPayScreen = (info, srcImgSuccess = "./resources/checkGreen.svg", srcImgPending = "./resources/waitIcon.svg", srcImgFail = "./resources/deteleIcon.svg") => {};
 
 
 window.addEventListener('load', () => {
 
-    buildPayScreen = (info, srcImgSuccess = "./resources/checkGreen.svg", srcImgPending="./resources/waitIcon.svg", srcImgFail = "./resources/deteleIcon.svg") => {
+    buildPayScreen = (info, srcImgSuccess = "./resources/checkGreen.svg", srcImgPending = "./resources/waitIcon.svg", srcImgFail = "./resources/deteleIcon.svg") => {
 
         const payDetailsContent = document.querySelector('.pay__details');
         const payResultContent = document.querySelector('.pay__result');
@@ -48,6 +48,9 @@ window.addEventListener('load', () => {
 
         const payDetailsTaxes = document.querySelector('.pay__detailsTaxesDataNumber');
 
+        const paySelectedValue = document.querySelector('.pay__detailsSelectedNumber');
+
+
         //
         const promo = document.querySelector('.pay__detailsPromoDataNumber');
         const promoContainer = document.querySelector('.pay__detailsPromo');
@@ -58,15 +61,20 @@ window.addEventListener('load', () => {
         }
 
         const submessageForType = document.querySelector('.pay__type__description');
-        switch(info.type){
-            case 'first':
-                submessageForType.innerHTML="Este pago corresponde al <strong>50% inicial</strong> del valor del servicio";
+        const percentForSelectedTextDetails = document.querySelector('.pay__detailsSelected__text');
+
+        switch (info.type) {
+            case 'initial':
+                submessageForType.innerHTML = "Este pago corresponde al <strong>50% inicial</strong> del valor del servicio";
+                percentForSelectedTextDetails.innerHTML = "Valor seleccionado para pago inicial (50%):";
                 break;
-            case 'last': 
-                submessageForType.innerHTML="Este pago corresponde al <strong>50% final</strong> del valor del servicio";
+            case 'last':
+                submessageForType.innerHTML = "Este pago corresponde al <strong>50% final</strong> del valor del servicio";
+                percentForSelectedTextDetails.innerHTML = "Valor faltante para completar pago del servicio:";
                 break;
             case 'full':
-                submessageForType.innerHTML="Este pago corresponde al <strong>100%</strong> del valor del servicio";
+                submessageForType.innerHTML = "Este pago corresponde al <strong>100%</strong> del valor del servicio";
+                percentForSelectedTextDetails.innerHTML = "Valor seleccionado para pago inicial (100%):";
                 break;
         }
 
@@ -78,18 +86,26 @@ window.addEventListener('load', () => {
             payResultGlobalDescription.innerHTML = "Usted va a realizar la compra del siguiente servicio.";
 
             payDetailsRequest.innerHTML = info.requestJob + " (" + info.requestLevel + ")";
-            payDetailsAmount.innerHTML = info.requestAmount;
-            payDetailsSubtotal.innerHTML = info.requestsubtotal;
-            payDetailsTotalValue.innerHTML = info.requestTotal;
+            payDetailsAmount.innerHTML = info.requestAmount.toLocaleString();
+            payDetailsSubtotal.innerHTML = info.requestsubtotal.toLocaleString();
+            payDetailsTotalValue.innerHTML = info.requestTotal.toLocaleString();
+            payDetailsTaxes.innerHTML = info.requestTaxes.toLocaleString();
 
-            payDetailsTaxes.innerHTML = info.requestTaxes;
 
-            if(info.hasDiscount){
+            switch (info.type) {
+                case 'initial':
+                case 'last':
+                    paySelectedValue.innerHTML = (Math.ceil(info.requestTotal / 2)).toLocaleString();
+                    break;
+                case 'full':
+                    paySelectedValue.innerHTML = info.requestTotal.toLocaleString();
+                    break;
+            }
+
+            if (info.hasDiscount) {
                 promoContainer.classList.add('pay__detailsPromo--active');
                 promo.innerHTML = info.discountValue.toLocaleString();
             }
-
-
         } else {
             payDetailsContent.classList.add('pay__details--hide');
             payResultContent.classList.remove('pay__details--hide');
@@ -112,7 +128,7 @@ window.addEventListener('load', () => {
                     payResultContentMessage.querySelector('p').innerHTML = feedbackMessage;
                 }
                 actionButton.innerHTML = 'Volver al inicio';
-            } else if(info.payStatus === "onWait") {
+            } else if (info.payStatus === "onWait") {
                 payResultContentTitle.querySelector('h2').innerHTML = 'TRANSACCIÓN PENDIENTE'
                 payResultContentIcon.querySelector('img').setAttribute('src', srcImgPending);
                 payResultContentMessage.querySelector('p').innerHTML = '¡El proceso se encuentra pendiente!' + '<br>' + 'Estaremos atentos a los mensajes de tu banco'

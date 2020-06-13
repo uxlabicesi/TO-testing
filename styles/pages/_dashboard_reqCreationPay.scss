@@ -173,7 +173,6 @@
 
         &Total{
             display: flex;
-
             justify-content: space-between;
             color: #294F75;
             font-size: $typo-h3;
@@ -186,6 +185,23 @@
                 border-top: 1px solid $color-gray;
             }
         }
+
+        &Selected{
+            display: flex;
+            justify-content: space-between;
+            color: #294F75;
+            font-size: $typo-h3;
+            border-top: 1px solid $color-gray;
+
+            &Data{
+                display: flex;
+            }
+            
+            &Selection{
+                border-top: 1px solid $color-gray;
+            }
+        }
+
     }
 
     &__buttons {

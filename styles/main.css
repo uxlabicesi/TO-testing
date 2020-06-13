@@ -4721,6 +4721,28 @@ input[type=number] {
   border-top: 1px solid #C4C4C4;
 }
 
+.pay__detailsSelected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #294F75;
+  font-size: 16px;
+  border-top: 1px solid #C4C4C4;
+}
+
+.pay__detailsSelectedData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pay__detailsSelectedSelection {
+  border-top: 1px solid #C4C4C4;
+}
+
 .pay__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
