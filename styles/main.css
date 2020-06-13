@@ -4853,6 +4853,9 @@ input[type=number] {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .registerThirdPart p {
@@ -4864,11 +4867,7 @@ input[type=number] {
 }
 
 .register__button--edit {
-  width: calc(100% - 270px);
-}
-
-.register__text--edit {
-  width: calc(100% - 270px);
+  width: calc(100% - 90px);
 }
 
 .croppie-container {
@@ -4880,6 +4879,32 @@ input[type=number] {
 .cr-boundary {
   background-color: #ADADAD;
   border-radius: 5%;
+}
+
+.editPerfil__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.editPerfil__button p {
+  margin-left: 0px;
+}
+
+.editPerfil__prueba {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
 }
 
 @media (max-width: 992px) {
@@ -4900,7 +4925,7 @@ input[type=number] {
     width: 100%;
   }
   .register__button--edit {
-    width: calc(100% - 90px);
+    width: 100%;
   }
   .register__text--edit {
     width: calc(100%);
@@ -4922,6 +4947,9 @@ input[type=number] {
   }
   .registerEdit .help-block {
     margin-left: 0px;
+  }
+  .editPerfil__prueba {
+    width: 100%;
   }
   .selectadd--edit {
     width: 100%;
