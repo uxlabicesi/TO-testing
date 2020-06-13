@@ -13,6 +13,13 @@
     border: none;
     text-shadow: 0.5px -0.5px 0px rgba(0, 0, 0, 0.25);
 
+    &--update {
+        position: absolute;
+        bottom: -110px;
+        text-align: center;
+        line-height: 50px;
+    }
+
     &--large {
         width: 331px;
         height: 43px;

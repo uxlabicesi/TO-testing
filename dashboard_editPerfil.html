@@ -168,12 +168,13 @@
 
                         </form>
                     </div>
-                    <div class="register__editPhoto">
+                    <div class="register__editPhoto register__editPhoto--firstPart">
                         <img src="./resources/upload.svg" alt="">
-                            <p>Arrastra la imagen o</p>
-                            <label class="register__editPhotoLabel" for="upload-company">selecciona un archivo</label>
-                            <input class="register__editPhotoInput" type="file" id="upload-company">
-                            <div id="croppieCompany"></div>
+                        <p>Arrastra la imagen o</p>
+                        <label class="register__editPhotoLabel" for="upload-company">selecciona un archivo</label>
+                        <input class="register__editPhotoInput" type="file" id="upload-company" accept="image/*">
+                        <div id="croppieCompany"></div>
+                        <input class="register__editPhotoInput" type="file" id="update-company" accept="image/*">
                     </div>
                 </div>
             </div>
@@ -215,8 +216,9 @@
                             <img src="./resources/upload.svg" alt="">
                             <p>Arrastra la imagen o</p>
                             <label class="register__editPhotoLabel" for="upload-user">selecciona un archivo</label>
-                            <input class="register__editPhotoInput" type="file" id="upload-user">
+                            <input class="register__editPhotoInput" type="file" id="upload-user" accept="image/*">
                             <div id="croppieUser"></div>
+                            <input class="register__editPhotoInput" type="file" id="update-user" accept="image/*">
                         </div>
                     </div> 
                 </div> 

@@ -33,6 +33,13 @@ body {
   text-shadow: 0.5px -0.5px 0px rgba(0, 0, 0, 0.25);
 }
 
+.btn--update {
+  position: absolute;
+  bottom: -110px;
+  text-align: center;
+  line-height: 50px;
+}
+
 .btn--large {
   width: 331px;
   height: 43px;
@@ -2869,6 +2876,10 @@ input:not(:-webkit-autofill) {
   width: 20%;
   padding: 40px 20px;
   min-width: 180px;
+}
+
+.register__editPhoto--firstPart {
+  height: 40%;
 }
 
 .register__editPhoto--secondPart {
