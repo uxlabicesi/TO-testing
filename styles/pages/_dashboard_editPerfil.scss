@@ -8,8 +8,6 @@
 }
 
 .register__icon--thirdPart {
-    width: 9%;
-
     & img{
         width: 59px;
     }
@@ -49,7 +47,7 @@
 }
 
 .registerEdit--third{
-    width: calc(100% - 180px);
+    // width: calc(100% - 180px);
 }
 
 .croppie-container {
@@ -92,6 +90,10 @@
                 margin-bottom: 90px;
             }
         }
+    }
+
+    .register__editPhoto--thirdPart{
+        display: none;
     }
     
 }
@@ -136,7 +138,5 @@
             margin: 0;
         }
     }
-    
-    
     
 }

@@ -39,6 +39,12 @@
             margin-top: 15px;
         }
 
+        &--thirdPart{
+            height: 33%;
+            margin-top: 15px;
+            visibility: hidden;
+        }
+
         & p {
             font-size: 0.8em;
             color: $color-darkGray;
@@ -93,7 +99,7 @@
         }
 
         &--edit{
-            width: 100%;
+            width: 80%;
         }
     }
     
