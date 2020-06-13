@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
                 updateBtn.setAttribute('for', 'update-company');
                 updateBtn.innerHTML = 'Cambiar imagen';
                 container.appendChild(updateBtn);
+                container.classList.add('register__editPhoto--active');
             }
             company = new Croppie(document.getElementById(id), { viewport: { width: 150, height: 150, type: 'circle' }});
             company.bind({
@@ -36,6 +37,7 @@ window.addEventListener('load', () => {
                 updateBtn.setAttribute('for', 'update-user');
                 updateBtn.innerHTML = 'Cambiar imagen';
                 container.appendChild(updateBtn);
+                container.classList.add('register__editPhoto--active');
                 container.style.marginBottom = '90px';
             }
             user = new Croppie(document.getElementById(id), { viewport: { width: 150, height: 150, type: 'circle' }});

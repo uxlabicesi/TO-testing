@@ -4859,6 +4859,7 @@ input[type=number] {
 }
 
 .cr-boundary {
+  background-color: #ADADAD;
   border-radius: 5%;
 }
 
@@ -4884,6 +4885,12 @@ input[type=number] {
   }
   .register__text--edit {
     width: calc(100%);
+  }
+  .register__editPhoto {
+    margin-top: 15px;
+  }
+  .register__editPhoto--active {
+    margin-bottom: 90px;
   }
 }
 
