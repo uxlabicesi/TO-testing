@@ -4854,7 +4854,6 @@ input[type=number] {
 }
 
 .registerThirdPart p {
-  width: calc(100% - 180px);
   margin-left: 40px;
 }
 
@@ -4867,7 +4866,7 @@ input[type=number] {
 }
 
 .register__text--edit {
-  width: calc(100% - 180px);
+  width: calc(100% - 270px);
 }
 
 .registerEdit--third {
