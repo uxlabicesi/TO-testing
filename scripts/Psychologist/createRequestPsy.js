@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
         cities: **Arreglo** con el nombre de las ciudades,
         length: **String** Duración del contrato, ej: 'Término fijo a un año',
         days: **String** Días de trabajo, ej: 'Lunes a Viernes',
+        date: **String** que contiene la fecha en formato DD/MM/YYYY ej. 25/03/2020,
         payment: **String** Pago con formato, ej: '2\'500.000 COP',
         draft: **booleano** indicando si se trata de un borrador, true indica que es borrador.
         finished: **booleano** indicando si se trata de una solicitud terminada, true indica que la solicitud finalizó 
@@ -39,6 +40,7 @@ window.addEventListener('load', () => {
         }
         let jobLength = information.length;
         let workDays = information.days;
+        let creationDate = information.date;
         let payment = information.payment;
         let draft = information.draft;
         let finished = information.finished;
@@ -126,10 +128,15 @@ window.addEventListener('load', () => {
         let requestDays = document.createElement('p');
         requestDays.innerHTML = workDays;
 
-        
+        let requestDate = document.createElement('p');
+        if(creationDate != undefined){
+            requestDate.innerHTML = "Fecha de entrega: " + creationDate;
+        }
+
         requestInfo.appendChild(requestCity);
         requestInfo.appendChild(requestLength);
         requestInfo.appendChild(requestDays);
+        requestInfo.appendChild(requestDate);
         requestCardContainer.appendChild(requestInfo);
 
         let requestPrice = document.createElement('h4');

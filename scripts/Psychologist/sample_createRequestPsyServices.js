@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    console.log("Using sample data...");
+    console.log("Using sample data sample_createRequestPsyServices...");
 // TODO REMOVE AFTER DEBUG
 let sample = {
     "job": "DISEÑADOR DE MEDIOS INTERACTIVOS",
@@ -8,6 +8,7 @@ let sample = {
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
     "days": "Lunes a Viernes",
+    "date": "25/03/2020",
     "payment": "12'500.000 COP",
     "status": [0, 1],
     "draft": false,
@@ -23,6 +24,7 @@ let sample2 = {
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
     "days": "Lunes a Viernes",
+    "date": "25/03/2020",
     "payment": "2'500.000 COP",
     "draft": false,
     "finished": false,
@@ -36,6 +38,7 @@ let sample3 = {
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
     "days": "Lunes a Viernes",
+    "date": "25/03/2020",
     "payment": "2'500.000 COP",
     "draft": false,
     "finished": false,
@@ -49,6 +52,7 @@ let sample4 = {
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
     "days": "Lunes a Viernes",
+    "date": "25/03/2020",
     "payment": "2'500.000 COP",
     "draft": false,
     "finished": false,
@@ -62,6 +66,7 @@ let sample5 = {
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
     "days": "Lunes a Viernes",
+    "date": "25/03/2020",
     "payment": "2'500.000 COP",
     "draft": false,
     "finished": false,
@@ -75,6 +80,7 @@ let sample6 = {
     "cities": ["Santiago de Cali, Valle del Cauca", "Medellín, Antioquia", "Bogotá D.C, Cundinamarca", "Jamundí, Valle del Cauca"],
     "length": "Término fijo a un año",
     "days": "Lunes a Viernes",
+    "date": "25/03/2020",
     "payment": "2'500.000 COP",
     "draft": false,
     "finished": false,
