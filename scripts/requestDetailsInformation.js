@@ -153,26 +153,31 @@ window.addEventListener("load", () => {
 
         positionLevel.innerHTML = MayusFirst(info.positionLevel);
 
-        if (info.status[0] === -1) {
-            remainingTime.innerHTML = "Borrador";
-            status.classList.add("status--gray");
-            candidatesTabButton.classList.add("reqDetails__candidates__tabButton--hide");
-            evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
-        } else {
-            evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
-            if (info.remainingTime === 1) {
-                remainingTime.innerHTML = "Falta 1 día";
+        if(status){
+            if (info.status[0] === -1) {
+                remainingTime.innerHTML = "Borrador";
+                status.classList.add("status--gray");
+                candidatesTabButton.classList.add("reqDetails__candidates__tabButton--hide");
+                evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
             } else {
-                remainingTime.innerHTML = "Faltan " + info.remainingTime + " días";
-            }
+                evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
+                if (info.remainingTime === 1) {
+                    remainingTime.innerHTML = "Falta 1 día";
+                } else {
+                    remainingTime.innerHTML = "Faltan " + info.remainingTime + " días";
+                }
+                if(status){
+                    if (status[1] === 0) {
+                        status.classList.add("status--yellow");
+                    } else {
+                        status.classList.add("status--green");
+                    }
+                }
+        }
 
-            if (status[1] === 0) {
-                status.classList.add("status--yellow");
-            } else {
-                status.classList.add("status--green");
+            if(candidatesTabButton){
+                candidatesTabButton.classList.remove("reqDetails__candidates__tabButton--hide");
             }
-
-            candidatesTabButton.classList.remove("reqDetails__candidates__tabButton--hide");
             // Do not erase, its required for global evaluation process
             /*if (info.status[0] === 5) {
                 evaluationTabButton.classList.remove("reqDetails__candidates__tabButton--hide");
@@ -180,52 +185,53 @@ window.addEventListener("load", () => {
         }
         // create buttons bar and button por interaction
         createInteractionButtons(info.status[0], info.isDraft, info.isCompleted);
-
-        switch (info.status[0]) {
-            case -1:
-                statusCurrent.innerHTML = "Borrador";
-                break;
-            case 0:
-                statusCurrent.innerHTML = "Pendiente de pago";
-                break;
-
-            case 1:
-                statusCurrent.innerHTML = "En verificación";
-                break;
-
-            case 2:
-                statusCurrent.innerHTML = "Iniciado";
-                break;
-
-            case 3:
-                statusCurrent.innerHTML = "En proceso de búsqueda";
-                break;
-
-            case 4:
-                statusCurrent.innerHTML = "En espera de selección";
-                break;
-
-            case 5:
-                statusCurrent.innerHTML = "Finalizó el proceso";
-                break;
-        }
-
-        if (status[0] === -1) {
-            statusList.add("status--inactive");
-        } else {
-            statusList.forEach((e, index) => {
-                if (index < info.status[0]) {
-                    e.classList.add("status--completed");
-                } else if (index === info.status[0]) {
-                    if (info.status[1] === 0) {
-                        e.classList.add("status--yellow");
+        if(statusCurrent){
+            switch (info.status[0]) {
+                case -1:
+                    statusCurrent.innerHTML = "Borrador";
+                    break;
+                case 0:
+                    statusCurrent.innerHTML = "Pendiente de pago";
+                    break;
+    
+                case 1:
+                    statusCurrent.innerHTML = "En verificación";
+                    break;
+    
+                case 2:
+                    statusCurrent.innerHTML = "Iniciado";
+                    break;
+    
+                case 3:
+                    statusCurrent.innerHTML = "En proceso de búsqueda";
+                    break;
+    
+                case 4:
+                    statusCurrent.innerHTML = "En espera de selección";
+                    break;
+    
+                case 5:
+                    statusCurrent.innerHTML = "Finalizó el proceso";
+                    break;
+            }
+    
+            if (status[0] === -1) {
+                statusList.add("status--inactive");
+            } else {
+                statusList.forEach((e, index) => {
+                    if (index < info.status[0]) {
+                        e.classList.add("status--completed");
+                    } else if (index === info.status[0]) {
+                        if (info.status[1] === 0) {
+                            e.classList.add("status--yellow");
+                        } else {
+                            e.classList.add("status--green");
+                        }
                     } else {
-                        e.classList.add("status--green");
+                        e.classList.add("status--inactive");
                     }
-                } else {
-                    e.classList.add("status--inactive");
-                }
-            });
+                });
+            }
         }
 
         title.innerHTML = MayusFirst(info.name) + " (" + info.amount + ")";
@@ -360,6 +366,23 @@ window.addEventListener("load", () => {
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
+                    break;
+                case 6:
+                    buttonEvaluation.classList.add("btn--blue");
+                    buttonEvaluation.innerHTML = "Calificar servicio";
+                    buttonFinishProcess.innerHTML = "Aplicar a este proceso";
+                    buttonBarBottom.appendChild(buttonFinishProcess);
+                    
+                    buttonEvaluation.classList.add("score-request");
+                    buttonFinishProcess.classList.add("complete-request");
+
+                    document
+                        .querySelector(".reqDetails__content")
+                        .appendChild(buttonBarBottom);
+                    
+                    buttonFinishProcess.addEventListener('click', () => {
+                        createPopUp();
+                    });
                     break;
             }
         }else{
