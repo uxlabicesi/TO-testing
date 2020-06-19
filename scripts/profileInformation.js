@@ -44,18 +44,31 @@ window.addEventListener('load', () => {
             nitValue += info.nit.charAt(i);
             if(i === 2 || i === 5) {
                 nitValue += '.';
-            } else if (i === 8) {
+            } /*else if (i === 8) {
                 nitValue += '-';
-            }
+            }*/
         }
-        
+
         nit.innerHTML = nitValue;
         address.innerHTML = info.address;
+
+        if(info.address===null||info.address === undefined || info.address === ""){
+            address.style = "display:none"
+        }
+
+
+
         companyImg.setAttribute('src', info.companyImg);
         
         profileImg.setAttribute('src', info.profileImg);
         username.innerHTML = info.username;
+
+
         job.innerHTML = info.job;
+
+        if(info.job===null||info.job === undefined || info.job === ""){
+            job.style = "display:none"
+        }
         
         let phoneValue = '+' + info.phoneCountry + ' ';
         for(let i = 0; i < info.phoneNumber.length; i++) {

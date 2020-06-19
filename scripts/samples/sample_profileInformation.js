@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     const info = {
         companyName: 'Colgate',
         sector: 'Servicios de tecnología',
-        nit: '8001379607',
+        nit: '800137960',
         address: 'Av. 5N # 23AN – 35',
         companyImg: './resources/companyLogo.svg',
         profileImg: './resources/perfil_img.png',
@@ -13,7 +13,8 @@ window.addEventListener('load', () => {
         job: 'Analista de selección',
         phoneCountry: 57,
         phoneNumber: '3008200838',
-        email: 'andres.trujillo@mimarca.com.co'
+        email: 'andres.trujillo@mimarca.com.co',
+        city:"O1"
     }
 
     profileInformation(info);

@@ -17,6 +17,7 @@ window.addEventListener('load', () => {
         const addressContainer = address.closest('div')
 
 
+
         companyName.value = info.companyName;
         companyNameContainer.querySelector('label').classList.add('label--active');
         companyNameContainer.classList.add('textInput--focused');
@@ -29,7 +30,7 @@ window.addEventListener('load', () => {
         usernameContainer.querySelector('label').classList.add('label--active');
         usernameContainer.classList.add('textInput--focused');
 
-        number.value = info.number;
+        number.value = info.phoneNumber;
         numberContainer.querySelector('label').classList.add('label--active');
         numberContainer.classList.add('textInput--focused');
 
@@ -40,6 +41,15 @@ window.addEventListener('load', () => {
         address.value = info.address;
         addressContainer.querySelector('label').classList.add('label--active');
         addressContainer.classList.add('textInput--focused');
+
+       
+
+        const jobName = document.getElementById('form_job');
+        jobName.value = info.job;
+
+
+
+
 
         $('.select2__selector--sector').val(info.sector);
         $('.select2__selector--sector').trigger('change');
