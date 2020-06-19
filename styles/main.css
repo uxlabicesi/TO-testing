@@ -4982,6 +4982,10 @@ input[type=number] {
   }
 }
 
+.dashboardContent__nav {
+  margin-top: 40px;
+}
+
 * {
   font-family: 'Open Sans';
   -webkit-box-sizing: border-box;

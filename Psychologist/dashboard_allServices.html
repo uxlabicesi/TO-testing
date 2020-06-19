@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talentos Online</title>
+    <link rel="shortcut icon" href="../resources/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <div class="popUp popUp--inactive"></div>
+    <header class="mainheader">
+        <div class="mainheader__menu">
+            <img src="../resources/menuIcon.svg">
+            <p>Menú</p>
+        </div>
+
+        <img class="mainheader__bell" src="../resources/notificationIcon.svg" alt="Notificaciones">
+        <a href="/dashboard_requests.html"><img class="mainheader__logo" src="../resources/logoTalentos.png" alt="Talentos Online"></a>
+
+        <div class="mainheader__user">
+            <div class="mainheader__userNotification">
+             
+                <svg class="mainheader__userNotificationIcon" width="25" height="28" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.58036 23C8.62742 22.9985 7.71402 22.6189 7.04072 21.9446C6.36742 21.2702 5.98926 20.3562 5.98926 19.4033C5.98926 19.2128 6.06493 19.0301 6.19962 18.8954C6.33431 18.7607 6.51699 18.6851 6.70748 18.6851C6.89796 18.6851 7.08064 18.7607 7.21534 18.8954C7.35003 19.0301 7.4257 19.2128 7.4257 19.4033C7.41071 19.6959 7.45541 19.9885 7.55706 20.2633C7.65872 20.5381 7.81522 20.7894 8.01703 21.0018C8.21885 21.2142 8.46176 21.3833 8.731 21.4989C9.00025 21.6145 9.29018 21.6741 9.58318 21.6741C9.87619 21.6741 10.1661 21.6145 10.4354 21.4989C10.7046 21.3833 10.9475 21.2142 11.1493 21.0018C11.3512 20.7894 11.5076 20.5381 11.6093 20.2633C11.711 19.9885 11.7557 19.6959 11.7407 19.4033C11.7407 19.2128 11.8163 19.0301 11.951 18.8954C12.0857 18.7607 12.2684 18.6851 12.4589 18.6851C12.6494 18.6851 12.8321 18.7607 12.9668 18.8954C13.1014 19.0301 13.1771 19.2128 13.1771 19.4033C13.1771 20.3572 12.7982 21.272 12.1236 21.9466C11.4491 22.6211 10.5343 23 9.58036 23Z" fill="white"/>
+                    <path d="M17.4865 20.1214H1.697C1.35666 20.1182 1.02516 20.0126 0.745579 19.8185C0.466002 19.6244 0.251273 19.3507 0.129295 19.0329C0.00731777 18.7152 -0.0162684 18.3681 0.0616016 18.0368C0.139472 17.7054 0.315198 17.4052 0.565944 17.175C1.27754 16.5683 1.8485 15.8139 2.23915 14.9643C2.62979 14.1146 2.83075 13.1901 2.82805 12.2549V9.58C2.87874 7.83413 3.60791 6.17675 4.86075 4.95976C6.11358 3.74277 7.79142 3.06201 9.53804 3.06201C11.2847 3.06201 12.9625 3.74277 14.2153 4.95976C15.4682 6.17675 16.1973 7.83413 16.248 9.58V12.2549C16.2451 13.1885 16.446 14.1114 16.8367 14.9593C17.2274 15.8071 17.7985 16.5595 18.5101 17.1637C18.7624 17.3904 18.9409 17.6875 19.0226 18.0166C19.1043 18.3458 19.0855 18.6919 18.9687 19.0102C18.8518 19.3286 18.6422 19.6046 18.3669 19.8027C18.0916 20.0007 17.7633 20.1118 17.4243 20.1214H17.4865ZM9.56914 4.31494C8.17368 4.31793 6.83623 4.8736 5.84948 5.86034C4.86274 6.84709 4.30707 8.18454 4.30408 9.58V12.2549C4.30645 13.3984 4.05861 14.5285 3.57795 15.566C3.0973 16.6035 2.39547 17.5233 1.52169 18.2608C1.49185 18.2956 1.47242 18.338 1.46562 18.3832C1.45882 18.4285 1.46492 18.4747 1.48324 18.5167C1.50155 18.5586 1.53132 18.5945 1.56914 18.6203C1.60695 18.6461 1.65127 18.6607 1.697 18.6624H17.5318C17.5634 18.6631 17.5949 18.6575 17.6244 18.6459C17.6539 18.6343 17.6807 18.617 17.7034 18.5948C17.726 18.5727 17.7441 18.5463 17.7563 18.5171C17.7686 18.4879 17.775 18.4565 17.7749 18.4249C17.7748 18.3903 17.7671 18.3563 17.7525 18.325C17.7378 18.2938 17.7166 18.2661 17.6901 18.2439C16.8144 17.506 16.1106 16.5857 15.6281 15.5472C15.1455 14.5088 14.8958 13.3774 14.8964 12.2323V9.58C14.8934 8.18356 14.337 6.84525 13.349 5.85835C12.361 4.87145 11.0221 4.31644 9.62569 4.31494H9.56914Z" fill="white"/>
+                    <path d="M9.58055 4.31482C9.48575 4.31482 9.39189 4.29606 9.30438 4.25961C9.21687 4.22316 9.13745 4.16975 9.07068 4.10246C9.00391 4.03517 8.95113 3.95532 8.91537 3.86753C8.87961 3.77974 8.86158 3.68573 8.86233 3.59094V0.718061C8.8783 0.537849 8.96118 0.370152 9.09464 0.248003C9.2281 0.125853 9.40246 0.0581055 9.58337 0.0581055C9.76429 0.0581055 9.93865 0.125853 10.0721 0.248003C10.2056 0.370152 10.2884 0.537849 10.3044 0.718061V3.59094C10.3044 3.78292 10.2282 3.96705 10.0924 4.1028C9.95665 4.23855 9.77253 4.31482 9.58055 4.31482Z" fill="white"/>
+                </svg>
+
+                <div class="mainheader__userNotificationAmount">
+                    <p class="mainheader__userNotificationText">3</p>
+                </div>
+                
+                
+            </div>
+
+            <img class="mainheader__userPicture" src="../resources/alala.jpg" alt="">
+            
+            <div class="mainheader__userProfile">
+                <a href="../dashboard_perfil.html" class="mainheader__userProfileName">Andrés Trujillo</a>
+                <h4 class="mainheader__userProfileCompany">Colgate</h4>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboardContent">
+        <section class="mainnav">
+            <input class="textInput textInput--search" type="text" name="" placeholder="Buscar">
+            <div class="mainnav__border"></div>
+            
+            <div class="dashboardContent__nav">
+                <div class="mainnav__notification mainnav__notification--active">
+                    <img src="../resources/notificationIcon.svg" alt="">
+                    <a href="../Psychologist/dashboard_allServices.html">Todos los servicios</a>
+                    <span class="mainnav__notificationCount"></span>
+                </div>
+                <div class="mainnav__requests">
+                    <img src="../resources/requestIcon.svg" alt="">
+                    <a href="../Psychologist/dashboard_myServices.html">Mis servicios</a>
+                    <span class="mainnav__requestsCount">(1)</span>
+                </div>
+                <div class="mainnav__drafts">
+                    <img src="../resources/draftIcon.svg" alt="">
+                    <a href="../dashboard_drafts.html">En aprobación</a>
+                    <span class="mainnav__draftsCount">(11)</span>
+                </div> 
+                <div class="mainnav__completed">
+                    <img src="../resources/completedIcon.svg" alt="">
+                    <a href="../dashboard_completed.html">Terminados</a>
+                    <span class="mainnav__completedCount">(12)</span>
+                </div>
+            </div>
+            
+            <div class="mainnav__footer">
+                <div class="mainnav__footerHelp">
+                    <img src="../resources/helpIcon.svg" alt="">
+                    <a href="#">Solicitar ayuda</a>
+                </div>
+                <div class="mainnav__border"></div>
+                <div class="mainnav__footerLogout">
+                    <img src="../resources/powerIcon.svg" alt="">
+                    <a href="#">Cerrar sesión</a>
+                </div>
+            </div>      
+        </section>
+        
+        <div class="content">
+            <div class="content__containerFlex">
+                <h1 class="content__title content__title--noMargin">Todos los servicios</h1>
+
+                <div class="content__order">
+                    <img src="../resources/orderList.svg" class="content__viewImg">
+
+                    <select name="" id="" class="content__select">
+                        <option value="">Ordenar por</option>
+                        <option value="">Días restantes</option>
+                        <option value="">Fecha de cumplimiento</option>
+                        <option value="">Fecha de solicitud</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content__orderbar content__orderbar--inactive">
+                <div class="content__orderbarBtn content__orderbarBtn--first">
+                    <p>SOLICITUD</p>
+                    <img src="../resources/arrowDownIcon.svg" alt="">
+                </div>
+
+                <div class="content__orderbarBtn content__orderbarBtn--second">
+                    <p>ESTADO</p>
+                    <img src="../resources/arrowDownIcon.svg" alt="">
+                </div>
+
+                <div class="content__orderbarBtn content__orderbarBtn--third">
+                    <p>DÍAS PARA LA ENTREGA</p>
+                    <img src="../resources/arrowDownIcon.svg" alt="">
+                </div>
+            </div>
+            
+            <div class="content__requests">
+                <!-- insert completed request here -->
+            </div>                  
+        </div>
+    </div>
+    
+    <script src="../scripts/dashboardNav_interaction.js"></script>
+    <script src="../scripts/Psychologist/createRequestPsy.js"></script>
+    <script src="../scripts/requestCardView.js"></script>
+    <script src="../scripts/sortRequests.js"></script>
+
+    <!-- TODO remove for deleted sample info -->
+    <script src="../scripts/Psychologist/sample_createRequestPsy.js"></script>
+    <script src="../scripts/samples/sample_sortRequest.js"></script>
+    <script src="../scripts/samples/sample_requestCardView.js"></script>
+
+    <script src="../scripts/createPopUp.js"></script>
+    <script src="../scripts/samples/sample_openHelpPoUp.js"></script>
+</body>
+</html>
