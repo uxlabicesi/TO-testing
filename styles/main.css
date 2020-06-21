@@ -4986,6 +4986,10 @@ input[type=number] {
   margin-top: 40px;
 }
 
+.complete-request--applied {
+  background-color: #D23A3A;
+}
+
 * {
   font-family: 'Open Sans';
   -webkit-box-sizing: border-box;

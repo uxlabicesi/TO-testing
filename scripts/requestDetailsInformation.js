@@ -379,10 +379,6 @@ window.addEventListener("load", () => {
                     document
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
-                    
-                    buttonFinishProcess.addEventListener('click', () => {
-                        createPopUp();
-                    });
                     break;
             }
         }else{
