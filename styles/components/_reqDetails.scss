@@ -79,6 +79,52 @@
         white-space: nowrap;
     }
 
+    &__filter {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & .btn {
+            max-width: 115px;
+            font-size: $typo-h4;
+        }
+
+        &Advanced {
+            display: flex;
+
+            & p {
+                color: $color-blue;
+                font-weight: $typo-bold;
+                font-size: $typo-h4;
+                margin: 0 5px;
+            }
+
+            & * {
+                max-height: 40px;
+            }
+        }
+
+        &Item {
+            display: flex;
+            width: fit-content;
+
+            & img {
+                width: 20px;
+            }
+
+            & label {
+                color: $color-blue;
+                font-weight: $typo-bold;
+                font-size: $typo-h4;
+            }
+            
+            & * {
+                max-height: 40px;
+                margin: 0 5px;
+            }
+        }
+    }
+
     &__content {
         margin: 20px 0;
         padding: 20px;
@@ -97,6 +143,10 @@
             margin: 1.5em 10px;
             margin-top: 0;
             color: $color-blue;
+
+            & p {
+                white-space: nowrap;
+            }
 
             & p::after {
                 margin-top: .8em;
