@@ -5,6 +5,15 @@
 .servDetails {
 
     &__section {
+        transition: height .2s ease-out;
+        width: calc(100% + 40px);
+        position: relative;
+        left: -20px;
+        overflow-y: hidden;
+
+        &--hidden {
+            height: 0;
+        }
 
         &Header {
             display: flex;
@@ -15,8 +24,15 @@
             padding: 0 40px;
             align-items: center;
             height: 35px;
-            margin-top: 20px;
             cursor: pointer;
+            transition: all .2s ease-out;
+
+            &--hidden {
+
+                & img {
+                    transform: rotate(180deg);
+                }
+            }
 
             & h3 {
                 margin: 0 5px;
@@ -29,9 +45,8 @@
     &__candidate {
         display: flex;
         align-items: center;
-        width: calc(100% + 40px);
+        width: 100%;
         position: relative;
-        left: -20px;
         padding: 0 10%;
         border-bottom: solid 1px rgba($color: $color-gray, $alpha: .3);
         height: 55px;
