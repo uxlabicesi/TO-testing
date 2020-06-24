@@ -47,9 +47,9 @@ window.addEventListener('load', () => {
             const currentProgress = document.createElement('div');
             currentProgress.classList.add('servDetails__currentProgress');
             currentProgress.style.width = (element.affinity * 110 / 100) + 'px';
-            if(info.progress < 33) {
+            if(element.affinity < 33) {
                 currentProgress.classList.add('servDetails__currentProgress--red');
-            } else if (info.affinity < 66) {
+            } else if (element.affinity < 66) {
                 currentProgress.classList.add('servDetails__currentProgress--yellow');
             } else {
                 currentProgress.classList.add('servDetails__currentProgress--green');
