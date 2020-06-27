@@ -73,6 +73,12 @@
     margin-left: 90px;
     width: 100%;
 
+    &--servDetails {
+        width: 33%;
+        margin: 0;
+        margin-top: 35px;
+    }
+
     &--edit{
         margin-left: 40px;
         width: calc(100% - 90px);

@@ -71,7 +71,11 @@ window.addEventListener('load', () => {
         createTextInput('Estado de la oferta',formRowThree,form,'offer');
         createTextInput('Fecha de vigencia',formRowThree,form,'date');
         // createTextInput('Plataformas',formRowThree,form,'platforms');
-        createSelectInput('Plataformas',formRowThree,form,'platforms','01','Facebook');
+        createSelectInput('Plataformas',formRowThree,form,'platforms',[
+            {value: '01',text: 'Facebook'},
+            {value: '02',text: 'Twitter'},
+            {value: '03',text: 'LinkedIn'},
+        ]);
         createTextArea('Descripción',formRowFour,form,'description');
         // --------------------------------------------------------------------------------------------------
       
@@ -168,13 +172,13 @@ window.addEventListener('load', () => {
         });
     };
 
-    createSelectInput = (labelName,container,root,id,optionValue,optionText) => {
+    createSelectInput = (labelName,container,root,id,options) => {
 
         let textInputContainer = document.createElement('div');
-        textInputContainer.classList.add('selectadd','form-group');
+        textInputContainer.classList.add('selectadd','form-group', 'selectadd--servDetails');
 
         let label = document.createElement('label');
-        label.classList.add('select__label','select__label--visible','select__label--platforms');
+        label.classList.add('select__label','select__label--visible','select__label--platforms', 'select__label--register');
         label.innerText = labelName;
         label.htmlFor = id;
 
@@ -183,11 +187,14 @@ window.addEventListener('load', () => {
         select.id = id;
         select.multiple = 'multiple';
 
-        let option = document.createElement('option');
-        option.value = optionValue;
-        option.text = optionText;
+        options.forEach(opt => {
+            let option = document.createElement('option');
+            option.value = opt.value;
+            option.text = opt.text;
+            select.appendChild(option);
+        });
 
-        select.appendChild(option);
+        
         textInputContainer.appendChild(label);
         textInputContainer.appendChild(select);
 
@@ -195,38 +202,42 @@ window.addEventListener('load', () => {
 
         root.appendChild(container);
 
-        $('.select2__selector--platforms').select2({
-            tags: true,
-            placeholder: "Plataformas",
-            theme: "talentos",
-            width: '100%', // need to override the changed default
-            containerCss: {
-                "height": "55px"
-            },
-            //debug: true,  // used for verbose console
+        $('#platforms').ready(function() {
+            $('#platforms').select2({
+                tags: true,
+                placeholder: "",
+                theme: "talentos",
+                width: '100%',
+                containerCss: {
+                    "height": "55px"
+                },
+                //debug: true,  // used for verbose console
+            });
+
+            $('#platforms').on('select2:open', function (e) {
+                document.querySelector('.select__label--platforms').classList.remove(
+                    'select__label--register');
+                document.querySelector('.select__label--platforms').classList.add('select__label--focused');
+            });
+        
+            $('.select__label--platforms').on('click', function (e) {
+                $('#platforms').select2('open');
+                document.querySelector('.select__label--platforms').classList.remove(
+                    'select__label--register');
+                document.querySelector('.select__label--platforms').classList.add('select__label--focused');
+            });
+        
+            $('#platforms').on('select2:close', function (e) {
+                //let value = $('#platforms').select2('data')[0].id;
+                let value = $('#platforms').select2('data').length;
+                if(value === 0){ // TODO : make same process for all multiple tags, if required
+                    document.querySelector('.select__label--platforms').classList.add('select__label--register');
+                document.querySelector('.select__label--platforms').classList.remove(
+                    'select__label--focused');
+                }
+            });
         });
-    
-
-        select.addEventListener('focus', (event) => {
-            event.target.parentElement.classList.add('textInput--focused');
-
-            let label = event.target.parentElement.querySelector('label');
-            if(label!=null){
-                label.classList.remove('label--none');
-                label.classList.add('label--active');
-            }
-        });
-
-        // Desactivates the microinteraction when the input loses focus, ONLY if the input is still empty
-        select.addEventListener('blur', (event) => {
-
-            let label = event.target.parentElement.querySelector('label');
-
-            if(!select.value) {
-                label.classList.remove('label--active');
-                event.target.parentElement.classList.remove('textInput--focused');
-            }
-        });
+        
     };
 
     createTextArea = (labelName,container,root,id) =>{
