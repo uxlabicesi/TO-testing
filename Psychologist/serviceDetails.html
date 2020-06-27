@@ -97,11 +97,11 @@
                 <div class="reqDetails__contentHeader">
                     
                     
-                    <div class="reqDetails__contentCategory reqDetails__request">
+                    <div class="reqDetails__contentCategory reqDetails__request reqDetails__contentCategory--active">
                         <p>Solicitud</p>
                     </div>
 
-                    <div class="reqDetails__contentCategory reqDetails__request reqDetails__contentCategory--active">
+                    <div class="reqDetails__contentCategory reqDetails__request">
                         <p>Candidatos disponibles</p>
                     </div>
 
@@ -119,7 +119,58 @@
                     </div>
                 </div>
 
-                <div class="reqDetails__details reqDetails__content--active">
+                <!-- Service Details  ------------------------------------------------------------>
+                <div class="reqDetails__details servDetails__content reqDetails__content--active">
+                    <div class="reqDetails__contentSection reqDetails__contentSection--first">
+                        <h3>INFORMACIÓN DEL CARGO</h3>
+    
+                        <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
+                            <li><strong>Nombre del cargo:</strong> <span class="name"></span></li>
+                            <li><strong>Nivel del cargo:</strong> <span class="positionLevel"></span></li>
+                            <li><strong>Ciudad(es):</strong> <span class="city"></span></li>
+                            <li><strong>Jornada:</strong> <span class="time"></span></li>
+                            <li><strong>Tipo de contratación:</strong> <span class="hiring"></span></li>
+                            <li><strong>Salario:</strong> <span class="wage"></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="reqDetails__contentSection reqDetails__contentSection--dark">
+                        <h3>CARACTERÍSTICAS DE NIVEL DE CARGO</h3>
+
+                        <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
+                            <li><strong>Nivel de responsabilidad:</strong> <span class="responsability"></span></li>
+                            <li><strong>Nivel de toma de decisiones:</strong> <span class="decision"></span></li>
+                            <li><strong>Personas a cargo:</strong> <span class="incharge"></span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reqDetails__contentSection">
+                        <h3>FUNCIONES</h3>
+                        <ol class="reqDetails__infoSection reqDetails__infoSection--functions">
+                        </ol>
+                    </div>
+    
+                    <div class="reqDetails__contentSection  reqDetails__contentSection--dark">
+                        <h3>REQUISITOS</h3>
+                        <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
+                            <li><strong>Nivel académico:</strong> <span class="academicLevel"></span></li>
+                            <li><strong>Profesión(es):</strong> <span class="profession"></span></li>
+                            <li><strong>Conocimientos:</strong> <span class="knowledge"></span></li>
+                            <li><strong>Observaciones:</strong> <span class="observations"></span></li>
+                        </ul>
+                    </div>
+    
+                    <div class="reqDetails__contentSection">
+                        <h3>COMPETENCIAS</h3>
+    
+                        <ol class="reqDetails__infoSection reqDetails__infoSection--skills">
+
+                        </ol>
+                    </div>
+                </div> 
+
+                <!-- Candidates List ------------------------------------------------------------------------>
+                <div class="reqDetails__details servDetails__content">
                     <div class="reqDetails__filter">
                         <div class="reqDetails__filterItem">
                             <img src="../resources/psychologist/filter_icon.svg" alt="">
@@ -167,12 +218,14 @@
     <script src="../scripts/Psychologist/createCandidateList.js"></script>
     
     <!-- TODO remove for deleted sample info -->
-    <script src="../scripts/samples/sample_requestDetailsInformation_selectionNumber.js"></script>
     <script src="../scripts/Psychologist/samples/sample_createCandidateList.js"></script>
+    <script src="../scripts/samples/sample_requestDetailsInformation_selectionNumber.js"></script>
+    <script src="../scripts/Psychologist/sample_requestDetailesInformationPsy.js"></script>
+    <script src="../scripts/Psychologist/sample_popUpForServiceDetails.js"></script>
 
     
     <script src="../scripts/createPopUp.js"></script>
-
+    <script src="../scripts/samples/sample_openHelpPoUp.js"></script>
 
 </body>
 </html>

@@ -13,4 +13,23 @@ window.addEventListener('load', () => {
         candidateContainer.classList.toggle('servDetails__section--hidden');
         candidateHeader.classList.toggle('servDetails__sectionHeader--hidden');
     });
+
+    const tabs = document.querySelectorAll('.reqDetails__contentCategory');
+    const sections = document.querySelectorAll('.servDetails__content');
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach((e) => {
+                e.classList.remove('reqDetails__contentCategory--active');
+            })
+
+            tab.classList.add('reqDetails__contentCategory--active');
+
+            sections.forEach(e => {
+                e.classList.remove('reqDetails__content--active');
+            });
+
+            sections[index].classList.add('reqDetails__content--active');
+        })
+    });
 });
