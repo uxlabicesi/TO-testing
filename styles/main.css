@@ -227,6 +227,11 @@ input:not(:-webkit-autofill) {
   width: 75%;
 }
 
+.label--serviceDetails {
+  margin-left: 0px !important;
+  width: 100%;
+}
+
 .textInput--focused .label {
   font-size: 13px;
   font-weight: 700;
@@ -361,6 +366,18 @@ input:not(:-webkit-autofill) {
 
 .textInput__container--reqFunctions {
   margin-top: 0px;
+}
+
+.textInput__container--serviceDetails {
+  width: 30%;
+}
+
+.textInput__container--serviceDetails2col {
+  width: 48%;
+}
+
+.textInput__container--serviceDetailsTextArea {
+  width: 100%;
 }
 
 .textInput:focus {
@@ -5176,6 +5193,142 @@ input[type=number] {
 
 .servDetails__text--bold {
   font-weight: 700;
+}
+
+.popUpOffer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 11;
+  padding: 35px 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popUpOffer__noScroll {
+  position: static;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popUpOffer--inactive {
+  display: none;
+}
+
+.popUpOffer__content {
+  background-color: #fefefe;
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 70%;
+  height: 100%;
+  padding: 25px;
+}
+
+.popUpOffer__contentSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popUpOffer__contentSection p {
+  margin: 0px;
+  color: #294F75;
+}
+
+.popUpOffer__contentSection span {
+  color: #c4c4c4;
+  font-size: 28px;
+  float: right;
+  font-weight: 700;
+  margin-right: -10px;
+  margin-top: -30px;
+}
+
+.popUpOffer__contentSectionClose:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popUpOffer__contentSectionClose:focus {
+  color: #494949;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popUpOffer__contentInfo {
+  margin-top: 10px;
+  color: #294F75;
+}
+
+.popUpOffer__contentInfoTitle {
+  margin: 0px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.popUpOffer__contentInfoSubTitle {
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.popUpOffer__contentDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #C4C4C4;
+  margin-top: 5px;
+}
+
+.popUpOffer__contentForm {
+  margin-top: 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 70%;
+  padding-right: 10px;
+}
+
+.popUpOffer__contentFormRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popUpOffer__contentFormRow--five {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 15px;
 }
 
 * {

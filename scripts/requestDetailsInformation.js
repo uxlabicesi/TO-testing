@@ -380,6 +380,19 @@ window.addEventListener("load", () => {
                         .querySelector(".reqDetails__content")
                         .appendChild(buttonBarBottom);
                     break;
+                case 7:
+                    buttonEvaluation.innerHTML = "Ver candidatos disponibles";
+                    buttonFinishProcess.innerHTML = "Publicar oferta";
+                    buttonBarBottom.appendChild(buttonFinishProcess);
+                    buttonBarBottom.appendChild(buttonEvaluation);
+    
+                    buttonEvaluation.classList.add("score-request");
+                    buttonFinishProcess.classList.add("complete-request");
+    
+                    document
+                        .querySelector(".reqDetails__content")
+                        .appendChild(buttonBarBottom);
+                    break;    
             }
         }else{
             // add button for new request based on the current completed request

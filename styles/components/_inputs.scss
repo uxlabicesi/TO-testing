@@ -39,6 +39,11 @@ input:not(:-webkit-autofill) {
         left: 25px;
         width: 75%;
     }
+
+    &--serviceDetails{
+        margin-left: 0px !important;
+        width: 100%;
+    }
 }
 
 .textInput--focused .label {
@@ -165,6 +170,18 @@ input:not(:-webkit-autofill) {
 
         &--reqFunctions{
             margin-top: 0px;
+        }
+
+        &--serviceDetails{
+            width: 30%;
+            
+            &2col{
+                width: 48%;
+            }
+
+            &TextArea{
+                width: 100%;
+            }
         }
     }
 
