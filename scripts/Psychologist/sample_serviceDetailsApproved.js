@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
         isCompleted: false,
         levelResponsability: 0, // 0 1 2 --> bajo medio alto
         levelDecision: 0, // 0 1 2 
-        peopleInCharge: true,
+        peopleInCharge: true, 
     }
     
     requestDetailedInformation(sample);
