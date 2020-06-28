@@ -184,8 +184,8 @@ window.addEventListener("load", () => {
             }*/
         }
         // create buttons bar and button por interaction
-        createInteractionButtons(info.status[0], info.isDraft, info.isCompleted);
-        if(statusCurrent){
+        if(info.status) createInteractionButtons(info.status[0], info.isDraft, info.isCompleted);
+        if(statusCurrent && info.status){
             switch (info.status[0]) {
                 case -1:
                     statusCurrent.innerHTML = "Borrador";
@@ -234,7 +234,7 @@ window.addEventListener("load", () => {
             }
         }
 
-        title.innerHTML = MayusFirst(info.name) + " (" + info.amount + ")";
+        title.innerHTML = MayusFirst(info.name) + (info.amount? " (" + info.amount + ")" : "");
         name.innerHTML = MayusFirst(info.name);
 
         // This function formats text so the first letter of a string is in upper case and the

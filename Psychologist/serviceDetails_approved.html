@@ -6,11 +6,6 @@
     <title>Talentos Online</title>
     <link rel="shortcut icon" href="../resources/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/main.css">
-    <link href="../libs/select2-4.0.13/src/scss/core.css" rel="stylesheet" />
-    <!-- external styles -->
-    <link href="../libs/bootstrapvalidator-0.5.2/dist/css/bootstrapValidator.min.css" rel="stylesheet"></link>
-    <!-- general scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -92,7 +87,7 @@
             
             <div class="reqDetails__flexContainer">
                 <div class="reqDetails__flexContainer reqDetails__flexContainer--small">
-                    <h1 class="reqDetails__title"></h1>
+                    <h1 class="reqDetails__title">Diseñador Web</h1>
                 </div>
                 
                 <p class="reqDetails__remainingTime"></p>
@@ -106,13 +101,21 @@
                         <p>Solicitud</p>
                     </div>
 
-                    <!-- reqDetails__contentCategory reqDetails__request 
-                    <div class="reqDetails__selectionInfoContainer">
-                        <p class="reqDetails__selectionInfoItem  reqDetails__selectedNumber">[0/20]</p>
-                    </div> -->
+                    <div class="reqDetails__contentCategory reqDetails__request">
+                        <p>Candidatos disponibles</p>
+                    </div>
+
+                    <div class="reqDetails__contentCategory reqDetails__request">
+                        <p>Proceso</p>
+                    </div>
+
+                    <div class="reqDetails__contentCategory reqDetails__request">
+                        <p>Seleccionado</p>
+                    </div>
                 </div>
 
-                <div class="reqDetails__details reqDetails__content--active">
+                <!-- Service Details  ------------------------------------------------------------>
+                <div class="reqDetails__details servDetails__content reqDetails__content--active">
                     <div class="reqDetails__contentSection reqDetails__contentSection--first">
                         <h3>INFORMACIÓN DEL CARGO</h3>
     
@@ -159,32 +162,64 @@
 
                         </ol>
                     </div>
+                </div> 
+
+                <!-- Candidates List ------------------------------------------------------------------------>
+                <div class="reqDetails__details servDetails__content">
+                    <div class="reqDetails__filter">
+                        <div class="reqDetails__filterItem">
+                            <img src="../resources/psychologist/filter_icon.svg" alt="">
+                            <label for="quickFilter">Filtrado<br> rápido</label>
+                            <input type="text" id="quickFilter" class="textInput">
+                            <button type="button" class="btn btn--blue btn--small">Consultar</button>
+                        </div>
+
+                        <div class="reqDetails__filterAdvanced">
+                            <p>Filtrado<br> avanzado</p>
+                            <button class="btn btn--small btn--blue">Configurar</button>
+                        </div>
+                    </div>
+
+                    <div class="servDetails__sectionHeader" id="applicants-header">
+                        <img src="../resources/psychologist/arrowSmall_icon.svg" alt="">
+                        <h3>POSTULANTES <span>(10/20)</span></h3>
+                    </div>
+
+                    <div class="servDetails__section" id="applicants-container">
+                                                   
+                    </div>
+
+                    <div class="servDetails__sectionHeader" id="candidates-header">
+                        <img src="../resources/psychologist/arrowSmall_icon.svg" alt="">
+                        <h3>CANDIDATOS <span>(5/1560)</span></h3>
+                    </div>
+
+                    <div class="servDetails__section" id="candidates-container">
+                        
+                    </div>
                 </div>  
+
+                <div class="canDetails__buttonsGroup">
+                    <button class="btn btn--medium" id="btn--secondary"></button>
+                    <button class="btn btn--medium" id="btn--main"></button>
+                </div>
             </div>
         </div>
     </div>
-
-    <script src="../libs/select2-4.0.13/dist/js/select2.full.min.js"></script>
-    <script src="../scripts/inputText_Microinteraction.js"></script>
+    
     <script src="../scripts/dashboardNav_interaction.js"></script>
     <script src="../scripts/requestDetailsInformation.js"></script>
     <script src="../scripts/requestDetailsCandidates.js"></script>
-    <script src="../scripts/dashboard_requestCreation.js"></script>
-    <script src="../scripts/select_interaction.js"></script>
-
-
-
-
+    <script src="../scripts/Psychologist/serviceDetails__navigation.js"></script>
+    <script src="../scripts/Psychologist/createCandidateList.js"></script>
     
     <!-- TODO remove for deleted sample info -->
+    <script src="../scripts/Psychologist/samples/sample_createCandidateList.js"></script>
     <script src="../scripts/samples/sample_requestDetailsInformation_selectionNumber.js"></script>
-    <script src="../scripts/Psychologist/sample_serviceDetailsApproved.js"></script>
-    <script src="../scripts/Psychologist/sample_popUpPostOffer.js"></script>
-    
+    <script src="../scripts/Psychologist/sample_requestDetailesInformationPsy.js"></script>
     
     <script src="../scripts/createPopUp.js"></script>
     <script src="../scripts/samples/sample_openHelpPoUp.js"></script>
-
 
 </body>
 </html>
