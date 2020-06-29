@@ -2,6 +2,12 @@
     background-color: $color-red;
 }
 
+.serviceDetailsTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .servDetails {
 
     &__section {
