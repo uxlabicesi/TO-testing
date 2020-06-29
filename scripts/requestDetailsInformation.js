@@ -60,7 +60,9 @@ window.addEventListener("load", () => {
         const candidatesTabButton = document.querySelector(".reqDetails__candidates__tabButton");
         const evaluationTabButton = document.querySelector(".reqDetails__evaluation__tabButton");
 
-
+        const companyName = document.querySelector('.reqDetails__company');
+        if(companyName) companyName.innerHTML = info.company + ' / ' + (info.cities.length === 1 ? info.cities[0] : 'Varias ciudades');
+        console.log(info.company);
         // added for level
 
         const responsability = document.querySelector(".responsability");

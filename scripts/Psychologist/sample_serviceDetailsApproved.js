@@ -2,12 +2,14 @@ window.addEventListener('load', () => {
 
     // TODO REMOVE AFTER DEBUG
     /**
-     * The sample for this section does not need the status property, and must have 
+     * The use of requestDetailsInformation function for this section must not have the status property, 
+     * and must have the property company.
      */
     var sample = {
         name: 'Diseñador Web',
         remainingTime: 12,
         positionLevel: 'Técnico',
+        company: 'HOTEL SHERATON',
         cities: ['Santiago de Cali - Valle del Cauca',
                  'Popayán, Cauca',
                  'Palmira, Valle del Cauca'],

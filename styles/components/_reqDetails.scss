@@ -1,6 +1,12 @@
 .reqDetails {
     margin-right: 20px;
 
+    &__company {
+        color: $color-blue;
+        font-size: $typo-button;
+        margin: 0;
+    }
+
     &__selectionInfoContainer{
         width: 100%;
         text-align: right;

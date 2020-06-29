@@ -1264,6 +1264,12 @@ input:not(:-webkit-autofill) {
   margin-right: 20px;
 }
 
+.reqDetails__company {
+  color: #294F75;
+  font-size: 16px;
+  margin: 0;
+}
+
 .reqDetails__selectionInfoContainer {
   width: 100%;
   text-align: right;
