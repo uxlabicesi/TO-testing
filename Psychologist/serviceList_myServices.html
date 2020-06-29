@@ -49,14 +49,14 @@
             <div class="mainnav__border"></div>
             
             <div class="dashboardContent__nav">
-                <div class="mainnav__notification mainnav__notification--active">
+                <div class="mainnav__notification">
                     <img src="../resources/notificationIcon.svg" alt="">
-                    <a href="../Psychologist/dashboard_allServices.html">Todos los servicios</a>
+                    <a href="../Psychologist/serviceList.html">Todos los servicios</a>
                     <span class="mainnav__notificationCount"></span>
                 </div>
-                <div class="mainnav__requests">
+                <div class="mainnav__requests mainnav__requests--active">
                     <img src="../resources/requestIcon.svg" alt="">
-                    <a href="../Psychologist/dashboard_myServices.html">Mis servicios</a>
+                    <a href="../Psychologist/serviceList_myServices.html">Mis servicios</a>
                     <span class="mainnav__requestsCount">(1)</span>
                 </div>
                 <div class="mainnav__drafts">
@@ -86,7 +86,7 @@
         
         <div class="content">
             <div class="content__containerFlex">
-                <h1 class="content__title content__title--noMargin">Todos los servicios</h1>
+                <h1 class="content__title content__title--noMargin">Mis servicios</h1>
 
                 <div class="content__order">
                     <img src="../resources/orderList.svg" class="content__viewImg">
@@ -129,7 +129,7 @@
     <script src="../scripts/sortRequests.js"></script>
 
     <!-- TODO remove for deleted sample info -->
-    <script src="../scripts/Psychologist/sample_createRequestPsy.js"></script>
+    <script src="../scripts/Psychologist/sample_createRequestPsyServices.js"></script>
     <script src="../scripts/samples/sample_sortRequest.js"></script>
     <script src="../scripts/samples/sample_requestCardView.js"></script>
 
