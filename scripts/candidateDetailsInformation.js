@@ -73,42 +73,45 @@ window.addEventListener('load', () => {
         if (info.evaluated!=null&&info.evaluated) {
             candidateEvaluationBtn.innerHTML="Reevaluar candidato";
             //selectionStateButton.classList.remove('btn--inactive');
-        }else{
+        }else if(candidateEvaluationBtn){
             candidateEvaluationBtn.innerHTML="Evaluar candidato";
             candidateEvaluationBtn.classList.remove('btn__evaluation--select');
             //selectionStateButton.classList.add('btn--inactive');
         }
 
         // control selection state
-        if(info.selected){
-            // for badge top of page / 
-            selectionState.classList.add('reqDetails__selected--show');
-            selectionState.classList.remove('reqDetails__selected--hide');
-            selectionState.innerHTML="Seleccionado";
-            // for change the button state
-            selectionStateButton.innerHTML="Eliminar selección";
-            if(info.status[0]!== 0 && info.status[0]!== 5){
-                selectionStateButton.classList.add('btn--medium--cancel');
-                selectionStateButton.disabled = false;
-            }else{
-                selectionStateButton.classList.add('btn--inactive');
-                selectionStateButton.disabled = true;
-            }
-        }else{
-             // for badge top of page / 
-            selectionState.classList.remove('reqDetails__selected--show');
-            selectionState.classList.add('reqDetails__selected--hide');
-            selectionState.innerHTML="";
-            // for change the button state
-            selectionStateButton.innerHTML="Seleccionar candidato";
-            if(info.status[0]!== 0 && info.status[0]!== 5){
-                selectionStateButton.classList.remove('btn--medium--cancel')
-                selectionStateButton.disabled = false;
-            }else{
-                selectionStateButton.classList.add('btn--inactive');
-                selectionStateButton.disabled = true;
+        if(selectionState) {
+            if(info.selected){
+                // for badge top of page / 
+                selectionState.classList.add('reqDetails__selected--show');
+                selectionState.classList.remove('reqDetails__selected--hide');
+                selectionState.innerHTML="Seleccionado";
+                // for change the button state
+                selectionStateButton.innerHTML="Eliminar selección";
+                if(info.status[0]!== 0 && info.status[0]!== 5){
+                    selectionStateButton.classList.add('btn--medium--cancel');
+                    selectionStateButton.disabled = false;
+                }else{
+                    selectionStateButton.classList.add('btn--inactive');
+                    selectionStateButton.disabled = true;
+                }
+            } else {
+                 // for badge top of page / 
+                selectionState.classList.remove('reqDetails__selected--show');
+                selectionState.classList.add('reqDetails__selected--hide');
+                selectionState.innerHTML="";
+                // for change the button state
+                selectionStateButton.innerHTML="Seleccionar candidato";
+                if(info.status[0]!== 0 && info.status[0]!== 5){
+                    selectionStateButton.classList.remove('btn--medium--cancel')
+                    selectionStateButton.disabled = false;
+                }else{
+                    selectionStateButton.classList.add('btn--inactive');
+                    selectionStateButton.disabled = true;
+                }
             }
         }
+        
 
         // add references
         info.references.forEach((e) => {
@@ -170,13 +173,13 @@ window.addEventListener('load', () => {
 
         id.innerHTML = info.id;
 
-        origin.innerHTML = info.origin;
+        if(origin) origin.innerHTML = info.origin;
 
-        job.innerHTML = info.job;
+        if(job) job.innerHTML = info.job;
 
-        profilePic.setAttribute('src', info.profilePic);
+        if(profilePic) profilePic.setAttribute('src', info.profilePic);
 
-        name.innerHTML = info.name;
+        if(name) name.innerHTML = info.name;
 
         // if(info.remainingTime === 1) {
         //     remainingTime.innerHTML = 'Falta 1 día';
@@ -190,53 +193,55 @@ window.addEventListener('load', () => {
         //     status.classList.add('status--green');
         // }
 
-        if(info.status[0] === -1) {
-            remainingTime.innerHTML = 'Borrador';
-            status.classList.add('status--gray');
-            //candidatesTabButton.classList.add('reqDetails__candidates__tabButton--hide');
-        }else{
-            //candidatesTabButton.classList.remove('reqDetails__candidates__tabButton--hide');
-            if(info.remainingTime === 1) {
-                remainingTime.innerHTML = 'Falta 1 día';
-            } else {
-                remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
+        if(status) {
+            if(info.status[0] === -1) {
+                remainingTime.innerHTML = 'Borrador';
+                status.classList.add('status--gray');
+                //candidatesTabButton.classList.add('reqDetails__candidates__tabButton--hide');
+            }else{
+                //candidatesTabButton.classList.remove('reqDetails__candidates__tabButton--hide');
+                if(info.remainingTime === 1) {
+                    remainingTime.innerHTML = 'Falta 1 día';
+                } else {
+                    remainingTime.innerHTML = 'Faltan ' + info.remainingTime + ' días';
+                }
+                if(status[1] === 0) {
+                    status.classList.add('status--yellow');
+                } else {
+                    status.classList.add('status--green');
+                }
             }
-            if(status[1] === 0) {
-                status.classList.add('status--yellow');
-            } else {
-                status.classList.add('status--green');
+    
+    
+            switch(info.status[0]) {
+                case -1:
+                    statusCurrent.innerHTML = 'Borrador';
+                    break;
+                case 0:
+                    statusCurrent.innerHTML = 'Pendiente de pago';
+                    break;
+    
+                case 1: 
+                    statusCurrent.innerHTML = 'En verificación';
+                break;
+    
+                case 2: 
+                    statusCurrent.innerHTML = 'Iniciado';
+                    break;
+    
+                case 3: 
+                    statusCurrent.innerHTML = 'En proceso de búsqueda';
+                    break;
+    
+                case 4: 
+                    statusCurrent.innerHTML = 'En espera de selección';
+                    break;
+    
+                case 5: 
+                    statusCurrent.innerHTML = 'Finalizó el proceso';
+                    break;
             }
-        }
-
-
-        switch(info.status[0]) {
-            case -1:
-                statusCurrent.innerHTML = 'Borrador';
-                break;
-            case 0:
-                statusCurrent.innerHTML = 'Pendiente de pago';
-                break;
-
-            case 1: 
-                statusCurrent.innerHTML = 'En verificación';
-            break;
-
-            case 2: 
-                statusCurrent.innerHTML = 'Iniciado';
-                break;
-
-            case 3: 
-                statusCurrent.innerHTML = 'En proceso de búsqueda';
-                break;
-
-            case 4: 
-                statusCurrent.innerHTML = 'En espera de selección';
-                break;
-
-            case 5: 
-                statusCurrent.innerHTML = 'Finalizó el proceso';
-                break;
-        }
+        }        
 
         statusList.forEach((e, index) => {
             if(index < info.status[0]) {

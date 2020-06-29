@@ -88,122 +88,83 @@
         </section>
         
         <div class="content reqDetails">
-            <a href="../Psychologist/dashboard_myServices.html" class="reqDetails__back">ATRÁS</a>
+            <a href="./serviceList_myServices.html" class="reqDetails__back">Volver a mis servicios</a>
             
             <div class="reqDetails__flexContainer">
                 <div class="reqDetails__flexContainer reqDetails__flexContainer--small reqDetails__flexContainer--service">
-                    <h1 class="reqDetails__title"></h1>
-                    <h2 class="reqDetails__company"></h2>
+                    <h1 class="reqDetails__title">Diseñador Web</h1>
+                    <h2 class="reqDetails__company">HOTEL SHERATON / Varias ciudades</h2>
                 </div>
                 
-                <p class="reqDetails__remainingTime"></p>
+                <p class="reqDetails__remainingTime">Faltan 12 días</p>
             </div>
             
-            <div class="reqDetails__content">
-                <div class="reqDetails__contentHeader">
-                    
-                    
-                    <div class="reqDetails__contentCategory reqDetails__request reqDetails__contentCategory--active">
-                        <p>Solicitud</p>
-                    </div>
+            <div class="canDetails__content">
 
-                    <div class="reqDetails__contentCategory reqDetails__request">
-                        <p>Candidatos disponibles</p>
-                    </div>
+                <div class="canDetails__contentHeader canDetails__contentHeader--centered">
+                    <a href="./serviceDetails_approved.html">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5824 6.59244H3.41244L8.29244 1.71244C8.68244 1.32244 8.68244 0.682444 8.29244 0.292444C8.19993 0.19974 8.09004 0.126193 7.96907 0.0760112C7.8481 0.0258297 7.71841 0 7.58744 0C7.45648 0 7.32679 0.0258297 7.20582 0.0760112C7.08485 0.126193 6.97496 0.19974 6.88244 0.292444L0.292444 6.88244C0.199741 6.97496 0.126193 7.08485 0.0760117 7.20582C0.0258302 7.32679 0 7.45648 0 7.58744C0 7.71841 0.0258302 7.84809 0.0760117 7.96907C0.126193 8.09004 0.199741 8.19993 0.292444 8.29244L6.88244 14.8824C6.97503 14.975 7.08494 15.0485 7.2059 15.0986C7.32687 15.1487 7.45651 15.1745 7.58744 15.1745C7.71837 15.1745 7.84802 15.1487 7.96899 15.0986C8.08995 15.0485 8.19986 14.975 8.29244 14.8824C8.38503 14.7899 8.45847 14.68 8.50857 14.559C8.55868 14.438 8.58447 14.3084 8.58447 14.1774C8.58447 14.0465 8.55868 13.9169 8.50857 13.7959C8.45847 13.6749 8.38503 13.565 8.29244 13.4724L3.41244 8.59244H14.5824C15.1324 8.59244 15.5824 8.14244 15.5824 7.59244C15.5824 7.04244 15.1324 6.59244 14.5824 6.59244Z" fill="#C4C4C4"/>
+                        </svg>
+                    </a>
+                        
+                    <h2 class="canDetails__name">Fabio Arias</h2>
 
-                    <div class="reqDetails__contentCategory reqDetails__request">
-                        <p>Proceso</p>
-                    </div>
-
-                    <div class="reqDetails__contentCategory reqDetails__request">
-                        <p>Seleccionado</p>
-                    </div>
+                    <button class="btn btn--small btn--blue">Ver hoja de vida</button>
                 </div>
 
-                <!-- Service Details  ------------------------------------------------------------>
-                <div class="reqDetails__details servDetails__content reqDetails__content--active">
-                    <div class="reqDetails__contentSection reqDetails__contentSection--first">
-                        <h3>INFORMACIÓN DEL CARGO</h3>
-    
-                        <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
-                            <li><strong>Nombre del cargo:</strong> <span class="name"></span></li>
-                            <li><strong>Nivel del cargo:</strong> <span class="positionLevel"></span></li>
-                            <li><strong>Ciudad(es):</strong> <span class="city"></span></li>
-                            <li><strong>Jornada:</strong> <span class="time"></span></li>
-                            <li><strong>Tipo de contratación:</strong> <span class="hiring"></span></li>
-                            <li><strong>Salario:</strong> <span class="wage"></span></li>
-                        </ul>
-                    </div>
-
-                    <div class="reqDetails__contentSection reqDetails__contentSection--dark">
-                        <h3>CARACTERÍSTICAS DE NIVEL DE CARGO</h3>
-
-                        <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
-                            <li><strong>Nivel de responsabilidad:</strong> <span class="responsability"></span></li>
-                            <li><strong>Nivel de toma de decisiones:</strong> <span class="decision"></span></li>
-                            <li><strong>Personas a cargo:</strong> <span class="incharge"></span></li>
+                <div class="canDetails__details canDetails__content--active">
+                    <div class="canDetails__contentSection canDetails__contentSection--dark">
+                        <h3>DATOS PERSONALES</h3>
+                        
+                        <ul class="canDetails__infoSection">
+                            <li><strong>Identificación:</strong> <span class="id"></span></li>
+                            <li><strong>Teléfono:</strong> <span class="tel"></span></li>
+                            <li><strong>Edad:</strong> <span class="age"></span></li>
+                            <li><strong>Ciudad:</strong> <span class="city"></span></li>
                         </ul>
                     </div>
                     
-                    <div class="reqDetails__contentSection">
-                        <h3>FUNCIONES</h3>
-                        <ol class="reqDetails__infoSection reqDetails__infoSection--functions">
-                        </ol>
-                    </div>
-    
-                    <div class="reqDetails__contentSection  reqDetails__contentSection--dark">
-                        <h3>REQUISITOS</h3>
-                        <ul class="reqDetails__infoSection reqDetails__infoSection--bullet">
-                            <li><strong>Nivel académico:</strong> <span class="academicLevel"></span></li>
-                            <li><strong>Profesión(es):</strong> <span class="profession"></span></li>
-                            <li><strong>Conocimientos:</strong> <span class="knowledge"></span></li>
-                            <li><strong>Observaciones:</strong> <span class="observations"></span></li>
+                    <div class="canDetails__contentSection">
+                        <h3>EXPERIENCIA LABORAL</h3>
+                        
+                        <ul class="canDetails__infoSection canDetails__infoSection--exp">
+                            
                         </ul>
-                    </div>
-    
-                    <div class="reqDetails__contentSection">
-                        <h3>COMPETENCIAS</h3>
-    
-                        <ol class="reqDetails__infoSection reqDetails__infoSection--skills">
-
-                        </ol>
-                    </div>
-                </div> 
-
-                <!-- Candidates List ------------------------------------------------------------------------>
-                <div class="reqDetails__details servDetails__content">
-                    <div class="reqDetails__filter">
-                        <div class="reqDetails__filterItem">
-                            <img src="../resources/psychologist/filter_icon.svg" alt="">
-                            <label for="quickFilter">Filtrado<br> rápido</label>
-                            <input type="text" id="quickFilter" class="textInput">
-                            <button type="button" class="btn btn--blue btn--small">Consultar</button>
-                        </div>
-
-                        <div class="reqDetails__filterAdvanced">
-                            <p>Filtrado<br> avanzado</p>
-                            <button class="btn btn--small btn--blue">Configurar</button>
-                        </div>
-                    </div>
-
-                    <div class="servDetails__sectionHeader" id="applicants-header">
-                        <img src="../resources/psychologist/arrowSmall_icon.svg" alt="">
-                        <h3>POSTULANTES <span>(10/20)</span></h3>
-                    </div>
-
-                    <div class="servDetails__section" id="applicants-container">
-                                                   
-                    </div>
-
-                    <div class="servDetails__sectionHeader" id="candidates-header">
-                        <img src="../resources/psychologist/arrowSmall_icon.svg" alt="">
-                        <h3>CANDIDATOS <span>(5/1560)</span></h3>
-                    </div>
-
-                    <div class="servDetails__section" id="candidates-container">
                         
                     </div>
-                </div>  
+                    
+                    <div class="canDetails__contentSection canDetails__contentSection--dark">
+                        <h3>CONOCIMIENTOS</h3>
+                        
+                        <ol class="canDetails__infoSection canDetails__infoSection--knowledge">
+                            
+                        </ol>
+                    </div>
+                    
+                    <div class="canDetails__contentSection">
+                        <h3>LICENCIAS</h3>
+                        
+                        <ol class="canDetails__infoSection canDetails__infoSection--licenses">
+                            
+                        </ol>
+                    </div>
+                    
+                    <div class="canDetails__contentSection canDetails__contentSection--dark">
+                        <h3>FORMACIÓN ACADÉMICA</h3>
+
+                        <ul class="canDetails__infoSection canDetails__infoSection--academic">
+
+                        </ul>
+                    </div>
+                    
+                    <div class="canDetails__contentSection">
+                        <h3>REFERENCIAS PERSONALES</h3>
+                        <ol class="canDetails__infoSection canDetails__infoSection--references">
+                            
+                        </ol>
+                    </div>
+                </div>
 
                 <div class="canDetails__buttonsGroup">
                     <button class="btn btn--medium" id="btn--secondary"></button>
@@ -212,29 +173,16 @@
             </div>
         </div>
     </div>
-    
 
-    <script src="../libs/select2-4.0.13/dist/js/select2.full.min.js"></script>
     <script src="../scripts/dashboardNav_interaction.js"></script>
-    <script src="../scripts/requestDetailsInformation.js"></script>
     <script src="../scripts/requestDetailsCandidates.js"></script>
-    <script src="../scripts/Psychologist/serviceDetails__navigation.js"></script>
-    <script src="../scripts/Psychologist/createCandidateList.js"></script>
-    <script src="../scripts/select_interaction.js"></script>
-    <script src="../scripts/dashboard_requestCreation.js"></script>
-
+    <script src="../scripts/candidateDetailsInformation.js"></script>
     
-    <!-- TODO remove for deleted sample info -->
-    <script src="../scripts/Psychologist/samples/sample_createCandidateList.js"></script>
-    <script src="../scripts/samples/sample_requestDetailsInformation_selectionNumber.js"></script>
-    <script src="../scripts/Psychologist/sample_serviceDetailsApproved.js"></script>
-    <script src="../scripts/Psychologist/createPopUpPostOffer.js"></script>
-    <script src="../scripts/Psychologist/sample_popUpPostOffer.js"></script>
-
-    
-    
+    <!-- TODO remove for deleted sample info -->    
     <script src="../scripts/createPopUp.js"></script>
     <script src="../scripts/samples/sample_openHelpPoUp.js"></script>
+    <script src="../scripts/Psychologist/samples/sample_candidateDetailsInformation.js"></script>
+
 
 </body>
 </html>

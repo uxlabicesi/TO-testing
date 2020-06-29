@@ -12,6 +12,7 @@ let createCandidateList = (info) => {};
  *  inProcess: **Boolean** true when the In Process tag should be displayed,
  *  candidate: **Boolean** which is true if the person belongs to the candidate section, located on the bottom half 
  *  of the screen, and false if the person is an applicant, which is the section located on the top half of the screen
+ *  url: **string** with the url of the page where the user will be redirected when clicking this candidate
  * }
  * 
  * The function can be called more than once if necessary, i.e, If it has to be called once for applicants and once for candidates
@@ -73,6 +74,10 @@ window.addEventListener('load', () => {
             } else {
                 applicantsContainer.appendChild(candidate);
             }
+
+            candidate.addEventListener('click', () => {
+                if(element.url) window.location.href = element.url;
+            });
         });
     } 
 });

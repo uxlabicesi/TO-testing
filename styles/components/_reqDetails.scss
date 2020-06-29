@@ -73,6 +73,11 @@
         &--small {
             justify-content: flex-start;
         }
+
+        &--service {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
 

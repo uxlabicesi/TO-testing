@@ -8,6 +8,7 @@ window.addEventListener('load' ,() => {
             affinity: 100,
             inProcess: true,
             candidate: false,
+            url: './candidateDetails.html'
         },
         {
             name: 'Miguel Tulande',

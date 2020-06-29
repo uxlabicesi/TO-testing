@@ -62,7 +62,6 @@ window.addEventListener("load", () => {
 
         const companyName = document.querySelector('.reqDetails__company');
         if(companyName) companyName.innerHTML = info.company + ' / ' + (info.cities.length === 1 ? info.cities[0] : 'Varias ciudades');
-        console.log(info.company);
         // added for level
 
         const responsability = document.querySelector(".responsability");
