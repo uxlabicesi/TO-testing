@@ -1,10 +1,11 @@
 window.addEventListener('load', () => {
 
     // TODO REMOVE AFTER DEBUG
+    /**
+     * The sample for this section does not need the status property, and must have 
+     */
     var sample = {
         name: 'Diseñador Web',
-        amount: '20',
-        status: [7, 0], // -1, 0 para borradores
         remainingTime: 12,
         positionLevel: 'Técnico',
         cities: ['Santiago de Cali - Valle del Cauca',
@@ -32,7 +33,7 @@ window.addEventListener('load', () => {
         isCompleted: false,
         levelResponsability: 0, // 0 1 2 --> bajo medio alto
         levelDecision: 0, // 0 1 2 
-        peopleInCharge: true, 
+        peopleInCharge: true,
     }
     
     requestDetailedInformation(sample);

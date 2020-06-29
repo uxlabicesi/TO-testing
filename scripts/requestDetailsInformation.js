@@ -153,14 +153,14 @@ window.addEventListener("load", () => {
 
         positionLevel.innerHTML = MayusFirst(info.positionLevel);
 
-        if(status){
-            if (info.status[0] === -1) {
+        
+            if (info.statis && info.status[0] === -1) {
                 remainingTime.innerHTML = "Borrador";
                 status.classList.add("status--gray");
                 candidatesTabButton.classList.add("reqDetails__candidates__tabButton--hide");
                 evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
             } else {
-                evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
+                if(evaluationTabButton) evaluationTabButton.classList.add("reqDetails__candidates__tabButton--hide");
                 if (info.remainingTime === 1) {
                     remainingTime.innerHTML = "Falta 1 día";
                 } else {
@@ -173,7 +173,7 @@ window.addEventListener("load", () => {
                         status.classList.add("status--green");
                     }
                 }
-        }
+        
 
             if(candidatesTabButton){
                 candidatesTabButton.classList.remove("reqDetails__candidates__tabButton--hide");
