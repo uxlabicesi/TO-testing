@@ -5084,6 +5084,19 @@ input[type=number] {
   background-color: #D23A3A;
 }
 
+.serviceDetailsTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .servDetails__section {
   -webkit-transition: height .2s ease-out;
   transition: height .2s ease-out;
