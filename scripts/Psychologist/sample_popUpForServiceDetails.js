@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
         btn: "Confirmar Aplicación",
         goTo: "",
         goBack: "Cancelar la solicitud",
-        returnTo: "dashboard_serviceDetails.html",
+        returnTo: "serviceDetails.html",
     };
 
     let informationPopUpCancel = {
@@ -16,12 +16,12 @@ window.addEventListener('load', () => {
         btn: "Deseo mantener la aplicación",
         goTo: "",
         goBack: "Deseo no tomar la solicitud",
-        returnTo: "dashboard_serviceDetails.html",
+        returnTo: "serviceDetails.html",
     };
       
     let rootForPopUp = ".popUp";
 
-    let buttonFinishProcess = document.querySelector('.complete-request');
+    let buttonFinishProcess = document.getElementById('btn--main');
 
     buttonFinishProcess.addEventListener('click', () => {
         if(buttonFinishProcess.classList.contains('complete-request--applied')){

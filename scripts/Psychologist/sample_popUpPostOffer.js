@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-    let buttonFinishProcess = document.querySelector('.complete-request');
+    let buttonFinishProcess = document.getElementById('btn--secondary');
 
     buttonFinishProcess.addEventListener('click',( ) => {
         createPopUpPostOffer();
