@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     let body = document.querySelector('body');
     let titleRequest = document.querySelector('.name');
 
-    createPopUpPostOffer = () => {
+    createPopUpPostOffer = (valuesInput) => {
         let popUp = document.createElement('div');
         popUp.classList.add('popUpOffer');
 
@@ -60,8 +60,12 @@ window.addEventListener('load', () => {
         button.classList.add('btn','btn--medium');
         button.innerText = 'Publicar';
 
-        let createTextInput = (labelName,container,root,id,classContainerInput,type) => {
+        
+      
+        let values = valuesInput;
 
+        let createTextInput = (labelName,container,root,id,classContainerInput,valui) => {
+            
             let textInputContainer = document.createElement('div');
             if(classContainerInput){
                 textInputContainer.classList.add(classContainerInput);
@@ -74,12 +78,10 @@ window.addEventListener('load', () => {
             label.htmlFor = id;
     
             let input = document.createElement('input');
-            if(type){
-                input.type = type;
-            }
             input.classList.add('textInput');
-            input.id = id;      
-    
+            input.id = id;
+            input.value = valui;      
+
             textInputContainer.appendChild(label);
             textInputContainer.appendChild(input);
     
@@ -228,9 +230,14 @@ window.addEventListener('load', () => {
             });
         };
 
+        let value;
+        values.forEach(val => {
+            value = val; 
+            console.log(value);     
+        });
         // --------------------------------------------------------------------------------------------------
-        createTextInput('Nombre del cargo',formRow,form,'positionName');
-        createTextInput('Número de vacantes',formRow,form,'vacancy');
+        createTextInput('Nombre del cargo',formRow,form,'positionName','',value);
+        createTextInput('Número de vacantes',formRow,form,'vacancy','',value);
         createTextInput('Salario',formRow,form,'wage');
         createTextInput('Sector',formRowSec,form,'sector','textInput__container--serviceDetails2col');
         createTextInput('Ciudad',formRowSec,form,'city','textInput__container--serviceDetails2col');
@@ -243,7 +250,8 @@ window.addEventListener('load', () => {
         ]);
         createTextArea('Descripción',formRowFour,form,'description');
         // --------------------------------------------------------------------------------------------------
-      
+
+
         section.appendChild(sectionTitle);
         section.appendChild(popUpContentClose);
 
