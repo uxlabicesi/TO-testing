@@ -20,7 +20,9 @@ let createCandidateList = (info) => {};
 window.addEventListener('load', () => {
 
     const applicantsContainer = document.getElementById('applicants-container');
+    const applicantsInProcessContainer = document.getElementById('applicantsInProcess-container');
     const candidatesContainer = document.getElementById('candidates-container');
+    const candidatesInProcessContainer = document.getElementById('candidatesInProcess-container');
 
     createCandidateList = (info) => {
         info.forEach(element => {
@@ -70,9 +72,18 @@ window.addEventListener('load', () => {
             candidate.appendChild(inProcess);
 
             if(element.candidate) {
-                candidatesContainer.appendChild(candidate);
+                if(element.inProcess) {
+                    candidatesInProcessContainer.appendChild(candidate);
+                } else {
+                    candidatesContainer.appendChild(candidate);
+                }
+                
             } else {
-                applicantsContainer.appendChild(candidate);
+                if(element.inProcess) {
+                    applicantsInProcessContainer.appendChild(candidate);
+                } else {
+                    applicantsContainer.appendChild(candidate);
+                }
             }
 
             candidate.addEventListener('click', () => {

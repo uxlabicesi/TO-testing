@@ -53,7 +53,8 @@ window.addEventListener('load', () => {
         const statusCurrent = document.querySelector('.status__current');
         const statusList = document.querySelectorAll('.status__listItem');
         const remainingTime = document.querySelector('.reqDetails__remainingTime');
-        const name = document.querySelector('.canDetails__contentHeaderTitlesTitle');
+        let name = document.querySelector('.canDetails__contentHeaderTitlesTitle');
+        const summary = document.querySelector('.canDetails__position');
         const profilePic = document.querySelector('.canDetails__contentHeaderImg');
         const job = document.querySelector('.canDetails__contentHeaderJobStrong');
         const origin = document.querySelector('.origin');
@@ -69,6 +70,8 @@ window.addEventListener('load', () => {
         const selectionState = document.querySelector('.reqDetails__selected'); 
         const selectionStateButton = document.querySelector('.btn__selection'); 
         const candidateEvaluationBtn = document.querySelector('.btn__evaluation');
+
+        if(summary) summary.innerHTML = info.job + ' [Candidato / ' + info.origin+']';
 
         if (info.evaluated!=null&&info.evaluated) {
             candidateEvaluationBtn.innerHTML="Reevaluar candidato";
@@ -179,6 +182,7 @@ window.addEventListener('load', () => {
 
         if(profilePic) profilePic.setAttribute('src', info.profilePic);
 
+        if(!name) name = document.querySelector('.canDetails__name');
         if(name) name.innerHTML = info.name;
 
         // if(info.remainingTime === 1) {
