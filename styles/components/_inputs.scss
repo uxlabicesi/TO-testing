@@ -93,7 +93,12 @@ input:not(:-webkit-autofill) {
         width: 100%;
         min-width: 100%;
         min-height: 55px;
-        overflow: hidden; /* Hide scrollbars */
+        // overflow: hidden; /* Hide scrollbars */
+    }
+
+    &--areaCandidateProcess{
+        height: 100%;
+        padding: 15px;
     }
 
     &--number {
@@ -182,6 +187,11 @@ input:not(:-webkit-autofill) {
             &TextArea{
                 width: 100%;
             }
+        }
+
+        &--candidateDetailsProcess{
+            margin-top: 5px;
+            height: 100%;
         }
     }
 

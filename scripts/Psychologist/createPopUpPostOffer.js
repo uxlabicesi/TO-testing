@@ -185,7 +185,7 @@ window.addEventListener('load', () => {
             textInputContainer.classList.add('textInput__container','form-group', 'textInput__container--serviceDetailsTextArea');
     
             let input =  document.createElement('textarea');
-            input.classList.add('textInput', 'textInput--area');
+            input.classList.add('textInput', 'textInput--area', 'textInput--areaCandidateProcess');
             input.id = id;
             input.addEventListener('input',()=>{
                 auto_grow(input);

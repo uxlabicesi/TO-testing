@@ -284,8 +284,11 @@ input:not(:-webkit-autofill) {
   width: 100%;
   min-width: 100%;
   min-height: 55px;
-  overflow: hidden;
-  /* Hide scrollbars */
+}
+
+.textInput--areaCandidateProcess {
+  height: 100%;
+  padding: 15px;
 }
 
 .textInput--number {
@@ -378,6 +381,11 @@ input:not(:-webkit-autofill) {
 
 .textInput__container--serviceDetailsTextArea {
   width: 100%;
+}
+
+.textInput__container--candidateDetailsProcess {
+  margin-top: 5px;
+  height: 100%;
 }
 
 .textInput:focus {
@@ -5391,6 +5399,262 @@ input[type=number] {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 15px;
+}
+
+.popUpTest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 11;
+  padding: 35px 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popUpTest__noScroll {
+  position: static;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popUpTest--inactive {
+  display: none;
+}
+
+.popUpTest__content {
+  background-color: #fefefe;
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 70%;
+  height: 100%;
+  padding: 30px;
+}
+
+.popUpTest__contentClose span {
+  color: #c4c4c4;
+  font-size: 25px;
+  float: right;
+  font-weight: 700;
+  margin-right: -15px;
+  margin-top: -25px;
+}
+
+.popUpTest__contentClose span:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popUpTest__contentClose span:focus {
+  color: #494949;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popUpTest__contentHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.popUpTest__contentHeaderImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  margin-right: 15px;
+}
+
+.popUpTest__contentHeaderText h2 {
+  margin: 0px;
+  font-size: 22px;
+  color: #294F75;
+  font-weight: 600;
+}
+
+.popUpTest__contentHeaderText h3 {
+  margin: 0px;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.popUpTest__contentDivide {
+  width: 100%;
+  height: 1px;
+  background-color: #C4C4C4;
+  margin-top: 10px;
+}
+
+.popUpTest__contentInfoContact {
+  color: #294F75;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popUpTest__contentInfoContactEdit p {
+  margin: 15px 0px;
+  background-image: url(/resources/psychologist/editIcon.svg);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-right: 20px;
+  background-position-x: right;
+  background-position-y: center;
+  cursor: pointer;
+}
+
+.popUpTest__contentInfoContactData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popUpTest__contentInfoContactDataTitle {
+  font-size: 16px;
+  margin: 15px 0px;
+}
+
+.popUpTest__contentInfoContactData p {
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.popUpTest__contentMessage {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popUpTest__contentMessage h3 {
+  margin: 0px;
+  font-size: 16px;
+  color: #294F75;
+  font-weight: 700;
+}
+
+.popUpTest__contentSendInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 55%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popUpTest__contentSendInfoDiv {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.popUpTest__contentSendInfoDiv h3 {
+  margin: 0px;
+  font-size: 16px;
+  color: #294F75;
+  font-weight: 700;
+}
+
+.popUpTest__contentSendInfoDiv p {
+  margin: 0;
+  margin: 10px 0px;
+}
+
+.popUpTest__contentSendInfoDivWhat {
+  background-image: url(/resources/psychologist/whatsapp.svg);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  background-position-y: center;
+}
+
+.popUpTest__contentSendInfoDivSms {
+  background-image: url(/resources/psychologist/sms.svg);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  background-position-y: center;
+}
+
+.popUpTest__contentSendInfoDivEmail {
+  background-image: url(/resources/psychologist/email.svg);
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  background-position-y: center;
+}
+
+.btn--candidateProcess {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn--secondary {
+  background-image: url(/resources/psychologist/testIcon.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 18px;
+  background-position-x: 12px;
+}
+
+.btn--main {
+  background-image: url(/resources/psychologist/cameraIcon.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 18px;
+  background-position-x: 12px;
+}
+
+.btn--third {
+  background-image: url(/resources/psychologist/reportIcon.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 18px;
+  background-position-x: 12px;
 }
 
 * {
