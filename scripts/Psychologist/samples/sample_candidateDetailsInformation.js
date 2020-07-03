@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
         remainingTime: 1,
         name: 'Fabio Arias',
         job: 'Diseñador de Medios Interactivos',
+        profilePic: '../resources/perfil_img.png',
         origin: 'Ezenza',
         id: '1130613425',
         tel: ['(300) 8200838', '032 5552334'],

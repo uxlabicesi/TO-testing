@@ -2,11 +2,20 @@
 
     margin-right: 20px;
 
+    &__information {
+        margin-left: 15px;
+    }
+
     &__name {
         color: $color-blue;
         font-size: $typo-largeButton;
         margin: 0;
-        margin-left: 20px;
+        line-height: 27px;
+        font-weight: $typo-semibold;
+    }
+
+    &__position {
+        margin: 0;
     }
 
     &__content {

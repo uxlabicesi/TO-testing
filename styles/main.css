@@ -2055,11 +2055,20 @@ input:not(:-webkit-autofill) {
   margin-right: 20px;
 }
 
+.canDetails__information {
+  margin-left: 15px;
+}
+
 .canDetails__name {
   color: #294F75;
   font-size: 24px;
   margin: 0;
-  margin-left: 20px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+.canDetails__position {
+  margin: 0;
 }
 
 .canDetails__content {
