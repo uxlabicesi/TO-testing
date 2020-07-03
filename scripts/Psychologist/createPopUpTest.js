@@ -3,6 +3,8 @@ window.addEventListener('load', () => {
     let button = document.getElementById('btn--secondary');
     let body = document.querySelector('body');
     let candidateName = document.querySelector('.canDetails__name');
+    let candidatePosition = document.querySelector('.canDetails__position');
+    let candidateProfilePic = document.querySelector('.canDetails__contentHeaderImg');
     let candidateNumbers = document.querySelector('.tel');
     let candidateJob = document.querySelector('.reqDetails__title');
     let candidateCompany = document.querySelector('.reqDetails__company');
@@ -27,7 +29,7 @@ window.addEventListener('load', () => {
 
         let contentHeaderImg = document.createElement('img');
         contentHeaderImg.classList.add('popUpTest__contentHeaderImg');
-        contentHeaderImg.src = '../resources/imgPerfil.jpg';
+        contentHeaderImg.src = candidateProfilePic.src;
 
         let contentHeaderText = document.createElement('div');
         contentHeaderText.classList.add('popUpTest__contentHeaderText');
@@ -38,7 +40,7 @@ window.addEventListener('load', () => {
 
         let contentHeaderTextSubTitle = document.createElement('h3');
         contentHeaderTextSubTitle.classList.add('popUpTest__contentHeaderTextSubTitle');
-        contentHeaderTextSubTitle.innerText = 'Diseñador de Medios Interactivos[Candidato/Ezenza]';
+        contentHeaderTextSubTitle.innerText = candidatePosition.innerText;
 
         let contentDivide = document.createElement('div');
         contentDivide.classList.add('popUpTest__contentDivide');
