@@ -126,6 +126,7 @@ La función recibe un JSON con la siguiente estructura:
 
 Para crear un popUp se debe utilizar la función createPopUp en /scripts/createPopUp.js.
 La función recibe un JSON con la siguiente estructura:
+
 {
   title: **String** texto para el titulo principal
   text: **String** texto descriptivo 
@@ -134,6 +135,7 @@ La función recibe un JSON con la siguiente estructura:
   goBack: **String** Texto para opción secundaria
   returnTo: **String** Url para opción secundaria
 }
+
 Además recibe la ruta del popUp como segund parametro, la cual debe ser = ".popUp"
 
 
