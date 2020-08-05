@@ -128,12 +128,12 @@ Para crear un popUp se debe utilizar la función createPopUp en /scripts/createP
 La función recibe un JSON con la siguiente estructura:
 
 {
-  title: **String** texto para el titulo principal
-  text: **String** texto descriptivo 
-  btn:  **String** texto para el botón principal
-  goTo: **String** Url para direccionar con el botón
-  goBack: **String** Texto para opción secundaria
-  returnTo: **String** Url para opción secundaria
+  title: **String** texto para el titulo principal, <br />
+  text: **String** texto descriptivo, <br />
+  btn:  **String** texto para el botón principal, <br />
+  goTo: **String** Url para direccionar con el botón, <br />
+  goBack: **String** Texto para opción secundaria, <br />
+  returnTo: **String** Url para opción secundaria <br />
 }
 
 Además recibe la ruta del popUp como segund parametro, la cual debe ser = ".popUp"
