@@ -120,4 +120,24 @@ La función recibe un JSON con la siguiente estructura:
   finished: **booleano** indicando si se trata de una solicitud terminada, true indica que la solicitud finalizó <br />
 }
 
+**Clase** .popUp
+
+![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/popUp.png)
+
+Para crear un popUp se debe utilizar la función createPopUp en /scripts/createPopUp.js.
+La función recibe un JSON con la siguiente estructura:
+
+{
+  title: **String** texto para el titulo principal
+  text: **String** texto descriptivo 
+  btn:  **String** texto para el botón principal
+  goTo: **String** Url para direccionar con el botón
+  goBack: **String** Texto para opción secundaria
+  returnTo: **String** Url para opción secundaria
+}
+
+Además recibe la ruta del popUp como segund parametro, la cual debe ser = ".popUp"
+
+
+
 
