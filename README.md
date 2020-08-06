@@ -151,30 +151,30 @@ La función recibe un Objeto con la siguiente estructura:
 
 {
 
-  name: **String** nombre del trabajo,
-  amount: **String** cantidad de candidatos requerida,
-  status **Array** con dos números, el primero indica en qué paso del proceso de la solicitud se encuentras el usuario, es un número entre 0 y 4; y el segundo número indica si el usuario necesita realizar alguna acción, en cuyo caso el número debe ser 0, o si no necesita realizar ninguna acción, en cuyo caso el número es 1.
-  remainingTime: **Número** Cantidad de días restantes,
-  positionLevel: **String** El nivel del cargo,
-  cities: **String array** Nombre de las ciudades requeridas,
-  amountPerCity: **array** Cantidad de candidatos requeridos por ciudad (Deben estar en el mismo orden que las ciudades),
-  time: **String** Jornada de trabajo,
-  hiring: **String** Tipo de contrato,
-  wage: **String** Salario,
-  functions: **Array** Funciones a desempeñar en el cargo,
-  academicLevel: **String** Nivel académico requerido,
-  profession: **String Array** Profesión/es buscada,
-  knowledge: **String** Conocimientos buscados,
-  observations: **String** Observaciones,
-  skills: **Array** Competencias requeridas.
-  requirements: **Array** with the job's requirements,
-  subtotal **Number**,
-  isDraft: **boolean**,
+  name: **String** nombre del trabajo, <br />
+  amount: **String** cantidad de candidatos requerida, <br />
+  status **Array** con dos números, el primero indica en qué paso del proceso de la solicitud se encuentras el usuario, es un número entre 0 y 4; y el segundo número indica si el usuario necesita realizar alguna acción, en cuyo caso el número debe ser 0, o si no necesita realizar ninguna acción, en cuyo caso el número es 1. <br />
+  remainingTime: **Número** Cantidad de días restantes, <br />
+  positionLevel: **String** El nivel del cargo, <br />
+  cities: **String array** Nombre de las ciudades requeridas, <br />
+  amountPerCity: **array** Cantidad de candidatos requeridos por ciudad (Deben estar en el mismo orden que las ciudades), <br />
+  time: **String** Jornada de trabajo, <br />
+  hiring: **String** Tipo de contrato, <br />
+  wage: **String** Salario, <br />
+  functions: **Array** Funciones a desempeñar en el cargo, <br />
+  academicLevel: **String** Nivel académico requerido, <br />
+  profession: **String Array** Profesión/es buscada, <br />
+  knowledge: **String** Conocimientos buscados, <br />
+  observations: **String** Observaciones, <br />
+  skills: **Array** Competencias requeridas, <br />
+  requirements: **Array** with the job's requirements, <br />
+  subtotal **Number**, <br />
+  isDraft: **boolean**, <br />
   isCompleted: **boolean**, // activate the use of 'reqDetails__contentSection--inactive' class
-  // the following were added for suppor new level selection system
-  levelResponsability: **Number** // 0: Low, 1: mid: high
-  levelDecision: **Number** // 0: Low, 1: mid: high
-  peopleInCharge: true // 
+  // the following were added for suppor new level selection system <br />
+  levelResponsability: **Number** // 0: Low, 1: mid: high <br />
+  levelDecision: **Number** // 0: Low, 1: mid: high <br />
+  peopleInCharge: true // <br />
 
 }
 
@@ -184,11 +184,11 @@ Adicionalmente, también se necesita pasar la información sobre los candidatos 
 
 
 {
-  profilePic: **String** Enlace a la imagen de perfil del candidato,
-  name: **String** Nombre del candidato,
-  job: **String** Profesión del candidato,
-  telephone: **Arreglo String** Lista de los números de contactos del candidato,
-  email: **String** Correo electrónico del candidato,
-  id: **String** Id para cada candidato,
-  selected: **Boolean** Verdadero si el candidato fue seleccionado para esta solicitud,
+  profilePic: **String** Enlace a la imagen de perfil del candidato, <br />
+  name: **String** Nombre del candidato, <br />
+  job: **String** Profesión del candidato, <br />
+  telephone: **Arreglo String** Lista de los números de contactos del candidato, <br />
+  email: **String** Correo electrónico del candidato, <br />
+  id: **String** Id para cada candidato, <br />
+  selected: **Boolean** Verdadero si el candidato fue seleccionado para esta solicitud, <br />
 }
