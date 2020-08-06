@@ -124,7 +124,7 @@ La función recibe un JSON con la siguiente estructura:
 
 **Clase** .popUp
 
-![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/popUp.png)
+![PopUp](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/popUp.png)
 
 Para crear un popUp se debe utilizar la función createPopUp en /scripts/createPopUp.js.
 La función recibe un JSON con la siguiente estructura:
@@ -142,6 +142,38 @@ La función recibe un JSON con la siguiente estructura:
 
 Además recibe la ruta del popUp como segundo parametro, la cual debe ser = ".popUp"
 
+### Detalles de solicitud
 
 
 
+Al entrar a la pantalla que contiene los detalles de solicitud, se debe usar la función requestDetailedInformation en /scripts/requestDetailsInformation.js.
+La función recibe un Objeto con la siguiente estructura:
+
+{
+
+  name: **String** nombre del trabajo,
+  amount: **String** cantidad de candidatos requerida,
+  status **Array** con dos números, el primero indica en qué paso del proceso de la solicitud se encuentras el usuario, es un número entre 0 y 4; y el segundo número indica si el usuario necesita realizar alguna acción, en cuyo caso el número debe ser 0, o si no necesita realizar ninguna acción, en cuyo caso el número es 1.
+  remainingTime: **Número** Cantidad de días restantes,
+  positionLevel: **String** El nivel del cargo,
+  cities: **String array** Nombre de las ciudades requeridas,
+  amountPerCity: **array** Cantidad de candidatos requeridos por ciudad (Deben estar en el mismo orden que las ciudades),
+  time: **String** Jornada de trabajo,
+  hiring: **String** Tipo de contrato,
+  wage: **String** Salario,
+  functions: **Array** Funciones a desempeñar en el cargo,
+  academicLevel: **String** Nivel académico requerido,
+  profession: **String Array** Profesión/es buscada,
+  knowledge: **String** Conocimientos buscados,
+  observations: **String** Observaciones,
+  skills: **Array** Competencias requeridas.
+  requirements: **Array** with the job's requirements,
+  subtotal **Number**,
+  isDraft: **boolean**,
+  isCompleted: **boolean**, // activate the use of 'reqDetails__contentSection--inactive' class
+  // the following were added for suppor new level selection system
+  levelResponsability: **Number** // 0: Low, 1: mid: high
+  levelDecision: **Number** // 0: Low, 1: mid: high
+  peopleInCharge: true // 
+
+}
