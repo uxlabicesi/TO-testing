@@ -144,7 +144,7 @@ Además recibe la ruta del popUp como segundo parametro, la cual debe ser = ".po
 
 ### Detalles de solicitud
 
-
+![Detalles de Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestDetails.png)
 
 Al entrar a la pantalla que contiene los detalles de solicitud, se debe usar la función requestDetailedInformation en /scripts/requestDetailsInformation.js.
 La función recibe un Objeto con la siguiente estructura:
@@ -176,4 +176,19 @@ La función recibe un Objeto con la siguiente estructura:
   levelDecision: **Number** // 0: Low, 1: mid: high
   peopleInCharge: true // 
 
+}
+
+![Candidatos](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/requestDetailsCandidates.png)
+
+Adicionalmente, también se necesita pasar la información sobre los candidatos que estén aplicando a esta solicitud, para esto se debe usar la función candidates en /scripts/requestDetailsCandidates.js. Esta función recibe un arreglo de Objetos, en la que cada uno debe cumplir con la siguiente estructura: 
+
+
+{
+  profilePic: **String** Enlace a la imagen de perfil del candidato,
+  name: **String** Nombre del candidato,
+  job: **String** Profesión del candidato,
+  telephone: **Arreglo String** Lista de los números de contactos del candidato,
+  email: **String** Correo electrónico del candidato,
+  id: **String** Id para cada candidato,
+  selected: **Boolean** Verdadero si el candidato fue seleccionado para esta solicitud,
 }
