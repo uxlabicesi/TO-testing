@@ -120,6 +120,8 @@ La función recibe un JSON con la siguiente estructura:
   finished: **booleano** indicando si se trata de una solicitud terminada, true indica que la solicitud finalizó <br />
 }
 
+### PopUp
+
 **Clase** .popUp
 
 ![Solicitud](https://github.com/uxlabicesi/TO-testing/blob/master/README%20images/popUp.png)
