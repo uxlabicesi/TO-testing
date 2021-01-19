@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
         selectAdd.appendChild(select);
 
         $('.select2__selector--reqCity'+currentCityCount).select2({
-            tags: true,
+            tags: false,
             placeholder: "CIUDAD",
             theme: "talentos",
             width: '100%', // need to override the changed default
